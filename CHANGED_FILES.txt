@@ -1,0 +1,8 @@
+?? EXPERIMENT_INVENTORY_FINAL.csv
+?? REPRODUCTION_COMMANDS.md
+?? aura_validation/
+?? generate_inventory.py
+?? git_review_evidence.txt
+?? test_execution_log.txt
+?? tests/
+?? validation_reports/

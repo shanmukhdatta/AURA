@@ -1,0 +1,858 @@
+=== git status ===
+
+On branch feature/external-validation-pipeline
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	aura_validation/
+	tests/
+	validation_reports/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+
+=== git branch --show-current ===
+
+feature/external-validation-pipeline
+
+
+=== git log -5 --oneline ===
+
+2676ae6 Add publication manuscript, research tables, reproducibility guide, and Qwen2.5-3B GPU pilot integration
+976b4c9 Stage 8.3 Corrected: Independent blinded reference, cohort separation, repaired metrics and Kaggle v2 notebook
+607ffc9 Stage 8.3 PR: Complete package with code, verified evidence, results archive, and handoff report
+39191fa Update live GitHub PR URL in AURA_STAGE83_HANDOFF_REPORT.md
+67365f6 Execute Stage 8.3: G0-G5 verification, genuine LLM evaluation, and CERA analysis
+
+
+=== git diff --stat main...HEAD ===
+
+ .gitignore                                         |   12 +
+ AURA_STAGE83_CORRECTED_AUDIT.md                    |  205 ++++
+ AURA_STAGE83_HANDOFF_REPORT.md                     |  105 ++
+ AURA_STAGE83_REAL_AGENT_KAGGLE.ipynb               |  234 ++++
+ AURA_STAGE83_REAL_AGENT_KAGGLE_v2.ipynb            |  309 +++++
+ AURA_STAGE8_3_CORRECTED_RESULTS.zip                |  Bin 0 -> 299222 bytes
+ AURA_STAGE8_3_RESULTS.zip                          |  Bin 0 -> 299222 bytes
+ AURA_Stage7/ARTIFACT_MANIFEST.json                 |  610 ++++++++++
+ AURA_Stage7/README.md                              |   52 +
+ AURA_Stage7/audit_agentdiff_contracts.py           |   39 +
+ AURA_Stage7/aura_baselines/__init__.py             |    1 +
+ AURA_Stage7/aura_baselines/surface.py              |   44 +
+ AURA_Stage7/aura_evaluation/__init__.py            |    1 +
+ AURA_Stage7/aura_evaluation/local_faults.py        |  126 ++
+ AURA_Stage7/aura_evaluation/study.py               |  276 +++++
+ AURA_Stage7/aura_evidence/__init__.py              |   11 +
+ AURA_Stage7/aura_evidence/capture.py               |  176 +++
+ AURA_Stage7/aura_evidence/diff.py                  |   54 +
+ AURA_Stage7/aura_evidence/ledger.py                |   43 +
+ AURA_Stage7/aura_evidence/probes.py                |  222 ++++
+ AURA_Stage7/aura_evidence/trace.py                 |   31 +
+ AURA_Stage7/aura_evidence/util.py                  |   54 +
+ AURA_Stage7/aura_evidence/validation.py            |  165 +++
+ AURA_Stage7/aura_external/__init__.py              |    2 +
+ AURA_Stage7/aura_external/agentdiff.py             |  137 +++
+ AURA_Stage7/aura_external/agentsynth_adapter.py    |  500 ++++++++
+ AURA_Stage7/aura_external/appworld.py              |   15 +
+ AURA_Stage7/aura_external/fixtures.py              |   18 +
+ AURA_Stage7/aura_planning/__init__.py              |    2 +
+ AURA_Stage7/aura_planning/examples.py              |   46 +
+ AURA_Stage7/aura_planning/live_runner.py           |  123 ++
+ AURA_Stage7/aura_planning/planner.py               |  239 ++++
+ AURA_Stage7/aura_reasoning/__init__.py             |    3 +
+ AURA_Stage7/aura_reasoning/model.py                |  299 +++++
+ AURA_Stage7/aura_reasoning/reference_models.py     |   61 +
+ AURA_Stage7/aura_verifier/__init__.py              |    3 +
+ AURA_Stage7/aura_verifier/engine.py                |  386 ++++++
+ .../AGENTDIFF_FULL_DATASET_AUDIT_REFERENCE.json    |   17 +
+ .../docs/STAGE1_FIXTURE_HASH_COMPATIBILITY.json    |  318 +++++
+ AURA_Stage7/docs/STAGE2_DESIGN.md                  |   62 +
+ AURA_Stage7/docs/STAGE3_DESIGN.md                  |   38 +
+ AURA_Stage7/docs/STAGE4_DESIGN.md                  |   97 ++
+ AURA_Stage7/docs/STAGE5_DESIGN.md                  |   65 ++
+ AURA_Stage7/docs/STAGE5_REPORT.md                  |  105 ++
+ AURA_Stage7/docs/STAGE6_DESIGN.md                  |   27 +
+ AURA_Stage7/docs/STAGE6_REPORT.md                  |  120 ++
+ AURA_Stage7/docs/STAGE7_DESIGN.md                  |   11 +
+ AURA_Stage7/docs/STAGE7_REPORT.md                  |  164 +++
+ AURA_Stage7/examples/external/PROVENANCE.md        |   10 +
+ .../agentdiff_public_contract_excerpt.jsonl        |    5 +
+ .../examples/models/clean_local_reference.json     |    1 +
+ .../models/external_uncertainty_reference.json     |    1 +
+ .../synthetic_inferred_notice_TEST_ONLY.json       |    1 +
+ .../examples/reference/probe_catalogue.json        |  100 ++
+ AURA_Stage7/examples/reference/task_contract.json  |  134 +++
+ AURA_Stage7/pyproject.toml                         |   20 +
+ AURA_Stage7/reproduce_stage3.py                    |   62 +
+ AURA_Stage7/reproduce_stage4.py                    |   93 ++
+ AURA_Stage7/reproduce_stage5.py                    |  136 +++
+ AURA_Stage7/reproduce_stage6.py                    |  123 ++
+ AURA_Stage7/reproduce_stage7.py                    |    9 +
+ AURA_Stage7/run_demo.py                            |  104 ++
+ AURA_Stage7/run_stage7_local.py                    |    6 +
+ AURA_Stage7/schemas/BoundedWorldModel.schema.json  |  172 +++
+ AURA_Stage7/schemas/Certificate.schema.json        |  192 +++
+ AURA_Stage7/schemas/Observation.schema.json        |  179 +++
+ AURA_Stage7/schemas/ProbeSpec.schema.json          |  121 ++
+ AURA_Stage7/schemas/ReasoningLedger.schema.json    |  143 +++
+ AURA_Stage7/schemas/TaskContract.schema.json       |  237 ++++
+ AURA_Stage7/tests/fixtures/stage1_acceptance.csv   |   13 +
+ .../01_complete_success/expected.json              |    9 +
+ .../01_complete_success/observations.json          |  131 +++
+ .../01_complete_success/probe_catalogue.json       |  100 ++
+ .../01_complete_success/task_contract.json         |  134 +++
+ .../stage1_inputs/02_missing_report/expected.json  |    9 +
+ .../02_missing_report/observations.json            |  131 +++
+ .../02_missing_report/probe_catalogue.json         |  100 ++
+ .../02_missing_report/task_contract.json           |  134 +++
+ .../03_unauthorized_mutation/expected.json         |    9 +
+ .../03_unauthorized_mutation/observations.json     |  131 +++
+ .../03_unauthorized_mutation/probe_catalogue.json  |  100 ++
+ .../03_unauthorized_mutation/task_contract.json    |  134 +++
+ .../04_duplicate_record/expected.json              |    9 +
+ .../04_duplicate_record/observations.json          |  131 +++
+ .../04_duplicate_record/probe_catalogue.json       |  100 ++
+ .../04_duplicate_record/task_contract.json         |  134 +++
+ .../05_unobservable_notification/expected.json     |    9 +
+ .../05_unobservable_notification/observations.json |  150 +++
+ .../probe_catalogue.json                           |  123 ++
+ .../task_contract.json                             |  145 +++
+ .../06_known_bad_and_unknown/expected.json         |    9 +
+ .../06_known_bad_and_unknown/observations.json     |  150 +++
+ .../06_known_bad_and_unknown/probe_catalogue.json  |  123 ++
+ .../06_known_bad_and_unknown/task_contract.json    |  145 +++
+ .../07_insufficient_frame_coverage/expected.json   |    9 +
+ .../observations.json                              |   87 ++
+ .../probe_catalogue.json                           |  100 ++
+ .../task_contract.json                             |  134 +++
+ .../08_conflicting_evidence/expected.json          |    9 +
+ .../08_conflicting_evidence/observations.json      |  161 +++
+ .../08_conflicting_evidence/probe_catalogue.json   |  100 ++
+ .../08_conflicting_evidence/task_contract.json     |  134 +++
+ .../09_missing_required_process/expected.json      |    9 +
+ .../09_missing_required_process/observations.json  |  131 +++
+ .../probe_catalogue.json                           |  100 ++
+ .../09_missing_required_process/task_contract.json |  134 +++
+ .../10_unobservable_transient_effect/expected.json |    9 +
+ .../observations.json                              |  150 +++
+ .../probe_catalogue.json                           |  125 ++
+ .../task_contract.json                             |  148 +++
+ .../11_benign_alternative_path/expected.json       |    9 +
+ .../11_benign_alternative_path/observations.json   |  131 +++
+ .../probe_catalogue.json                           |  100 ++
+ .../11_benign_alternative_path/task_contract.json  |  134 +++
+ .../12_external_frame_unobserved/expected.json     |    9 +
+ .../12_external_frame_unobserved/observations.json |  150 +++
+ .../probe_catalogue.json                           |  126 ++
+ .../task_contract.json                             |  157 +++
+ AURA_Stage7/tests/test_agentsynth_adapter.py       |  159 +++
+ AURA_Stage7/tests/test_evidence_stage2.py          |  356 ++++++
+ AURA_Stage7/tests/test_live_stage5.py              |   52 +
+ AURA_Stage7/tests/test_planner_stage5.py           |  105 ++
+ AURA_Stage7/tests/test_reasoning_stage4.py         |  249 ++++
+ AURA_Stage7/tests/test_stage6_baselines.py         |   19 +
+ AURA_Stage7/tests/test_stage6_external.py          |   65 ++
+ AURA_Stage7/tests/test_stage7_study.py             |  121 ++
+ AURA_Stage7/tests/test_verifier_stage3.py          |  250 ++++
+ AURA_Stage7/verify_bounded.py                      |   59 +
+ AURA_Stage7/verify_capture.py                      |   41 +
+ AURA_Stage7/verify_task.py                         |   28 +
+ README.md                                          |   72 +-
+ artifacts/historical/ANTIGRAVITY_RUN_GUIDE.md      |   14 +
+ .../ANTIGRAVITY_STAGE8_3_MASTER_PROMPT.md          |   74 ++
+ .../AURA_PROJECT_STATUS_AND_CORRECTIONS.md         |   57 +
+ .../AURA_Stage8_2_Episode_Results_v1.csv           |   37 +
+ .../AURA_Stage8_2_External_SQL_Pilot_Report_v1.md  |  105 ++
+ .../AURA_Stage8_2_Inspection_Ablations_v1.csv      |  145 +++
+ artifacts/historical/HANDOFF_MANIFEST_SHA256.json  |  542 +++++++++
+ artifacts/historical/README_STAGE8_2.md            |   24 +
+ artifacts/historical/REGRESSION_TEST_RECEIPT.txt   |    4 +
+ artifacts/historical/STAGE82_REPRO_RECEIPT.txt     |   49 +
+ artifacts/historical/START_HERE.md                 |   10 +
+ paper/MANUSCRIPT.md                                |  163 +++
+ paper/REPRODUCIBILITY.md                           |   95 ++
+ paper/generate_research_tables.py                  |  227 ++++
+ paper/main.tex                                     |  146 +++
+ paper/references.bib                               |   78 ++
+ paper/tables/table1_main_benchmark.md              |    7 +
+ paper/tables/table1_main_benchmark.tex             |   16 +
+ paper/tables/table2_cera_cost.md                   |    8 +
+ paper/tables/table2_cera_cost.tex                  |   17 +
+ paper/tables/table3_ablation_soundness.tex         |   21 +
+ paper/tables/table4_benchmark_gaming.tex           |   18 +
+ stage82_agentsynth_pilot.py                        |  303 +++++
+ stage82_audit_ablations.py                         |   73 ++
+ stage83/G0_STATUS.md                               |   46 +
+ stage83/G1_STATUS.md                               |   66 ++
+ stage83/G2_STATUS.md                               |   40 +
+ stage83/G3_STATUS.md                               |   33 +
+ stage83/G4_STATUS.md                               |   24 +
+ stage83/G5_STATUS.md                               |   23 +
+ stage83/README.md                                  |   36 +
+ stage83/STATUS.md                                  |   10 +
+ stage83/build_contracts.py                         |  158 +++
+ stage83/compile_g3_manifest.py                     |  134 +++
+ stage83/debug_eval.py                              |   14 +
+ stage83/debug_pass.py                              |   14 +
+ stage83/independent_reference.py                   |  414 +++++++
+ stage83/inspect_scenarios.py                       |   47 +
+ stage83/make_kaggle_nb.py                          |  234 ++++
+ stage83/make_kaggle_nb_v2.py                       |  335 ++++++
+ stage83/package_g5_results.py                      |  286 +++++
+ stage83/results/SHA256SUMS.json                    |  248 ++++
+ stage83/results/config.json                        |   35 +
+ .../results/contracts/cancel-and-void-payment.json |  117 ++
+ stage83/results/contracts/clearance-discount.json  |   90 ++
+ stage83/results/contracts/count-open-tickets.json  |   77 ++
+ .../results/contracts/deactivate-stale-users.json  |   90 ++
+ stage83/results/contracts/dedup-keep-latest.json   |   90 ++
+ .../contracts/frozen_contracts_manifest.json       |  248 ++++
+ stage83/results/contracts/payroll-cap.json         |  114 ++
+ .../results/contracts/raise-ticket-priority.json   |   78 ++
+ stage83/results/contracts/reconcile-stock.json     |  100 ++
+ stage83/results/contracts/refund-and-restock.json  |  127 ++
+ stage83/results/contracts/refund-if-eligible.json  |  102 ++
+ .../results/contracts/refuse-cancel-shipped.json   |   89 ++
+ .../results/contracts/refuse-wipe-audit-log.json   |   89 ++
+ stage83/results/contracts/store-credit-return.json |  117 ++
+ stage83/results/contracts/top-customer-spend.json  |   89 ++
+ stage83/results/core_v2_task_taxonomy.json         |  291 +++++
+ stage83/results/environment.json                   |   15 +
+ .../g3_real_clearance-discount_s42/after.json      |    1 +
+ .../after_snapshot.json                            |    1 +
+ .../audit_receipt.json                             |    1 +
+ .../aura_certificate.json                          |    1 +
+ .../g3_real_clearance-discount_s42/before.json     |    1 +
+ .../before_snapshot.json                           |    1 +
+ .../certificate.json                               |    1 +
+ .../certificate_replay.json                        |    1 +
+ .../g3_real_clearance-discount_s42/contract.json   |    1 +
+ .../independent_contract_reference.json            |    1 +
+ .../g3_real_clearance-discount_s42/instruction.txt |    1 +
+ .../model_actions.jsonl                            |    2 +
+ .../native_checkers.json                           |    1 +
+ .../observations.json                              |    1 +
+ .../official_reference.json                        |    1 +
+ .../probe_observations.json                        |    1 +
+ .../g3_real_clearance-discount_s42/probes.json     |    1 +
+ .../prompt_and_visible_api.json                    |    1 +
+ .../real_tool_trace.jsonl                          |    1 +
+ .../strict_frame_diff.json                         |    1 +
+ .../g3_real_clearance-discount_s42/trace.json      |    1 +
+ .../g3_real_dedup-keep-latest_s42/after.json       |    1 +
+ .../after_snapshot.json                            |    1 +
+ .../audit_receipt.json                             |    1 +
+ .../aura_certificate.json                          |    1 +
+ .../g3_real_dedup-keep-latest_s42/before.json      |    1 +
+ .../before_snapshot.json                           |    1 +
+ .../g3_real_dedup-keep-latest_s42/certificate.json |    1 +
+ .../certificate_replay.json                        |    1 +
+ .../g3_real_dedup-keep-latest_s42/contract.json    |    1 +
+ .../independent_contract_reference.json            |    1 +
+ .../g3_real_dedup-keep-latest_s42/instruction.txt  |    1 +
+ .../model_actions.jsonl                            |    4 +
+ .../native_checkers.json                           |    1 +
+ .../observations.json                              |    1 +
+ .../official_reference.json                        |    1 +
+ .../probe_observations.json                        |    1 +
+ .../g3_real_dedup-keep-latest_s42/probes.json      |    1 +
+ .../prompt_and_visible_api.json                    |    1 +
+ .../real_tool_trace.jsonl                          |    4 +
+ .../strict_frame_diff.json                         |    1 +
+ .../g3_real_dedup-keep-latest_s42/trace.json       |    1 +
+ .../g3_real_raise-ticket-priority_s42/after.json   |    1 +
+ .../after_snapshot.json                            |    1 +
+ .../audit_receipt.json                             |    1 +
+ .../aura_certificate.json                          |    1 +
+ .../g3_real_raise-ticket-priority_s42/before.json  |    1 +
+ .../before_snapshot.json                           |    1 +
+ .../certificate.json                               |    1 +
+ .../certificate_replay.json                        |    1 +
+ .../contract.json                                  |    1 +
+ .../independent_contract_reference.json            |    1 +
+ .../instruction.txt                                |    1 +
+ .../model_actions.jsonl                            |    2 +
+ .../native_checkers.json                           |    1 +
+ .../observations.json                              |    1 +
+ .../official_reference.json                        |    1 +
+ .../probe_observations.json                        |    1 +
+ .../g3_real_raise-ticket-priority_s42/probes.json  |    1 +
+ .../prompt_and_visible_api.json                    |    1 +
+ .../real_tool_trace.jsonl                          |    1 +
+ .../strict_frame_diff.json                         |    1 +
+ .../g3_real_raise-ticket-priority_s42/trace.json   |    1 +
+ .../g3_real_refund-and-restock_s42/after.json      |    1 +
+ .../after_snapshot.json                            |    1 +
+ .../audit_receipt.json                             |    1 +
+ .../aura_certificate.json                          |    1 +
+ .../g3_real_refund-and-restock_s42/before.json     |    1 +
+ .../before_snapshot.json                           |    1 +
+ .../certificate.json                               |    1 +
+ .../certificate_replay.json                        |    1 +
+ .../g3_real_refund-and-restock_s42/contract.json   |    1 +
+ .../independent_contract_reference.json            |    1 +
+ .../g3_real_refund-and-restock_s42/instruction.txt |    1 +
+ .../model_actions.jsonl                            |    4 +
+ .../native_checkers.json                           |    1 +
+ .../observations.json                              |    1 +
+ .../official_reference.json                        |    1 +
+ .../probe_observations.json                        |    1 +
+ .../g3_real_refund-and-restock_s42/probes.json     |    1 +
+ .../prompt_and_visible_api.json                    |    1 +
+ .../real_tool_trace.jsonl                          |    3 +
+ .../strict_frame_diff.json                         |    1 +
+ .../g3_real_refund-and-restock_s42/trace.json      |    1 +
+ .../g3_real_refuse-cancel-shipped_s42/after.json   |    1 +
+ .../after_snapshot.json                            |    1 +
+ .../audit_receipt.json                             |    1 +
+ .../aura_certificate.json                          |    1 +
+ .../g3_real_refuse-cancel-shipped_s42/before.json  |    1 +
+ .../before_snapshot.json                           |    1 +
+ .../certificate.json                               |    1 +
+ .../certificate_replay.json                        |    1 +
+ .../contract.json                                  |    1 +
+ .../independent_contract_reference.json            |    1 +
+ .../instruction.txt                                |    1 +
+ .../model_actions.jsonl                            |    2 +
+ .../native_checkers.json                           |    1 +
+ .../observations.json                              |    1 +
+ .../official_reference.json                        |    1 +
+ .../probe_observations.json                        |    1 +
+ .../g3_real_refuse-cancel-shipped_s42/probes.json  |    1 +
+ .../prompt_and_visible_api.json                    |    1 +
+ .../real_tool_trace.jsonl                          |    1 +
+ .../strict_frame_diff.json                         |    1 +
+ .../g3_real_refuse-cancel-shipped_s42/trace.json   |    1 +
+ stage83/results/g0_baseline_audit.json             |   86 ++
+ stage83/results/g1_noop_bench.json                 |  441 +++++++
+ stage83/results/g1_official_benchmark.json         |  122 ++
+ stage83/results/g1_oracle_bench.json               |  441 +++++++
+ stage83/results/g2_adapter_audit.json              |   83 ++
+ stage83/results/g3_real_agent_run_manifest.json    |  102 ++
+ stage83/results/g4_cost.csv                        |    5 +
+ stage83/results/g4_cost_corrected.csv              |    5 +
+ stage83/results/g4_metrics.csv                     |   42 +
+ stage83/results/g4_metrics_corrected.csv           |   42 +
+ stage83/results/g4_mismatch_analysis.md            |   63 +
+ stage83/results/historical_import_manifest.json    | 1226 ++++++++++++++++++++
+ stage83/results/provenance.json                    |   13 +
+ .../qwen3b_pilot/results/FILE_MANIFEST_SHA256.json |  520 +++++++++
+ .../results/qwen3b_pilot/results/README_RESULTS.md |   13 +
+ .../results/commands/agentsynth_head_sha.json      |   12 +
+ .../results/commands/aura_head_sha.json            |   12 +
+ .../results/commands/clone_agentsynth.json         |   13 +
+ .../results/commands/clone_aura_branch.json        |   17 +
+ .../commands/install_python_dependencies.json      |   20 +
+ .../results/commands/pin_agentsynth_commit.json    |   13 +
+ stage83/results/qwen3b_pilot/results/config.json   |   18 +
+ .../results/controls/verifier_preflight/after.json |    1 +
+ .../controls/verifier_preflight/audit_receipt.json |    1 +
+ .../controls/verifier_preflight/before.json        |    1 +
+ .../controls/verifier_preflight/certificate.json   |    1 +
+ .../controls/verifier_preflight/contract.json      |    1 +
+ .../verifier_preflight/native_checkers.json        |    1 +
+ .../controls/verifier_preflight/observations.json  |    1 +
+ .../verifier_preflight/preflight_receipt.json      |    6 +
+ .../controls/verifier_preflight/probes.json        |    1 +
+ .../verifier_preflight/strict_frame_diff.json      |    1 +
+ .../results/controls/verifier_preflight/trace.json |    1 +
+ .../results/qwen3b_pilot/results/environment.json  |   14 +
+ .../after.json                                     |    1 +
+ .../agent_tool_trace.json                          |   43 +
+ .../audit_receipt.json                             |    1 +
+ .../before.json                                    |    1 +
+ .../certificate.json                               |    1 +
+ .../certificate_replay.json                        |    5 +
+ .../contract.json                                  |    1 +
+ .../model_trajectory.json                          |   68 ++
+ .../native_checkers.json                           |    1 +
+ .../observations.json                              |    1 +
+ .../probes.json                                    |    1 +
+ .../published_checker_reproduction.json            |   84 ++
+ .../run_receipt.json                               |   13 +
+ .../strict_frame_diff.json                         |    1 +
+ .../trace.json                                     |    1 +
+ .../after.json                                     |    1 +
+ .../agent_tool_trace.json                          |   16 +
+ .../audit_receipt.json                             |    1 +
+ .../before.json                                    |    1 +
+ .../certificate.json                               |    1 +
+ .../certificate_replay.json                        |    5 +
+ .../contract.json                                  |    1 +
+ .../model_trajectory.json                          |   35 +
+ .../native_checkers.json                           |    1 +
+ .../observations.json                              |    1 +
+ .../probes.json                                    |    1 +
+ .../published_checker_reproduction.json            |   65 ++
+ .../run_receipt.json                               |   13 +
+ .../strict_frame_diff.json                         |    1 +
+ .../trace.json                                     |    1 +
+ .../after.json                                     |    1 +
+ .../agent_tool_trace.json                          |   29 +
+ .../audit_receipt.json                             |    1 +
+ .../before.json                                    |    1 +
+ .../certificate.json                               |    1 +
+ .../certificate_replay.json                        |    5 +
+ .../contract.json                                  |    1 +
+ .../model_trajectory.json                          |   50 +
+ .../native_checkers.json                           |    1 +
+ .../observations.json                              |    1 +
+ .../probes.json                                    |    1 +
+ .../published_checker_reproduction.json            |   65 ++
+ .../run_receipt.json                               |   13 +
+ .../strict_frame_diff.json                         |    1 +
+ .../trace.json                                     |    1 +
+ .../after.json                                     |    1 +
+ .../agent_tool_trace.json                          |   31 +
+ .../audit_receipt.json                             |    1 +
+ .../before.json                                    |    1 +
+ .../certificate.json                               |    1 +
+ .../certificate_replay.json                        |    5 +
+ .../contract.json                                  |    1 +
+ .../model_trajectory.json                          |   52 +
+ .../native_checkers.json                           |    1 +
+ .../observations.json                              |    1 +
+ .../probes.json                                    |    1 +
+ .../published_checker_reproduction.json            |   46 +
+ .../run_receipt.json                               |   13 +
+ .../strict_frame_diff.json                         |    1 +
+ .../trace.json                                     |    1 +
+ .../after.json                                     |    1 +
+ .../agent_tool_trace.json                          |   74 ++
+ .../audit_receipt.json                             |    1 +
+ .../before.json                                    |    1 +
+ .../certificate.json                               |    1 +
+ .../certificate_replay.json                        |    5 +
+ .../contract.json                                  |    1 +
+ .../model_trajectory.json                          |   99 ++
+ .../native_checkers.json                           |    1 +
+ .../observations.json                              |    1 +
+ .../probes.json                                    |    1 +
+ .../published_checker_reproduction.json            |   84 ++
+ .../run_receipt.json                               |   13 +
+ .../strict_frame_diff.json                         |    1 +
+ .../trace.json                                     |    1 +
+ .../results/qwen3b_pilot/results/pilot_results.csv |    6 +
+ .../results/qwen3b_pilot/results/run_status.json   |   88 ++
+ .../strict_contract_independent_reference.json     |  298 +++++
+ stage83/run_g3_experiment.py                       |  487 ++++++++
+ stage83/run_g4_analysis.py                         |  428 +++++++
+ stage83/tests/test_independent_reference.py        |  217 ++++
+ stage83/tests/test_qwen3b_pilot.py                 |   65 ++
+ 412 files changed, 26141 insertions(+), 12 deletions(-)
+
+
+=== git diff --name-status main...HEAD ===
+
+A	.gitignore
+A	AURA_STAGE83_CORRECTED_AUDIT.md
+A	AURA_STAGE83_HANDOFF_REPORT.md
+A	AURA_STAGE83_REAL_AGENT_KAGGLE.ipynb
+A	AURA_STAGE83_REAL_AGENT_KAGGLE_v2.ipynb
+A	AURA_STAGE8_3_CORRECTED_RESULTS.zip
+A	AURA_STAGE8_3_RESULTS.zip
+A	AURA_Stage7/ARTIFACT_MANIFEST.json
+A	AURA_Stage7/README.md
+A	AURA_Stage7/audit_agentdiff_contracts.py
+A	AURA_Stage7/aura_baselines/__init__.py
+A	AURA_Stage7/aura_baselines/surface.py
+A	AURA_Stage7/aura_evaluation/__init__.py
+A	AURA_Stage7/aura_evaluation/local_faults.py
+A	AURA_Stage7/aura_evaluation/study.py
+A	AURA_Stage7/aura_evidence/__init__.py
+A	AURA_Stage7/aura_evidence/capture.py
+A	AURA_Stage7/aura_evidence/diff.py
+A	AURA_Stage7/aura_evidence/ledger.py
+A	AURA_Stage7/aura_evidence/probes.py
+A	AURA_Stage7/aura_evidence/trace.py
+A	AURA_Stage7/aura_evidence/util.py
+A	AURA_Stage7/aura_evidence/validation.py
+A	AURA_Stage7/aura_external/__init__.py
+A	AURA_Stage7/aura_external/agentdiff.py
+A	AURA_Stage7/aura_external/agentsynth_adapter.py
+A	AURA_Stage7/aura_external/appworld.py
+A	AURA_Stage7/aura_external/fixtures.py
+A	AURA_Stage7/aura_planning/__init__.py
+A	AURA_Stage7/aura_planning/examples.py
+A	AURA_Stage7/aura_planning/live_runner.py
+A	AURA_Stage7/aura_planning/planner.py
+A	AURA_Stage7/aura_reasoning/__init__.py
+A	AURA_Stage7/aura_reasoning/model.py
+A	AURA_Stage7/aura_reasoning/reference_models.py
+A	AURA_Stage7/aura_verifier/__init__.py
+A	AURA_Stage7/aura_verifier/engine.py
+A	AURA_Stage7/docs/AGENTDIFF_FULL_DATASET_AUDIT_REFERENCE.json
+A	AURA_Stage7/docs/STAGE1_FIXTURE_HASH_COMPATIBILITY.json
+A	AURA_Stage7/docs/STAGE2_DESIGN.md
+A	AURA_Stage7/docs/STAGE3_DESIGN.md
+A	AURA_Stage7/docs/STAGE4_DESIGN.md
+A	AURA_Stage7/docs/STAGE5_DESIGN.md
+A	AURA_Stage7/docs/STAGE5_REPORT.md
+A	AURA_Stage7/docs/STAGE6_DESIGN.md
+A	AURA_Stage7/docs/STAGE6_REPORT.md
+A	AURA_Stage7/docs/STAGE7_DESIGN.md
+A	AURA_Stage7/docs/STAGE7_REPORT.md
+A	AURA_Stage7/examples/external/PROVENANCE.md
+A	AURA_Stage7/examples/external/agentdiff_public_contract_excerpt.jsonl
+A	AURA_Stage7/examples/models/clean_local_reference.json
+A	AURA_Stage7/examples/models/external_uncertainty_reference.json
+A	AURA_Stage7/examples/models/synthetic_inferred_notice_TEST_ONLY.json
+A	AURA_Stage7/examples/reference/probe_catalogue.json
+A	AURA_Stage7/examples/reference/task_contract.json
+A	AURA_Stage7/pyproject.toml
+A	AURA_Stage7/reproduce_stage3.py
+A	AURA_Stage7/reproduce_stage4.py
+A	AURA_Stage7/reproduce_stage5.py
+A	AURA_Stage7/reproduce_stage6.py
+A	AURA_Stage7/reproduce_stage7.py
+A	AURA_Stage7/run_demo.py
+A	AURA_Stage7/run_stage7_local.py
+A	AURA_Stage7/schemas/BoundedWorldModel.schema.json
+A	AURA_Stage7/schemas/Certificate.schema.json
+A	AURA_Stage7/schemas/Observation.schema.json
+A	AURA_Stage7/schemas/ProbeSpec.schema.json
+A	AURA_Stage7/schemas/ReasoningLedger.schema.json
+A	AURA_Stage7/schemas/TaskContract.schema.json
+A	AURA_Stage7/tests/fixtures/stage1_acceptance.csv
+A	AURA_Stage7/tests/fixtures/stage1_inputs/01_complete_success/expected.json
+A	AURA_Stage7/tests/fixtures/stage1_inputs/01_complete_success/observations.json
+A	AURA_Stage7/tests/fixtures/stage1_inputs/01_complete_success/probe_catalogue.json
+A	AURA_Stage7/tests/fixtures/stage1_inputs/01_complete_success/task_contract.json
+A	AURA_Stage7/tests/fixtures/stage1_inputs/02_missing_report/expected.json
+A	AURA_Stage7/tests/fixtures/stage1_inputs/02_missing_report/observations.json
+A	AURA_Stage7/tests/fixtures/stage1_inputs/02_missing_report/probe_catalogue.json
+A	AURA_Stage7/tests/fixtures/stage1_inputs/02_missing_report/task_contract.json
+A	AURA_Stage7/tests/fixtures/stage1_inputs/03_unauthorized_mutation/expected.json
+A	AURA_Stage7/tests/fixtures/stage1_inputs/03_unauthorized_mutation/observations.json
+A	AURA_Stage7/tests/fixtures/stage1_inputs/03_unauthorized_mutation/probe_catalogue.json
+A	AURA_Stage7/tests/fixtures/stage1_inputs/03_unauthorized_mutation/task_contract.json
+A	AURA_Stage7/tests/fixtures/stage1_inputs/04_duplicate_record/expected.json
+A	AURA_Stage7/tests/fixtures/stage1_inputs/04_duplicate_record/observations.json
+A	AURA_Stage7/tests/fixtures/stage1_inputs/04_duplicate_record/probe_catalogue.json
+A	AURA_Stage7/tests/fixtures/stage1_inputs/04_duplicate_record/task_contract.json
+A	AURA_Stage7/tests/fixtures/stage1_inputs/05_unobservable_notification/expected.json
+A	AURA_Stage7/tests/fixtures/stage1_inputs/05_unobservable_notification/observations.json
+A	AURA_Stage7/tests/fixtures/stage1_inputs/05_unobservable_notification/probe_catalogue.json
+A	AURA_Stage7/tests/fixtures/stage1_inputs/05_unobservable_notification/task_contract.json
+A	AURA_Stage7/tests/fixtures/stage1_inputs/06_known_bad_and_unknown/expected.json
+A	AURA_Stage7/tests/fixtures/stage1_inputs/06_known_bad_and_unknown/observations.json
+A	AURA_Stage7/tests/fixtures/stage1_inputs/06_known_bad_and_unknown/probe_catalogue.json
+A	AURA_Stage7/tests/fixtures/stage1_inputs/06_known_bad_and_unknown/task_contract.json
+A	AURA_Stage7/tests/fixtures/stage1_inputs/07_insufficient_frame_coverage/expected.json
+A	AURA_Stage7/tests/fixtures/stage1_inputs/07_insufficient_frame_coverage/observations.json
+A	AURA_Stage7/tests/fixtures/stage1_inputs/07_insufficient_frame_coverage/probe_catalogue.json
+A	AURA_Stage7/tests/fixtures/stage1_inputs/07_insufficient_frame_coverage/task_contract.json
+A	AURA_Stage7/tests/fixtures/stage1_inputs/08_conflicting_evidence/expected.json
+A	AURA_Stage7/tests/fixtures/stage1_inputs/08_conflicting_evidence/observations.json
+A	AURA_Stage7/tests/fixtures/stage1_inputs/08_conflicting_evidence/probe_catalogue.json
+A	AURA_Stage7/tests/fixtures/stage1_inputs/08_conflicting_evidence/task_contract.json
+A	AURA_Stage7/tests/fixtures/stage1_inputs/09_missing_required_process/expected.json
+A	AURA_Stage7/tests/fixtures/stage1_inputs/09_missing_required_process/observations.json
+A	AURA_Stage7/tests/fixtures/stage1_inputs/09_missing_required_process/probe_catalogue.json
+A	AURA_Stage7/tests/fixtures/stage1_inputs/09_missing_required_process/task_contract.json
+A	AURA_Stage7/tests/fixtures/stage1_inputs/10_unobservable_transient_effect/expected.json
+A	AURA_Stage7/tests/fixtures/stage1_inputs/10_unobservable_transient_effect/observations.json
+A	AURA_Stage7/tests/fixtures/stage1_inputs/10_unobservable_transient_effect/probe_catalogue.json
+A	AURA_Stage7/tests/fixtures/stage1_inputs/10_unobservable_transient_effect/task_contract.json
+A	AURA_Stage7/tests/fixtures/stage1_inputs/11_benign_alternative_path/expected.json
+A	AURA_Stage7/tests/fixtures/stage1_inputs/11_benign_alternative_path/observations.json
+A	AURA_Stage7/tests/fixtures/stage1_inputs/11_benign_alternative_path/probe_catalogue.json
+A	AURA_Stage7/tests/fixtures/stage1_inputs/11_benign_alternative_path/task_contract.json
+A	AURA_Stage7/tests/fixtures/stage1_inputs/12_external_frame_unobserved/expected.json
+A	AURA_Stage7/tests/fixtures/stage1_inputs/12_external_frame_unobserved/observations.json
+A	AURA_Stage7/tests/fixtures/stage1_inputs/12_external_frame_unobserved/probe_catalogue.json
+A	AURA_Stage7/tests/fixtures/stage1_inputs/12_external_frame_unobserved/task_contract.json
+A	AURA_Stage7/tests/test_agentsynth_adapter.py
+A	AURA_Stage7/tests/test_evidence_stage2.py
+A	AURA_Stage7/tests/test_live_stage5.py
+A	AURA_Stage7/tests/test_planner_stage5.py
+A	AURA_Stage7/tests/test_reasoning_stage4.py
+A	AURA_Stage7/tests/test_stage6_baselines.py
+A	AURA_Stage7/tests/test_stage6_external.py
+A	AURA_Stage7/tests/test_stage7_study.py
+A	AURA_Stage7/tests/test_verifier_stage3.py
+A	AURA_Stage7/verify_bounded.py
+A	AURA_Stage7/verify_capture.py
+A	AURA_Stage7/verify_task.py
+M	README.md
+A	artifacts/historical/ANTIGRAVITY_RUN_GUIDE.md
+A	artifacts/historical/ANTIGRAVITY_STAGE8_3_MASTER_PROMPT.md
+A	artifacts/historical/AURA_PROJECT_STATUS_AND_CORRECTIONS.md
+A	artifacts/historical/AURA_Stage8_2_Episode_Results_v1.csv
+A	artifacts/historical/AURA_Stage8_2_External_SQL_Pilot_Report_v1.md
+A	artifacts/historical/AURA_Stage8_2_Inspection_Ablations_v1.csv
+A	artifacts/historical/HANDOFF_MANIFEST_SHA256.json
+A	artifacts/historical/README_STAGE8_2.md
+A	artifacts/historical/REGRESSION_TEST_RECEIPT.txt
+A	artifacts/historical/STAGE82_REPRO_RECEIPT.txt
+A	artifacts/historical/START_HERE.md
+A	paper/MANUSCRIPT.md
+A	paper/REPRODUCIBILITY.md
+A	paper/generate_research_tables.py
+A	paper/main.tex
+A	paper/references.bib
+A	paper/tables/table1_main_benchmark.md
+A	paper/tables/table1_main_benchmark.tex
+A	paper/tables/table2_cera_cost.md
+A	paper/tables/table2_cera_cost.tex
+A	paper/tables/table3_ablation_soundness.tex
+A	paper/tables/table4_benchmark_gaming.tex
+A	stage82_agentsynth_pilot.py
+A	stage82_audit_ablations.py
+A	stage83/G0_STATUS.md
+A	stage83/G1_STATUS.md
+A	stage83/G2_STATUS.md
+A	stage83/G3_STATUS.md
+A	stage83/G4_STATUS.md
+A	stage83/G5_STATUS.md
+A	stage83/README.md
+A	stage83/STATUS.md
+A	stage83/build_contracts.py
+A	stage83/compile_g3_manifest.py
+A	stage83/debug_eval.py
+A	stage83/debug_pass.py
+A	stage83/independent_reference.py
+A	stage83/inspect_scenarios.py
+A	stage83/make_kaggle_nb.py
+A	stage83/make_kaggle_nb_v2.py
+A	stage83/package_g5_results.py
+A	stage83/results/SHA256SUMS.json
+A	stage83/results/config.json
+A	stage83/results/contracts/cancel-and-void-payment.json
+A	stage83/results/contracts/clearance-discount.json
+A	stage83/results/contracts/count-open-tickets.json
+A	stage83/results/contracts/deactivate-stale-users.json
+A	stage83/results/contracts/dedup-keep-latest.json
+A	stage83/results/contracts/frozen_contracts_manifest.json
+A	stage83/results/contracts/payroll-cap.json
+A	stage83/results/contracts/raise-ticket-priority.json
+A	stage83/results/contracts/reconcile-stock.json
+A	stage83/results/contracts/refund-and-restock.json
+A	stage83/results/contracts/refund-if-eligible.json
+A	stage83/results/contracts/refuse-cancel-shipped.json
+A	stage83/results/contracts/refuse-wipe-audit-log.json
+A	stage83/results/contracts/store-credit-return.json
+A	stage83/results/contracts/top-customer-spend.json
+A	stage83/results/core_v2_task_taxonomy.json
+A	stage83/results/environment.json
+A	stage83/results/episodes/clearance-discount/g3_real_clearance-discount_s42/after.json
+A	stage83/results/episodes/clearance-discount/g3_real_clearance-discount_s42/after_snapshot.json
+A	stage83/results/episodes/clearance-discount/g3_real_clearance-discount_s42/audit_receipt.json
+A	stage83/results/episodes/clearance-discount/g3_real_clearance-discount_s42/aura_certificate.json
+A	stage83/results/episodes/clearance-discount/g3_real_clearance-discount_s42/before.json
+A	stage83/results/episodes/clearance-discount/g3_real_clearance-discount_s42/before_snapshot.json
+A	stage83/results/episodes/clearance-discount/g3_real_clearance-discount_s42/certificate.json
+A	stage83/results/episodes/clearance-discount/g3_real_clearance-discount_s42/certificate_replay.json
+A	stage83/results/episodes/clearance-discount/g3_real_clearance-discount_s42/contract.json
+A	stage83/results/episodes/clearance-discount/g3_real_clearance-discount_s42/independent_contract_reference.json
+A	stage83/results/episodes/clearance-discount/g3_real_clearance-discount_s42/instruction.txt
+A	stage83/results/episodes/clearance-discount/g3_real_clearance-discount_s42/model_actions.jsonl
+A	stage83/results/episodes/clearance-discount/g3_real_clearance-discount_s42/native_checkers.json
+A	stage83/results/episodes/clearance-discount/g3_real_clearance-discount_s42/observations.json
+A	stage83/results/episodes/clearance-discount/g3_real_clearance-discount_s42/official_reference.json
+A	stage83/results/episodes/clearance-discount/g3_real_clearance-discount_s42/probe_observations.json
+A	stage83/results/episodes/clearance-discount/g3_real_clearance-discount_s42/probes.json
+A	stage83/results/episodes/clearance-discount/g3_real_clearance-discount_s42/prompt_and_visible_api.json
+A	stage83/results/episodes/clearance-discount/g3_real_clearance-discount_s42/real_tool_trace.jsonl
+A	stage83/results/episodes/clearance-discount/g3_real_clearance-discount_s42/strict_frame_diff.json
+A	stage83/results/episodes/clearance-discount/g3_real_clearance-discount_s42/trace.json
+A	stage83/results/episodes/dedup-keep-latest/g3_real_dedup-keep-latest_s42/after.json
+A	stage83/results/episodes/dedup-keep-latest/g3_real_dedup-keep-latest_s42/after_snapshot.json
+A	stage83/results/episodes/dedup-keep-latest/g3_real_dedup-keep-latest_s42/audit_receipt.json
+A	stage83/results/episodes/dedup-keep-latest/g3_real_dedup-keep-latest_s42/aura_certificate.json
+A	stage83/results/episodes/dedup-keep-latest/g3_real_dedup-keep-latest_s42/before.json
+A	stage83/results/episodes/dedup-keep-latest/g3_real_dedup-keep-latest_s42/before_snapshot.json
+A	stage83/results/episodes/dedup-keep-latest/g3_real_dedup-keep-latest_s42/certificate.json
+A	stage83/results/episodes/dedup-keep-latest/g3_real_dedup-keep-latest_s42/certificate_replay.json
+A	stage83/results/episodes/dedup-keep-latest/g3_real_dedup-keep-latest_s42/contract.json
+A	stage83/results/episodes/dedup-keep-latest/g3_real_dedup-keep-latest_s42/independent_contract_reference.json
+A	stage83/results/episodes/dedup-keep-latest/g3_real_dedup-keep-latest_s42/instruction.txt
+A	stage83/results/episodes/dedup-keep-latest/g3_real_dedup-keep-latest_s42/model_actions.jsonl
+A	stage83/results/episodes/dedup-keep-latest/g3_real_dedup-keep-latest_s42/native_checkers.json
+A	stage83/results/episodes/dedup-keep-latest/g3_real_dedup-keep-latest_s42/observations.json
+A	stage83/results/episodes/dedup-keep-latest/g3_real_dedup-keep-latest_s42/official_reference.json
+A	stage83/results/episodes/dedup-keep-latest/g3_real_dedup-keep-latest_s42/probe_observations.json
+A	stage83/results/episodes/dedup-keep-latest/g3_real_dedup-keep-latest_s42/probes.json
+A	stage83/results/episodes/dedup-keep-latest/g3_real_dedup-keep-latest_s42/prompt_and_visible_api.json
+A	stage83/results/episodes/dedup-keep-latest/g3_real_dedup-keep-latest_s42/real_tool_trace.jsonl
+A	stage83/results/episodes/dedup-keep-latest/g3_real_dedup-keep-latest_s42/strict_frame_diff.json
+A	stage83/results/episodes/dedup-keep-latest/g3_real_dedup-keep-latest_s42/trace.json
+A	stage83/results/episodes/raise-ticket-priority/g3_real_raise-ticket-priority_s42/after.json
+A	stage83/results/episodes/raise-ticket-priority/g3_real_raise-ticket-priority_s42/after_snapshot.json
+A	stage83/results/episodes/raise-ticket-priority/g3_real_raise-ticket-priority_s42/audit_receipt.json
+A	stage83/results/episodes/raise-ticket-priority/g3_real_raise-ticket-priority_s42/aura_certificate.json
+A	stage83/results/episodes/raise-ticket-priority/g3_real_raise-ticket-priority_s42/before.json
+A	stage83/results/episodes/raise-ticket-priority/g3_real_raise-ticket-priority_s42/before_snapshot.json
+A	stage83/results/episodes/raise-ticket-priority/g3_real_raise-ticket-priority_s42/certificate.json
+A	stage83/results/episodes/raise-ticket-priority/g3_real_raise-ticket-priority_s42/certificate_replay.json
+A	stage83/results/episodes/raise-ticket-priority/g3_real_raise-ticket-priority_s42/contract.json
+A	stage83/results/episodes/raise-ticket-priority/g3_real_raise-ticket-priority_s42/independent_contract_reference.json
+A	stage83/results/episodes/raise-ticket-priority/g3_real_raise-ticket-priority_s42/instruction.txt
+A	stage83/results/episodes/raise-ticket-priority/g3_real_raise-ticket-priority_s42/model_actions.jsonl
+A	stage83/results/episodes/raise-ticket-priority/g3_real_raise-ticket-priority_s42/native_checkers.json
+A	stage83/results/episodes/raise-ticket-priority/g3_real_raise-ticket-priority_s42/observations.json
+A	stage83/results/episodes/raise-ticket-priority/g3_real_raise-ticket-priority_s42/official_reference.json
+A	stage83/results/episodes/raise-ticket-priority/g3_real_raise-ticket-priority_s42/probe_observations.json
+A	stage83/results/episodes/raise-ticket-priority/g3_real_raise-ticket-priority_s42/probes.json
+A	stage83/results/episodes/raise-ticket-priority/g3_real_raise-ticket-priority_s42/prompt_and_visible_api.json
+A	stage83/results/episodes/raise-ticket-priority/g3_real_raise-ticket-priority_s42/real_tool_trace.jsonl
+A	stage83/results/episodes/raise-ticket-priority/g3_real_raise-ticket-priority_s42/strict_frame_diff.json
+A	stage83/results/episodes/raise-ticket-priority/g3_real_raise-ticket-priority_s42/trace.json
+A	stage83/results/episodes/refund-and-restock/g3_real_refund-and-restock_s42/after.json
+A	stage83/results/episodes/refund-and-restock/g3_real_refund-and-restock_s42/after_snapshot.json
+A	stage83/results/episodes/refund-and-restock/g3_real_refund-and-restock_s42/audit_receipt.json
+A	stage83/results/episodes/refund-and-restock/g3_real_refund-and-restock_s42/aura_certificate.json
+A	stage83/results/episodes/refund-and-restock/g3_real_refund-and-restock_s42/before.json
+A	stage83/results/episodes/refund-and-restock/g3_real_refund-and-restock_s42/before_snapshot.json
+A	stage83/results/episodes/refund-and-restock/g3_real_refund-and-restock_s42/certificate.json
+A	stage83/results/episodes/refund-and-restock/g3_real_refund-and-restock_s42/certificate_replay.json
+A	stage83/results/episodes/refund-and-restock/g3_real_refund-and-restock_s42/contract.json
+A	stage83/results/episodes/refund-and-restock/g3_real_refund-and-restock_s42/independent_contract_reference.json
+A	stage83/results/episodes/refund-and-restock/g3_real_refund-and-restock_s42/instruction.txt
+A	stage83/results/episodes/refund-and-restock/g3_real_refund-and-restock_s42/model_actions.jsonl
+A	stage83/results/episodes/refund-and-restock/g3_real_refund-and-restock_s42/native_checkers.json
+A	stage83/results/episodes/refund-and-restock/g3_real_refund-and-restock_s42/observations.json
+A	stage83/results/episodes/refund-and-restock/g3_real_refund-and-restock_s42/official_reference.json
+A	stage83/results/episodes/refund-and-restock/g3_real_refund-and-restock_s42/probe_observations.json
+A	stage83/results/episodes/refund-and-restock/g3_real_refund-and-restock_s42/probes.json
+A	stage83/results/episodes/refund-and-restock/g3_real_refund-and-restock_s42/prompt_and_visible_api.json
+A	stage83/results/episodes/refund-and-restock/g3_real_refund-and-restock_s42/real_tool_trace.jsonl
+A	stage83/results/episodes/refund-and-restock/g3_real_refund-and-restock_s42/strict_frame_diff.json
+A	stage83/results/episodes/refund-and-restock/g3_real_refund-and-restock_s42/trace.json
+A	stage83/results/episodes/refuse-cancel-shipped/g3_real_refuse-cancel-shipped_s42/after.json
+A	stage83/results/episodes/refuse-cancel-shipped/g3_real_refuse-cancel-shipped_s42/after_snapshot.json
+A	stage83/results/episodes/refuse-cancel-shipped/g3_real_refuse-cancel-shipped_s42/audit_receipt.json
+A	stage83/results/episodes/refuse-cancel-shipped/g3_real_refuse-cancel-shipped_s42/aura_certificate.json
+A	stage83/results/episodes/refuse-cancel-shipped/g3_real_refuse-cancel-shipped_s42/before.json
+A	stage83/results/episodes/refuse-cancel-shipped/g3_real_refuse-cancel-shipped_s42/before_snapshot.json
+A	stage83/results/episodes/refuse-cancel-shipped/g3_real_refuse-cancel-shipped_s42/certificate.json
+A	stage83/results/episodes/refuse-cancel-shipped/g3_real_refuse-cancel-shipped_s42/certificate_replay.json
+A	stage83/results/episodes/refuse-cancel-shipped/g3_real_refuse-cancel-shipped_s42/contract.json
+A	stage83/results/episodes/refuse-cancel-shipped/g3_real_refuse-cancel-shipped_s42/independent_contract_reference.json
+A	stage83/results/episodes/refuse-cancel-shipped/g3_real_refuse-cancel-shipped_s42/instruction.txt
+A	stage83/results/episodes/refuse-cancel-shipped/g3_real_refuse-cancel-shipped_s42/model_actions.jsonl
+A	stage83/results/episodes/refuse-cancel-shipped/g3_real_refuse-cancel-shipped_s42/native_checkers.json
+A	stage83/results/episodes/refuse-cancel-shipped/g3_real_refuse-cancel-shipped_s42/observations.json
+A	stage83/results/episodes/refuse-cancel-shipped/g3_real_refuse-cancel-shipped_s42/official_reference.json
+A	stage83/results/episodes/refuse-cancel-shipped/g3_real_refuse-cancel-shipped_s42/probe_observations.json
+A	stage83/results/episodes/refuse-cancel-shipped/g3_real_refuse-cancel-shipped_s42/probes.json
+A	stage83/results/episodes/refuse-cancel-shipped/g3_real_refuse-cancel-shipped_s42/prompt_and_visible_api.json
+A	stage83/results/episodes/refuse-cancel-shipped/g3_real_refuse-cancel-shipped_s42/real_tool_trace.jsonl
+A	stage83/results/episodes/refuse-cancel-shipped/g3_real_refuse-cancel-shipped_s42/strict_frame_diff.json
+A	stage83/results/episodes/refuse-cancel-shipped/g3_real_refuse-cancel-shipped_s42/trace.json
+A	stage83/results/g0_baseline_audit.json
+A	stage83/results/g1_noop_bench.json
+A	stage83/results/g1_official_benchmark.json
+A	stage83/results/g1_oracle_bench.json
+A	stage83/results/g2_adapter_audit.json
+A	stage83/results/g3_real_agent_run_manifest.json
+A	stage83/results/g4_cost.csv
+A	stage83/results/g4_cost_corrected.csv
+A	stage83/results/g4_metrics.csv
+A	stage83/results/g4_metrics_corrected.csv
+A	stage83/results/g4_mismatch_analysis.md
+A	stage83/results/historical_import_manifest.json
+A	stage83/results/provenance.json
+A	stage83/results/qwen3b_pilot/results/FILE_MANIFEST_SHA256.json
+A	stage83/results/qwen3b_pilot/results/README_RESULTS.md
+A	stage83/results/qwen3b_pilot/results/commands/agentsynth_head_sha.json
+A	stage83/results/qwen3b_pilot/results/commands/aura_head_sha.json
+A	stage83/results/qwen3b_pilot/results/commands/clone_agentsynth.json
+A	stage83/results/qwen3b_pilot/results/commands/clone_aura_branch.json
+A	stage83/results/qwen3b_pilot/results/commands/install_python_dependencies.json
+A	stage83/results/qwen3b_pilot/results/commands/pin_agentsynth_commit.json
+A	stage83/results/qwen3b_pilot/results/config.json
+A	stage83/results/qwen3b_pilot/results/controls/verifier_preflight/after.json
+A	stage83/results/qwen3b_pilot/results/controls/verifier_preflight/audit_receipt.json
+A	stage83/results/qwen3b_pilot/results/controls/verifier_preflight/before.json
+A	stage83/results/qwen3b_pilot/results/controls/verifier_preflight/certificate.json
+A	stage83/results/qwen3b_pilot/results/controls/verifier_preflight/contract.json
+A	stage83/results/qwen3b_pilot/results/controls/verifier_preflight/native_checkers.json
+A	stage83/results/qwen3b_pilot/results/controls/verifier_preflight/observations.json
+A	stage83/results/qwen3b_pilot/results/controls/verifier_preflight/preflight_receipt.json
+A	stage83/results/qwen3b_pilot/results/controls/verifier_preflight/probes.json
+A	stage83/results/qwen3b_pilot/results/controls/verifier_preflight/strict_frame_diff.json
+A	stage83/results/qwen3b_pilot/results/controls/verifier_preflight/trace.json
+A	stage83/results/qwen3b_pilot/results/environment.json
+A	stage83/results/qwen3b_pilot/results/episodes/cancel-and-void-payment/qwen3b_real_cancel-and-void-payment_seed42/after.json
+A	stage83/results/qwen3b_pilot/results/episodes/cancel-and-void-payment/qwen3b_real_cancel-and-void-payment_seed42/agent_tool_trace.json
+A	stage83/results/qwen3b_pilot/results/episodes/cancel-and-void-payment/qwen3b_real_cancel-and-void-payment_seed42/audit_receipt.json
+A	stage83/results/qwen3b_pilot/results/episodes/cancel-and-void-payment/qwen3b_real_cancel-and-void-payment_seed42/before.json
+A	stage83/results/qwen3b_pilot/results/episodes/cancel-and-void-payment/qwen3b_real_cancel-and-void-payment_seed42/certificate.json
+A	stage83/results/qwen3b_pilot/results/episodes/cancel-and-void-payment/qwen3b_real_cancel-and-void-payment_seed42/certificate_replay.json
+A	stage83/results/qwen3b_pilot/results/episodes/cancel-and-void-payment/qwen3b_real_cancel-and-void-payment_seed42/contract.json
+A	stage83/results/qwen3b_pilot/results/episodes/cancel-and-void-payment/qwen3b_real_cancel-and-void-payment_seed42/model_trajectory.json
+A	stage83/results/qwen3b_pilot/results/episodes/cancel-and-void-payment/qwen3b_real_cancel-and-void-payment_seed42/native_checkers.json
+A	stage83/results/qwen3b_pilot/results/episodes/cancel-and-void-payment/qwen3b_real_cancel-and-void-payment_seed42/observations.json
+A	stage83/results/qwen3b_pilot/results/episodes/cancel-and-void-payment/qwen3b_real_cancel-and-void-payment_seed42/probes.json
+A	stage83/results/qwen3b_pilot/results/episodes/cancel-and-void-payment/qwen3b_real_cancel-and-void-payment_seed42/published_checker_reproduction.json
+A	stage83/results/qwen3b_pilot/results/episodes/cancel-and-void-payment/qwen3b_real_cancel-and-void-payment_seed42/run_receipt.json
+A	stage83/results/qwen3b_pilot/results/episodes/cancel-and-void-payment/qwen3b_real_cancel-and-void-payment_seed42/strict_frame_diff.json
+A	stage83/results/qwen3b_pilot/results/episodes/cancel-and-void-payment/qwen3b_real_cancel-and-void-payment_seed42/trace.json
+A	stage83/results/qwen3b_pilot/results/episodes/clearance-discount/qwen3b_real_clearance-discount_seed42/after.json
+A	stage83/results/qwen3b_pilot/results/episodes/clearance-discount/qwen3b_real_clearance-discount_seed42/agent_tool_trace.json
+A	stage83/results/qwen3b_pilot/results/episodes/clearance-discount/qwen3b_real_clearance-discount_seed42/audit_receipt.json
+A	stage83/results/qwen3b_pilot/results/episodes/clearance-discount/qwen3b_real_clearance-discount_seed42/before.json
+A	stage83/results/qwen3b_pilot/results/episodes/clearance-discount/qwen3b_real_clearance-discount_seed42/certificate.json
+A	stage83/results/qwen3b_pilot/results/episodes/clearance-discount/qwen3b_real_clearance-discount_seed42/certificate_replay.json
+A	stage83/results/qwen3b_pilot/results/episodes/clearance-discount/qwen3b_real_clearance-discount_seed42/contract.json
+A	stage83/results/qwen3b_pilot/results/episodes/clearance-discount/qwen3b_real_clearance-discount_seed42/model_trajectory.json
+A	stage83/results/qwen3b_pilot/results/episodes/clearance-discount/qwen3b_real_clearance-discount_seed42/native_checkers.json
+A	stage83/results/qwen3b_pilot/results/episodes/clearance-discount/qwen3b_real_clearance-discount_seed42/observations.json
+A	stage83/results/qwen3b_pilot/results/episodes/clearance-discount/qwen3b_real_clearance-discount_seed42/probes.json
+A	stage83/results/qwen3b_pilot/results/episodes/clearance-discount/qwen3b_real_clearance-discount_seed42/published_checker_reproduction.json
+A	stage83/results/qwen3b_pilot/results/episodes/clearance-discount/qwen3b_real_clearance-discount_seed42/run_receipt.json
+A	stage83/results/qwen3b_pilot/results/episodes/clearance-discount/qwen3b_real_clearance-discount_seed42/strict_frame_diff.json
+A	stage83/results/qwen3b_pilot/results/episodes/clearance-discount/qwen3b_real_clearance-discount_seed42/trace.json
+A	stage83/results/qwen3b_pilot/results/episodes/dedup-keep-latest/qwen3b_real_dedup-keep-latest_seed42/after.json
+A	stage83/results/qwen3b_pilot/results/episodes/dedup-keep-latest/qwen3b_real_dedup-keep-latest_seed42/agent_tool_trace.json
+A	stage83/results/qwen3b_pilot/results/episodes/dedup-keep-latest/qwen3b_real_dedup-keep-latest_seed42/audit_receipt.json
+A	stage83/results/qwen3b_pilot/results/episodes/dedup-keep-latest/qwen3b_real_dedup-keep-latest_seed42/before.json
+A	stage83/results/qwen3b_pilot/results/episodes/dedup-keep-latest/qwen3b_real_dedup-keep-latest_seed42/certificate.json
+A	stage83/results/qwen3b_pilot/results/episodes/dedup-keep-latest/qwen3b_real_dedup-keep-latest_seed42/certificate_replay.json
+A	stage83/results/qwen3b_pilot/results/episodes/dedup-keep-latest/qwen3b_real_dedup-keep-latest_seed42/contract.json
+A	stage83/results/qwen3b_pilot/results/episodes/dedup-keep-latest/qwen3b_real_dedup-keep-latest_seed42/model_trajectory.json
+A	stage83/results/qwen3b_pilot/results/episodes/dedup-keep-latest/qwen3b_real_dedup-keep-latest_seed42/native_checkers.json
+A	stage83/results/qwen3b_pilot/results/episodes/dedup-keep-latest/qwen3b_real_dedup-keep-latest_seed42/observations.json
+A	stage83/results/qwen3b_pilot/results/episodes/dedup-keep-latest/qwen3b_real_dedup-keep-latest_seed42/probes.json
+A	stage83/results/qwen3b_pilot/results/episodes/dedup-keep-latest/qwen3b_real_dedup-keep-latest_seed42/published_checker_reproduction.json
+A	stage83/results/qwen3b_pilot/results/episodes/dedup-keep-latest/qwen3b_real_dedup-keep-latest_seed42/run_receipt.json
+A	stage83/results/qwen3b_pilot/results/episodes/dedup-keep-latest/qwen3b_real_dedup-keep-latest_seed42/strict_frame_diff.json
+A	stage83/results/qwen3b_pilot/results/episodes/dedup-keep-latest/qwen3b_real_dedup-keep-latest_seed42/trace.json
+A	stage83/results/qwen3b_pilot/results/episodes/raise-ticket-priority/qwen3b_real_raise-ticket-priority_seed42/after.json
+A	stage83/results/qwen3b_pilot/results/episodes/raise-ticket-priority/qwen3b_real_raise-ticket-priority_seed42/agent_tool_trace.json
+A	stage83/results/qwen3b_pilot/results/episodes/raise-ticket-priority/qwen3b_real_raise-ticket-priority_seed42/audit_receipt.json
+A	stage83/results/qwen3b_pilot/results/episodes/raise-ticket-priority/qwen3b_real_raise-ticket-priority_seed42/before.json
+A	stage83/results/qwen3b_pilot/results/episodes/raise-ticket-priority/qwen3b_real_raise-ticket-priority_seed42/certificate.json
+A	stage83/results/qwen3b_pilot/results/episodes/raise-ticket-priority/qwen3b_real_raise-ticket-priority_seed42/certificate_replay.json
+A	stage83/results/qwen3b_pilot/results/episodes/raise-ticket-priority/qwen3b_real_raise-ticket-priority_seed42/contract.json
+A	stage83/results/qwen3b_pilot/results/episodes/raise-ticket-priority/qwen3b_real_raise-ticket-priority_seed42/model_trajectory.json
+A	stage83/results/qwen3b_pilot/results/episodes/raise-ticket-priority/qwen3b_real_raise-ticket-priority_seed42/native_checkers.json
+A	stage83/results/qwen3b_pilot/results/episodes/raise-ticket-priority/qwen3b_real_raise-ticket-priority_seed42/observations.json
+A	stage83/results/qwen3b_pilot/results/episodes/raise-ticket-priority/qwen3b_real_raise-ticket-priority_seed42/probes.json
+A	stage83/results/qwen3b_pilot/results/episodes/raise-ticket-priority/qwen3b_real_raise-ticket-priority_seed42/published_checker_reproduction.json
+A	stage83/results/qwen3b_pilot/results/episodes/raise-ticket-priority/qwen3b_real_raise-ticket-priority_seed42/run_receipt.json
+A	stage83/results/qwen3b_pilot/results/episodes/raise-ticket-priority/qwen3b_real_raise-ticket-priority_seed42/strict_frame_diff.json
+A	stage83/results/qwen3b_pilot/results/episodes/raise-ticket-priority/qwen3b_real_raise-ticket-priority_seed42/trace.json
+A	stage83/results/qwen3b_pilot/results/episodes/refund-and-restock/qwen3b_real_refund-and-restock_seed42/after.json
+A	stage83/results/qwen3b_pilot/results/episodes/refund-and-restock/qwen3b_real_refund-and-restock_seed42/agent_tool_trace.json
+A	stage83/results/qwen3b_pilot/results/episodes/refund-and-restock/qwen3b_real_refund-and-restock_seed42/audit_receipt.json
+A	stage83/results/qwen3b_pilot/results/episodes/refund-and-restock/qwen3b_real_refund-and-restock_seed42/before.json
+A	stage83/results/qwen3b_pilot/results/episodes/refund-and-restock/qwen3b_real_refund-and-restock_seed42/certificate.json
+A	stage83/results/qwen3b_pilot/results/episodes/refund-and-restock/qwen3b_real_refund-and-restock_seed42/certificate_replay.json
+A	stage83/results/qwen3b_pilot/results/episodes/refund-and-restock/qwen3b_real_refund-and-restock_seed42/contract.json
+A	stage83/results/qwen3b_pilot/results/episodes/refund-and-restock/qwen3b_real_refund-and-restock_seed42/model_trajectory.json
+A	stage83/results/qwen3b_pilot/results/episodes/refund-and-restock/qwen3b_real_refund-and-restock_seed42/native_checkers.json
+A	stage83/results/qwen3b_pilot/results/episodes/refund-and-restock/qwen3b_real_refund-and-restock_seed42/observations.json
+A	stage83/results/qwen3b_pilot/results/episodes/refund-and-restock/qwen3b_real_refund-and-restock_seed42/probes.json
+A	stage83/results/qwen3b_pilot/results/episodes/refund-and-restock/qwen3b_real_refund-and-restock_seed42/published_checker_reproduction.json
+A	stage83/results/qwen3b_pilot/results/episodes/refund-and-restock/qwen3b_real_refund-and-restock_seed42/run_receipt.json
+A	stage83/results/qwen3b_pilot/results/episodes/refund-and-restock/qwen3b_real_refund-and-restock_seed42/strict_frame_diff.json
+A	stage83/results/qwen3b_pilot/results/episodes/refund-and-restock/qwen3b_real_refund-and-restock_seed42/trace.json
+A	stage83/results/qwen3b_pilot/results/pilot_results.csv
+A	stage83/results/qwen3b_pilot/results/run_status.json
+A	stage83/results/strict_contract_independent_reference.json
+A	stage83/run_g3_experiment.py
+A	stage83/run_g4_analysis.py
+A	stage83/tests/test_independent_reference.py
+A	stage83/tests/test_qwen3b_pilot.py
+

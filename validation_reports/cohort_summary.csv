@@ -1,0 +1,5 @@
+cohort,execution_mode,model_id,episodes_count,reproduced_sql_accuracy,strict_reference_accuracy,aura_verdict_accuracy,concordance_rate,false_pass_count,false_fail_count,replay_match_rate,noninterference_rate
+stage7_local,local_baseline,none_scripted_local_sqlite,13,0.2308,0.2308,0.2308,1.0,0,0,1.0,1.0
+stage82_scripted_controls,scripted_control,none_scripted_control,36,0.75,0.1667,0.1667,1.0,0,0,1.0,1.0
+stage83_qwen05b_genuine,genuine_llm,Qwen/Qwen2.5-0.5B-Instruct,5,0.5833,0.2,0.2,1.0,0,0,1.0,1.0
+stage83_qwen3b_genuine,genuine_llm,Qwen/Qwen2.5-3B-Instruct,5,0.75,0.6,0.6,1.0,0,0,1.0,1.0
