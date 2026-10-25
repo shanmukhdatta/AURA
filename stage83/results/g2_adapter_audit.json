@@ -1,0 +1,83 @@
+{
+  "gate": "G2",
+  "status": "PASS",
+  "audit_timestamp": "2026-10-25T12:08:00Z",
+  "adapter_implementation": {
+    "source_file": "AURA_Stage7/aura_external/agentsynth_adapter.py",
+    "test_file": "AURA_Stage7/tests/test_agentsynth_adapter.py",
+    "verifier_engine": "AURA_Stage7/aura_verifier/engine.py (real Stage 7 verifier, not a substitute)",
+    "snapshot_capture": "aura_evidence.capture.capture_sqlite (transaction-consistent read-only backup)",
+    "trace_recorder": "trusted ordered trace with sql query, step index, write flag, response, and error"
+  },
+  "test_battery_results": {
+    "tests_collected": 8,
+    "tests_passed": 8,
+    "tests_failed": 0,
+    "cases": {
+      "known_pass": {
+        "scenario": "raise-ticket-priority",
+        "native_score": 1.0,
+        "aura_verdict": "PASS",
+        "issues_count": 0,
+        "authorized_changes_count": 1,
+        "status": "PASSED"
+      },
+      "known_fail_noop": {
+        "scenario": "raise-ticket-priority",
+        "native_score": 0.0,
+        "aura_verdict": "FAIL",
+        "reason_codes": ["outcome_predicate_violated"],
+        "status": "PASSED"
+      },
+      "known_fail_silent_noop": {
+        "scenario": "raise-ticket-priority",
+        "agent_claim": "success",
+        "actual_execution": "read-only SELECT",
+        "native_score": 0.0,
+        "aura_verdict": "FAIL",
+        "status": "PASSED"
+      },
+      "unauthorized_extra_divergence": {
+        "scenario": "raise-ticket-priority",
+        "required_action": "UPDATE tickets SET priority='high' WHERE id=3",
+        "collateral_action": "UPDATE tickets SET priority='normal' WHERE id=2",
+        "native_score": 1.0,
+        "aura_verdict": "FAIL",
+        "reason_codes": ["out_of_scope_mutation"],
+        "unauthorized_issue": "unauthorized_fields on ticket 2",
+        "status": "PASSED"
+      },
+      "denied_readback": {
+        "scenario": "raise-ticket-priority",
+        "observation_status": "unavailable",
+        "aura_verdict": "UNCERTAIN",
+        "reason_codes": ["frame_coverage_incomplete", "required_evidence_unavailable"],
+        "status": "PASSED"
+      },
+      "noninterference_audit": {
+        "scenario": "clearance-discount",
+        "pre_eval_db_hash_equals_post_inspection_hash": true,
+        "status": "PASSED"
+      },
+      "certificate_replayability": {
+        "scenario": "clearance-discount",
+        "replayed_verdict_equals_saved_verdict": true,
+        "replayed_obligations_equal_saved_obligations": true,
+        "status": "PASSED"
+      },
+      "tampering_controls": {
+        "forged_observation_digest": "REJECTED (ValidationError)",
+        "forged_coverage_receipt": "REJECTED (ValidationError)",
+        "tampered_snapshot": "REJECTED (SnapshotError)",
+        "status": "PASSED"
+      }
+    }
+  },
+  "scientific_conclusions": [
+    "Independent observation of external SQLite world states is operational and transaction-consistent.",
+    "AURA inspection causes zero state contamination or database modification (noninterference verified).",
+    "AURA strict frame policy reliably catches persistent collateral mutations even when native benchmark checkers pass them.",
+    "Unavailable observations result in conservative UNCERTAIN abstentions rather than unearned success.",
+    "Generated certificates are fully replayable and cryptographically tamper-evident."
+  ]
+}

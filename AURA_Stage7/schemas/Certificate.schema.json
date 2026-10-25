@@ -1,0 +1,192 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aura.local/schemas/certificate-v1.schema.json",
+  "title": "AURA Verification Certificate v1",
+  "type": "object",
+  "description": "",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "certificate_id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_.-]*$"
+    },
+    "run_id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_.-]*$"
+    },
+    "contract_id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_.-]*$"
+    },
+    "contract_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "epoch_id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_.-]*$"
+    },
+    "mode": {
+      "enum": [
+        "bounded_exact",
+        "conservative"
+      ]
+    },
+    "verdict": {
+      "enum": [
+        "PASS",
+        "FAIL",
+        "UNCERTAIN"
+      ]
+    },
+    "decision_status": {
+      "enum": [
+        "normal",
+        "evidence_conflict",
+        "model_inconsistent",
+        "solver_indeterminate"
+      ]
+    },
+    "reason_codes": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z][a-z0-9_.-]*$"
+      },
+      "minItems": 1
+    },
+    "obligation_results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "description": "",
+        "additionalProperties": false,
+        "properties": {
+          "obligation_id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_.-]*$"
+          },
+          "truth": {
+            "enum": [
+              "pass",
+              "fail",
+              "unknown"
+            ]
+          },
+          "reason_code": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_.-]*$"
+          },
+          "evidence_refs": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9_.-]*$"
+            },
+            "uniqueItems": true
+          }
+        },
+        "required": [
+          "obligation_id",
+          "truth",
+          "reason_code",
+          "evidence_refs"
+        ]
+      }
+    },
+    "inspection_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z][a-z0-9_.-]*$"
+      }
+    },
+    "evidence_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z][a-z0-9_.-]*$"
+      }
+    },
+    "verified_frame_surfaces": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z][a-z0-9_.-]*$"
+      },
+      "uniqueItems": true
+    },
+    "unresolved_obligation_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z][a-z0-9_.-]*$"
+      },
+      "uniqueItems": true
+    },
+    "costs": {
+      "type": "object",
+      "description": "",
+      "additionalProperties": false,
+      "properties": {
+        "capture_latency_ms": {
+          "type": "number",
+          "minimum": 0
+        },
+        "inspection_latency_ms": {
+          "type": "number",
+          "minimum": 0
+        },
+        "planner_latency_ms": {
+          "type": "number",
+          "minimum": 0
+        },
+        "bytes_read": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "capture_latency_ms",
+        "inspection_latency_ms",
+        "planner_latency_ms",
+        "bytes_read"
+      ]
+    },
+    "trust_assumptions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "schema_version",
+    "certificate_id",
+    "run_id",
+    "contract_id",
+    "contract_sha256",
+    "epoch_id",
+    "mode",
+    "verdict",
+    "decision_status",
+    "reason_codes",
+    "obligation_results",
+    "inspection_ids",
+    "evidence_refs",
+    "verified_frame_surfaces",
+    "unresolved_obligation_ids",
+    "costs",
+    "trust_assumptions",
+    "created_at"
+  ]
+}

@@ -1,0 +1,10 @@
+_aura_recovery/
+__pycache__/
+*.pyc
+.pytest_cache/
+stage82_clean_replication/
+_deps/
+scratch*/
+*.sqlite3
+*.tmp
+*.zip

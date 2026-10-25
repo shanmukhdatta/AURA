@@ -1,0 +1,86 @@
+{
+  "gate": "G0",
+  "status": "PASS",
+  "audit_timestamp": "2026-10-25T11:48:30Z",
+  "environment": {
+    "os": "Windows",
+    "python_version": "3.11.9",
+    "pytest_version": "9.1.1",
+    "numpy_version": "2.4.6",
+    "jsonschema_version": "4.26.0",
+    "pyyaml_version": "6.0.3"
+  },
+  "historical_recovery": {
+    "handoff_md": "AURA_ANTIGRAVITY_COMPLETE_HANDOFF_ONE_FILE.md",
+    "embedded_zip_sha256": "784fd8571dae33e138bb7b17c6d4a3f7366c1bc52239e6e2e79008d42f4eb95b",
+    "files_in_manifest": 135,
+    "manifest_mismatches": 0,
+    "imported_files_count": 136,
+    "import_manifest_path": "stage83/results/historical_import_manifest.json"
+  },
+  "inherited_test_suite": {
+    "total_collected": 186,
+    "passed": 185,
+    "failed": 0,
+    "skipped": 1,
+    "skipped_details": {
+      "test": "AURA_Stage7/tests/test_evidence_stage2.py::test_symlink_detected_during_snapshot",
+      "reason": "Windows non-admin environment lacks SeCreateSymbolicLinkPrivilege (WinError 1314); test gracefully skipped"
+    },
+    "test_duration_seconds": 114.74,
+    "fixes_applied": [
+      {
+        "file": "AURA_Stage7/aura_evidence/probes.py",
+        "description": "Fixed _file probe to verify raw bytes sha256 against manifest before decoding to UTF-8, avoiding platform-dependent CRLF universal-newline mismatch on Windows."
+      },
+      {
+        "file": "AURA_Stage7/tests/test_evidence_stage2.py",
+        "description": "Added platform privilege check/skip on symlink creation in test_symlink_detected_during_snapshot."
+      },
+      {
+        "file": "AURA_Stage7/aura_evaluation/local_faults.py",
+        "description": "Explicitly closed SQLite connection in modify() to prevent Windows file locking (WinError 32)."
+      },
+      {
+        "file": "stage82_agentsynth_pilot.py",
+        "description": "Explicitly closed SQLite connection in execute_agent() to prevent Windows file locking before db.unlink()."
+      }
+    ]
+  },
+  "stage82_replication": {
+    "clean_out_dir": "stage82_clean_replication",
+    "clean_zip": "stage82_clean_replication.zip",
+    "zip_entries": 331,
+    "internal_manifest_entries": 330,
+    "internal_manifest_verification": "100% MATCH",
+    "episodes_tested": 36,
+    "aura_verdict_counts": {
+      "PASS": 6,
+      "FAIL": 24,
+      "UNCERTAIN": 6
+    },
+    "native_sql_checker_pass_counts": {
+      "oracle": 6,
+      "no_op": 0,
+      "silent_noop": 0,
+      "partial": 0,
+      "unauthorized_extra": 6,
+      "denied_readback": 6
+    },
+    "discrepancies_vs_historical": 0,
+    "ablation_judgments_tested": 144,
+    "ablation_discrepancies_vs_historical": 0,
+    "negative_controls": {
+      "forged_observation_digest": "REJECTED",
+      "forged_coverage_receipt": "REJECTED",
+      "tampered_snapshot": "REJECTED"
+    }
+  },
+  "unvalidated_assumptions_audit": {
+    "coverage_completeness": "Stage 8.2 covers solely declared SQLite tables within the task database. Filesystem, external side-effects, and unlisted tables are out of scope.",
+    "frame_allowlists": "Strict primary-key/column-level allowlists flag unauthorized edits as FAIL. This is a distinct policy scope compared to upstream benchmark checkers that only test postconditions.",
+    "deny_readback": "Denial is simulated in harness by marking observation status unavailable; not a live network or OS denial.",
+    "hidden_read_channels": "No task checker labels are leaked to agent or probe planner; readback facts are computed from snapshots by independent adapter.",
+    "tool_result_trust": "Zero trust in agent self-reported success; tested and verified by silent_noop control returning FAIL."
+  }
+}

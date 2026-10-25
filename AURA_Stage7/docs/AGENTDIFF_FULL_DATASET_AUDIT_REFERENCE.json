@@ -1,0 +1,17 @@
+{
+  "audit_date": "2026-10-24",
+  "source": "https://github.com/agent-diff-bench/agent-diff/blob/main/datasets/agent-diff-bench/all_numbered.jsonl",
+  "source_blob_sha_git": "ce4a82e788a8bdb05d43b4b6d41c621a0b2758ba",
+  "method": "Read all 224 public task JSONL entries through connected GitHub source; independently mapped the documented Stage 6 supported operator subset. This is a STATIC CONTRACT-SYNTAX analysis. Full raw data not bundled; audit_agentdiff_contracts.py recreates local compatibility report when user supplies upstream JSONL.",
+  "task_count": 224,
+  "services": {"slack":59,"box":48,"linear":57,"calendar":60},
+  "total_assertions":713,
+  "assertion_types": {"added":480,"changed":201,"removed":32},
+  "expected_count_task_count":182,
+  "tasks_supported_syntactically_by_current_subset":168,
+  "tasks_with_at_least_one_unsupported_clause":56,
+  "important_unsupported": ["removed diff_type", "i_contains", "in", "not_in", "exists", "nontrivial expected_changes"],
+  "official_native_evaluations":0,
+  "agent_trajectories_executed":0,
+  "note":"Source metadata are external contract descriptions, not evaluation outcomes; this approximate subset classifier does not validate native Agent-Diff scorer semantics."
+}

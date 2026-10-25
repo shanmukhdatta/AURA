@@ -1,0 +1,49 @@
+{
+  "cases_tested": 36,
+  "ablation_certificates": 144,
+  "ablation_verdict_counts": {
+    "all": {
+      "PASS": 6,
+      "FAIL": 24,
+      "UNCERTAIN": 6
+    },
+    "no_frame_probe": {
+      "UNCERTAIN": 18,
+      "FAIL": 18
+    },
+    "no_outcome_probe": {
+      "UNCERTAIN": 30,
+      "FAIL": 6
+    },
+    "no_probes": {
+      "UNCERTAIN": 36
+    }
+  },
+  "negative_controls": {
+    "forged_observation_digest": "REJECTED",
+    "forged_coverage_receipt": "REJECTED",
+    "tampered_snapshot": "REJECTED"
+  },
+  "independent_sql_checkers_replayed_without_mismatches": 36,
+  "remark": "No probes -> all UNCERTAIN; known observed failures may remain FAIL with only one probe. Neither ablation is an external LLM experiment."
+}
+{
+  "cases": 36,
+  "tasks": 6,
+  "aura_expected_matches": 36,
+  "aura_verdict_counts": {
+    "PASS": 6,
+    "FAIL": 24,
+    "UNCERTAIN": 6
+  },
+  "native_sql_checker_pass_counts_by_variant": {
+    "oracle": 6,
+    "no_op": 0,
+    "silent_noop": 0,
+    "partial": 0,
+    "unauthorized_extra": 6,
+    "denied_readback": 6
+  },
+  "mismatches": []
+}
+Evidence ZIP: /mnt/data/AURA_Stage8_3_Fresh_Validation.zip files: 330

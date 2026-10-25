@@ -1,0 +1,1 @@
+Refund order 5 and put its items back into inventory: add each line item's quantity back to the matching SKU's stock. Leave order 6 and its stock contribution alone.

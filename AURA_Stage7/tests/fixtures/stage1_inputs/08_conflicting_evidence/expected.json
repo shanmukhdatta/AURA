@@ -1,0 +1,9 @@
+{
+  "case_id": "08_conflicting_evidence",
+  "expected_verdict": "UNCERTAIN",
+  "decision_status": "evidence_conflict",
+  "reason_code": "evidence_conflict",
+  "reference_world_count": 8,
+  "observable_world_count": 0,
+  "note": "Expected result for Stage 1 specification tests. No AURA engine was run."
+}
