@@ -124,39 +124,56 @@ def generate_sha256sums() -> Dict[str, str]:
 
 
 def create_results_zip() -> Tuple[Path, str]:
-    zip_path = REPO_ROOT / 'AURA_STAGE8_3_RESULTS.zip'
-    if zip_path.exists():
-        zip_path.unlink()
+    zip_paths = [
+        REPO_ROOT / 'AURA_STAGE8_3_CORRECTED_RESULTS.zip',
+        REPO_ROOT / 'AURA_STAGE8_3_RESULTS.zip'
+    ]
+    
+    zip_sha256 = ""
+    entry_count = 0
 
-    print(f"Packaging {zip_path.name}...")
-    with zipfile.ZipFile(zip_path, 'w', compression=zipfile.ZIP_DEFLATED, compresslevel=6) as zf:
-        # Include stage83/ results, status files, contracts, scripts, notebooks
-        for base_sub in ['stage83', 'AURA_STAGE83_REAL_AGENT_KAGGLE.ipynb']:
-            p = REPO_ROOT / base_sub
-            if p.is_file():
-                zf.write(p, arcname=base_sub)
-            elif p.is_dir():
-                for root, dirs, files in os.walk(p):
-                    for f in files:
-                        fp = Path(root) / f
-                        # Exclude cache or temp files
-                        if '__pycache__' in str(fp) or fp.suffix in ('.pyc', '.tmp'):
-                            continue
-                        arc = str(fp.relative_to(REPO_ROOT)).replace('\\', '/')
-                        zf.write(fp, arcname=arc)
+    for zip_path in zip_paths:
+        if zip_path.exists():
+            zip_path.unlink()
 
-    # Test CRC
-    with zipfile.ZipFile(zip_path, 'r') as zf:
-        bad = zf.testzip()
-        if bad is not None:
-            raise RuntimeError(f"ZIP CRC corrupted at {bad}")
-        entry_count = len(zf.namelist())
+        print(f"Packaging {zip_path.name}...")
+        with zipfile.ZipFile(zip_path, 'w', compression=zipfile.ZIP_DEFLATED, compresslevel=6) as zf:
+            # Include stage83/ results, status files, contracts, scripts, tests, notebooks
+            for base_sub in [
+                'stage83',
+                'AURA_STAGE83_REAL_AGENT_KAGGLE_v2.ipynb',
+                'AURA_STAGE83_REAL_AGENT_KAGGLE.ipynb'
+            ]:
+                p = REPO_ROOT / base_sub
+                if p.is_file():
+                    zf.write(p, arcname=base_sub)
+                elif p.is_dir():
+                    for root, dirs, files in os.walk(p):
+                        for f in files:
+                            fp = Path(root) / f
+                            # Exclude cache or temp files
+                            if '__pycache__' in str(fp) or fp.suffix in ('.pyc', '.tmp'):
+                                continue
+                            arc = str(fp.relative_to(REPO_ROOT)).replace('\\', '/')
+                            zf.write(fp, arcname=arc)
 
-    zip_bytes = zip_path.read_bytes()
-    zip_sha256 = hashlib.sha256(zip_bytes).hexdigest()
-    print(f"Exported {zip_path.name} ({len(zip_bytes):,} bytes, {entry_count} entries)")
-    print(f"SHA256: {zip_sha256}")
-    return zip_path, zip_sha256
+        # Test CRC
+        with zipfile.ZipFile(zip_path, 'r') as zf:
+            bad = zf.testzip()
+            if bad is not None:
+                raise RuntimeError(f"ZIP CRC corrupted at {bad}")
+            entry_count = len(zf.namelist())
+
+        zip_bytes = zip_path.read_bytes()
+        zip_sha256 = hashlib.sha256(zip_bytes).hexdigest()
+        print(f"Exported {zip_path.name} ({len(zip_bytes):,} bytes, {entry_count} entries)")
+        print(f"SHA256: {zip_sha256}")
+
+        # Also copy to parent workspace directory for convenience
+        parent_copy = REPO_ROOT.parent / zip_path.name
+        parent_copy.write_bytes(zip_bytes)
+
+    return zip_paths[0], zip_sha256
 
 
 def write_g5_status_md(zip_name: str, zip_sha256: str, entry_count: int) -> None:

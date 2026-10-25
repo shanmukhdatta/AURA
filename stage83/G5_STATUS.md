@@ -3,9 +3,9 @@
 ## Execution Summary
 - **Gate**: G5 (Reproducibility, Packaging, GitHub Feature-Branch PR)
 - **Status**: PASS
-- **Package Archive**: `AURA_STAGE8_3_RESULTS.zip`
-- **Archive SHA256**: `46e7901f05e87da1d615ed257c5ea90144439b76df2dfc43df5458e6dba98cf1`
-- **Archive Size**: 163,369 bytes (155 archive entries)
+- **Package Archive**: `AURA_STAGE8_3_CORRECTED_RESULTS.zip`
+- **Archive SHA256**: `e6836569b6276781bd70906b375578ba523c95a177e3f471afb1b058e332534f`
+- **Archive Size**: 190,130 bytes (165 archive entries)
 - **ZIP CRC Verification**: PASSED (0 corrupted CRC entries)
 - **Manifest Check**: 100% matched against `stage83/results/SHA256SUMS.json`
 

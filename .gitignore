@@ -9,3 +9,4 @@ scratch*/
 *.tmp
 *.zip
 !AURA_STAGE8_3_RESULTS.zip
+!AURA_STAGE8_3_CORRECTED_RESULTS.zip
