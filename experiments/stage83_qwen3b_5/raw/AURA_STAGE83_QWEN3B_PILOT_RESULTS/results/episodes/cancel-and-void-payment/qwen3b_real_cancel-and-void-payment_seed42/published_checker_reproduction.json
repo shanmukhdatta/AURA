@@ -1,0 +1,84 @@
+{
+  "method": "REPRODUCED_PUBLISHED_CHECKERS_NOT_OFFICIAL_AGENTSYNTH_RUNNER",
+  "all_matched": false,
+  "passed_count": 2,
+  "total_count": 4,
+  "checks": [
+    {
+      "index": 0,
+      "kind": "sql",
+      "matched": false,
+      "observed": [
+        [
+          "processing"
+        ]
+      ],
+      "reference_spec": {
+        "kind": "sql",
+        "query": "SELECT status FROM orders WHERE id=3",
+        "equals": [
+          [
+            "cancelled"
+          ]
+        ]
+      }
+    },
+    {
+      "index": 1,
+      "kind": "sql",
+      "matched": false,
+      "observed": [
+        [
+          "captured"
+        ]
+      ],
+      "reference_spec": {
+        "kind": "sql",
+        "query": "SELECT status FROM payments WHERE order_id=3",
+        "equals": [
+          [
+            "voided"
+          ]
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "kind": "sql",
+      "matched": true,
+      "observed": [
+        [
+          "processing"
+        ]
+      ],
+      "reference_spec": {
+        "kind": "sql",
+        "query": "SELECT status FROM orders WHERE id=4",
+        "equals": [
+          [
+            "processing"
+          ]
+        ]
+      }
+    },
+    {
+      "index": 3,
+      "kind": "sql",
+      "matched": true,
+      "observed": [
+        [
+          "captured"
+        ]
+      ],
+      "reference_spec": {
+        "kind": "sql",
+        "query": "SELECT status FROM payments WHERE order_id=4",
+        "equals": [
+          [
+            "captured"
+          ]
+        ]
+      }
+    }
+  ]
+}

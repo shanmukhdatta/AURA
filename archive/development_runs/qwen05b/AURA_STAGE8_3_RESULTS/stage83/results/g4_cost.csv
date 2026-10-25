@@ -1,0 +1,5 @@
+policy,episodes_evaluated,avg_probes,avg_probe_cost_units,avg_planner_overhead_ms,total_effective_cost,decisive_rate,false_pass_rate,false_fail_rate,notes
+cera,64,1.88,3.25,0.3621,3.6121,1.0,0.0,0.0,Counterexample-guided risk-amortized. Minimizes probe count on counterexamples.
+greedy,64,1.88,3.25,0.071,3.321,1.0,0.0,0.0,"Greedy 1-step variance reduction. Fast planning, slightly sub-optimal probe sequencing."
+fixed,64,1.88,3.375,0.0446,3.4196,1.0,0.0,0.0,"Static pre-ordered sequence. Zero planning overhead, but executes unneeded probes."
+exhaustive,64,6.0,29.2,0.0886,29.2886,1.0,0.0,0.0,Full complete inspection. Always evaluates every probe regardless of intermediate verdict.

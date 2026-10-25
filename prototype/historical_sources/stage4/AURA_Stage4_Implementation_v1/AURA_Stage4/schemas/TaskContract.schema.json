@@ -1,0 +1,237 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aura.local/schemas/task-contract-v1.schema.json",
+  "title": "AURA TaskContract v1",
+  "description": "",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "contract_id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_.-]*$"
+    },
+    "contract_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "task_description": {
+      "type": "string",
+      "minLength": 1
+    },
+    "surfaces": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "description": "",
+        "additionalProperties": false,
+        "properties": {
+          "surface_id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_.-]*$"
+          },
+          "kind": {
+            "enum": [
+              "sqlite",
+              "filesystem",
+              "trace",
+              "mock_external"
+            ]
+          },
+          "mutable": {
+            "type": "boolean"
+          },
+          "scope": {
+            "type": "string",
+            "minLength": 1
+          },
+          "observation_boundary": {
+            "enum": [
+              "full",
+              "partial",
+              "unavailable"
+            ]
+          },
+          "consistency_domain": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "surface_id",
+          "kind",
+          "mutable",
+          "scope",
+          "observation_boundary",
+          "consistency_domain"
+        ]
+      },
+      "minItems": 1
+    },
+    "frame_policy": {
+      "type": "object",
+      "description": "",
+      "additionalProperties": false,
+      "properties": {
+        "policy": {
+          "enum": [
+            "closed_world",
+            "declared_only"
+          ]
+        },
+        "declared_mutation_surfaces": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_.-]*$"
+          },
+          "uniqueItems": true
+        },
+        "required_coverage_method": {
+          "enum": [
+            "snapshot_pair",
+            "complete_journal",
+            "either",
+            "none"
+          ]
+        },
+        "allowed_effects": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "description": "",
+            "additionalProperties": false,
+            "properties": {
+              "surface_id": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9_.-]*$"
+              },
+              "operation": {
+                "enum": [
+                  "insert",
+                  "update",
+                  "delete",
+                  "create_file",
+                  "modify_file",
+                  "delete_file",
+                  "none"
+                ]
+              },
+              "target_pattern": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "surface_id",
+              "operation",
+              "target_pattern"
+            ]
+          }
+        }
+      },
+      "required": [
+        "policy",
+        "declared_mutation_surfaces",
+        "required_coverage_method",
+        "allowed_effects"
+      ]
+    },
+    "obligations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "description": "",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_.-]*$"
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1
+          },
+          "category": {
+            "enum": [
+              "outcome",
+              "frame",
+              "process",
+              "external"
+            ]
+          },
+          "surface_id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_.-]*$"
+          },
+          "predicate": {
+            "type": "object",
+            "description": "Finite v1 predicates only; operator-specific rules are semantic invariants, not fully captured by JSON Schema.",
+            "additionalProperties": false,
+            "properties": {
+              "operator": {
+                "enum": [
+                  "eq",
+                  "neq",
+                  "true",
+                  "false",
+                  "count_eq",
+                  "same_as"
+                ]
+              },
+              "fact_key": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9_.-]*$"
+              },
+              "expected": {
+                "type": [
+                  "string",
+                  "number",
+                  "boolean",
+                  "null"
+                ]
+              },
+              "comparison_fact_key": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9_.-]*$"
+              }
+            },
+            "required": [
+              "operator",
+              "fact_key"
+            ]
+          },
+          "required_complete_coverage": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9_.-]*$"
+            },
+            "uniqueItems": true,
+            "default": []
+          }
+        },
+        "required": [
+          "id",
+          "description",
+          "category",
+          "surface_id",
+          "predicate",
+          "required_complete_coverage"
+        ]
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "schema_version",
+    "contract_id",
+    "contract_version",
+    "task_description",
+    "surfaces",
+    "frame_policy",
+    "obligations"
+  ]
+}

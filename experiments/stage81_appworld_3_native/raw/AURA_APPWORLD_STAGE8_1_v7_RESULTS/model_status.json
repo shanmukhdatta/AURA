@@ -1,0 +1,7 @@
+{
+  "model_id": "Qwen/Qwen2.5-3B-Instruct",
+  "ready": true,
+  "error": null,
+  "inference_only": true,
+  "training": false
+}

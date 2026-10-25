@@ -1,0 +1,1 @@
+{"allowlist":{"contacts":{"1":["deleted_row"]}},"changes":[{"operation":"delete_row","pk":[1],"table":"contacts"}],"issues":[]}

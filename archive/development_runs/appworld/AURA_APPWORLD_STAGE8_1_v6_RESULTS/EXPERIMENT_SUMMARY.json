@@ -1,0 +1,14 @@
+{
+  "readiness": "NOT_READY_APPWORLD_SETUP_ERROR",
+  "notebook_version": "v6-appworld-only",
+  "track_a_repeated": false,
+  "appworld_ready": false,
+  "model_ready": false,
+  "native_task_count": 0,
+  "native_evaluated_count": 0,
+  "setup_failure_phase": "appworld_dev_task_index",
+  "task_audit": [],
+  "external_aura_certificates_created": false,
+  "valid_for_held_out_score": false,
+  "scientific_note": "Authentic AppWorld official dev scores; independent AURA AppWorld verification adapter not built."
+}

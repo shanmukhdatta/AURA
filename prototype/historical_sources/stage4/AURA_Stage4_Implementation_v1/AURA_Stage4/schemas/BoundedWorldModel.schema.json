@@ -1,0 +1,172 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aura.local/schemas/bounded-world-model-v1.schema.json",
+  "title": "AURA Stage 4 BoundedWorldModel",
+  "description": "Externally authored finite reference model. Contains no hidden actual-world label. Logical guarantees are conditional on its validity.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "model_id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_.-]*$"
+    },
+    "fact_domains": {
+      "type": "object",
+      "minProperties": 1,
+      "propertyNames": {
+        "type": "string",
+        "pattern": "^[a-z][a-z0-9_.-]*$"
+      },
+      "additionalProperties": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 32,
+        "items": {
+          "type": [
+            "string",
+            "integer",
+            "number",
+            "boolean",
+            "null"
+          ]
+        }
+      }
+    },
+    "constraints": {
+      "type": "array",
+      "maxItems": 128,
+      "items": {
+        "$ref": "#/$defs/formula"
+      }
+    },
+    "max_worlds": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 100000
+    }
+  },
+  "required": [
+    "schema_version",
+    "model_id",
+    "fact_domains",
+    "constraints",
+    "max_worlds"
+  ],
+  "$defs": {
+    "formula": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "op": {
+              "const": "fact_eq"
+            },
+            "fact_key": {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9_.-]*$"
+            },
+            "value": {
+              "type": [
+                "string",
+                "integer",
+                "number",
+                "boolean",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "op",
+            "fact_key",
+            "value"
+          ]
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "op": {
+              "const": "fact_same"
+            },
+            "left": {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9_.-]*$"
+            },
+            "right": {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9_.-]*$"
+            }
+          },
+          "required": [
+            "op",
+            "left",
+            "right"
+          ]
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "op": {
+              "const": "not"
+            },
+            "arg": {
+              "$ref": "#/$defs/formula"
+            }
+          },
+          "required": [
+            "op",
+            "arg"
+          ]
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "op": {
+              "enum": [
+                "and",
+                "or"
+              ]
+            },
+            "args": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/formula"
+              },
+              "minItems": 2
+            }
+          },
+          "required": [
+            "op",
+            "args"
+          ]
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "op": {
+              "const": "implies"
+            },
+            "if": {
+              "$ref": "#/$defs/formula"
+            },
+            "then": {
+              "$ref": "#/$defs/formula"
+            }
+          },
+          "required": [
+            "op",
+            "if",
+            "then"
+          ]
+        }
+      ]
+    }
+  }
+}

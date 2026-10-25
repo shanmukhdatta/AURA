@@ -1,0 +1,1 @@
+[{"checker_index":0,"expected":[["shipped"]],"kind":"sql","matched":true,"observed":[["shipped"]],"query":"SELECT status FROM orders WHERE id=9"}]

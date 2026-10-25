@@ -1,0 +1,147 @@
+[
+  {
+    "path": "EXPERIMENT_SUMMARY.json",
+    "bytes": 825,
+    "sha256": "f94095bf94a841b53d386a2545fcd5ffc033f6350a4319fb52c8c01489de3649"
+  },
+  {
+    "path": "config.json",
+    "bytes": 506,
+    "sha256": "0991546b38354491b027dd33db28d0ce89dbb1f0fa7e83333098818653d624ea"
+  },
+  {
+    "path": "data_preflight.json",
+    "bytes": 322,
+    "sha256": "7993607b9e84c966f14a85c7b402db67119889e0fc4e734bc1283b2f9fcbb246"
+  },
+  {
+    "path": "model_status.json",
+    "bytes": 125,
+    "sha256": "7c76f6a31b2590fe2a68c86e1ad5167c703b9a58aa840807bc41c86134329954"
+  },
+  {
+    "path": "native_evaluator_preflight.json",
+    "bytes": 229,
+    "sha256": "f395aece31bc5ad032613d9bef2cc8b40680386a4280195afe4592f8671025f1"
+  },
+  {
+    "path": "setup_checklist.json",
+    "bytes": 1344,
+    "sha256": "2555b510e8ca6f64dd2999c2601206ab85ed23a6cb6150ae7accd97b5dadce15"
+  },
+  {
+    "path": "setup_status.json",
+    "bytes": 149,
+    "sha256": "5534acb782d0a10a585715991789b5298d8133c6c81f0852448a74dfc34a0499"
+  },
+  {
+    "path": "track_B/50e1ac9_1/agent_code_trajectory.json",
+    "bytes": 2199,
+    "sha256": "0c3ecb4802e7d8bf42c43c15784181368f37c9f15f8a9fda30b0d0c6964bd288"
+  },
+  {
+    "path": "track_B/50e1ac9_1/native_api_calls.jsonl",
+    "bytes": 136,
+    "sha256": "78239e7f00e8d51d30d8066aed29a8c6465f7b8c8dda512e84f839cbc72083ab"
+  },
+  {
+    "path": "track_B/50e1ac9_1/native_evidence_status.json",
+    "bytes": 238,
+    "sha256": "37df6d167c983e297f8b73d23763481e23276074b4c0e38fcb278c8001f42f59"
+  },
+  {
+    "path": "track_B/50e1ac9_1/official_appworld_evaluation_summary.json",
+    "bytes": 169,
+    "sha256": "a87166d3317d820f6c7ed38dca4f8be51a175c96ef9141aefb891846e838179f"
+  },
+  {
+    "path": "track_B/50e1ac9_1/official_noop_control_summary.json",
+    "bytes": 169,
+    "sha256": "a87166d3317d820f6c7ed38dca4f8be51a175c96ef9141aefb891846e838179f"
+  },
+  {
+    "path": "track_B/50e1ac9_1/run_status.json",
+    "bytes": 441,
+    "sha256": "3e7b79ef8a8197073392824f13c08a17b89ee74a800a5c005c7073cd5265ccbd"
+  },
+  {
+    "path": "track_B/50e1ac9_2/agent_code_trajectory.json",
+    "bytes": 4731,
+    "sha256": "bf39275c0f73ff8d02d4105d173af7d13ff5ffa5e48d254f4e5e34d15be173a7"
+  },
+  {
+    "path": "track_B/50e1ac9_2/native_api_calls.jsonl",
+    "bytes": 558,
+    "sha256": "6c7fb884db04b6b131c16a3e809d5cd272c7f734363fb03b06d30707bbdb719e"
+  },
+  {
+    "path": "track_B/50e1ac9_2/native_evidence_status.json",
+    "bytes": 238,
+    "sha256": "498041f61c72ecc127154504ba4dc37008ab4cb4e51c9d20fb79c328cc209f08"
+  },
+  {
+    "path": "track_B/50e1ac9_2/official_appworld_evaluation_summary.json",
+    "bytes": 169,
+    "sha256": "a87166d3317d820f6c7ed38dca4f8be51a175c96ef9141aefb891846e838179f"
+  },
+  {
+    "path": "track_B/50e1ac9_2/official_noop_control_summary.json",
+    "bytes": 169,
+    "sha256": "a87166d3317d820f6c7ed38dca4f8be51a175c96ef9141aefb891846e838179f"
+  },
+  {
+    "path": "track_B/50e1ac9_2/run_status.json",
+    "bytes": 441,
+    "sha256": "c51c275994745a2fdb2b1f395b22661eb25ae99f6c1fdda9dda8d61ab005a05a"
+  },
+  {
+    "path": "track_B/50e1ac9_3/agent_code_trajectory.json",
+    "bytes": 12348,
+    "sha256": "9a27a719ebb0cdaebbd9e0e57f9055ec5048494a46205c387ae3b3add1d4a0d8"
+  },
+  {
+    "path": "track_B/50e1ac9_3/native_api_calls.jsonl",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "track_B/50e1ac9_3/native_evidence_status.json",
+    "bytes": 236,
+    "sha256": "94f49f3d8ec8752a2c1de7cb28923621a9e4012190d06599eb9b99f8bd3cf800"
+  },
+  {
+    "path": "track_B/50e1ac9_3/official_appworld_evaluation_summary.json",
+    "bytes": 169,
+    "sha256": "a87166d3317d820f6c7ed38dca4f8be51a175c96ef9141aefb891846e838179f"
+  },
+  {
+    "path": "track_B/50e1ac9_3/official_noop_control_summary.json",
+    "bytes": 169,
+    "sha256": "a87166d3317d820f6c7ed38dca4f8be51a175c96ef9141aefb891846e838179f"
+  },
+  {
+    "path": "track_B/50e1ac9_3/run_status.json",
+    "bytes": 440,
+    "sha256": "1e8e8eb67aa10a25384af5369701b0f4f0456482d40365ca8fa81ca0afca2ed3"
+  },
+  {
+    "path": "track_B/appworld_task_ids.json",
+    "bytes": 135,
+    "sha256": "08f8b087c6c3d8589d9f262612cfabc3cd9a102c74e3787709d65b3755698b41"
+  },
+  {
+    "path": "track_B/no_op_controls.json",
+    "bytes": 449,
+    "sha256": "ff8dc9b0ac9fea6e153821a60822a1e4d349594748242478ced10055ae8b5483"
+  },
+  {
+    "path": "track_B/summary.csv",
+    "bytes": 488,
+    "sha256": "2bd706d711b895eef0ff11fe605bcc81aa7bdfea6d00db5e321185990f1c6ee0"
+  },
+  {
+    "path": "worker_status.json",
+    "bytes": 725,
+    "sha256": "89d6671ddbef7373a1962030d7faabd2609cd6418d3bfff50f0c0963db12375d"
+  }
+]

@@ -1,0 +1,9 @@
+{
+  "case_id": "05_unobservable_notification",
+  "expected_verdict": "UNCERTAIN",
+  "decision_status": "normal",
+  "reason_code": "unconfirmed_external_effect",
+  "reference_world_count": 9,
+  "observable_world_count": 3,
+  "note": "Expected result for Stage 1 specification tests. No AURA engine was run."
+}

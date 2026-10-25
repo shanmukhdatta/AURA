@@ -1,0 +1,9 @@
+{
+  "case_id": "04_duplicate_record",
+  "expected_verdict": "FAIL",
+  "decision_status": "normal",
+  "reason_code": "record_multiplicity_violation",
+  "reference_world_count": 7,
+  "observable_world_count": 1,
+  "note": "Expected result for Stage 1 specification tests. No AURA engine was run."
+}

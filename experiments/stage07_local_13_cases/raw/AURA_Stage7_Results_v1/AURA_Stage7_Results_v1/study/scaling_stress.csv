@@ -1,0 +1,16 @@
+facts,possible_worlds,policy,sampled_worlds,mean_probe_cost,false_passes,false_fails,total_policy_runtime_ms,source_type
+4,16,fixed,16,2.875,0,0,0.4065,author_generated_scale_study
+4,16,greedy,16,2.375,0,0,0.60234,author_generated_scale_study
+4,16,cera,16,2.375,0,0,2.555254,author_generated_scale_study
+5,32,fixed,16,3.0,0,0,0.831528,author_generated_scale_study
+5,32,greedy,16,3.875,0,0,1.202396,author_generated_scale_study
+5,32,cera,16,2.875,0,0,5.458701,author_generated_scale_study
+6,64,fixed,16,3.1875,0,0,1.27313,author_generated_scale_study
+6,64,greedy,16,3.5,0,0,1.738757,author_generated_scale_study
+6,64,cera,16,3.125,0,0,11.962938,author_generated_scale_study
+7,128,fixed,16,3.25,0,0,2.299075,author_generated_scale_study
+7,128,greedy,16,3.75,0,0,2.792123,author_generated_scale_study
+7,128,cera,16,3.75,0,0,26.429703,author_generated_scale_study
+8,256,fixed,16,3.375,0,0,3.563232,author_generated_scale_study
+8,256,greedy,16,3.875,0,0,4.454349,author_generated_scale_study
+8,256,cera,16,2.875,0,0,51.235288,author_generated_scale_study

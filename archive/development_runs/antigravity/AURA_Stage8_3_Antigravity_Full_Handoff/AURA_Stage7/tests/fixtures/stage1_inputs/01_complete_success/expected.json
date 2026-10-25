@@ -1,0 +1,9 @@
+{
+  "case_id": "01_complete_success",
+  "expected_verdict": "PASS",
+  "decision_status": "normal",
+  "reason_code": "all_obligations_supported",
+  "reference_world_count": 7,
+  "observable_world_count": 1,
+  "note": "Expected result for Stage 1 specification tests. No AURA engine was run."
+}

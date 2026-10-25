@@ -1,0 +1,179 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aura.local/schemas/observation-v1.schema.json",
+  "title": "AURA Observation v1",
+  "type": "object",
+  "description": "",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "observation_id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_.-]*$"
+    },
+    "run_id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_.-]*$"
+    },
+    "probe_id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_.-]*$"
+    },
+    "epoch_id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_.-]*$"
+    },
+    "observed_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "status": {
+      "enum": [
+        "ok",
+        "unavailable",
+        "error"
+      ]
+    },
+    "reason_code": {
+      "enum": [
+        "none",
+        "timeout_no_readback",
+        "permission_denied",
+        "stale",
+        "probe_error",
+        "integrity_failure",
+        "unsupported"
+      ]
+    },
+    "channel": {
+      "enum": [
+        "independent_verifier",
+        "conditionally_trusted",
+        "agent_self_report"
+      ]
+    },
+    "facts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "description": "",
+        "additionalProperties": false,
+        "properties": {
+          "fact_key": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_.-]*$"
+          },
+          "value": {
+            "type": [
+              "string",
+              "number",
+              "boolean",
+              "null"
+            ]
+          },
+          "source_ref": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "fact_key",
+          "value",
+          "source_ref"
+        ]
+      }
+    },
+    "coverage_receipts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "description": "",
+        "additionalProperties": false,
+        "properties": {
+          "surface_id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_.-]*$"
+          },
+          "completeness": {
+            "enum": [
+              "complete",
+              "partial"
+            ]
+          },
+          "method": {
+            "enum": [
+              "snapshot_pair",
+              "complete_journal"
+            ]
+          },
+          "consistent_epoch": {
+            "type": "boolean"
+          },
+          "independent_source": {
+            "type": "boolean"
+          },
+          "snapshot_before_ref": {
+            "type": "string",
+            "minLength": 1
+          },
+          "snapshot_after_ref": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "surface_id",
+          "completeness",
+          "method",
+          "consistent_epoch",
+          "independent_source"
+        ]
+      }
+    },
+    "actual_cost": {
+      "type": "object",
+      "description": "",
+      "additionalProperties": false,
+      "properties": {
+        "latency_ms": {
+          "type": "number",
+          "minimum": 0
+        },
+        "bytes_read": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "cpu_ms": {
+          "type": "number",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "latency_ms",
+        "bytes_read",
+        "cpu_ms"
+      ]
+    },
+    "payload_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    }
+  },
+  "required": [
+    "schema_version",
+    "observation_id",
+    "run_id",
+    "probe_id",
+    "epoch_id",
+    "observed_at",
+    "status",
+    "reason_code",
+    "channel",
+    "facts",
+    "coverage_receipts",
+    "actual_cost",
+    "payload_sha256"
+  ]
+}

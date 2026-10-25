@@ -1,0 +1,161 @@
+[
+  {
+    "schema_version": "1.0",
+    "observation_id": "obs.08_conflicting_evidence.student_state.0",
+    "run_id": "run.08_conflicting_evidence",
+    "probe_id": "student_state",
+    "epoch_id": "run.epoch.20261024",
+    "observed_at": "2026-10-24T14:49:00Z",
+    "status": "ok",
+    "reason_code": "none",
+    "channel": "independent_verifier",
+    "facts": [
+      {
+        "fact_key": "student.101.marks",
+        "value": 85,
+        "source_ref": "source:student_state"
+      },
+      {
+        "fact_key": "student.101.matching_count",
+        "value": 1,
+        "source_ref": "source:student_state"
+      }
+    ],
+    "coverage_receipts": [],
+    "actual_cost": {
+      "latency_ms": 1.2,
+      "bytes_read": 200,
+      "cpu_ms": 0.5
+    },
+    "payload_sha256": "cc27fd8bb3a4ec4116b73fa94b9952fa61cd53e75bbae77da097085d48a7e887"
+  },
+  {
+    "schema_version": "1.0",
+    "observation_id": "obs.08_conflicting_evidence.report_state.0",
+    "run_id": "run.08_conflicting_evidence",
+    "probe_id": "report_state",
+    "epoch_id": "run.epoch.20261024",
+    "observed_at": "2026-10-24T14:49:00Z",
+    "status": "ok",
+    "reason_code": "none",
+    "channel": "independent_verifier",
+    "facts": [
+      {
+        "fact_key": "report.101.exists",
+        "value": true,
+        "source_ref": "source:report_state"
+      },
+      {
+        "fact_key": "report.101.matches_db",
+        "value": true,
+        "source_ref": "source:report_state"
+      }
+    ],
+    "coverage_receipts": [],
+    "actual_cost": {
+      "latency_ms": 2.3,
+      "bytes_read": 700,
+      "cpu_ms": 0.5
+    },
+    "payload_sha256": "019ceee081bd1766fea99d5a1791c0a3400a7f115b63c6aba43608a2d4fd736c"
+  },
+  {
+    "schema_version": "1.0",
+    "observation_id": "obs.08_conflicting_evidence.full_frame_diff.0",
+    "run_id": "run.08_conflicting_evidence",
+    "probe_id": "full_frame_diff",
+    "epoch_id": "run.epoch.20261024",
+    "observed_at": "2026-10-24T14:49:00Z",
+    "status": "ok",
+    "reason_code": "none",
+    "channel": "independent_verifier",
+    "facts": [
+      {
+        "fact_key": "mutation.out_of_frame_count",
+        "value": 0,
+        "source_ref": "source:full_frame_diff"
+      }
+    ],
+    "coverage_receipts": [
+      {
+        "surface_id": "sqlite.students",
+        "completeness": "complete",
+        "method": "snapshot_pair",
+        "consistent_epoch": true,
+        "independent_source": true,
+        "snapshot_before_ref": "snapshot_before:sqlite.students",
+        "snapshot_after_ref": "snapshot_after:sqlite.students"
+      },
+      {
+        "surface_id": "filesystem.reports",
+        "completeness": "complete",
+        "method": "snapshot_pair",
+        "consistent_epoch": true,
+        "independent_source": true,
+        "snapshot_before_ref": "snapshot_before:filesystem.reports",
+        "snapshot_after_ref": "snapshot_after:filesystem.reports"
+      }
+    ],
+    "actual_cost": {
+      "latency_ms": 20.0,
+      "bytes_read": 100000,
+      "cpu_ms": 0.5
+    },
+    "payload_sha256": "5983daf70809a8eb4fa74571bc487d99ee803a00068d7634cd8d1fe8bb144abc"
+  },
+  {
+    "schema_version": "1.0",
+    "observation_id": "obs.08_conflicting_evidence.validation_trace.0",
+    "run_id": "run.08_conflicting_evidence",
+    "probe_id": "validation_trace",
+    "epoch_id": "run.epoch.20261024",
+    "observed_at": "2026-10-24T14:49:00Z",
+    "status": "ok",
+    "reason_code": "none",
+    "channel": "independent_verifier",
+    "facts": [
+      {
+        "fact_key": "trace.validation_before_update",
+        "value": true,
+        "source_ref": "source:validation_trace"
+      }
+    ],
+    "coverage_receipts": [],
+    "actual_cost": {
+      "latency_ms": 2.5,
+      "bytes_read": 1000,
+      "cpu_ms": 0.5
+    },
+    "payload_sha256": "9f08955a1b0c5c8db4bde98455ef41f12b54534a46ce340a7aaeed8ffe6f5f53"
+  },
+  {
+    "schema_version": "1.0",
+    "observation_id": "obs.08_conflicting_evidence.conflict",
+    "run_id": "run.08_conflicting_evidence",
+    "probe_id": "student_state",
+    "epoch_id": "run.epoch.20261024",
+    "observed_at": "2026-10-24T14:49:00Z",
+    "status": "ok",
+    "reason_code": "none",
+    "channel": "independent_verifier",
+    "facts": [
+      {
+        "fact_key": "student.101.marks",
+        "value": 90,
+        "source_ref": "source:student_state"
+      },
+      {
+        "fact_key": "student.101.matching_count",
+        "value": 1,
+        "source_ref": "source:student_state"
+      }
+    ],
+    "coverage_receipts": [],
+    "actual_cost": {
+      "latency_ms": 1.2,
+      "bytes_read": 200,
+      "cpu_ms": 0.5
+    },
+    "payload_sha256": "3ce8992a274d31aecfaafc9b0dd829b41fb33920ab5f9039a6dda8cca8314aff"
+  }
+]

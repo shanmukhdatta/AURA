@@ -1,0 +1,6 @@
+{
+  "fixture_id": "09_missing_required_process",
+  "harness_only": true,
+  "actual_world_id": "world.09_missing_required_process.actual",
+  "actual_world_satisfies_contract": false
+}

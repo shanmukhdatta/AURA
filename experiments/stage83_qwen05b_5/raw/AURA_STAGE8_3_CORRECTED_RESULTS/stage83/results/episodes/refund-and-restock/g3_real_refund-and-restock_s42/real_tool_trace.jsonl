@@ -1,0 +1,3 @@
+{"step_index": 0, "turn": 1, "tool": "execute_sql", "query": "DELETE FROM orders WHERE id = 5;", "observation": "success", "execution_time_s": 0.0312}
+{"step_index": 1, "turn": 2, "tool": "execute_sql", "query": "UPDATE inventory SET stock = stock - (SELECT SUM(qty) FROM order_items WHERE order_id = 5) WHERE sku = 'SKU_5';", "observation": "success", "execution_time_s": 0.00407}
+{"step_index": 2, "turn": 3, "tool": "execute_sql", "query": "SELECT * FROM inventory WHERE sku = 'SKU_5' LIMIT 1;", "observation": [], "execution_time_s": 0.0025}

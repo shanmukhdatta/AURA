@@ -1,0 +1,13 @@
+{
+  "task_id": "50e1ac9_2",
+  "split": "dev",
+  "status": "EXECUTED_EVALUATED",
+  "native_evaluation_available": true,
+  "trajectory_type": "LLM_code_execution_in_native_AppWorld",
+  "agent_context_sha256": "6d226c605bbc9a1e4b782d546a3b80ab60336bbfc1d687b4e535fbddb52e3a34",
+  "context_bytes": 15192,
+  "agent_called_complete_task": true,
+  "official_success_field": false,
+  "native_api_log_available": true,
+  "native_api_log_bytes": 558
+}

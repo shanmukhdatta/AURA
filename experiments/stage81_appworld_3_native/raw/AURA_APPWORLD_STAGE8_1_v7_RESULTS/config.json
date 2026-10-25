@@ -1,0 +1,17 @@
+{
+  "seed": 20261025,
+  "model_id": "Qwen/Qwen2.5-3B-Instruct",
+  "split": "dev",
+  "task_selection": "first_three_published_dev_order",
+  "n_tasks": 3,
+  "max_steps": 7,
+  "max_model_new_tokens": 300,
+  "run_model": true,
+  "experiment_name": "aura_stage8_1_appworld_v7_dev",
+  "track_a_local_results_repeated": false,
+  "external_aura_certificates": false,
+  "held_out_score_claimed": false,
+  "appworld_python_requested": "3.11",
+  "notebook_version": "v7-appworld-rootfix",
+  "main_python": "3.13.15"
+}

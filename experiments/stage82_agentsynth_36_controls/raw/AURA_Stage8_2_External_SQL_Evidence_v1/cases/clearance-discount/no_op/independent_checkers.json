@@ -1,0 +1,1 @@
+[{"expected":[[120.0]],"matched":false,"observed":[[150.0]],"query":"SELECT price FROM products WHERE id=1"},{"expected":[[80.0]],"matched":true,"observed":[[80.0]],"query":"SELECT price FROM products WHERE id=2"},{"expected":[[120.0]],"matched":true,"observed":[[120.0]],"query":"SELECT price FROM products WHERE id=3"}]

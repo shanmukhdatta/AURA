@@ -1,0 +1,318 @@
+{
+  "explanation": "Stage 1 authoring fixtures contained shape-valid but noncanonical observation digests. Only copies inside the Stage 3 test directory were corrected to Stage 2 canonical observation digest; originals preserved in Stage 1 archive. These are synthetic facts, not real captured evidence.",
+  "changed_count": 52,
+  "changes": [
+    {
+      "case": "01_complete_success",
+      "observation_id": "obs.01_complete_success.student_state.0",
+      "original_digest": "299635090dc6c9bf9afa227086db468d3bf0be71179d184f2cee9b9bef0068e5",
+      "canonical_digest": "858c01848a067ade4dc6a42b7a03b81e8d136c8bfa08b2ef97c558d62d35338a"
+    },
+    {
+      "case": "01_complete_success",
+      "observation_id": "obs.01_complete_success.report_state.0",
+      "original_digest": "8c78a27f7deef19c1e6a2772e63242b415020e750765a531aafe00c6f235da7c",
+      "canonical_digest": "4dca46f654d6b803f759ebbb5dc33b59aaec731ce22815c4e9c4c920967d2212"
+    },
+    {
+      "case": "01_complete_success",
+      "observation_id": "obs.01_complete_success.full_frame_diff.0",
+      "original_digest": "c3a31dbf387ce9ef35c1da00f798dad958b9c99fc7ea025d7d5c4404c2440086",
+      "canonical_digest": "84e4610a881ad550e1e80d4fc5511d255e4e67295c0c2f53bb31e3c231b0aac3"
+    },
+    {
+      "case": "01_complete_success",
+      "observation_id": "obs.01_complete_success.validation_trace.0",
+      "original_digest": "dc879269b35f603002dcd03afb4730fc9b224c2a0bb36c0780d45396498d5c76",
+      "canonical_digest": "abb12d9db9a4e94665222a26785e4ca327f463d1f3723e3b06b473316acfec50"
+    },
+    {
+      "case": "02_missing_report",
+      "observation_id": "obs.02_missing_report.student_state.0",
+      "original_digest": "299635090dc6c9bf9afa227086db468d3bf0be71179d184f2cee9b9bef0068e5",
+      "canonical_digest": "626040f6a70315d0495e9a16e6f8fbe9b95a493a754fa983aa425199ccd072ae"
+    },
+    {
+      "case": "02_missing_report",
+      "observation_id": "obs.02_missing_report.report_state.0",
+      "original_digest": "0e6156e658a54f0e226fc002ce05d17b582a54e3c96ed203618de316bda9ec0f",
+      "canonical_digest": "f989cbc66fbd17cf6cb35ab99dcafe9ae76f8fa9f0c66e371725a5490cbc8f8f"
+    },
+    {
+      "case": "02_missing_report",
+      "observation_id": "obs.02_missing_report.full_frame_diff.0",
+      "original_digest": "c3a31dbf387ce9ef35c1da00f798dad958b9c99fc7ea025d7d5c4404c2440086",
+      "canonical_digest": "3cc018277f6667765ed9a897d7b00a045876e6edb770089deecafcf7267fd70c"
+    },
+    {
+      "case": "02_missing_report",
+      "observation_id": "obs.02_missing_report.validation_trace.0",
+      "original_digest": "dc879269b35f603002dcd03afb4730fc9b224c2a0bb36c0780d45396498d5c76",
+      "canonical_digest": "65c8b604d6772a1b025e9cb96b65e70d3f9a56ee3d0e67a527665d09381df833"
+    },
+    {
+      "case": "03_unauthorized_mutation",
+      "observation_id": "obs.03_unauthorized_mutation.student_state.0",
+      "original_digest": "299635090dc6c9bf9afa227086db468d3bf0be71179d184f2cee9b9bef0068e5",
+      "canonical_digest": "40a3a7b67cd666f175bbb0479c169f3065fe8b0b82e92f634d13b0f4bc21c81f"
+    },
+    {
+      "case": "03_unauthorized_mutation",
+      "observation_id": "obs.03_unauthorized_mutation.report_state.0",
+      "original_digest": "8c78a27f7deef19c1e6a2772e63242b415020e750765a531aafe00c6f235da7c",
+      "canonical_digest": "e420006c7706ab405ed7aec9cfa591b7e2f88c4895f592cac8ddacb5b10225f2"
+    },
+    {
+      "case": "03_unauthorized_mutation",
+      "observation_id": "obs.03_unauthorized_mutation.full_frame_diff.0",
+      "original_digest": "86a8a45866c504435cf84805fdf1bd036d3fa8d83971c9eab1010f001c6d7645",
+      "canonical_digest": "b92a1ed9d2607954d08894753d0f8337f6264101e6fbaa8f55b6dfe77cef7dca"
+    },
+    {
+      "case": "03_unauthorized_mutation",
+      "observation_id": "obs.03_unauthorized_mutation.validation_trace.0",
+      "original_digest": "dc879269b35f603002dcd03afb4730fc9b224c2a0bb36c0780d45396498d5c76",
+      "canonical_digest": "af9f1bc6c9478909a5cea1468b0e8fcbe0979a40aa79cc181ece5443960d9752"
+    },
+    {
+      "case": "04_duplicate_record",
+      "observation_id": "obs.04_duplicate_record.student_state.0",
+      "original_digest": "a30bf37b680edb2237584af8266bf904bd4933e503bdda560d34e906b4e56fd0",
+      "canonical_digest": "8a3ce16520dbfd73b3bf2831692b8eb0108ffe2c49c04cff20210e2bec636050"
+    },
+    {
+      "case": "04_duplicate_record",
+      "observation_id": "obs.04_duplicate_record.report_state.0",
+      "original_digest": "8c78a27f7deef19c1e6a2772e63242b415020e750765a531aafe00c6f235da7c",
+      "canonical_digest": "0f05775634f9a5198794569e7d8248c7f93fe63d50944e34190c6fa9cf86096f"
+    },
+    {
+      "case": "04_duplicate_record",
+      "observation_id": "obs.04_duplicate_record.full_frame_diff.0",
+      "original_digest": "c3a31dbf387ce9ef35c1da00f798dad958b9c99fc7ea025d7d5c4404c2440086",
+      "canonical_digest": "09037acf4e0e99e9f22180a6a9b07e610c0f7c2091cc6c0f6ce6ccbcffba2258"
+    },
+    {
+      "case": "04_duplicate_record",
+      "observation_id": "obs.04_duplicate_record.validation_trace.0",
+      "original_digest": "dc879269b35f603002dcd03afb4730fc9b224c2a0bb36c0780d45396498d5c76",
+      "canonical_digest": "3e9b8a6a8d55e5d8c5661df2da914a009cc2767424e6bea44ae0025fd00d363d"
+    },
+    {
+      "case": "05_unobservable_notification",
+      "observation_id": "obs.05_unobservable_notification.student_state.0",
+      "original_digest": "299635090dc6c9bf9afa227086db468d3bf0be71179d184f2cee9b9bef0068e5",
+      "canonical_digest": "8bd4c98b8d9ab817e5a35c861b5fa6bdfd822e34f81c9e7f84a0d583466f742d"
+    },
+    {
+      "case": "05_unobservable_notification",
+      "observation_id": "obs.05_unobservable_notification.report_state.0",
+      "original_digest": "8c78a27f7deef19c1e6a2772e63242b415020e750765a531aafe00c6f235da7c",
+      "canonical_digest": "1665923c3eb2d708e8818fbeb12f43e3cbc07be3aab99483ce708e193eeebf57"
+    },
+    {
+      "case": "05_unobservable_notification",
+      "observation_id": "obs.05_unobservable_notification.full_frame_diff.0",
+      "original_digest": "c3a31dbf387ce9ef35c1da00f798dad958b9c99fc7ea025d7d5c4404c2440086",
+      "canonical_digest": "99431aa5dc8b04dafbd0637fd55034f744e55269d59f64fe5386d39eaf31a50b"
+    },
+    {
+      "case": "05_unobservable_notification",
+      "observation_id": "obs.05_unobservable_notification.validation_trace.0",
+      "original_digest": "dc879269b35f603002dcd03afb4730fc9b224c2a0bb36c0780d45396498d5c76",
+      "canonical_digest": "22efaf9d52b5885e0f1938eb8bb0acaa5f270a02b9551769e6ac70f3ad404612"
+    },
+    {
+      "case": "05_unobservable_notification",
+      "observation_id": "obs.05_unobservable_notification.notification_status.0",
+      "original_digest": "a697221348754bbc3204066e2a616fc4d8d5421572be456fe9e180611574f011",
+      "canonical_digest": "5873bbb0a4246b4aba08fb2d15e3eb950e68e14849f4c38a8fbe699af85d9b01"
+    },
+    {
+      "case": "06_known_bad_and_unknown",
+      "observation_id": "obs.06_known_bad_and_unknown.student_state.0",
+      "original_digest": "9e4b3e171e69aa160b2f396763f79b4dc1aa7696a333f9d12356fb9f12870010",
+      "canonical_digest": "c1f1fbe6f52bb070299cb0dd988dd70bf42dab07feb1aff8fab779273a4556ee"
+    },
+    {
+      "case": "06_known_bad_and_unknown",
+      "observation_id": "obs.06_known_bad_and_unknown.report_state.0",
+      "original_digest": "8c78a27f7deef19c1e6a2772e63242b415020e750765a531aafe00c6f235da7c",
+      "canonical_digest": "de2e075db672e786f92c52b73e23b960d343c1881963b64b32cb97219260be8a"
+    },
+    {
+      "case": "06_known_bad_and_unknown",
+      "observation_id": "obs.06_known_bad_and_unknown.full_frame_diff.0",
+      "original_digest": "c3a31dbf387ce9ef35c1da00f798dad958b9c99fc7ea025d7d5c4404c2440086",
+      "canonical_digest": "19eaa2d8543bd279fdd265ecd178970fae9f2e4d8da31335436727481206a54b"
+    },
+    {
+      "case": "06_known_bad_and_unknown",
+      "observation_id": "obs.06_known_bad_and_unknown.validation_trace.0",
+      "original_digest": "dc879269b35f603002dcd03afb4730fc9b224c2a0bb36c0780d45396498d5c76",
+      "canonical_digest": "3b1d74d46b38e386d071810a000cf474ac9f9b4891b98e9dc716b8ec580f6ee6"
+    },
+    {
+      "case": "06_known_bad_and_unknown",
+      "observation_id": "obs.06_known_bad_and_unknown.notification_status.0",
+      "original_digest": "a697221348754bbc3204066e2a616fc4d8d5421572be456fe9e180611574f011",
+      "canonical_digest": "6c93bebc045938b68b0a5705b3d53da69fba1d28248f3df749fde3771339bdec"
+    },
+    {
+      "case": "07_insufficient_frame_coverage",
+      "observation_id": "obs.07_insufficient_frame_coverage.student_state.0",
+      "original_digest": "299635090dc6c9bf9afa227086db468d3bf0be71179d184f2cee9b9bef0068e5",
+      "canonical_digest": "1265877bfde90242c9680d6ec4dc75fe1df57556c771414291bda81ff2b7c7dc"
+    },
+    {
+      "case": "07_insufficient_frame_coverage",
+      "observation_id": "obs.07_insufficient_frame_coverage.report_state.0",
+      "original_digest": "8c78a27f7deef19c1e6a2772e63242b415020e750765a531aafe00c6f235da7c",
+      "canonical_digest": "eeb474ddc3fb6b6719a6673c2f9bdf883183a8a59f10ec076d203c5da1aba96e"
+    },
+    {
+      "case": "07_insufficient_frame_coverage",
+      "observation_id": "obs.07_insufficient_frame_coverage.validation_trace.0",
+      "original_digest": "dc879269b35f603002dcd03afb4730fc9b224c2a0bb36c0780d45396498d5c76",
+      "canonical_digest": "b05c3ba046f0af332f4de1230925e3e9f370b5a115ddacb39397fc22f4cfa355"
+    },
+    {
+      "case": "08_conflicting_evidence",
+      "observation_id": "obs.08_conflicting_evidence.student_state.0",
+      "original_digest": "299635090dc6c9bf9afa227086db468d3bf0be71179d184f2cee9b9bef0068e5",
+      "canonical_digest": "cc27fd8bb3a4ec4116b73fa94b9952fa61cd53e75bbae77da097085d48a7e887"
+    },
+    {
+      "case": "08_conflicting_evidence",
+      "observation_id": "obs.08_conflicting_evidence.report_state.0",
+      "original_digest": "8c78a27f7deef19c1e6a2772e63242b415020e750765a531aafe00c6f235da7c",
+      "canonical_digest": "019ceee081bd1766fea99d5a1791c0a3400a7f115b63c6aba43608a2d4fd736c"
+    },
+    {
+      "case": "08_conflicting_evidence",
+      "observation_id": "obs.08_conflicting_evidence.full_frame_diff.0",
+      "original_digest": "c3a31dbf387ce9ef35c1da00f798dad958b9c99fc7ea025d7d5c4404c2440086",
+      "canonical_digest": "5983daf70809a8eb4fa74571bc487d99ee803a00068d7634cd8d1fe8bb144abc"
+    },
+    {
+      "case": "08_conflicting_evidence",
+      "observation_id": "obs.08_conflicting_evidence.validation_trace.0",
+      "original_digest": "dc879269b35f603002dcd03afb4730fc9b224c2a0bb36c0780d45396498d5c76",
+      "canonical_digest": "9f08955a1b0c5c8db4bde98455ef41f12b54534a46ce340a7aaeed8ffe6f5f53"
+    },
+    {
+      "case": "08_conflicting_evidence",
+      "observation_id": "obs.08_conflicting_evidence.conflict",
+      "original_digest": "9e4b3e171e69aa160b2f396763f79b4dc1aa7696a333f9d12356fb9f12870010",
+      "canonical_digest": "3ce8992a274d31aecfaafc9b0dd829b41fb33920ab5f9039a6dda8cca8314aff"
+    },
+    {
+      "case": "09_missing_required_process",
+      "observation_id": "obs.09_missing_required_process.student_state.0",
+      "original_digest": "299635090dc6c9bf9afa227086db468d3bf0be71179d184f2cee9b9bef0068e5",
+      "canonical_digest": "99f9ecbabf92a734a6bf3f2501d0a442065bbd6fc7cbe104f8838fb3f8c33c8c"
+    },
+    {
+      "case": "09_missing_required_process",
+      "observation_id": "obs.09_missing_required_process.report_state.0",
+      "original_digest": "8c78a27f7deef19c1e6a2772e63242b415020e750765a531aafe00c6f235da7c",
+      "canonical_digest": "a8f9f047b6765659db515839b5afff0e65dbe922082305d381d8b3da4a66adbe"
+    },
+    {
+      "case": "09_missing_required_process",
+      "observation_id": "obs.09_missing_required_process.full_frame_diff.0",
+      "original_digest": "c3a31dbf387ce9ef35c1da00f798dad958b9c99fc7ea025d7d5c4404c2440086",
+      "canonical_digest": "7004a4b2ec610ba1cdd69a4f99aa408b2d2832f7c974316538ff81a14930dbc5"
+    },
+    {
+      "case": "09_missing_required_process",
+      "observation_id": "obs.09_missing_required_process.validation_trace.0",
+      "original_digest": "90bf315a3617f595f1b945fab7ca748966cab9748ffc7a8dfbfdcfa88c55bc0e",
+      "canonical_digest": "84971f0a54a4b50506a6c81d6ec1f91f7466d00b21a6ec8c0d1f731fb937500a"
+    },
+    {
+      "case": "10_unobservable_transient_effect",
+      "observation_id": "obs.10_unobservable_transient_effect.student_state.0",
+      "original_digest": "299635090dc6c9bf9afa227086db468d3bf0be71179d184f2cee9b9bef0068e5",
+      "canonical_digest": "96ae1f79a6e5fcb86c2a4bfa91bd7ad61afb6f5380aeb549f4639273e5e8e121"
+    },
+    {
+      "case": "10_unobservable_transient_effect",
+      "observation_id": "obs.10_unobservable_transient_effect.report_state.0",
+      "original_digest": "8c78a27f7deef19c1e6a2772e63242b415020e750765a531aafe00c6f235da7c",
+      "canonical_digest": "f47be565a800df78c4ba0ced6295c6938a477e28f386c540cecf848e331efde0"
+    },
+    {
+      "case": "10_unobservable_transient_effect",
+      "observation_id": "obs.10_unobservable_transient_effect.full_frame_diff.0",
+      "original_digest": "c3a31dbf387ce9ef35c1da00f798dad958b9c99fc7ea025d7d5c4404c2440086",
+      "canonical_digest": "3e3b2a8c6f9aca927a0e80ab2dfd6c0d77be0885c993ea91cb630f35d24eed16"
+    },
+    {
+      "case": "10_unobservable_transient_effect",
+      "observation_id": "obs.10_unobservable_transient_effect.validation_trace.0",
+      "original_digest": "dc879269b35f603002dcd03afb4730fc9b224c2a0bb36c0780d45396498d5c76",
+      "canonical_digest": "7f4e29ba3f615de58d46e0b60fd68a09dc28eb81a07effa8d6e9e1a7026844bc"
+    },
+    {
+      "case": "10_unobservable_transient_effect",
+      "observation_id": "obs.10_unobservable_transient_effect.transient_journal.0",
+      "original_digest": "a697221348754bbc3204066e2a616fc4d8d5421572be456fe9e180611574f011",
+      "canonical_digest": "a2c8cc109417716bd91a1e29a222b29cdb5b1f81d8f45fa24bcf10c02cf7a4c2"
+    },
+    {
+      "case": "11_benign_alternative_path",
+      "observation_id": "obs.11_benign_alternative_path.student_state.0",
+      "original_digest": "299635090dc6c9bf9afa227086db468d3bf0be71179d184f2cee9b9bef0068e5",
+      "canonical_digest": "f498b3960ff36765c6658a008e710a7c5c7eae77685505a1a9c2a3a448963b13"
+    },
+    {
+      "case": "11_benign_alternative_path",
+      "observation_id": "obs.11_benign_alternative_path.report_state.0",
+      "original_digest": "8c78a27f7deef19c1e6a2772e63242b415020e750765a531aafe00c6f235da7c",
+      "canonical_digest": "f306d9f2e1d7379217caa17292394129727a3b60e9d3370a303dcbb90ea0f124"
+    },
+    {
+      "case": "11_benign_alternative_path",
+      "observation_id": "obs.11_benign_alternative_path.full_frame_diff.0",
+      "original_digest": "c3a31dbf387ce9ef35c1da00f798dad958b9c99fc7ea025d7d5c4404c2440086",
+      "canonical_digest": "0596e34699dcd0441c852e338b442654b4303723c8b3ccd730cb613980098d63"
+    },
+    {
+      "case": "11_benign_alternative_path",
+      "observation_id": "obs.11_benign_alternative_path.validation_trace.0",
+      "original_digest": "dc879269b35f603002dcd03afb4730fc9b224c2a0bb36c0780d45396498d5c76",
+      "canonical_digest": "e32cf9cbd1b1f6d8445a4d03a7a6cbcb292bda45b3622b725cc4a195f5c31b5a"
+    },
+    {
+      "case": "12_external_frame_unobserved",
+      "observation_id": "obs.12_external_frame_unobserved.student_state.0",
+      "original_digest": "299635090dc6c9bf9afa227086db468d3bf0be71179d184f2cee9b9bef0068e5",
+      "canonical_digest": "d09430da8f91eee1dd71fe80324214ab4c85f04517336561c58b7ea9c2869012"
+    },
+    {
+      "case": "12_external_frame_unobserved",
+      "observation_id": "obs.12_external_frame_unobserved.report_state.0",
+      "original_digest": "8c78a27f7deef19c1e6a2772e63242b415020e750765a531aafe00c6f235da7c",
+      "canonical_digest": "66cc710fceae51da641db7f7150f2a62f43fddb718d7b4c99db7e39450d5e823"
+    },
+    {
+      "case": "12_external_frame_unobserved",
+      "observation_id": "obs.12_external_frame_unobserved.full_frame_diff.0",
+      "original_digest": "c3a31dbf387ce9ef35c1da00f798dad958b9c99fc7ea025d7d5c4404c2440086",
+      "canonical_digest": "b21f765970f9b4268714268348968577821596a0ae690b42672ee7f529e70bf9"
+    },
+    {
+      "case": "12_external_frame_unobserved",
+      "observation_id": "obs.12_external_frame_unobserved.validation_trace.0",
+      "original_digest": "dc879269b35f603002dcd03afb4730fc9b224c2a0bb36c0780d45396498d5c76",
+      "canonical_digest": "4b04f2432adab9dc015a7ff16bff7db8ffb83fcb6e8eb23c4edbfa6a22ffdad1"
+    },
+    {
+      "case": "12_external_frame_unobserved",
+      "observation_id": "obs.12_external_frame_unobserved.external_ledger_readback.0",
+      "original_digest": "a697221348754bbc3204066e2a616fc4d8d5421572be456fe9e180611574f011",
+      "canonical_digest": "66e9c82cdfd29aeb366ca1f3d41376bfa58748f8c175ebed73cbacdcb687fccc"
+    }
+  ]
+}

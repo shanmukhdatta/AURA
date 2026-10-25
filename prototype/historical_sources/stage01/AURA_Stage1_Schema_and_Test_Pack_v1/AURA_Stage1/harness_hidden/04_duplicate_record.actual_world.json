@@ -1,0 +1,6 @@
+{
+  "fixture_id": "04_duplicate_record",
+  "harness_only": true,
+  "actual_world_id": "world.04_duplicate_record.actual",
+  "actual_world_satisfies_contract": false
+}

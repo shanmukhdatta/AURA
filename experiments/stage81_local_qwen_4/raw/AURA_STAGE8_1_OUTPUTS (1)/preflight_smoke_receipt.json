@@ -1,0 +1,22 @@
+[
+  {
+    "case": "complete",
+    "expected": "PASS",
+    "actual": "PASS"
+  },
+  {
+    "case": "missing_report",
+    "expected": "FAIL",
+    "actual": "FAIL"
+  },
+  {
+    "case": "unauthorized_write",
+    "expected": "FAIL",
+    "actual": "FAIL"
+  },
+  {
+    "case": "denied_readback",
+    "expected": "UNCERTAIN",
+    "actual": "UNCERTAIN"
+  }
+]

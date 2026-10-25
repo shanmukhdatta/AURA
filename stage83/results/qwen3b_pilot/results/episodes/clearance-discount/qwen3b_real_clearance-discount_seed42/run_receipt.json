@@ -1,0 +1,13 @@
+{
+  "task_id": "clearance-discount",
+  "run_id": "qwen3b_real_clearance-discount_seed42",
+  "is_real_llm": true,
+  "sql_tool_calls": 1,
+  "aura_verdict": "PASS",
+  "certificate_replay": true,
+  "snapshot_noninterference": true,
+  "reproduced_full_published_checker_pass": true,
+  "NOTE": "Reproduced checker comparison NOT official AgentSynth runner result",
+  "trajectory_wall_seconds": 2.0184,
+  "state": "EXECUTED_AND_AURA_EVALUATED"
+}

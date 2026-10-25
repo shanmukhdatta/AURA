@@ -1,0 +1,37 @@
+{
+  "attempted": true,
+  "complete": true,
+  "fatal": null,
+  "events": [
+    {
+      "kind": "task_done",
+      "task_id": "50e1ac9_1",
+      "status": "EXECUTED_EVALUATED",
+      "evaluated": true,
+      "steps": 2,
+      "native_log_available": true
+    },
+    {
+      "kind": "task_done",
+      "task_id": "50e1ac9_2",
+      "status": "EXECUTED_EVALUATED",
+      "evaluated": true,
+      "steps": 3,
+      "native_log_available": true
+    },
+    {
+      "kind": "task_done",
+      "task_id": "50e1ac9_3",
+      "status": "EXECUTED_EVALUATED",
+      "evaluated": true,
+      "steps": 7,
+      "native_log_available": true
+    }
+  ],
+  "task_ids": [
+    "50e1ac9_1",
+    "50e1ac9_2",
+    "50e1ac9_3"
+  ],
+  "exit_code": 0
+}

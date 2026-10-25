@@ -1,0 +1,14 @@
+{
+  "python": "3.13.15 (main, Aug  6 2026, 11:06:22) [GCC 13.3.0]",
+  "torch": "2.11.0+cu128",
+  "transformers": "4.57.6",
+  "cuda": "12.8",
+  "gpu": "Tesla T4",
+  "gpu_count": 2,
+  "aura_repository_sha": "607ffc9fc554db23a972f478475148514e9cc94e",
+  "agentsynth_upstream_sha": "d2564dfb25ed7ba32e367d28117e6afd1ee6c485",
+  "upstream_pack_sha256": "cee022bdca929ad15cf4da6cd79949e2be2654615a66ef2b21c4c5cc68243102",
+  "aura_branch": "experiment/stage-8-3-external-llm-verification",
+  "model": "Qwen/Qwen2.5-3B-Instruct",
+  "hf_revision": null
+}

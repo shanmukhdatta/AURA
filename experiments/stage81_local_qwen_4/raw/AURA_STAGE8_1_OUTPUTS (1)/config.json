@@ -1,0 +1,35 @@
+{
+  "SEED": 20261025,
+  "MODEL_ID": "Qwen/Qwen2.5-3B-Instruct",
+  "LOCAL_EPISODES": [
+    [
+      "direct",
+      "none"
+    ],
+    [
+      "procedural",
+      "none"
+    ],
+    [
+      "silent_tool_noop",
+      "silent_noop"
+    ],
+    [
+      "denied_readback",
+      "deny_readback"
+    ]
+  ],
+  "APPWORLD_SPLIT": "dev",
+  "N_APPWORLD_TASKS": 3,
+  "MAX_LOCAL_STEPS": 10,
+  "MAX_APPWORLD_STEPS": 7,
+  "MAX_MODEL_NEW_TOKENS": 300,
+  "EXPERIMENT_NAME": "aura_stage8_1_qwen_small_dev_v5",
+  "track_a_type": "genuine_LLM_tool_calls_with_controlled_local_environment",
+  "track_b_type": "native_appworld_LLM_agent_official_benchmark_evaluation",
+  "external_AURA_independent_verification_implemented": false,
+  "official_held_out_score_claimed": false,
+  "workflow": "model_inference_only_no_training",
+  "notebook_audit_version": "v5-uv-environment-fix",
+  "created_at_utc": "2026-10-25T07:22:09.685135+00:00"
+}

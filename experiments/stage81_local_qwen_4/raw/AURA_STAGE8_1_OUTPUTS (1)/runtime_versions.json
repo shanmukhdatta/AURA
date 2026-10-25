@@ -1,0 +1,14 @@
+{
+  "python": "3.13.15 (main, Aug  6 2026, 11:06:22) [GCC 13.3.0]",
+  "versions": {
+    "transformers": "4.57.6",
+    "torch": "2.11.0+cu128",
+    "jsonschema": "4.26.0",
+    "numpy": "2.1.3"
+  },
+  "torch_device": "cuda",
+  "gpu": "Tesla T4",
+  "stage7_sha256": "210d7c963aba647c436cba495da5e924062951082e1352fadd9ea8469cc94ff8",
+  "model_ready": true,
+  "model_error": null
+}

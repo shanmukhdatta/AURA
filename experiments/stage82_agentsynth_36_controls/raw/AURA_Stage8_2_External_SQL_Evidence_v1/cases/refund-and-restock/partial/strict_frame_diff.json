@@ -1,0 +1,1 @@
+{"allowlist":{"inventory":{"G-200":["stock"],"W-100":["stock"]},"orders":{"5":["status"]}},"changes":[{"after":{"stock":6},"before":{"stock":4},"columns":["stock"],"pk":["G-200"],"table":"inventory"},{"after":{"stock":13},"before":{"stock":10},"columns":["stock"],"pk":["W-100"],"table":"inventory"}],"issues":[]}

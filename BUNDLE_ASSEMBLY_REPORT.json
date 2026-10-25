@@ -1,0 +1,20 @@
+{
+  "created_at_utc": "2026-10-25T20:55:58.964208+00:00",
+  "files_in_bundle": 3308,
+  "original_loose_files": 95,
+  "workspace_original_files": 70,
+  "zip_archives": 33,
+  "archive_members_extracted": 2619,
+  "source_archive_crc_failures": 0,
+  "validation_registry_rows": 59,
+  "stage84_status": "UNVERIFIED_NO_ARCHIVE",
+  "git_push_status": "NOT_PUSHED_FROM_THIS_OFFLINE_CONTAINER",
+  "git_import_mode": "additive merge with conflict report",
+  "full_suite_local": "INCOMPLETE_TIMEOUT",
+  "local_fast_regression": "184 PASSED;14 DESELECTED",
+  "local_external_validation_unit_tests": "12 PASSED",
+  "local_certificate_replay": "59/59 MATCH",
+  "local_stage83_manifest": "246/246;0 MISSING;0 MISMATCHES",
+  "historical_manifest_local_only": "124/135;11 REMOTE_ONLY MISSING",
+  "final_bundle_files": 3329
+}

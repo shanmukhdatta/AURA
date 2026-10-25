@@ -1,0 +1,127 @@
+{
+  "schema_version": "1.0",
+  "contract_id": "agentsynth.refund_and_restock",
+  "contract_version": "1.0.0",
+  "task_description": "Refund order 5 and put its items back into inventory: add each line item's quantity back to the matching SKU's stock. Leave order 6 and its stock contribution alone.",
+  "surfaces": [
+    {
+      "surface_id": "sqlite.orders",
+      "kind": "sqlite",
+      "mutable": true,
+      "scope": "orders table with all columns and rows",
+      "observation_boundary": "full",
+      "consistency_domain": "run.epoch"
+    },
+    {
+      "surface_id": "sqlite.order_items",
+      "kind": "sqlite",
+      "mutable": true,
+      "scope": "order_items table with all columns and rows",
+      "observation_boundary": "full",
+      "consistency_domain": "run.epoch"
+    },
+    {
+      "surface_id": "sqlite.inventory",
+      "kind": "sqlite",
+      "mutable": true,
+      "scope": "inventory table with all columns and rows",
+      "observation_boundary": "full",
+      "consistency_domain": "run.epoch"
+    },
+    {
+      "surface_id": "trace.tools",
+      "kind": "trace",
+      "mutable": false,
+      "scope": "trusted tool invocation order",
+      "observation_boundary": "full",
+      "consistency_domain": "run.epoch"
+    }
+  ],
+  "frame_policy": {
+    "policy": "closed_world",
+    "declared_mutation_surfaces": [
+      "sqlite.orders",
+      "sqlite.order_items",
+      "sqlite.inventory"
+    ],
+    "required_coverage_method": "snapshot_pair",
+    "allowed_effects": [
+      {
+        "surface_id": "sqlite.orders",
+        "operation": "update",
+        "target_pattern": "authorized_row_fields_policy:orders"
+      },
+      {
+        "surface_id": "sqlite.inventory",
+        "operation": "update",
+        "target_pattern": "authorized_row_fields_policy:inventory"
+      }
+    ]
+  },
+  "obligations": [
+    {
+      "id": "checker_0",
+      "description": "SQL state check: SELECT status FROM orders WHERE id=5",
+      "category": "outcome",
+      "surface_id": "sqlite.orders",
+      "predicate": {
+        "operator": "eq",
+        "fact_key": "sql.checker_0",
+        "expected": "refunded"
+      },
+      "required_complete_coverage": []
+    },
+    {
+      "id": "checker_1",
+      "description": "SQL state check: SELECT status FROM orders WHERE id=6",
+      "category": "outcome",
+      "surface_id": "sqlite.orders",
+      "predicate": {
+        "operator": "eq",
+        "fact_key": "sql.checker_1",
+        "expected": "paid"
+      },
+      "required_complete_coverage": []
+    },
+    {
+      "id": "checker_2",
+      "description": "SQL state check: SELECT stock FROM inventory WHERE sku='W-100'",
+      "category": "outcome",
+      "surface_id": "sqlite.orders",
+      "predicate": {
+        "operator": "eq",
+        "fact_key": "sql.checker_2",
+        "expected": 13
+      },
+      "required_complete_coverage": []
+    },
+    {
+      "id": "checker_3",
+      "description": "SQL state check: SELECT stock FROM inventory WHERE sku='G-200'",
+      "category": "outcome",
+      "surface_id": "sqlite.orders",
+      "predicate": {
+        "operator": "eq",
+        "fact_key": "sql.checker_3",
+        "expected": 6
+      },
+      "required_complete_coverage": []
+    },
+    {
+      "id": "no_unauthorized_mutation",
+      "description": "Absence of persistent modifications outside predeclared task allowlist",
+      "category": "frame",
+      "surface_id": "sqlite.orders",
+      "predicate": {
+        "operator": "count_eq",
+        "fact_key": "mutation.out_of_frame_count",
+        "expected": 0
+      },
+      "required_complete_coverage": [
+        "sqlite.orders",
+        "sqlite.order_items",
+        "sqlite.inventory"
+      ]
+    }
+  ]
+}

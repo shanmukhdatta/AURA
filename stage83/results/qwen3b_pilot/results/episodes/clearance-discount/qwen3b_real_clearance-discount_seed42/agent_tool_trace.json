@@ -1,0 +1,16 @@
+[
+  {
+    "step": 0,
+    "tool": "sql_query",
+    "sql": "UPDATE products SET price = price * 0.8 WHERE category = 'clearance' AND price > 100;",
+    "write": true,
+    "response": "success",
+    "error": null,
+    "timestamp": "2026-10-25T14:59:17.548894Z"
+  },
+  {
+    "kind": "final_answer",
+    "text": "Update successful.",
+    "timestamp": "2026-10-25T14:59:17.997969Z"
+  }
+]

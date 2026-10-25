@@ -1,0 +1,19 @@
+{
+  "dependencies_before": {
+    "torch": "2.11.0+cu128",
+    "transformers": "4.57.6",
+    "jsonschema": "4.26.0",
+    "pytest": "8.4.2",
+    "pydantic": "2.13.5"
+  },
+  "dependencies_after": {
+    "torch": "2.11.0+cu128",
+    "transformers": "4.57.6",
+    "jsonschema": "4.26.0",
+    "pytest": "8.4.2",
+    "pydantic": "2.13.5"
+  },
+  "versions_unchanged": true,
+  "appworld_not_imported_in_main_kernel": true,
+  "scope": "native AppWorld phase must not alter imported main notebook packages"
+}

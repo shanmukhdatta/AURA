@@ -1,0 +1,6 @@
+{
+  "fixture_id": "01_complete_success",
+  "harness_only": true,
+  "actual_world_id": "world.01_complete_success.actual",
+  "actual_world_satisfies_contract": true
+}

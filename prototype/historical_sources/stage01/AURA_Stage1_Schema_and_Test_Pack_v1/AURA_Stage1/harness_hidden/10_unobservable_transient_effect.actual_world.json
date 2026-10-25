@@ -1,0 +1,6 @@
+{
+  "fixture_id": "10_unobservable_transient_effect",
+  "harness_only": true,
+  "actual_world_id": "world.10_unobservable_transient_effect.actual",
+  "actual_world_satisfies_contract": true
+}

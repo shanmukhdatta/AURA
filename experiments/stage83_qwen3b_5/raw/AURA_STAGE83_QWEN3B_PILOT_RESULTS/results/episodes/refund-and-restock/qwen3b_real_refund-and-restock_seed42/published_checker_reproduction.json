@@ -1,0 +1,84 @@
+{
+  "method": "REPRODUCED_PUBLISHED_CHECKERS_NOT_OFFICIAL_AGENTSYNTH_RUNNER",
+  "all_matched": false,
+  "passed_count": 1,
+  "total_count": 4,
+  "checks": [
+    {
+      "index": 0,
+      "kind": "sql",
+      "matched": false,
+      "observed": [
+        [
+          "paid"
+        ]
+      ],
+      "reference_spec": {
+        "kind": "sql",
+        "query": "SELECT status FROM orders WHERE id=5",
+        "equals": [
+          [
+            "refunded"
+          ]
+        ]
+      }
+    },
+    {
+      "index": 1,
+      "kind": "sql",
+      "matched": true,
+      "observed": [
+        [
+          "paid"
+        ]
+      ],
+      "reference_spec": {
+        "kind": "sql",
+        "query": "SELECT status FROM orders WHERE id=6",
+        "equals": [
+          [
+            "paid"
+          ]
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "kind": "sql",
+      "matched": false,
+      "observed": [
+        [
+          10
+        ]
+      ],
+      "reference_spec": {
+        "kind": "sql",
+        "query": "SELECT stock FROM inventory WHERE sku='W-100'",
+        "equals": [
+          [
+            13
+          ]
+        ]
+      }
+    },
+    {
+      "index": 3,
+      "kind": "sql",
+      "matched": false,
+      "observed": [
+        [
+          4
+        ]
+      ],
+      "reference_spec": {
+        "kind": "sql",
+        "query": "SELECT stock FROM inventory WHERE sku='G-200'",
+        "equals": [
+          [
+            6
+          ]
+        ]
+      }
+    }
+  ]
+}

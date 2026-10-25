@@ -1,0 +1,1 @@
+{"actual_agent_rollout":false,"epoch_id":"epoch.stage7.extra_file","harness_expected_contract_verdict":"FAIL","run_id":"run.stage7.extra_file","scenario":"extra_file","snapshot_capture_bytes_read":621,"snapshot_capture_latency_ms":2.37193,"transient_dirty_write_outside_existing_task_contract":false}

@@ -1,0 +1,7 @@
+scenario,probe_count,probe_ok,probe_unavailable,student_marks,report_exists,report_matches_db,out_of_frame_count,validation_before_update,capture_latency_ms,probe_latency_ms_sum,snapshot_bytes_read,probe_bytes_read
+clean,4,4,0,85,True,True,0,True,3.59129,0.70838,615,2160
+missing_report,4,4,0,85,False,False,0,True,3.4119,0.3278,592,1865
+collateral,4,4,0,85,True,True,1,True,2.97427,0.71,615,2382
+silent_noop,4,4,0,70,True,False,0,True,3.19569,0.55037,615,2196
+denied_readback,4,3,1,UNAVAILABLE,True,True,0,True,2.94856,0.59276,615,2112
+missing_validation,4,4,0,85,True,True,0,False,4.30548,0.78733,615,2035

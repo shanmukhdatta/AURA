@@ -1,0 +1,52 @@
+{
+  "task_id": "raise-ticket-priority",
+  "instruction": "Raise ticket 3 to high priority. Leave the other tickets exactly as they are.",
+  "system_prompt": "You are a database agent in an isolated SQLite training task. Execute the user's requested database operations. You have one tool, sql_query(query), which executes one SQLite SQL statement. First inspect current data as needed; then perform necessary updates and verify. Output EXACTLY ONE of two formats per turn:\nFor a tool call, output only: ```sql\nONE SQL STATEMENT;\n```\nFor completion, output only: FINAL_ANSWER: <clear concise answer>.\nNever claim an update succeeded unless the tool confirmed it. Do not change data beyond what is requested; respect policy refusals.\n\nAvailable schema:\nCREATE TABLE tickets (id INTEGER PRIMARY KEY, subject TEXT, priority TEXT)",
+  "model_actions": [
+    {
+      "turn": 1,
+      "input_tokens": 170,
+      "output_tokens": 15,
+      "generation_seconds": 2.007,
+      "raw_model_response": "```sql\nSELECT * FROM tickets WHERE id = 3;\n```",
+      "parsed_type": "sql",
+      "parsed_payload": "SELECT * FROM tickets WHERE id = 3;",
+      "tool_ok": true,
+      "tool_observation": [
+        [
+          3,
+          "outage",
+          "normal"
+        ]
+      ]
+    },
+    {
+      "turn": 2,
+      "input_tokens": 222,
+      "output_tokens": 19,
+      "generation_seconds": 0.9708,
+      "raw_model_response": "```sql\nUPDATE tickets SET priority = \"high\" WHERE id = 3;\n```",
+      "parsed_type": "sql",
+      "parsed_payload": "UPDATE tickets SET priority = \"high\" WHERE id = 3;",
+      "tool_ok": true,
+      "tool_observation": "success"
+    },
+    {
+      "turn": 3,
+      "input_tokens": 271,
+      "output_tokens": 15,
+      "generation_seconds": 0.7989,
+      "raw_model_response": "FINAL_ANSWER: Ticket 3 has been updated to high priority.",
+      "parsed_type": "final",
+      "parsed_payload": "Ticket 3 has been updated to high priority."
+    }
+  ],
+  "final_answer": "Ticket 3 has been updated to high priority.",
+  "total_wall_seconds": 3.8083,
+  "max_turns": 6,
+  "model_id": "Qwen/Qwen2.5-3B-Instruct",
+  "model_revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+  "is_genuine_llm": true,
+  "sampling": false,
+  "seed": 42
+}

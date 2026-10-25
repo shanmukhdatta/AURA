@@ -1,0 +1,13 @@
+regime,comparison,templates,mean_cost_difference,bootstrap_95_low,bootstrap_95_high,fraction_templates_better,interpretation
+uniform,cera_minus_fixed,48,-2.2913519965,-2.6232342339416665,-1.9655633137947914,1.0,"resampling authored templates, not population inference"
+clean_50,cera_minus_fixed,48,-3.5472231562083336,-4.045294027563541,-3.0554870606088538,1.0,"resampling authored templates, not population inference"
+clean_90,cera_minus_fixed,48,-4.673827964458333,-5.501186594509895,-3.9232851288458326,1.0,"resampling authored templates, not population inference"
+uniform,cera_minus_greedy,48,-1.1224240451458332,-1.56441179471875,-0.7385279188911459,0.7916666666666666,"resampling authored templates, not population inference"
+clean_50,cera_minus_greedy,48,-0.15129856047916654,-0.4350566240328124,0.09945836276666709,0.5208333333333334,"resampling authored templates, not population inference"
+clean_90,cera_minus_greedy,48,0.7138736213333335,0.19837387913854188,1.2453582864281256,0.3958333333333333,"resampling authored templates, not population inference"
+uniform,cera_minus_optimal,48,0.022371527770833333,0.004243880201041671,0.0424200954765625,0.0,"resampling authored templates, not population inference"
+clean_50,cera_minus_optimal,48,0.4296489206458333,0.27062774264843753,0.6048967069098958,0.0,"resampling authored templates, not population inference"
+clean_90,cera_minus_optimal,48,1.3595105148124997,0.9226885893239583,1.8165046525572919,0.0,"resampling authored templates, not population inference"
+uniform,cera_minus_exhaustive,48,-34.9760538194375,-36.78083917099636,-33.35375212670365,1.0,"resampling authored templates, not population inference"
+clean_50,cera_minus_exhaustive,48,-31.845715737895834,-33.557543497393745,-30.161264190776564,1.0,"resampling authored templates, not population inference"
+clean_90,cera_minus_exhaustive,48,-29.04889314745833,-30.715421525533333,-27.37604852915729,1.0,"resampling authored templates, not population inference"

@@ -1,0 +1,1 @@
+{"step_index": 0, "turn": 1, "tool": "execute_sql", "query": "SELECT \n    id,\n    name,\n    category,\n    price * 0.8 AS discounted_price\nFROM \n    products\nWHERE \n    price > 100;", "observation": [[1, "Robot", "clearance", 120.0], [3, "Lamp", "home", 96.0]], "execution_time_s": 0.00099}

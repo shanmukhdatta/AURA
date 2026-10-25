@@ -1,0 +1,4 @@
+mode,runs,decisive,expected_label_matches,false_pass,false_fail,mean_total_ms
+state_only,6,3,4,0,0,2.6357
+trace_only,6,1,2,0,0,2.50781
+dual_surface,6,5,6,0,0,2.75795

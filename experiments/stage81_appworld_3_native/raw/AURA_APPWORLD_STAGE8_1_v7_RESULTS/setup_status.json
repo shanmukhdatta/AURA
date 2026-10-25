@@ -1,0 +1,6 @@
+{
+  "ready_for_native_agent": true,
+  "failure_phase": null,
+  "appworld_version": "0.1.3.post1",
+  "first_world_and_native_evaluator_passed": true
+}

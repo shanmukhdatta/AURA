@@ -1,0 +1,9 @@
+{
+  "success": false,
+  "difficulty": 2,
+  "num_tests": 2,
+  "num_passed": 1,
+  "num_failed": 1,
+  "source": "AppWorld TestTracker.to_dict",
+  "not_aura_verdict": true
+}

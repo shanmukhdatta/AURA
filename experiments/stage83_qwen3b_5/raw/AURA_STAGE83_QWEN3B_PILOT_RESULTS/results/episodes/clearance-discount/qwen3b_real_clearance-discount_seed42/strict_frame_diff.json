@@ -1,0 +1,1 @@
+{"allowlist":{"products":{"1":["price"]}},"changes":[{"after":{"price":120.0},"before":{"price":150.0},"columns":["price"],"pk":[1],"table":"products"}],"issues":[]}

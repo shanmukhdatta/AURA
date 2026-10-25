@@ -1,0 +1,56 @@
+[
+  {
+    "step": "uv_available",
+    "exit_code": 0,
+    "elapsed_s": 0.29,
+    "status": "PASS"
+  },
+  {
+    "step": "install_managed_python_311",
+    "exit_code": 0,
+    "elapsed_s": 1.53,
+    "status": "PASS"
+  },
+  {
+    "step": "create_python311_venv",
+    "exit_code": 0,
+    "elapsed_s": 0.36,
+    "status": "PASS"
+  },
+  {
+    "step": "verify_python311",
+    "exit_code": 0,
+    "elapsed_s": 0.02,
+    "status": "PASS"
+  },
+  {
+    "step": "install_official_appworld",
+    "exit_code": 0,
+    "elapsed_s": 2.23,
+    "status": "PASS"
+  },
+  {
+    "step": "appworld_unpack_official_code",
+    "exit_code": 0,
+    "elapsed_s": 5.58,
+    "status": "PASS"
+  },
+  {
+    "step": "appworld_download_official_data",
+    "exit_code": 0,
+    "elapsed_s": 4.73,
+    "status": "PASS"
+  },
+  {
+    "step": "appworld_python_import",
+    "exit_code": 0,
+    "elapsed_s": 1.83,
+    "status": "PASS"
+  },
+  {
+    "step": "appworld_dev_task_index",
+    "exit_code": 1,
+    "elapsed_s": 1.75,
+    "status": "FAIL"
+  }
+]

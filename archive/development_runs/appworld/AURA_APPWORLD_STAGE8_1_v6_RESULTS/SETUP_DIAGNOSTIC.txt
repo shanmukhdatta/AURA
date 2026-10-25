@@ -1,0 +1,12 @@
+FAILED STEP: appworld_dev_task_index
+COMMAND: ['/tmp/aura_appworld_v6_97wyly9e/appworld_py311/bin/python', '-c', 'from appworld import load_task_ids; ids=list(load_task_ids("dev")); print("DEV_TASK_COUNT",len(ids)); assert len(ids)>=3']
+RETURN CODE: 1
+STDOUT:
+
+STDERR:
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/tmp/aura_appworld_v6_97wyly9e/appworld_py311/lib/python3.11/site-packages/appworld/task.py", line 243, in load_task_ids
+    raise Exception(f"The task directory ({tasks_directory}) doesn't exist.")
+Exception: The task directory (/tmp/aura_appworld_v6_97wyly9e/appworld_root/data/tasks) doesn't exist.
+

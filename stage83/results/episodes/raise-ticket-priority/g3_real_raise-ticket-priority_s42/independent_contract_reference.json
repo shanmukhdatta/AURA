@@ -1,0 +1,1 @@
+{"allowlist_changes":[{"after":{"priority":"high"},"before":{"priority":"normal"},"columns":["priority"],"pk":[3],"table":"tickets"}],"matched_contract_passed":true,"out_of_frame_issues":[],"task_id":"raise-ticket-priority"}

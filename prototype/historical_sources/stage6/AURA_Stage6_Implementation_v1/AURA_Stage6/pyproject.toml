@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aura-verifier-stage6"
+version = "0.6.0"
+description = "AURA Stage 5: contract-checking and adaptive evidence inspection"
+requires-python = ">=3.10"
+dependencies = ["jsonschema>=4.18"]
+
+[project.optional-dependencies]
+test = ["pytest>=7.4"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.setuptools.packages.find]
+include = ["aura_evidence*", "aura_verifier*", "aura_reasoning*", "aura_planning*", "aura_external*", "aura_baselines*"]

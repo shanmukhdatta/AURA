@@ -1,0 +1,1 @@
+{"actual_agent_rollout":false,"epoch_id":"epoch.stage7.wrong_student","harness_expected_contract_verdict":"FAIL","run_id":"run.stage7.wrong_student","scenario":"wrong_student","snapshot_capture_bytes_read":615,"snapshot_capture_latency_ms":2.71983,"transient_dirty_write_outside_existing_task_contract":false}

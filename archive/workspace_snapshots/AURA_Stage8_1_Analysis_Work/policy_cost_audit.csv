@@ -1,0 +1,17 @@
+episode,policy,verdict,selected_probes,actual_probe_ms,planner_selection_ms,capture_ms,total_probe_plus_planning_ms
+01_direct,cera,PASS,"['student_state', 'report_state', 'validation_trace', 'full_frame_diff']",0.88394,1.607504,15.417074,2.49144
+01_direct,exhaustive,PASS,"['student_state', 'report_state', 'full_frame_diff', 'validation_trace']",0.81571,0.028338,15.417074,0.84405
+01_direct,fixed,PASS,"['student_state', 'report_state', 'full_frame_diff', 'validation_trace']",0.78339,0.070924,15.417074,0.85431
+01_direct,greedy,PASS,"['student_state', 'report_state', 'validation_trace', 'full_frame_diff']",0.89153,0.162634,15.417074,1.05416
+02_procedural,cera,FAIL,['student_state'],0.05026,1.198841,12.331579000000001,1.2491
+02_procedural,exhaustive,FAIL,"['student_state', 'report_state', 'full_frame_diff', 'validation_trace']",0.4269,0.031518,12.331579000000001,0.45842
+02_procedural,fixed,FAIL,['student_state'],0.04976,0.022645,12.331579000000001,0.0724
+02_procedural,greedy,FAIL,['student_state'],0.04777,0.036314,12.331579000000001,0.08408
+03_silent_tool_noop,cera,FAIL,['student_state'],0.04838,1.187069,16.392139,1.23545
+03_silent_tool_noop,exhaustive,FAIL,"['student_state', 'report_state', 'full_frame_diff', 'validation_trace']",0.73607,0.03404,16.392139,0.77011
+03_silent_tool_noop,fixed,FAIL,['student_state'],0.05208,0.023868,16.392139,0.07595
+03_silent_tool_noop,greedy,FAIL,['student_state'],0.04725,0.033844,16.392139,0.08109
+04_denied_readback,cera,FAIL,"['student_state', 'report_state', 'validation_trace']",0.5547300000000001,2.118307,15.770195000000001,2.67304
+04_denied_readback,exhaustive,FAIL,"['student_state', 'report_state', 'full_frame_diff', 'validation_trace']",0.8318,0.0257,15.770195000000001,0.8575
+04_denied_readback,fixed,FAIL,"['student_state', 'report_state', 'full_frame_diff', 'validation_trace']",0.76262,0.062369,15.770195000000001,0.82499
+04_denied_readback,greedy,FAIL,"['student_state', 'report_state', 'validation_trace']",0.56653,0.093917,15.770195000000001,0.66045

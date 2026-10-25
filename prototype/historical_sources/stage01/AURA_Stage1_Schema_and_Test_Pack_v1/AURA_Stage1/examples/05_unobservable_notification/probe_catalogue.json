@@ -1,0 +1,123 @@
+[
+  {
+    "schema_version": "1.0",
+    "probe_id": "student_state",
+    "description": "Independent read of student row and record count",
+    "surface_id": "sqlite.students",
+    "adapter": "sql_read",
+    "read_only": true,
+    "independence": "independent_verifier",
+    "provides_fact_keys": [
+      "student.101.marks",
+      "student.101.matching_count"
+    ],
+    "mutation_coverage": "scoped",
+    "covered_mutation_surfaces": [],
+    "coverage_method": "none",
+    "estimated_cost": {
+      "latency_ms": 1.2,
+      "bytes_read": 200
+    },
+    "failure_modes": [
+      "denied",
+      "stale"
+    ]
+  },
+  {
+    "schema_version": "1.0",
+    "probe_id": "report_state",
+    "description": "Independent read of saved report and comparison against known database result",
+    "surface_id": "filesystem.reports",
+    "adapter": "file_read",
+    "read_only": true,
+    "independence": "independent_verifier",
+    "provides_fact_keys": [
+      "report.101.exists",
+      "report.101.matches_db"
+    ],
+    "mutation_coverage": "scoped",
+    "covered_mutation_surfaces": [],
+    "coverage_method": "none",
+    "estimated_cost": {
+      "latency_ms": 2.3,
+      "bytes_read": 700
+    },
+    "failure_modes": [
+      "denied",
+      "stale"
+    ]
+  },
+  {
+    "schema_version": "1.0",
+    "probe_id": "full_frame_diff",
+    "description": "Full quiescent S0/ST diff for all declared local mutable surfaces",
+    "surface_id": "sqlite.students",
+    "adapter": "state_diff",
+    "read_only": true,
+    "independence": "independent_verifier",
+    "provides_fact_keys": [
+      "mutation.out_of_frame_count"
+    ],
+    "mutation_coverage": "complete",
+    "covered_mutation_surfaces": [
+      "sqlite.students",
+      "filesystem.reports"
+    ],
+    "coverage_method": "snapshot_pair",
+    "estimated_cost": {
+      "latency_ms": 20.0,
+      "bytes_read": 100000
+    },
+    "failure_modes": [
+      "denied",
+      "stale",
+      "integrity_failure"
+    ]
+  },
+  {
+    "schema_version": "1.0",
+    "probe_id": "validation_trace",
+    "description": "Read trusted ordered trace events",
+    "surface_id": "trace.tools",
+    "adapter": "trace_read",
+    "read_only": true,
+    "independence": "independent_verifier",
+    "provides_fact_keys": [
+      "trace.validation_before_update"
+    ],
+    "mutation_coverage": "none",
+    "covered_mutation_surfaces": [],
+    "coverage_method": "none",
+    "estimated_cost": {
+      "latency_ms": 2.5,
+      "bytes_read": 1000
+    },
+    "failure_modes": [
+      "unavailable",
+      "integrity_failure"
+    ]
+  },
+  {
+    "schema_version": "1.0",
+    "probe_id": "notification_status",
+    "description": "Read status from mock external notifier; may be unavailable",
+    "surface_id": "external.notify",
+    "adapter": "external_status",
+    "read_only": true,
+    "independence": "conditionally_trusted",
+    "provides_fact_keys": [
+      "external.notify.confirmed"
+    ],
+    "mutation_coverage": "none",
+    "covered_mutation_surfaces": [],
+    "coverage_method": "none",
+    "estimated_cost": {
+      "latency_ms": 50.0,
+      "bytes_read": 50
+    },
+    "failure_modes": [
+      "timeout",
+      "unavailable"
+    ]
+  }
+]

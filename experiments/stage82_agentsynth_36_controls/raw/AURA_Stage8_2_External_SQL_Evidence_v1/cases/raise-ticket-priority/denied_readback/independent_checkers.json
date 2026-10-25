@@ -1,0 +1,1 @@
+[{"expected":[["high"]],"matched":true,"observed":[["high"]],"query":"SELECT priority FROM tickets WHERE id=3"},{"expected":[["normal"]],"matched":true,"observed":[["normal"]],"query":"SELECT priority FROM tickets WHERE id=1"}]

@@ -1,0 +1,1 @@
+[{"expected":[[85]],"matched":true,"observed":[[85]],"query":"SELECT stock FROM products WHERE sku='A'"},{"expected":[[30]],"matched":true,"observed":[[30]],"query":"SELECT stock FROM products WHERE sku='B'"},{"expected":[[30]],"matched":true,"observed":[[30]],"query":"SELECT stock FROM products WHERE sku='C'"}]

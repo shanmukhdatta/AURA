@@ -1,0 +1,6 @@
+cohort,n,scope,pass,fail,uncertain,not_aura_evaluated
+stage8_1_local_qwen3b,4,real LLM local-controlled workflows,1,3,0,0
+stage8_1_appworld,3,AppWorld native agent evaluation; no AURA certificates,0,0,0,3
+stage8_2_scripted,36,6 tasks x 6 scripted oracle/fault/denial controls,6,24,6,0
+stage8_3_qwen05,5,Qwen2.5-0.5B; AgentSynth SQL environment; 1 seed,1,4,0,0
+stage8_3_qwen3b_gpu,5,Qwen2.5-3B on Kaggle GPU; 5 tasks; 1 seed,3,2,0,0

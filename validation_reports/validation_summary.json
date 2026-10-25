@@ -1,0 +1,83 @@
+{
+  "metadata": {
+    "validation_timestamp_utc": "2026-10-25T21:22:58.435105+00:00",
+    "execution_time_seconds": 7.36,
+    "platform": "Windows-10-10.0.26200-SP0",
+    "python_version": "3.11.9",
+    "git_branch": "feature/full-research-reproducibility",
+    "git_commit": "b1e814ff1a05aac5846cc3637b98308d2053d475"
+  },
+  "scientific_integrity_disclosures": {
+    "scoring_separation": "Four distinct evaluation concepts strictly maintained: (1) Official CLI Benchmark, (2) Reproduced SQL-only Checker, (3) Independent Strict Task-Contract Reference, (4) AURA Verification Certificate.",
+    "cohort_separation": "Scripted controls (Stage 7 and 8.2) are explicitly separated from genuine LLM episodes (Stage 8.3). Scripted fault injections are never labeled as model rollouts.",
+    "model_comparison_constraint": "Qwen2.5-0.5B (local CPU, max 4 turns) and Qwen2.5-3B (Kaggle T4 GPU, max 6 turns) diverge in runtime environments and task sets (refuse-cancel-shipped vs cancel-and-void-payment). They are reported as independent cohorts, not as a controlled head-to-head study.",
+    "noninterference_guarantee": "Closed-world SQLite snapshots and binary checksums verify that evaluation did not mutate task environments."
+  },
+  "aggregate_counts": {
+    "total_episodes_validated": 59,
+    "total_certificates_replayed": 59,
+    "total_replay_matches": 59,
+    "certificate_replay_match_rate": 1.0,
+    "overall_concordance_rate": 1.0,
+    "total_false_passes": 0,
+    "total_false_fails": 0
+  },
+  "cohorts": {
+    "stage7_local": {
+      "cohort": "stage7_local",
+      "execution_mode": "local_baseline",
+      "model_id": "none_scripted_local_sqlite",
+      "episodes_count": 13,
+      "reproduced_sql_accuracy": 0.2308,
+      "strict_reference_accuracy": 0.2308,
+      "aura_verdict_accuracy": 0.2308,
+      "concordance_rate": 1.0,
+      "false_pass_count": 0,
+      "false_fail_count": 0,
+      "replay_match_rate": 1.0,
+      "noninterference_rate": 1.0
+    },
+    "stage82_scripted_controls": {
+      "cohort": "stage82_scripted_controls",
+      "execution_mode": "scripted_control",
+      "model_id": "none_scripted_control",
+      "episodes_count": 36,
+      "reproduced_sql_accuracy": 0.75,
+      "strict_reference_accuracy": 0.1667,
+      "aura_verdict_accuracy": 0.1667,
+      "concordance_rate": 1.0,
+      "false_pass_count": 0,
+      "false_fail_count": 0,
+      "replay_match_rate": 1.0,
+      "noninterference_rate": 1.0
+    },
+    "stage83_qwen05b_genuine": {
+      "cohort": "stage83_qwen05b_genuine",
+      "execution_mode": "genuine_llm",
+      "model_id": "Qwen/Qwen2.5-0.5B-Instruct",
+      "episodes_count": 5,
+      "reproduced_sql_accuracy": 0.5833,
+      "strict_reference_accuracy": 0.2,
+      "aura_verdict_accuracy": 0.2,
+      "concordance_rate": 1.0,
+      "false_pass_count": 0,
+      "false_fail_count": 0,
+      "replay_match_rate": 1.0,
+      "noninterference_rate": 1.0
+    },
+    "stage83_qwen3b_genuine": {
+      "cohort": "stage83_qwen3b_genuine",
+      "execution_mode": "genuine_llm",
+      "model_id": "Qwen/Qwen2.5-3B-Instruct",
+      "episodes_count": 5,
+      "reproduced_sql_accuracy": 0.75,
+      "strict_reference_accuracy": 0.6,
+      "aura_verdict_accuracy": 0.6,
+      "concordance_rate": 1.0,
+      "false_pass_count": 0,
+      "false_fail_count": 0,
+      "replay_match_rate": 1.0,
+      "noninterference_rate": 1.0
+    }
+  }
+}

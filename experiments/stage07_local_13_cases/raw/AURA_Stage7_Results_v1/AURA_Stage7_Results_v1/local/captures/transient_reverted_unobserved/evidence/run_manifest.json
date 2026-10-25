@@ -1,0 +1,1 @@
+{"actual_agent_rollout":false,"epoch_id":"epoch.stage7.transient_reverted_unobserved","harness_expected_contract_verdict":"PASS","run_id":"run.stage7.transient_reverted_unobserved","scenario":"transient_reverted_unobserved","snapshot_capture_bytes_read":615,"snapshot_capture_latency_ms":2.86264,"transient_dirty_write_outside_existing_task_contract":true}

@@ -1,0 +1,47 @@
+{
+  "copied_files": 2912,
+  "identical_unchanged": 409,
+  "conflicting_unchanged": 8,
+  "conflicts": [
+    {
+      "path": "README.md",
+      "existing_sha256": "4ca29ad7b618dcd156448e1a66785f833b85bf7e9ea0801552b9b967785edff7",
+      "bundle_sha256": "9c72d129ac8b48045d11ac386b972bec6bf62f28411cd32557347cf6b3a704c1"
+    },
+    {
+      "path": "stage82_agentsynth_pilot.py",
+      "existing_sha256": "770b7ca1b64dc1fb82bb4ee8a2509aafc2aae83e345bc0e70f9cef2dbb424d94",
+      "bundle_sha256": "0c6c324423d4579bf7c7068ffebf9e93df63ef1648cfbfbdc9aefc001acc895d"
+    },
+    {
+      "path": "AURA_Stage7/.pytest_cache/v/cache/nodeids",
+      "existing_sha256": "73c63dfcc948554c70179c4d0cf6904c93f5713cd84c65568b847293e66fab87",
+      "bundle_sha256": "fd6c58147148b9e7fcc5c12ce885d843db7b12aa376ea8228f334863c73a7e66"
+    },
+    {
+      "path": "AURA_Stage7/aura_evaluation/local_faults.py",
+      "existing_sha256": "10fb73f91d0b11d1cbe0c615df8f15d6e7831ec7870c923fee5a19955a9ab71c",
+      "bundle_sha256": "01bc4b05c38bcf212730a9666cfd38aa7b189080087945da8a87c03241ffecf7"
+    },
+    {
+      "path": "AURA_Stage7/aura_evidence/probes.py",
+      "existing_sha256": "ee2f47996363138e606c0e413aa285f02610c1e7f9291a84969bb63511d1d57b",
+      "bundle_sha256": "eb2533eef9d5bef46a7e0a3143d38a2ac4df954f8737b02e354ce875e58b0876"
+    },
+    {
+      "path": "AURA_Stage7/tests/test_evidence_stage2.py",
+      "existing_sha256": "6686af877ecafcb1f9857504c67ec5665c265e8873f2a9ef5f76b64fbf43e17a",
+      "bundle_sha256": "aa4485a8e6f960e888e8126f9770c5bd13ce61e5356c57dc6ab3c1e17eca2484"
+    },
+    {
+      "path": "stage83/G5_STATUS.md",
+      "existing_sha256": "87ca758615a3074445e9e366957a425411275628b7ef01f382c78696f6072096",
+      "bundle_sha256": "22c23911d11aed4027a05d932bca18d5aaf55332a514a896e0aae0d354b6d3f8"
+    },
+    {
+      "path": "stage83/package_g5_results.py",
+      "existing_sha256": "cf598401472ab2c34d4142bc400f9431be3792ef364c1202a5a706f959a9a589",
+      "bundle_sha256": "c5dafe191e6fde3ab6ae9b7177e029c2d681537261c74475db8d637d6cf6ed2b"
+    }
+  ]
+}

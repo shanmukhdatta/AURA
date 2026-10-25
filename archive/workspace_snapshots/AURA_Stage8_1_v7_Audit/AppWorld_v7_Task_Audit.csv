@@ -1,0 +1,4 @@
+task_id,steps,execution_errors,execution_success,native_api_log_calls,completed_signal,official_success,official_tests_passed,official_tests_total,noop_passed,noop_total,gain_vs_noop,inference_time_s,distinct_parsed_commands
+50e1ac9_1,2,1,1,1,True,False,1,2,1,2,0,33.68,2
+50e1ac9_2,3,2,1,2,True,False,1,2,1,2,0,68.83,3
+50e1ac9_3,7,7,0,0,False,False,1,2,1,2,0,201.71,3

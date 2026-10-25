@@ -1,0 +1,9 @@
+{
+  "case_id": "06_known_bad_and_unknown",
+  "expected_verdict": "FAIL",
+  "decision_status": "normal",
+  "reason_code": "known_violation_dominates_unknown",
+  "reference_world_count": 9,
+  "observable_world_count": 3,
+  "note": "Expected result for Stage 1 specification tests. No AURA engine was run."
+}

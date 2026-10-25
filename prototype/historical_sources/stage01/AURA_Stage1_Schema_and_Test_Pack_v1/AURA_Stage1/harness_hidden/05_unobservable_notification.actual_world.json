@@ -1,0 +1,6 @@
+{
+  "fixture_id": "05_unobservable_notification",
+  "harness_only": true,
+  "actual_world_id": "world.05_unobservable_notification.actual",
+  "actual_world_satisfies_contract": true
+}

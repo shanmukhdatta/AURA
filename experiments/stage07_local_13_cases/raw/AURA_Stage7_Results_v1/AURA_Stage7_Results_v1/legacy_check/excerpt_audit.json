@@ -1,0 +1,13 @@
+{
+  "source_file": "agentdiff_public_contract_excerpt.jsonl",
+  "source_sha256": "efaa83033f4745c21278a507fab00caeae8314aff79006780e1231927b307b9d",
+  "metrics": {
+    "total_tasks": 5,
+    "parsed_tasks": 5,
+    "service_box": 5,
+    "assertions": 8,
+    "syntactically_supported_tasks": 5
+  },
+  "example_unsupported": [],
+  "warning": "Parsing and static syntax support only; not a native Agent-Diff task run or verified score."
+}

@@ -1,0 +1,150 @@
+[
+  {
+    "schema_version": "1.0",
+    "observation_id": "obs.05_unobservable_notification.student_state.0",
+    "run_id": "run.05_unobservable_notification",
+    "probe_id": "student_state",
+    "epoch_id": "run.epoch.20261024",
+    "observed_at": "2026-10-24T14:49:00Z",
+    "status": "ok",
+    "reason_code": "none",
+    "channel": "independent_verifier",
+    "facts": [
+      {
+        "fact_key": "student.101.marks",
+        "value": 85,
+        "source_ref": "source:student_state"
+      },
+      {
+        "fact_key": "student.101.matching_count",
+        "value": 1,
+        "source_ref": "source:student_state"
+      }
+    ],
+    "coverage_receipts": [],
+    "actual_cost": {
+      "latency_ms": 1.2,
+      "bytes_read": 200,
+      "cpu_ms": 0.5
+    },
+    "payload_sha256": "8bd4c98b8d9ab817e5a35c861b5fa6bdfd822e34f81c9e7f84a0d583466f742d"
+  },
+  {
+    "schema_version": "1.0",
+    "observation_id": "obs.05_unobservable_notification.report_state.0",
+    "run_id": "run.05_unobservable_notification",
+    "probe_id": "report_state",
+    "epoch_id": "run.epoch.20261024",
+    "observed_at": "2026-10-24T14:49:00Z",
+    "status": "ok",
+    "reason_code": "none",
+    "channel": "independent_verifier",
+    "facts": [
+      {
+        "fact_key": "report.101.exists",
+        "value": true,
+        "source_ref": "source:report_state"
+      },
+      {
+        "fact_key": "report.101.matches_db",
+        "value": true,
+        "source_ref": "source:report_state"
+      }
+    ],
+    "coverage_receipts": [],
+    "actual_cost": {
+      "latency_ms": 2.3,
+      "bytes_read": 700,
+      "cpu_ms": 0.5
+    },
+    "payload_sha256": "1665923c3eb2d708e8818fbeb12f43e3cbc07be3aab99483ce708e193eeebf57"
+  },
+  {
+    "schema_version": "1.0",
+    "observation_id": "obs.05_unobservable_notification.full_frame_diff.0",
+    "run_id": "run.05_unobservable_notification",
+    "probe_id": "full_frame_diff",
+    "epoch_id": "run.epoch.20261024",
+    "observed_at": "2026-10-24T14:49:00Z",
+    "status": "ok",
+    "reason_code": "none",
+    "channel": "independent_verifier",
+    "facts": [
+      {
+        "fact_key": "mutation.out_of_frame_count",
+        "value": 0,
+        "source_ref": "source:full_frame_diff"
+      }
+    ],
+    "coverage_receipts": [
+      {
+        "surface_id": "sqlite.students",
+        "completeness": "complete",
+        "method": "snapshot_pair",
+        "consistent_epoch": true,
+        "independent_source": true,
+        "snapshot_before_ref": "snapshot_before:sqlite.students",
+        "snapshot_after_ref": "snapshot_after:sqlite.students"
+      },
+      {
+        "surface_id": "filesystem.reports",
+        "completeness": "complete",
+        "method": "snapshot_pair",
+        "consistent_epoch": true,
+        "independent_source": true,
+        "snapshot_before_ref": "snapshot_before:filesystem.reports",
+        "snapshot_after_ref": "snapshot_after:filesystem.reports"
+      }
+    ],
+    "actual_cost": {
+      "latency_ms": 20.0,
+      "bytes_read": 100000,
+      "cpu_ms": 0.5
+    },
+    "payload_sha256": "99431aa5dc8b04dafbd0637fd55034f744e55269d59f64fe5386d39eaf31a50b"
+  },
+  {
+    "schema_version": "1.0",
+    "observation_id": "obs.05_unobservable_notification.validation_trace.0",
+    "run_id": "run.05_unobservable_notification",
+    "probe_id": "validation_trace",
+    "epoch_id": "run.epoch.20261024",
+    "observed_at": "2026-10-24T14:49:00Z",
+    "status": "ok",
+    "reason_code": "none",
+    "channel": "independent_verifier",
+    "facts": [
+      {
+        "fact_key": "trace.validation_before_update",
+        "value": true,
+        "source_ref": "source:validation_trace"
+      }
+    ],
+    "coverage_receipts": [],
+    "actual_cost": {
+      "latency_ms": 2.5,
+      "bytes_read": 1000,
+      "cpu_ms": 0.5
+    },
+    "payload_sha256": "22efaf9d52b5885e0f1938eb8bb0acaa5f270a02b9551769e6ac70f3ad404612"
+  },
+  {
+    "schema_version": "1.0",
+    "observation_id": "obs.05_unobservable_notification.notification_status.0",
+    "run_id": "run.05_unobservable_notification",
+    "probe_id": "notification_status",
+    "epoch_id": "run.epoch.20261024",
+    "observed_at": "2026-10-24T14:49:00Z",
+    "status": "unavailable",
+    "reason_code": "timeout_no_readback",
+    "channel": "conditionally_trusted",
+    "facts": [],
+    "coverage_receipts": [],
+    "actual_cost": {
+      "latency_ms": 50.0,
+      "bytes_read": 0,
+      "cpu_ms": 0.5
+    },
+    "payload_sha256": "5873bbb0a4246b4aba08fb2d15e3eb950e68e14849f4c38a8fbe699af85d9b01"
+  }
+]

@@ -1,0 +1,111 @@
+{
+  "schema_version": "1.0",
+  "study": "AURA preliminary research consolidation",
+  "archive_integrity": {
+    "local_qwen3b": {
+      "archive": "AURA_STAGE8_1_OUTPUTS.zip",
+      "status": "PASS",
+      "zip_members": 57,
+      "manifest_entries": 55,
+      "hashes_verified": 55,
+      "sha256": "5afbd5486a893a742b27a57639cae2a645107bc8ed5ede7ada4baf9f30bb454b",
+      "issues": []
+    },
+    "appworld_v7": {
+      "archive": "AURA_APPWORLD_STAGE8_1_v7_RESULTS.zip",
+      "status": "PASS",
+      "zip_members": 31,
+      "manifest_entries": 29,
+      "hashes_verified": 29,
+      "sha256": "fbc5957ab2c26e70ac0a92fa5945673698a84f14f8a1bdea864dc91ae98f8847",
+      "issues": []
+    },
+    "scripted_agent_synth": {
+      "archive": "AURA_Stage8_2_External_SQL_Evidence_v1.zip",
+      "status": "PASS",
+      "zip_members": 331,
+      "manifest_entries": 330,
+      "hashes_verified": 330,
+      "sha256": "d3d50978c72fde8422416fbecd1ee18c28523629ac9e4248049952131f40507b",
+      "issues": []
+    },
+    "qwen05_agent_synth": {
+      "archive": "AURA_STAGE8_3_CORRECTED_RESULTS.zip",
+      "status": "PASS",
+      "zip_members": 165,
+      "manifest_entries": 142,
+      "hashes_verified": 142,
+      "sha256": "e6836569b6276781bd70906b375578ba523c95a177e3f471afb1b058e332534f",
+      "issues": []
+    },
+    "qwen3b_agent_synth": {
+      "archive": "AURA_STAGE83_QWEN3B_PILOT_RESULTS.zip",
+      "status": "PASS",
+      "zip_members": 104,
+      "manifest_entries": 103,
+      "hashes_verified": 103,
+      "sha256": "416b28a87621022668d8f04c63a3db6d8fd3be5c8d6a260346cae4da505d3a4d",
+      "issues": []
+    }
+  },
+  "cohorts": [
+    {
+      "cohort": "stage8_1_local_qwen3b",
+      "n": 4,
+      "scope": "real LLM local-controlled workflows",
+      "pass": 1,
+      "fail": 3,
+      "uncertain": 0,
+      "not_aura_evaluated": 0
+    },
+    {
+      "cohort": "stage8_1_appworld",
+      "n": 3,
+      "scope": "AppWorld native agent evaluation; no AURA certificates",
+      "pass": 0,
+      "fail": 0,
+      "uncertain": 0,
+      "not_aura_evaluated": 3
+    },
+    {
+      "cohort": "stage8_2_scripted",
+      "n": 36,
+      "scope": "6 tasks x 6 scripted oracle/fault/denial controls",
+      "pass": 6,
+      "fail": 24,
+      "uncertain": 6,
+      "not_aura_evaluated": 0
+    },
+    {
+      "cohort": "stage8_3_qwen05",
+      "n": 5,
+      "scope": "Qwen2.5-0.5B; AgentSynth SQL environment; 1 seed",
+      "pass": 1,
+      "fail": 4,
+      "uncertain": 0,
+      "not_aura_evaluated": 0
+    },
+    {
+      "cohort": "stage8_3_qwen3b_gpu",
+      "n": 5,
+      "scope": "Qwen2.5-3B on Kaggle GPU; 5 tasks; 1 seed",
+      "pass": 3,
+      "fail": 2,
+      "uncertain": 0,
+      "not_aura_evaluated": 0
+    }
+  ],
+  "model_episode_count_across_four_distinct_cohorts": 17,
+  "model_episode_count_excluding_appworld": 14,
+  "controlled_case_count": 36,
+  "important_limitations": [
+    "53 registry rows are 17 model episodes plus 36 scripted controls; not 53 independent agent episodes.",
+    "AppWorld has no AURA certificates.",
+    "The 5 Qwen0.5 AgentSynth tasks were scored with reproduced SQL state predicates and a matched-contract scorer, not native CLI.",
+    "The 5 Qwen3B Kaggle tasks were scored with reproduced checkers, not native CLI.",
+    "Model cohorts differ in tasks, prompt, code revision and hardware: NOT a controlled model-comparison experiment.",
+    "Zero mismatches on small test-designed controls is not general accuracy.",
+    "Finite-model CERA cost units do not equal milliseconds; under some priors greedy outperforms CERA.",
+    "Terminal before/after snapshots cannot detect transient writes that are fully reverted."
+  ]
+}

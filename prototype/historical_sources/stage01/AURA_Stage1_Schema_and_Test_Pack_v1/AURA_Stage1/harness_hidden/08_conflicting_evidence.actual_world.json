@@ -1,0 +1,6 @@
+{
+  "fixture_id": "08_conflicting_evidence",
+  "harness_only": true,
+  "actual_world_id": "world.08_conflicting_evidence.actual",
+  "actual_world_satisfies_contract": true
+}

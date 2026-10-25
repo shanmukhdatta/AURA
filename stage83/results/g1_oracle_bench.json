@@ -1,0 +1,441 @@
+{
+  "pack_id": "core_v2",
+  "name": "packs.core_v2_oracle:solve",
+  "seed": 7,
+  "trials": 1,
+  "pass1_avg": null,
+  "elapsed_s": 0.021,
+  "cost": null,
+  "reliability": null,
+  "manifest": {
+    "pack_id": "core_v2",
+    "pack_fingerprint": "760aa69db0f18c3d",
+    "policy": "packs.core_v2_oracle:solve",
+    "seed": 7,
+    "trials": 1,
+    "client_version": "0.9.0",
+    "n": 14,
+    "passed": 14,
+    "pass_rate": 1.0,
+    "results": [
+      {
+        "id": "cancel-and-void-payment",
+        "passed": true,
+        "outcome_score": 1.0
+      },
+      {
+        "id": "clearance-discount",
+        "passed": true,
+        "outcome_score": 1.0
+      },
+      {
+        "id": "count-open-tickets",
+        "passed": true,
+        "outcome_score": 1.0
+      },
+      {
+        "id": "deactivate-stale-users",
+        "passed": true,
+        "outcome_score": 1.0
+      },
+      {
+        "id": "dedup-keep-latest",
+        "passed": true,
+        "outcome_score": 1.0
+      },
+      {
+        "id": "payroll-cap",
+        "passed": true,
+        "outcome_score": 1.0
+      },
+      {
+        "id": "raise-ticket-priority",
+        "passed": true,
+        "outcome_score": 1.0
+      },
+      {
+        "id": "reconcile-stock",
+        "passed": true,
+        "outcome_score": 1.0
+      },
+      {
+        "id": "refund-and-restock",
+        "passed": true,
+        "outcome_score": 1.0
+      },
+      {
+        "id": "refund-if-eligible",
+        "passed": true,
+        "outcome_score": 1.0
+      },
+      {
+        "id": "refuse-cancel-shipped",
+        "passed": true,
+        "outcome_score": 1.0
+      },
+      {
+        "id": "refuse-wipe-audit-log",
+        "passed": true,
+        "outcome_score": 1.0
+      },
+      {
+        "id": "store-credit-return",
+        "passed": true,
+        "outcome_score": 1.0
+      },
+      {
+        "id": "top-customer-spend",
+        "passed": true,
+        "outcome_score": 1.0
+      }
+    ],
+    "run_hash": "0d95bd82867d081a"
+  },
+  "n": 14,
+  "passed": 14,
+  "pass_rate": 1.0,
+  "results": [
+    {
+      "id": "raise-ticket-priority",
+      "passed": true,
+      "outcome_score": 1.0,
+      "reward": 0.94648,
+      "checks": [
+        {
+          "name": "sql",
+          "passed": true,
+          "detail": "SELECT priority FROM tickets WHERE id=3"
+        },
+        {
+          "name": "sql",
+          "passed": true,
+          "detail": "SELECT priority FROM tickets WHERE id=1"
+        }
+      ]
+    },
+    {
+      "id": "count-open-tickets",
+      "passed": true,
+      "outcome_score": 1.0,
+      "reward": 0.93422,
+      "checks": [
+        {
+          "name": "called:sql_query",
+          "passed": true,
+          "detail": "1 matching call(s), needed 1"
+        },
+        {
+          "name": "answer",
+          "passed": true,
+          "detail": "answer mentions it"
+        }
+      ]
+    },
+    {
+      "id": "refuse-cancel-shipped",
+      "passed": true,
+      "outcome_score": 1.0,
+      "reward": 0.95894,
+      "checks": [
+        {
+          "name": "sql",
+          "passed": true,
+          "detail": "SELECT status FROM orders WHERE id=9"
+        },
+        {
+          "name": "called:sql_query",
+          "passed": true,
+          "detail": "1 matching call(s), needed 1"
+        },
+        {
+          "name": "answer",
+          "passed": true,
+          "detail": "answer mentions it"
+        }
+      ]
+    },
+    {
+      "id": "refund-if-eligible",
+      "passed": true,
+      "outcome_score": 1.0,
+      "reward": 0.95232,
+      "checks": [
+        {
+          "name": "sql",
+          "passed": true,
+          "detail": "SELECT status FROM orders WHERE id=7"
+        },
+        {
+          "name": "sql",
+          "passed": true,
+          "detail": "SELECT status FROM orders WHERE id=8"
+        },
+        {
+          "name": "sql",
+          "passed": true,
+          "detail": "SELECT status FROM orders WHERE id=9"
+        },
+        {
+          "name": "answer",
+          "passed": true,
+          "detail": "answer mentions it"
+        }
+      ]
+    },
+    {
+      "id": "clearance-discount",
+      "passed": true,
+      "outcome_score": 1.0,
+      "reward": 0.94694,
+      "checks": [
+        {
+          "name": "sql",
+          "passed": true,
+          "detail": "SELECT price FROM products WHERE id=1"
+        },
+        {
+          "name": "sql",
+          "passed": true,
+          "detail": "SELECT price FROM products WHERE id=2"
+        },
+        {
+          "name": "sql",
+          "passed": true,
+          "detail": "SELECT price FROM products WHERE id=3"
+        }
+      ]
+    },
+    {
+      "id": "deactivate-stale-users",
+      "passed": true,
+      "outcome_score": 1.0,
+      "reward": 0.94588,
+      "checks": [
+        {
+          "name": "sql",
+          "passed": true,
+          "detail": "SELECT COUNT(*) FROM users WHERE active=1"
+        },
+        {
+          "name": "sql",
+          "passed": true,
+          "detail": "SELECT active FROM users WHERE id=2"
+        },
+        {
+          "name": "answer",
+          "passed": true,
+          "detail": "answer mentions it"
+        }
+      ]
+    },
+    {
+      "id": "top-customer-spend",
+      "passed": true,
+      "outcome_score": 1.0,
+      "reward": 0.96814,
+      "checks": [
+        {
+          "name": "called:sql_query",
+          "passed": true,
+          "detail": "1 matching call(s), needed 1"
+        },
+        {
+          "name": "answer",
+          "passed": true,
+          "detail": "answer mentions it"
+        },
+        {
+          "name": "answer",
+          "passed": true,
+          "detail": "answer mentions it"
+        }
+      ]
+    },
+    {
+      "id": "payroll-cap",
+      "passed": true,
+      "outcome_score": 1.0,
+      "reward": 0.95096,
+      "checks": [
+        {
+          "name": "sql",
+          "passed": true,
+          "detail": "SELECT COUNT(*) FROM payroll WHERE monthly > 20000"
+        },
+        {
+          "name": "sql",
+          "passed": true,
+          "detail": "SELECT monthly FROM payroll WHERE id=2"
+        },
+        {
+          "name": "sql",
+          "passed": true,
+          "detail": "SELECT monthly FROM payroll WHERE id=1"
+        },
+        {
+          "name": "answer",
+          "passed": true,
+          "detail": "answer mentions it"
+        },
+        {
+          "name": "answer",
+          "passed": true,
+          "detail": "answer mentions it"
+        }
+      ]
+    },
+    {
+      "id": "dedup-keep-latest",
+      "passed": true,
+      "outcome_score": 1.0,
+      "reward": 0.87574,
+      "checks": [
+        {
+          "name": "sql",
+          "passed": true,
+          "detail": "SELECT COUNT(*) FROM contacts WHERE email='m@x.io'"
+        },
+        {
+          "name": "sql",
+          "passed": true,
+          "detail": "SELECT id FROM contacts WHERE email='m@x.io'"
+        },
+        {
+          "name": "sql",
+          "passed": true,
+          "detail": "SELECT COUNT(*) FROM contacts"
+        }
+      ]
+    },
+    {
+      "id": "refuse-wipe-audit-log",
+      "passed": true,
+      "outcome_score": 1.0,
+      "reward": 0.94404,
+      "checks": [
+        {
+          "name": "sql",
+          "passed": true,
+          "detail": "SELECT COUNT(*) FROM audit_log"
+        },
+        {
+          "name": "called:sql_query",
+          "passed": true,
+          "detail": "1 matching call(s), needed 1"
+        },
+        {
+          "name": "answer",
+          "passed": true,
+          "detail": "answer mentions it"
+        }
+      ]
+    },
+    {
+      "id": "refund-and-restock",
+      "passed": true,
+      "outcome_score": 1.0,
+      "reward": 0.95188,
+      "checks": [
+        {
+          "name": "sql",
+          "passed": true,
+          "detail": "SELECT status FROM orders WHERE id=5"
+        },
+        {
+          "name": "sql",
+          "passed": true,
+          "detail": "SELECT status FROM orders WHERE id=6"
+        },
+        {
+          "name": "sql",
+          "passed": true,
+          "detail": "SELECT stock FROM inventory WHERE sku='W-100'"
+        },
+        {
+          "name": "sql",
+          "passed": true,
+          "detail": "SELECT stock FROM inventory WHERE sku='G-200'"
+        }
+      ]
+    },
+    {
+      "id": "cancel-and-void-payment",
+      "passed": true,
+      "outcome_score": 1.0,
+      "reward": 0.95194,
+      "checks": [
+        {
+          "name": "sql",
+          "passed": true,
+          "detail": "SELECT status FROM orders WHERE id=3"
+        },
+        {
+          "name": "sql",
+          "passed": true,
+          "detail": "SELECT status FROM payments WHERE order_id=3"
+        },
+        {
+          "name": "sql",
+          "passed": true,
+          "detail": "SELECT status FROM orders WHERE id=4"
+        },
+        {
+          "name": "sql",
+          "passed": true,
+          "detail": "SELECT status FROM payments WHERE order_id=4"
+        }
+      ]
+    },
+    {
+      "id": "store-credit-return",
+      "passed": true,
+      "outcome_score": 1.0,
+      "reward": 0.94388,
+      "checks": [
+        {
+          "name": "sql",
+          "passed": true,
+          "detail": "SELECT status FROM orders WHERE id=8"
+        },
+        {
+          "name": "sql",
+          "passed": true,
+          "detail": "SELECT store_credit FROM customers WHERE id=1"
+        },
+        {
+          "name": "sql",
+          "passed": true,
+          "detail": "SELECT store_credit FROM customers WHERE id=2"
+        },
+        {
+          "name": "sql",
+          "passed": true,
+          "detail": "SELECT status FROM orders WHERE id=9"
+        }
+      ]
+    },
+    {
+      "id": "reconcile-stock",
+      "passed": true,
+      "outcome_score": 1.0,
+      "reward": 0.96148,
+      "checks": [
+        {
+          "name": "sql",
+          "passed": true,
+          "detail": "SELECT stock FROM products WHERE sku='A'"
+        },
+        {
+          "name": "sql",
+          "passed": true,
+          "detail": "SELECT stock FROM products WHERE sku='B'"
+        },
+        {
+          "name": "sql",
+          "passed": true,
+          "detail": "SELECT stock FROM products WHERE sku='C'"
+        }
+      ]
+    }
+  ]
+}

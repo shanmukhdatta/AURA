@@ -1,0 +1,15 @@
+{
+  "platform": "Windows-10-10.0.26200-SP0",
+  "python_version": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "os_name": "nt",
+  "architecture": "64bit",
+  "packages": {
+    "torch": "2.14.1+cpu",
+    "transformers": "5.20.2",
+    "pytest": "9.1.1",
+    "pyyaml": "6.0.3",
+    "jsonschema": "4.26.0"
+  },
+  "cpu_count": 20,
+  "timestamp_utc": "2026-10-25T17:45:24.744859+00:00"
+}

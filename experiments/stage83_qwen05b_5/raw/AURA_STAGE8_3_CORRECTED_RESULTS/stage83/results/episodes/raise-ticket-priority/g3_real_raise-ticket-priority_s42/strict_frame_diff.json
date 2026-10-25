@@ -1,0 +1,1 @@
+{"allowlist":{"tickets":{"3":["priority"]}},"changes":[{"after":{"priority":"high"},"before":{"priority":"normal"},"columns":["priority"],"pk":[3],"table":"tickets"}],"issues":[]}

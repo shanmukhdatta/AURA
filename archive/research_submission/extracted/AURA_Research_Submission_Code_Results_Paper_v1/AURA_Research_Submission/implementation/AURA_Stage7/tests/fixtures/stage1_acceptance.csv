@@ -1,0 +1,13 @@
+case_id,expected_verdict,decision_status,reason_code,world_count,compatible_world_count
+01_complete_success,PASS,normal,all_obligations_supported,7,1
+02_missing_report,FAIL,normal,required_report_absent,7,1
+03_unauthorized_mutation,FAIL,normal,out_of_scope_mutation,7,1
+04_duplicate_record,FAIL,normal,record_multiplicity_violation,7,1
+05_unobservable_notification,UNCERTAIN,normal,unconfirmed_external_effect,9,3
+06_known_bad_and_unknown,FAIL,normal,known_violation_dominates_unknown,9,3
+07_insufficient_frame_coverage,UNCERTAIN,normal,frame_coverage_incomplete,8,3
+08_conflicting_evidence,UNCERTAIN,evidence_conflict,evidence_conflict,8,0
+09_missing_required_process,FAIL,normal,process_precedence_violated,7,1
+10_unobservable_transient_effect,UNCERTAIN,normal,transient_mutation_unobserved,9,3
+11_benign_alternative_path,PASS,normal,alternative_path_allowed,7,1
+12_external_frame_unobserved,UNCERTAIN,normal,external_frame_unobserved,9,3

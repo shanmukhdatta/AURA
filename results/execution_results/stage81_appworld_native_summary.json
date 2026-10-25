@@ -1,0 +1,30 @@
+{
+  "readiness": "READY_FOR_EXTERNAL_NATIVE_BENCHMARK_ANALYSIS",
+  "notebook_version": "v7-appworld-rootfix",
+  "track_a_repeated": false,
+  "appworld_ready": true,
+  "model_ready": true,
+  "native_task_count": 3,
+  "native_evaluated_count": 3,
+  "setup_failure_phase": null,
+  "task_audit": [
+    {
+      "task_id": "50e1ac9_1",
+      "issues": [],
+      "official_evaluation_available": true
+    },
+    {
+      "task_id": "50e1ac9_2",
+      "issues": [],
+      "official_evaluation_available": true
+    },
+    {
+      "task_id": "50e1ac9_3",
+      "issues": [],
+      "official_evaluation_available": true
+    }
+  ],
+  "external_aura_certificates_created": false,
+  "valid_for_held_out_score": false,
+  "scientific_note": "Authentic AppWorld official dev scores; independent AURA AppWorld verification adapter not built."
+}

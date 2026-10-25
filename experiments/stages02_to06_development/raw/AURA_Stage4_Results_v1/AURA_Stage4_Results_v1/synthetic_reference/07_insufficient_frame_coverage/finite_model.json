@@ -1,0 +1,1 @@
+{"constraints":[],"fact_domains":{"mutation.out_of_frame_count":[0,1],"report.101.exists":[true],"report.101.matches_db":[true],"student.101.marks":[85],"student.101.matching_count":[1],"trace.validation_before_update":[true]},"max_worlds":8192,"model_id":"model.reference.07_insufficient_frame_coverage","schema_version":"1.0"}

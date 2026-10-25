@@ -1,0 +1,277 @@
+[
+  {
+    "file": "EXPERIMENT_SUMMARY.json",
+    "bytes": 2390,
+    "sha256": "97a53a38926a51d643d2b0e75a6165eeecb4b52735d077803a27625ba093ab14"
+  },
+  {
+    "file": "RESEARCH_AUDIT.json",
+    "bytes": 764,
+    "sha256": "f2b8417ada4653402410dc887d8638142ee7f99b16f6763c11af4b4567f289b6"
+  },
+  {
+    "file": "agent_prompt_spec.json",
+    "bytes": 1340,
+    "sha256": "a608684d34ee7ae40425def4281b42e7ed017d0a5522e2cc4ede82cb308ca90c"
+  },
+  {
+    "file": "appworld_worker_status.json",
+    "bytes": 55,
+    "sha256": "bed774514db52f52ff84ecd4873e931c3495a8df426f497177dcd8e0131e41e9"
+  },
+  {
+    "file": "config.json",
+    "bytes": 903,
+    "sha256": "95f7cb545674e38b13bbcd16b09df0cc8bb83f9bfb7d22bd2b33150ff5d0f124"
+  },
+  {
+    "file": "kernel_noninterference_receipt.json",
+    "bytes": 496,
+    "sha256": "9bf6ea651fc687947fccd9de96c8cfcb32f7c409b5b19ddc9ec96c45f9135165"
+  },
+  {
+    "file": "preflight_smoke_receipt.json",
+    "bytes": 347,
+    "sha256": "2cf6ddb65fa06c83bb7d4327f11cfa0336e05da097d8a237ea741a30a0192563"
+  },
+  {
+    "file": "probe_catalogue_local.json",
+    "bytes": 1966,
+    "sha256": "4bca1779e321884c80bd008c06869b467e5d12cbfcd67b03aa3d18c8e22dad02"
+  },
+  {
+    "file": "runtime_versions.json",
+    "bytes": 377,
+    "sha256": "c8363b713b11a8f9d6f4fa2b7f15be7ff1e13a5a5919984c37c9ad76d2308b85"
+  },
+  {
+    "file": "stage7_test_receipt.json",
+    "bytes": 186,
+    "sha256": "9ec73a277935660a81e9c24e147cb4534b38ee951d475d3462ab9966fd6d9302"
+  },
+  {
+    "file": "task_contract_local.json",
+    "bytes": 2901,
+    "sha256": "72723a83dcabbb898ce4967d19a2173e9fd9a9e4f222c1584671333610327d55"
+  },
+  {
+    "file": "track_A/01_direct/agent_turns.json",
+    "bytes": 1079,
+    "sha256": "1ea67ff3e5ab69b54a808a6073c8a374073d82c7cde387109dea599f0bd2c003"
+  },
+  {
+    "file": "track_A/01_direct/aura_certificate_conservative.json",
+    "bytes": 2081,
+    "sha256": "634011ec234c00643fdd5a923a946d46af7292aa4fd08709597f727b63acae33"
+  },
+  {
+    "file": "track_A/01_direct/final_report.md",
+    "bytes": 23,
+    "sha256": "605aa67508ef1782bee832866c5bf19e3644feec85e73a562682c713d3bfa2fc"
+  },
+  {
+    "file": "track_A/01_direct/noninterference_receipt.json",
+    "bytes": 132,
+    "sha256": "1cd9e15ca79456f22eb83b2bedd115766dc5ebd873ab84cb89bcd728a94154ca"
+  },
+  {
+    "file": "track_A/01_direct/policy_summary.json",
+    "bytes": 791,
+    "sha256": "41140e50de06f10e90c536e02b4775747558f901bfbb1bdd1b77f410ab6b173e"
+  },
+  {
+    "file": "track_A/01_direct/probe_observations.json",
+    "bytes": 3283,
+    "sha256": "c975a9536396766f8274f4fe9a346c86866c34ed68c6985ac8dba51b70942290"
+  },
+  {
+    "file": "track_A/01_direct/run_manifest.json",
+    "bytes": 303,
+    "sha256": "0c55dd092395520975b6d9877b764337bcb9a7f9a21dd252c38edcd3c56b45d3"
+  },
+  {
+    "file": "track_A/01_direct/snapshots/stage8_1_01_direct.after.json",
+    "bytes": 735,
+    "sha256": "add8783bbde9821ee2669e86c0c7628dc1f900a40f47f690fe353ad981b501d5"
+  },
+  {
+    "file": "track_A/01_direct/snapshots/stage8_1_01_direct.before.json",
+    "bytes": 609,
+    "sha256": "e1d04b1fe7559dedd21f8dcb04144134e3c03b5db0c545152673dcbe5a3bd89b"
+  },
+  {
+    "file": "track_A/01_direct/traces/stage8_1_01_direct.json",
+    "bytes": 756,
+    "sha256": "97d8c206fcfc32d0c0488ff7223a974b6b7063702340a250352f43c91cba4822"
+  },
+  {
+    "file": "track_A/01_direct/withheld_reference_after_run.json",
+    "bytes": 259,
+    "sha256": "c433f82a6ce6037d5728df0ae7373d73109f4b194fa141762c472d9e395b0f34"
+  },
+  {
+    "file": "track_A/02_procedural/agent_turns.json",
+    "bytes": 4409,
+    "sha256": "d753bbea85e263344b1d11f09f3bea2b2faf198768701f229e781b60a504b706"
+  },
+  {
+    "file": "track_A/02_procedural/aura_certificate_conservative.json",
+    "bytes": 2241,
+    "sha256": "7e9b9b1c73c252aa9ccfedff56af7ab410bd84d987adacfadc0ae5e9c6e0bfa3"
+  },
+  {
+    "file": "track_A/02_procedural/noninterference_receipt.json",
+    "bytes": 136,
+    "sha256": "277157930748491723b36e1b132d2f14aae01d39df5dc75a4c68843bfd6d3c6a"
+  },
+  {
+    "file": "track_A/02_procedural/policy_summary.json",
+    "bytes": 670,
+    "sha256": "cdd41da9d41e7fb2a65a5eca47259518840d460ded38f0cbf8234bd547de4542"
+  },
+  {
+    "file": "track_A/02_procedural/probe_observations.json",
+    "bytes": 3377,
+    "sha256": "5de16851ea21e8383ef528610aca1c46d52a1718504253c4994ca6634a6fd571"
+  },
+  {
+    "file": "track_A/02_procedural/run_manifest.json",
+    "bytes": 324,
+    "sha256": "446dc86c363fca3c06bcbd9462301cbea9f6ad8aeac19e74a235644c3c32feec"
+  },
+  {
+    "file": "track_A/02_procedural/snapshots/stage8_1_02_procedural.after.json",
+    "bytes": 612,
+    "sha256": "9ae99180b8146ef3c9a26e6240372b69807139a94c9ee00aa446dc7d2b19b0c3"
+  },
+  {
+    "file": "track_A/02_procedural/snapshots/stage8_1_02_procedural.before.json",
+    "bytes": 613,
+    "sha256": "1f01d04b63727a55958fe3fed479a70513c7e753f1a46226948647607dfb36d1"
+  },
+  {
+    "file": "track_A/02_procedural/traces/stage8_1_02_procedural.json",
+    "bytes": 126,
+    "sha256": "5fab2fdaff81ae5b509b83bb69fa7e0622eddefc5cb483d6f688cf8d8becdb00"
+  },
+  {
+    "file": "track_A/02_procedural/withheld_reference_after_run.json",
+    "bytes": 264,
+    "sha256": "a350c9d62e93b0720a3c3bd357b17d1595a7b8ef962e3ca1b8e96b59aa5c10b2"
+  },
+  {
+    "file": "track_A/03_silent_tool_noop/agent_turns.json",
+    "bytes": 1063,
+    "sha256": "6892b4d7ff5046630a243e43872b162b4eb080d92c548f7903473fb0bd509f03"
+  },
+  {
+    "file": "track_A/03_silent_tool_noop/aura_certificate_conservative.json",
+    "bytes": 2244,
+    "sha256": "f08b6ba386c6a8a8832e8b58d23f97b8bc9798a0c9b5d63703be38011217a89f"
+  },
+  {
+    "file": "track_A/03_silent_tool_noop/final_report.md",
+    "bytes": 23,
+    "sha256": "605aa67508ef1782bee832866c5bf19e3644feec85e73a562682c713d3bfa2fc"
+  },
+  {
+    "file": "track_A/03_silent_tool_noop/noninterference_receipt.json",
+    "bytes": 142,
+    "sha256": "30fb1a43fd0f26e368a15a9ec9140c3b8e12254ad95e40fa9303d00d72413a32"
+  },
+  {
+    "file": "track_A/03_silent_tool_noop/policy_summary.json",
+    "bytes": 634,
+    "sha256": "2aafdd7e9d9b07542a769923a4d1fdd10a3bef7c9a2bf3123fb2c1f104d5b17e"
+  },
+  {
+    "file": "track_A/03_silent_tool_noop/probe_observations.json",
+    "bytes": 3515,
+    "sha256": "c8c5b7e16407e8a6489dc000897b84d75c7ddb656aba29c7f787280c817e5e57"
+  },
+  {
+    "file": "track_A/03_silent_tool_noop/run_manifest.json",
+    "bytes": 340,
+    "sha256": "9212e7cff35031bb72bbb988d12484d1592261cf78146da82bcfe1f38437d00b"
+  },
+  {
+    "file": "track_A/03_silent_tool_noop/snapshots/stage8_1_03_silent_tool_noop.after.json",
+    "bytes": 745,
+    "sha256": "8ef3a6684f1ae237c4e8b0afcebaab3ce89dbba974cd3de79610bcec219e7185"
+  },
+  {
+    "file": "track_A/03_silent_tool_noop/snapshots/stage8_1_03_silent_tool_noop.before.json",
+    "bytes": 619,
+    "sha256": "9c1f910631e7db81436549820a3e25cc317be2e83c3a17ddc98569ec325d5542"
+  },
+  {
+    "file": "track_A/03_silent_tool_noop/traces/stage8_1_03_silent_tool_noop.json",
+    "bytes": 832,
+    "sha256": "490e5729a2b00432788f13dd7ad4565db4411607605c42a5fcfd8bdd72cf49e7"
+  },
+  {
+    "file": "track_A/03_silent_tool_noop/withheld_reference_after_run.json",
+    "bytes": 261,
+    "sha256": "5442270a88df705be28b44e5ee9514861a1ee2590de6c72ec1b1c8a0dc08dd4e"
+  },
+  {
+    "file": "track_A/04_denied_readback/agent_turns.json",
+    "bytes": 998,
+    "sha256": "f5c92bb08cf2b4713dbfc90a51df9be4b24943c2ef86242f60589ed4bf91411e"
+  },
+  {
+    "file": "track_A/04_denied_readback/aura_certificate_conservative.json",
+    "bytes": 2285,
+    "sha256": "234e54ec740d098a32c296a4191934510cf45b9bee9248c71263545e1cc4e40e"
+  },
+  {
+    "file": "track_A/04_denied_readback/final_report.md",
+    "bytes": 23,
+    "sha256": "605aa67508ef1782bee832866c5bf19e3644feec85e73a562682c713d3bfa2fc"
+  },
+  {
+    "file": "track_A/04_denied_readback/noninterference_receipt.json",
+    "bytes": 141,
+    "sha256": "49c88d88d5dd7e0068721e485b2b2558df39e206b2145b1807430443808fc46d"
+  },
+  {
+    "file": "track_A/04_denied_readback/policy_summary.json",
+    "bytes": 799,
+    "sha256": "8afceb494d086e6123364ce87ce1b1380fd9d6374542b552e4fd9f1f72d46a34"
+  },
+  {
+    "file": "track_A/04_denied_readback/probe_observations.json",
+    "bytes": 3237,
+    "sha256": "45ca5e4114426287a397d10bdbbd4ee3fb890203810e982baa94eb0ae19a1e06"
+  },
+  {
+    "file": "track_A/04_denied_readback/run_manifest.json",
+    "bytes": 348,
+    "sha256": "417d486991d68b10d2d361a94d7e045933fe7be6b3a3dd15a0e0ee252f7bc709"
+  },
+  {
+    "file": "track_A/04_denied_readback/snapshots/stage8_1_04_denied_readback.after.json",
+    "bytes": 744,
+    "sha256": "9f3a0efd9b21c50ff0fbc268ef802b61171d0fd91dfc7641da4f533685343a0c"
+  },
+  {
+    "file": "track_A/04_denied_readback/snapshots/stage8_1_04_denied_readback.before.json",
+    "bytes": 618,
+    "sha256": "9dcc1bf01c8225616842b2da679ca730db9d09e46e6c474a5e44cec51dca8f4a"
+  },
+  {
+    "file": "track_A/04_denied_readback/traces/stage8_1_04_denied_readback.json",
+    "bytes": 593,
+    "sha256": "df4a7cc3acfd841baee122bf2ae217068d2c8d63a16d005bdfcf63f49ec9698a"
+  },
+  {
+    "file": "track_A/04_denied_readback/withheld_reference_after_run.json",
+    "bytes": 261,
+    "sha256": "a7cfde0fd3e271d9e814f66902d05d423debea78c416bb7f41e9ece324e1462b"
+  },
+  {
+    "file": "track_A/summary.csv",
+    "bytes": 898,
+    "sha256": "09a57e523b2ba1c93998bef5c4f375cf84c30742a7803643e0321fb8c2129b72"
+  }
+]

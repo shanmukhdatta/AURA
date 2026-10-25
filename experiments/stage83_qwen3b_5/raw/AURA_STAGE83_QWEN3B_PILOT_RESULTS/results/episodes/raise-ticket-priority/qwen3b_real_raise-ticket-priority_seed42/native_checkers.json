@@ -1,0 +1,1 @@
+[{"checker_index":0,"expected":[["high"]],"kind":"sql","matched":true,"observed":[["high"]],"query":"SELECT priority FROM tickets WHERE id=3"},{"checker_index":1,"expected":[["normal"]],"kind":"sql","matched":true,"observed":[["normal"]],"query":"SELECT priority FROM tickets WHERE id=1"}]

@@ -1,0 +1,16 @@
+prior_regime,policy,templates,mean_expected_cost,mean_coverage,mean_expected_probes,false_pass_probability_sum,false_fail_probability_sum
+uniform,fixed,48,5.484673,1.0,2.0625,0.0,0.0
+uniform,greedy,48,4.315745,1.0,1.349826,0.0,0.0
+uniform,cera,48,3.193321,1.0,1.610243,0.0,0.0
+uniform,optimal,48,3.17095,1.0,1.559896,0.0,0.0
+uniform,exhaustive,48,38.169375,1.0,7.5,0.0,0.0
+clean_50,fixed,48,9.870882,1.0,3.213371,0.0,0.0
+clean_50,greedy,48,6.474958,1.0,1.971567,0.0,0.0
+clean_50,cera,48,6.323659,1.0,2.492739,0.0,0.0
+clean_50,optimal,48,5.89401,1.0,2.026226,0.0,0.0
+clean_50,exhaustive,48,38.169375,1.0,7.5,0.0,0.0
+clean_90,fixed,48,13.79431,1.0,4.242674,0.0,0.0
+clean_90,greedy,48,8.406608,1.0,2.527647,0.0,0.0
+clean_90,cera,48,9.120482,1.0,3.281881,0.0,0.0
+clean_90,optimal,48,7.760971,1.0,2.106857,0.0,0.0
+clean_90,exhaustive,48,38.169375,1.0,7.5,0.0,0.0

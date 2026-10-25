@@ -1,0 +1,12 @@
+{
+  "command": [
+    "git",
+    "rev-parse",
+    "HEAD"
+  ],
+  "cwd": "/kaggle/working/aura_stage83_qwen3b_work/AURA",
+  "exit_code": 0,
+  "elapsed_seconds": 0.0052,
+  "stdout_tail": "607ffc9fc554db23a972f478475148514e9cc94e\n",
+  "stderr_tail": ""
+}

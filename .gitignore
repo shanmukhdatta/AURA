@@ -1,0 +1,13 @@
+# Python bytecode and caches
+__pycache__/
+*.pyc
+.pytest_cache/
+*.tmp
+
+# Local scratch and temporary recovery directories
+_deps/
+_aura_recovery/
+*_scratch*/
+scratch*/
+stage82_clean_replication*
+AURA_EXTERNAL_VALIDATION_FINAL_HANDOFF.zip

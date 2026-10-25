@@ -1,0 +1,1 @@
+{"allowlist":{"orders":{"3":["status"]},"payments":{"1":["status"]}},"changes":[{"after":{"status":"voided"},"before":{"status":"captured"},"columns":["status"],"pk":[1],"table":"payments"}],"issues":[]}

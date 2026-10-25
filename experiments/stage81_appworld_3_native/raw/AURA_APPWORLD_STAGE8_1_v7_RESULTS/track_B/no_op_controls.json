@@ -1,0 +1,20 @@
+[
+  {
+    "task_id": "50e1ac9_1",
+    "control": "NO_AGENT_ACTIONS",
+    "native_evaluation_available": true,
+    "official_success_field": false
+  },
+  {
+    "task_id": "50e1ac9_2",
+    "control": "NO_AGENT_ACTIONS",
+    "native_evaluation_available": true,
+    "official_success_field": false
+  },
+  {
+    "task_id": "50e1ac9_3",
+    "control": "NO_AGENT_ACTIONS",
+    "native_evaluation_available": true,
+    "official_success_field": false
+  }
+]

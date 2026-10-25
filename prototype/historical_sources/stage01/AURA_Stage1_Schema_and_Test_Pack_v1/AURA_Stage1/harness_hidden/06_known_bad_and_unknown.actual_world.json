@@ -1,0 +1,6 @@
+{
+  "fixture_id": "06_known_bad_and_unknown",
+  "harness_only": true,
+  "actual_world_id": "world.06_known_bad_and_unknown.actual",
+  "actual_world_satisfies_contract": false
+}

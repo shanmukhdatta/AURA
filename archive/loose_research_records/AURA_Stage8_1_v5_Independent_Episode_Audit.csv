@@ -1,0 +1,5 @@
+episode,local_reference_success,aura_verdict,tool_calls,model_turns,before_101,after_101,report_matches_expected,process_valid,other_student_unchanged,readback_observation_available,noninterference,cera_inspections,fixed_inspections,greedy_inspections,exhaustive_inspections,cera_variable_ms,fixed_variable_ms,greedy_variable_ms,exhaustive_variable_ms
+01_direct,True,PASS,3,4,70,85,True,True,True,True,True,4,4,4,4,2.1072,0.8537,1.0597,0.8304
+02_procedural,False,FAIL,0,10,70,70,False,False,True,True,True,1,1,1,4,1.1575,0.0664,0.0987,0.419
+03_silent_tool_noop,False,FAIL,3,4,70,70,True,True,True,True,True,1,1,1,4,1.1292,0.071,0.0772,0.8377
+04_denied_readback,False,FAIL,2,4,70,85,True,False,True,False,True,3,4,3,4,2.5374,0.7919,0.6699,0.7273

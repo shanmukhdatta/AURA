@@ -1,0 +1,8 @@
+{
+  "ready": false,
+  "phase": "check_native_appworld_import_and_dev_index",
+  "last_return_code": 1,
+  "installer": "uv_pip_free_virtualenv",
+  "failure": "RuntimeError('check_native_appworld_import_and_dev_index failed with exit code 1 (see notebook cell output; full installation log excluded from research ZIP)')",
+  "appworld_version": null
+}

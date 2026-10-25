@@ -1,0 +1,1 @@
+{"allowlist":{"inventory":{"G-200":["stock"],"W-100":["stock"]},"orders":{"5":["status"]}},"changes":[{"after":{"status":"refunded"},"before":{"status":"paid"},"columns":["status"],"pk":[5],"table":"orders"}],"issues":[]}

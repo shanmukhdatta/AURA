@@ -1,0 +1,1 @@
+{"checkers":[{"checker_index":0,"expected":[["shipped"]],"kind":"sql","matched":true,"observed":[["shipped"]],"query":"SELECT status FROM orders WHERE id=9"}],"native_passed":true,"native_score":1.0,"task_id":"refuse-cancel-shipped"}

@@ -1,0 +1,150 @@
+[
+  {
+    "schema_version": "1.0",
+    "observation_id": "obs.10_unobservable_transient_effect.student_state.0",
+    "run_id": "run.10_unobservable_transient_effect",
+    "probe_id": "student_state",
+    "epoch_id": "run.epoch.20261024",
+    "observed_at": "2026-10-24T14:49:00Z",
+    "status": "ok",
+    "reason_code": "none",
+    "channel": "independent_verifier",
+    "facts": [
+      {
+        "fact_key": "student.101.marks",
+        "value": 85,
+        "source_ref": "source:student_state"
+      },
+      {
+        "fact_key": "student.101.matching_count",
+        "value": 1,
+        "source_ref": "source:student_state"
+      }
+    ],
+    "coverage_receipts": [],
+    "actual_cost": {
+      "latency_ms": 1.2,
+      "bytes_read": 200,
+      "cpu_ms": 0.5
+    },
+    "payload_sha256": "96ae1f79a6e5fcb86c2a4bfa91bd7ad61afb6f5380aeb549f4639273e5e8e121"
+  },
+  {
+    "schema_version": "1.0",
+    "observation_id": "obs.10_unobservable_transient_effect.report_state.0",
+    "run_id": "run.10_unobservable_transient_effect",
+    "probe_id": "report_state",
+    "epoch_id": "run.epoch.20261024",
+    "observed_at": "2026-10-24T14:49:00Z",
+    "status": "ok",
+    "reason_code": "none",
+    "channel": "independent_verifier",
+    "facts": [
+      {
+        "fact_key": "report.101.exists",
+        "value": true,
+        "source_ref": "source:report_state"
+      },
+      {
+        "fact_key": "report.101.matches_db",
+        "value": true,
+        "source_ref": "source:report_state"
+      }
+    ],
+    "coverage_receipts": [],
+    "actual_cost": {
+      "latency_ms": 2.3,
+      "bytes_read": 700,
+      "cpu_ms": 0.5
+    },
+    "payload_sha256": "f47be565a800df78c4ba0ced6295c6938a477e28f386c540cecf848e331efde0"
+  },
+  {
+    "schema_version": "1.0",
+    "observation_id": "obs.10_unobservable_transient_effect.full_frame_diff.0",
+    "run_id": "run.10_unobservable_transient_effect",
+    "probe_id": "full_frame_diff",
+    "epoch_id": "run.epoch.20261024",
+    "observed_at": "2026-10-24T14:49:00Z",
+    "status": "ok",
+    "reason_code": "none",
+    "channel": "independent_verifier",
+    "facts": [
+      {
+        "fact_key": "mutation.out_of_frame_count",
+        "value": 0,
+        "source_ref": "source:full_frame_diff"
+      }
+    ],
+    "coverage_receipts": [
+      {
+        "surface_id": "sqlite.students",
+        "completeness": "complete",
+        "method": "snapshot_pair",
+        "consistent_epoch": true,
+        "independent_source": true,
+        "snapshot_before_ref": "snapshot_before:sqlite.students",
+        "snapshot_after_ref": "snapshot_after:sqlite.students"
+      },
+      {
+        "surface_id": "filesystem.reports",
+        "completeness": "complete",
+        "method": "snapshot_pair",
+        "consistent_epoch": true,
+        "independent_source": true,
+        "snapshot_before_ref": "snapshot_before:filesystem.reports",
+        "snapshot_after_ref": "snapshot_after:filesystem.reports"
+      }
+    ],
+    "actual_cost": {
+      "latency_ms": 20.0,
+      "bytes_read": 100000,
+      "cpu_ms": 0.5
+    },
+    "payload_sha256": "3e3b2a8c6f9aca927a0e80ab2dfd6c0d77be0885c993ea91cb630f35d24eed16"
+  },
+  {
+    "schema_version": "1.0",
+    "observation_id": "obs.10_unobservable_transient_effect.validation_trace.0",
+    "run_id": "run.10_unobservable_transient_effect",
+    "probe_id": "validation_trace",
+    "epoch_id": "run.epoch.20261024",
+    "observed_at": "2026-10-24T14:49:00Z",
+    "status": "ok",
+    "reason_code": "none",
+    "channel": "independent_verifier",
+    "facts": [
+      {
+        "fact_key": "trace.validation_before_update",
+        "value": true,
+        "source_ref": "source:validation_trace"
+      }
+    ],
+    "coverage_receipts": [],
+    "actual_cost": {
+      "latency_ms": 2.5,
+      "bytes_read": 1000,
+      "cpu_ms": 0.5
+    },
+    "payload_sha256": "7f4e29ba3f615de58d46e0b60fd68a09dc28eb81a07effa8d6e9e1a7026844bc"
+  },
+  {
+    "schema_version": "1.0",
+    "observation_id": "obs.10_unobservable_transient_effect.transient_journal.0",
+    "run_id": "run.10_unobservable_transient_effect",
+    "probe_id": "transient_journal",
+    "epoch_id": "run.epoch.20261024",
+    "observed_at": "2026-10-24T14:49:00Z",
+    "status": "unavailable",
+    "reason_code": "permission_denied",
+    "channel": "independent_verifier",
+    "facts": [],
+    "coverage_receipts": [],
+    "actual_cost": {
+      "latency_ms": 12.0,
+      "bytes_read": 0,
+      "cpu_ms": 0.5
+    },
+    "payload_sha256": "a2c8cc109417716bd91a1e29a222b29cdb5b1f81d8f45fa24bcf10c02cf7a4c2"
+  }
+]
