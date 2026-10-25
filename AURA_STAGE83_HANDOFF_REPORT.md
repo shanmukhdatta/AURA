@@ -3,7 +3,7 @@
 ## Identity and provenance
 - Repository URL: https://github.com/shanmukhdatta/AURA
 - Base commit SHA: `00223d80781a7be7b333ae543620770b9d430a6f`
-- Feature branch / PR URL (or NOT CREATED): https://github.com/shanmukhdatta/AURA/pull/new/experiment/stage-8-3-external-llm-verification (Branch: `experiment/stage-8-3-external-llm-verification` pushed to `origin`)
+- Feature branch / PR URL (or NOT CREATED): https://github.com/shanmukhdatta/AURA/pull/new/feature/stage-8-3-external-verification (Branch: `feature/stage-8-3-external-verification` pushed to `origin`)
 - Historical recovery ZIP SHA256: `784fd8571dae33e138bb7b17c6d4a3f7366c1bc52239e6e2e79008d42f4eb95b`
 - AgentSynth upstream full commit SHA: `d2564dfb25ed7ba32e367d28117e6afd1ee6c485`
 - Python OS / hardware and package versions: Windows 11 (AMD64), Python 3.11.9, PyTorch `2.14.1+cpu`, Transformers `5.20.2`, Accelerate `1.15.0`, Pytest `9.0.2`, PyYAML `6.0.3`, JSONSchema `4.26.1`, Agentsynth-AI `0.1.0` (editable)

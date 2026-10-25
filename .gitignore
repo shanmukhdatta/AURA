@@ -8,3 +8,4 @@ scratch*/
 *.sqlite3
 *.tmp
 *.zip
+!AURA_STAGE8_3_RESULTS.zip
