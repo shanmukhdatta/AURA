@@ -1,0 +1,17 @@
+{
+  "command": [
+    "git",
+    "clone",
+    "--depth",
+    "1",
+    "--branch",
+    "experiment/stage-8-3-external-llm-verification",
+    "https://github.com/shanmukhdatta/AURA.git",
+    "/kaggle/working/aura_stage83_qwen3b_work/AURA"
+  ],
+  "cwd": null,
+  "exit_code": 0,
+  "elapsed_seconds": 0.8068,
+  "stdout_tail": "",
+  "stderr_tail": "Cloning into '/kaggle/working/aura_stage83_qwen3b_work/AURA'...\n"
+}

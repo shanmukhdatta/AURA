@@ -1,0 +1,6 @@
+{
+  "control": "SCRIPTED_NOT_LLM",
+  "verdict": "PASS",
+  "replay_ok": true,
+  "noninterference_ok": true
+}

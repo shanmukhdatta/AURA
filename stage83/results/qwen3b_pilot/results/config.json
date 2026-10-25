@@ -1,0 +1,18 @@
+{
+  "research_stage": "8.3_gpu_pilot",
+  "tasks": [
+    "raise-ticket-priority",
+    "clearance-discount",
+    "dedup-keep-latest",
+    "cancel-and-void-payment",
+    "refund-and-restock"
+  ],
+  "seed": 42,
+  "model": "Qwen/Qwen2.5-3B-Instruct",
+  "max_turns": 6,
+  "max_new_tokens": 192,
+  "do_sample": false,
+  "repo_branch": "experiment/stage-8-3-external-llm-verification",
+  "upstream_commit": "d2564dfb25ed7ba32e367d28117e6afd1ee6c485",
+  "score_label": "reproduced_published_checkers_NOT_official_AgentSynth_CLI"
+}

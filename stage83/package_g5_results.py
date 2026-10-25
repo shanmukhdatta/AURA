@@ -141,6 +141,7 @@ def create_results_zip() -> Tuple[Path, str]:
             # Include stage83/ results, status files, contracts, scripts, tests, notebooks
             for base_sub in [
                 'stage83',
+                'paper',
                 'AURA_STAGE83_REAL_AGENT_KAGGLE_v2.ipynb',
                 'AURA_STAGE83_REAL_AGENT_KAGGLE.ipynb'
             ]:

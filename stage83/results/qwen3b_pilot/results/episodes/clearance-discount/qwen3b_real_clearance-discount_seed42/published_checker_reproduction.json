@@ -1,0 +1,65 @@
+{
+  "method": "REPRODUCED_PUBLISHED_CHECKERS_NOT_OFFICIAL_AGENTSYNTH_RUNNER",
+  "all_matched": true,
+  "passed_count": 3,
+  "total_count": 3,
+  "checks": [
+    {
+      "index": 0,
+      "kind": "sql",
+      "matched": true,
+      "observed": [
+        [
+          120.0
+        ]
+      ],
+      "reference_spec": {
+        "kind": "sql",
+        "query": "SELECT price FROM products WHERE id=1",
+        "equals": [
+          [
+            120.0
+          ]
+        ]
+      }
+    },
+    {
+      "index": 1,
+      "kind": "sql",
+      "matched": true,
+      "observed": [
+        [
+          80.0
+        ]
+      ],
+      "reference_spec": {
+        "kind": "sql",
+        "query": "SELECT price FROM products WHERE id=2",
+        "equals": [
+          [
+            80.0
+          ]
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "kind": "sql",
+      "matched": true,
+      "observed": [
+        [
+          120.0
+        ]
+      ],
+      "reference_spec": {
+        "kind": "sql",
+        "query": "SELECT price FROM products WHERE id=3",
+        "equals": [
+          [
+            120.0
+          ]
+        ]
+      }
+    }
+  ]
+}

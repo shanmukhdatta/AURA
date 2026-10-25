@@ -1,0 +1,74 @@
+[
+  {
+    "step": 0,
+    "tool": "sql_query",
+    "sql": "SELECT * FROM orders WHERE id = 5;",
+    "write": false,
+    "response": [
+      [
+        5,
+        "paid"
+      ]
+    ],
+    "error": null,
+    "timestamp": "2026-10-25T14:59:27.479509Z"
+  },
+  {
+    "step": 1,
+    "tool": "sql_query",
+    "sql": "SELECT * FROM order_items WHERE order_id = 5;",
+    "write": false,
+    "response": [
+      [
+        1,
+        5,
+        "W-100",
+        3
+      ],
+      [
+        2,
+        5,
+        "G-200",
+        2
+      ]
+    ],
+    "error": null,
+    "timestamp": "2026-10-25T14:59:28.416475Z"
+  },
+  {
+    "step": 2,
+    "tool": "sql_query",
+    "sql": "UPDATE inventory SET stock = CASE WHEN sku = 'W-100' THEN stock + 3 ELSE stock END\nWHERE sku IN ('W-100');\nUPDATE inventory SET stock = CASE WHEN sku = 'G-200' THEN stock + 2 ELSE stock END\nWHERE sku IN ('G-200');",
+    "write": true,
+    "response": null,
+    "error": "ProgrammingError: You can only execute one statement at a time.",
+    "timestamp": "2026-10-25T14:59:32.249613Z"
+  },
+  {
+    "step": 3,
+    "tool": "sql_query",
+    "sql": "BEGIN;\nUPDATE inventory SET stock = CASE WHEN sku = 'W-100' THEN stock + 3 ELSE stock END\nWHERE sku IN ('W-100');\nUPDATE inventory SET stock = CASE WHEN sku = 'G-200' THEN stock + 2 ELSE stock END\nWHERE sku IN ('G-200');\nCOMMIT;",
+    "write": false,
+    "response": null,
+    "error": "ProgrammingError: You can only execute one statement at a time.",
+    "timestamp": "2026-10-25T14:59:36.469989Z"
+  },
+  {
+    "step": 4,
+    "tool": "sql_query",
+    "sql": "UPDATE inventory SET stock = CASE WHEN sku = 'W-100' THEN stock + 3 ELSE stock END\nWHERE sku = 'W-100';\nUPDATE inventory SET stock = CASE WHEN sku = 'G-200' THEN stock + 2 ELSE stock END\nWHERE sku = 'G-200';",
+    "write": true,
+    "response": null,
+    "error": "ProgrammingError: You can only execute one statement at a time.",
+    "timestamp": "2026-10-25T14:59:40.426136Z"
+  },
+  {
+    "step": 5,
+    "tool": "sql_query",
+    "sql": "BEGIN;\nUPDATE inventory SET stock = CASE WHEN sku = 'W-100' THEN stock + 3 ELSE stock END\nWHERE sku = 'W-100';\nUPDATE inventory SET stock = CASE WHEN sku = 'G-200' THEN stock + 2 ELSE stock END\nWHERE sku = 'G-200';\nCOMMIT;",
+    "write": false,
+    "response": null,
+    "error": "ProgrammingError: You can only execute one statement at a time.",
+    "timestamp": "2026-10-25T14:59:44.718137Z"
+  }
+]

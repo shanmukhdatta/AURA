@@ -1,0 +1,13 @@
+{
+  "task_id": "refund-and-restock",
+  "run_id": "qwen3b_real_refund-and-restock_seed42",
+  "is_real_llm": true,
+  "sql_tool_calls": 6,
+  "aura_verdict": "FAIL",
+  "certificate_replay": true,
+  "snapshot_noninterference": true,
+  "reproduced_full_published_checker_pass": false,
+  "NOTE": "Reproduced checker comparison NOT official AgentSynth runner result",
+  "trajectory_wall_seconds": 18.0364,
+  "state": "EXECUTED_AND_AURA_EVALUATED"
+}

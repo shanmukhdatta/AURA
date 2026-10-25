@@ -1,0 +1,17 @@
+% Table 2: Inspection Policy Efficiency and Planning Latency
+\begin{table*}[t]
+\centering
+\small
+\begin{tabular}{lccccc}
+\toprule
+\textbf{Inspection Policy} & \textbf{Worlds Evaluated} & \textbf{Avg. Probes} & \textbf{Probe Cost Units} & \textbf{Planner Latency (ms)} & \textbf{Recommended Regime} \\
+\midrule
+\texttt{cera}       & 64 & 1.88 & 3.2500 & 0.3709 & Distributed / high-latency sandboxes ($T_{probe} > 10$ms) \\
+\texttt{greedy}     & 64 & 1.88 & 3.2500 & 0.0736 & Low-latency local databases ($T_{probe} < 1$ms) \\
+\texttt{fixed}      & 64 & 1.88 & 3.3750 & 0.0451 & Static pre-ordered checks; zero planning overhead \\
+\texttt{exhaustive} & 64 & 6.00 & 29.200 & 0.0895 & Unconditional audit; evaluates all probes unconditionally \\
+\bottomrule
+\end{tabular}
+\caption{Empirical comparison of observation planning policies across four domains (64 worlds each). Abstract probe cost units and CPU planning milliseconds are maintained with dimensional separation. CERA achieves optimal counterexample minimization; greedy planning minimizes wall-clock time in sub-millisecond local environments.}
+\label{tab:cera_cost}
+\end{table*}

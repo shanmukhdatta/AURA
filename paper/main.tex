@@ -1,0 +1,146 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[margin=1.0in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xurl}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{cite}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}
+\newtheorem{lemma}{Lemma}
+
+\lstset{
+  basicstyle=\ttfamily\footnotesize,
+  breaklines=true,
+  frame=single,
+  framerule=0.2pt,
+  xleftmargin=4pt,
+  aboveskip=6pt,
+  belowskip=6pt,
+}
+
+\newcommand{\aura}{\textsc{AURA}}
+\newcommand{\cera}{\textsc{CERA}}
+\newcommand{\agentsynth}{\textsc{AgentSynth}}
+
+\title{\textbf{\aura: Verified Postcondition Arbiters and Frame Soundness\\for Autonomous Software and Database Agents}}
+\author{
+  \textbf{AURA Research Collective} \\
+  \texttt{https://github.com/shanmukhdatta/AURA}
+}
+\date{October 2026 --- Research Draft v1.0}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Evaluating autonomous LLM agents by inspecting execution transcripts or self-reported success introduces severe grade inflation: recent audits show that agents frequently report success despite failing the task, modifying unauthorized persistent state, or gaming naive string-matching checkers. In this work, we introduce \aura{} (\textbf{A}gent \textbf{U}ncertainty and \textbf{R}esidue \textbf{A}rbiter), an independent verification framework that enforces postcondition soundness and closed-world frame policies across live database and software environments. \aura{} captures deterministic pre- and post-execution snapshot pairs, evaluates declared contract obligations via noninterfering probes, and proves the absence of unauthorized collateral mutations using cell-level allowlists. Under epistemic gaps or incomplete observations, \aura{} fails closed with explicit uncertainty rather than misattributing success. 
+
+To minimize verification overhead, we develop \cera{} (\textbf{C}ounterexample-guided \textbf{E}valuation with \textbf{R}isk \textbf{A}mortization), an observation-planning algorithm that sequentially chooses probes to minimize expected inspection costs while identifying failures early. We validate \aura{} against the official \agentsynth{} \texttt{core\_v2} benchmark across two distinct open-weight LLM agent scales (\texttt{Qwen2.5-0.5B-Instruct} and \texttt{Qwen2.5-3B-Instruct}) alongside 36 replicated adversarial fault-injection episodes. \aura{} achieves a \textbf{100\% sound lower bound} (zero false PASS, zero false FAIL against strict ground truth). Furthermore, we expose a critical vulnerability in standard benchmark checkers, where an agent inverting company policy was mistakenly awarded a 1.0 pass rate by naive substring matching, whereas \aura{} soundly identified the failure. All verification contracts, replayable certificates, and raw SQLite snapshots are published for independent third-party reproducibility.
+\end{abstract}
+
+\section{Introduction}
+Autonomous agents powered by Large Language Models (LLMs) are increasingly deployed to execute complex, multi-turn software workflows: modifying databases, invoking APIs, and generating patch scripts \cite{yao2022react, shinn2023reflexion, jimenez2023swebench}. Evaluating whether an agent actually completed its assigned objective remains a foundational open challenge. Standard evaluation methodologies typically rely on one of two flawed mechanisms:
+\begin{enumerate}
+    \item \textbf{Transcript-Based LLM Judges}: An evaluator prompt reviews the conversation trace or the agent's self-reported summary. Because agents routinely hallucinate or overlook execution errors, self-reported success correlates poorly with actual environment state \cite{wang2024agentsynth, liu2023agentbench}.
+    \item \textbf{Ad-Hoc Benchmark Checkers}: Upstream benchmarks execute isolated post-queries (e.g., verifying whether an updated row matches an expected value). Crucially, these checkers do not audit whether the agent modified other sensitive rows, dropped tables, or satisfied prerequisite process constraints.
+\end{enumerate}
+
+These limitations represent an instance of the classical \emph{Frame Problem} in artificial intelligence \cite{mccarthy1969frame, reiter1991solution}: verifying that a desired postcondition holds does not guarantee that other aspects of the world remained uncorrupted. An agent tasked with cancelling an order that instead drops the entire customer database can pass an ad-hoc checker if the cancelled order row is absent.
+
+\paragraph{Contributions.} In this paper, we present:
+\begin{itemize}
+    \item \textbf{AURA Architecture}: A formal contract-driven verification arbiter that pairs online environment snapshots with closed-world frame allowlists, ensuring that persistent modifications outside predeclared boundaries are soundly detected.
+    \item \textbf{CERA Observation Planning}: An information-theoretic observation planner that minimizes verification latency and probe costs by prioritizing decisive counterexamples.
+    \item \textbf{Empirical Multi-Scale Evaluation}: Rigorous real-agent execution across \texttt{Qwen2.5-0.5B} and \texttt{Qwen2.5-3B} agents on \agentsynth{} SQLite tasks, demonstrating 100\% sound verification and exposing benchmark gaming vulnerabilities in naive substring evaluation.
+    \item \textbf{Full Reproducibility}: Complete release of all SQLite binary states, tool execution trajectories, and cryptographically verifiable certificates.
+\end{itemize}
+
+\section{The AURA Verification Architecture}
+
+\subsection{Formal Problem Formulation}
+Let $W$ be an execution environment consisting of mutable state surfaces (e.g., SQLite tables). An agent executes a sequence of actions $a_1, \dots, a_T$, inducing a state transition from $w_{\text{before}}$ to $w_{\text{after}}$.
+
+\begin{definition}[Task Contract]
+A task contract $\mathcal{C} = \langle \mathcal{S}, \mathcal{F}, \mathcal{O} \rangle$ consists of:
+\begin{enumerate}
+    \item \textbf{Surfaces} $\mathcal{S}$: Observable consistency domains (e.g., specific tables, tool execution traces).
+    \item \textbf{Frame Policy} $\mathcal{F}$: A closed-world allowlist specifying permissible modifications:
+    $$\mathcal{F} = \{ (tbl, pk, cols) \mid tbl \in \mathcal{S}, pk \in \text{PK}(tbl), cols \subseteq \text{Cols}(tbl) \}$$
+    \item \textbf{Obligations} $\mathcal{O}$: A set of predicates $\{ \phi_1, \dots, \phi_m \}$ over observed facts categorised into \emph{outcome}, \emph{process}, and \emph{frame} constraints.
+\end{enumerate}
+\end{definition}
+
+\begin{definition}[Frame Soundness]
+A state transition from $w_{\text{before}}$ to $w_{\text{after}}$ satisfies frame soundness under allowlist $\mathcal{F}$ if and only if for all tables $T$ and rows $r$:
+$$\Delta(w_{\text{before}}, w_{\text{after}})[T, r] \neq \emptyset \implies (T, \text{PK}(r), \text{changed\_cols}(r)) \in \mathcal{F}$$
+\end{definition}
+
+\subsection{Online Snapshot Pairs and Noninterference}
+To verify frame soundness without modifying the environment, \aura{} captures an online byte-level snapshot before the agent begins and immediately upon agent termination. A noninterference check verifies that the evaluation probe suite does not alter the underlying database:
+$$\text{SHA256}(w_{\text{post\_exec}}) = \text{SHA256}(w_{\text{post\_inspection}})$$
+
+If this equality fails, the verification run fails closed with an \texttt{INTERFERENCE\_DETECTED} error.
+
+\subsection{CERA: Counterexample-Guided Risk-Amortized Planning}
+In complex environments, evaluating all possible state assertions can incur substantial I/O overhead. We propose \cera{}, which formulates inspection as a sequential decision process over a set of available probes $\mathcal{P}$. Given prior distribution $P(w)$ over candidate worlds and observed outcomes $e_{1:k}$, \cera{} selects the probe $p^* \in \mathcal{P}$ that maximizes information gain per unit cost:
+$$p^* = \arg\max_{p \in \mathcal{P} \setminus \text{seen}} \frac{\mathcal{H}(\text{Verdict} \mid e_{1:k}) - \mathbb{E}[\mathcal{H}(\text{Verdict} \mid e_{1:k}, p)]}{\text{Cost}(p)}$$
+When a probe outcome decisively establishes a failure condition, \cera{} halts inspection immediately, avoiding wasteful readback costs.
+
+\section{Empirical Evaluation}
+
+\subsection{Experimental Setup}
+We evaluate \aura{} against the official \agentsynth{} \texttt{core\_v2} SQLite benchmark suite across three cohorts:
+\begin{enumerate}
+    \item \textbf{Genuine LLM (0.5B)}: Local CPU inference using \texttt{Qwen/Qwen2.5-0.5B-Instruct} across 5 preregistered tasks (seed 42).
+    \item \textbf{Genuine LLM (3B)}: Kaggle T4 GPU inference using \texttt{Qwen/Qwen2.5-3B-Instruct} across 5 tasks (seed 42).
+    \item \textbf{Scripted Control Baseline}: 36 controlled fault-injection episodes across 6 tasks from Stage 8.2 replication, evaluating positive oracles, silent omissions, collateral mutations, and epistemic denials.
+\end{enumerate}
+
+\input{tables/table1_main_benchmark.tex}
+
+\subsection{Verification Soundness Across Model Scales}
+Table~\ref{tab:main_benchmark} reports the empirical verification outcomes. Key observations:
+\begin{itemize}
+    \item \textbf{Perfect Soundness}: Across all 46 evaluated episodes (10 genuine LLM runs + 36 scripted controls), \aura{} produced \textbf{0 false PASS} and \textbf{0 false FAIL} outcomes against strict independent ground truth.
+    \item \textbf{Model Capacity Scaling}: Moving from \texttt{Qwen2.5-0.5B} to \texttt{Qwen2.5-3B} increased true task completion from 20\% to 60\%. On tasks requiring complex updates (\texttt{clearance-discount}) and duplicate deletions (\texttt{dedup-keep-latest}), the 3B model successfully emitted valid SQL commands where the 0.5B model failed.
+    \item \textbf{Fail-Closed Defense}: When the 3B model failed on \texttt{refund-and-restock} (failing to replenish inventory), \aura{} soundly issued a certificate of failure.
+\end{itemize}
+
+\input{tables/table4_benchmark_gaming.tex}
+
+\subsection{Benchmark Vulnerability: Substring Gaming Case Study}
+Table~\ref{tab:refusal_gaming} highlights a striking finding from the evaluation of \texttt{refuse-cancel-shipped}. The user requested cancellation of an already shipped order, which company policy forbids. The agent emitted conversational text that explicitly stated: \textit{``Therefore, the order with ID 9 should be cancelled.''}
+
+Despite directly violating policy, the official \agentsynth{} benchmark checker awarded the agent a \textbf{1.0 (PASS)} because its naive rule checked whether any keyword in \texttt{['shipped', 'cannot', 'policy']} appeared anywhere in the prose. \aura{}'s frozen contract enforced both state immutability and semantic refusal validity, rightly assigning a verdict of \textbf{FAIL}.
+
+\input{tables/table2_cera_cost.tex}
+
+\subsection{Observation Planning and Inspection Efficiency}
+Table~\ref{tab:cera_cost} compares \cera{} against baseline inspection policies across 64 evaluation worlds.
+\begin{itemize}
+    \item \textbf{Probe Minimization}: \cera{} and greedy policies evaluate an average of only 1.88 probes (3.25 cost units) compared to 6.00 probes (29.20 units) for exhaustive inspection, achieving a 7.8$\times$ probe cost reduction.
+    \item \textbf{Dimensional Trade-Offs}: In sub-millisecond local SQLite environments ($T_{probe} < 0.2$ms), greedy planning minimizes total wall-clock time due to lower planning overhead (0.07ms vs 0.37ms). In distributed or high-latency sandbox environments ($T_{probe} > 10$ms), \cera{}'s recursive optimization yields substantial net runtime savings.
+\end{itemize}
+
+\input{tables/table3_ablation_soundness.tex}
+
+\subsection{Controlled Fault Injection Matrix}
+Table~\ref{tab:ablation_matrix} details the results of the 36-episode fault-injection audit. \aura{} achieved a 100\% detection rate across all fault categories, correctly distinguishing between omission, unauthorized collateral edits, and observation denial without false certification.
+
+\section{Related Work}
+Existing LLM agent benchmarks (such as SWE-bench \cite{jimenez2023swebench}, AgentBench \cite{liu2023agentbench}, and AgentSynth \cite{wang2024agentsynth}) focus primarily on outcome scoring using execution logs or targeted assertions. Formal verification frameworks \cite{clarke2000counterexample, reiter1991solution} have historically focused on symbolic models rather than non-deterministic neural agents. \aura{} bridges this divide by introducing bounded snapshot pairs, cryptographic certificates, and risk-amortized planning to live agent executions.
+
+\section{Conclusion}
+We presented \aura{}, an independent verification arbiter that guarantees postcondition correctness and frame soundness for LLM agents. By enforcing closed-world allowlists and employing \cera{} observation planning, \aura{} eliminates benchmark grading vulnerabilities and provides an ironclad, reproducible foundation for evaluating real-world autonomous software agents.
+
+\bibliographystyle{plain}
+\bibliography{references}
+
+\end{document}
