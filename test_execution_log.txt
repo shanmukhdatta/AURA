@@ -232,4 +232,4 @@ AURA_Stage7::test_validation_noninterference PASSED                      [ 99%]
 AURA_Stage7::test_invalid_or_missing_source_artifacts PASSED             [ 99%]
 AURA_Stage7::test_scoring_and_cohort_separation PASSED                   [100%]
 
-================= 224 passed, 1 skipped in 133.75s (0:02:13) ==================
+======================= 224 passed, 1 skipped in 37.96s =======================

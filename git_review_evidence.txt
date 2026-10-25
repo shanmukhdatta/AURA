@@ -1,13 +1,20 @@
 === git status ===
 
 On branch feature/external-validation-pipeline
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-	aura_validation/
-	tests/
-	validation_reports/
+Your branch is up to date with 'origin/feature/external-validation-pipeline'.
 
-nothing added to commit but untracked files present (use "git add" to track)
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   EXTERNAL_VALIDATION_FINAL_HANDOFF.md
+	modified:   aura_validation/integrity.py
+	modified:   aura_validation/runner.py
+	modified:   test_execution_log.txt
+	modified:   validation_reports/VALIDATION_EXECUTION_REPORT.md
+	modified:   validation_reports/integrity_check.json
+	modified:   validation_reports/validation_summary.json
+
+no changes added to commit (use "git add" and/or "git commit -a")
 
 
 === git branch --show-current ===
@@ -17,11 +24,11 @@ feature/external-validation-pipeline
 
 === git log -5 --oneline ===
 
+8c594ba feat(validation): implement modular external validation workflow, test suite, and 59-episode audit reports
 2676ae6 Add publication manuscript, research tables, reproducibility guide, and Qwen2.5-3B GPU pilot integration
 976b4c9 Stage 8.3 Corrected: Independent blinded reference, cohort separation, repaired metrics and Kaggle v2 notebook
 607ffc9 Stage 8.3 PR: Complete package with code, verified evidence, results archive, and handoff report
 39191fa Update live GitHub PR URL in AURA_STAGE83_HANDOFF_REPORT.md
-67365f6 Execute Stage 8.3: G0-G5 verification, genuine LLM evaluation, and CERA analysis
 
 
 === git diff --stat main...HEAD ===
@@ -156,7 +163,11 @@ feature/external-validation-pipeline
  AURA_Stage7/verify_bounded.py                      |   59 +
  AURA_Stage7/verify_capture.py                      |   41 +
  AURA_Stage7/verify_task.py                         |   28 +
+ CHANGED_FILES.txt                                  |    8 +
+ EXPERIMENT_INVENTORY_FINAL.csv                     |   60 +
+ EXTERNAL_VALIDATION_FINAL_HANDOFF.md               |  168 +++
  README.md                                          |   72 +-
+ REPRODUCTION_COMMANDS.md                           |   60 +
  artifacts/historical/ANTIGRAVITY_RUN_GUIDE.md      |   14 +
  .../ANTIGRAVITY_STAGE8_3_MASTER_PROMPT.md          |   74 ++
  .../AURA_PROJECT_STATUS_AND_CORRECTIONS.md         |   57 +
@@ -168,6 +179,15 @@ feature/external-validation-pipeline
  artifacts/historical/REGRESSION_TEST_RECEIPT.txt   |    4 +
  artifacts/historical/STAGE82_REPRO_RECEIPT.txt     |   49 +
  artifacts/historical/START_HERE.md                 |   10 +
+ aura_validation/__init__.py                        |    1 +
+ aura_validation/cohorts.py                         |  406 +++++++
+ aura_validation/integrity.py                       |  163 +++
+ aura_validation/models.py                          |  106 ++
+ aura_validation/reference_scorer.py                |  420 +++++++
+ aura_validation/replayer.py                        |  141 +++
+ aura_validation/runner.py                          |  417 +++++++
+ generate_inventory.py                              |   73 ++
+ git_review_evidence.txt                            |  858 ++++++++++++++
  paper/MANUSCRIPT.md                                |  163 +++
  paper/REPRODUCIBILITY.md                           |   95 ++
  paper/generate_research_tables.py                  |  227 ++++
@@ -438,7 +458,16 @@ feature/external-validation-pipeline
  stage83/run_g4_analysis.py                         |  428 +++++++
  stage83/tests/test_independent_reference.py        |  217 ++++
  stage83/tests/test_qwen3b_pilot.py                 |   65 ++
- 412 files changed, 26141 insertions(+), 12 deletions(-)
+ test_execution_log.txt                             |  235 ++++
+ tests/test_validation_pipeline.py                  |  325 ++++++
+ validation_reports/VALIDATION_EXECUTION_REPORT.md  |   98 ++
+ validation_reports/certificate_replay_results.json |  769 ++++++++++++
+ validation_reports/cohort_summary.csv              |    5 +
+ validation_reports/external_episode_metrics.csv    |   60 +
+ validation_reports/integrity_check.json            |  793 +++++++++++++
+ validation_reports/validation_failures.md          |   84 ++
+ validation_reports/validation_summary.json         |   83 ++
+ 434 files changed, 31474 insertions(+), 12 deletions(-)
 
 
 === git diff --name-status main...HEAD ===
@@ -573,7 +602,11 @@ A	AURA_Stage7/tests/test_verifier_stage3.py
 A	AURA_Stage7/verify_bounded.py
 A	AURA_Stage7/verify_capture.py
 A	AURA_Stage7/verify_task.py
+A	CHANGED_FILES.txt
+A	EXPERIMENT_INVENTORY_FINAL.csv
+A	EXTERNAL_VALIDATION_FINAL_HANDOFF.md
 M	README.md
+A	REPRODUCTION_COMMANDS.md
 A	artifacts/historical/ANTIGRAVITY_RUN_GUIDE.md
 A	artifacts/historical/ANTIGRAVITY_STAGE8_3_MASTER_PROMPT.md
 A	artifacts/historical/AURA_PROJECT_STATUS_AND_CORRECTIONS.md
@@ -585,6 +618,15 @@ A	artifacts/historical/README_STAGE8_2.md
 A	artifacts/historical/REGRESSION_TEST_RECEIPT.txt
 A	artifacts/historical/STAGE82_REPRO_RECEIPT.txt
 A	artifacts/historical/START_HERE.md
+A	aura_validation/__init__.py
+A	aura_validation/cohorts.py
+A	aura_validation/integrity.py
+A	aura_validation/models.py
+A	aura_validation/reference_scorer.py
+A	aura_validation/replayer.py
+A	aura_validation/runner.py
+A	generate_inventory.py
+A	git_review_evidence.txt
 A	paper/MANUSCRIPT.md
 A	paper/REPRODUCIBILITY.md
 A	paper/generate_research_tables.py
@@ -855,4 +897,13 @@ A	stage83/run_g3_experiment.py
 A	stage83/run_g4_analysis.py
 A	stage83/tests/test_independent_reference.py
 A	stage83/tests/test_qwen3b_pilot.py
+A	test_execution_log.txt
+A	tests/test_validation_pipeline.py
+A	validation_reports/VALIDATION_EXECUTION_REPORT.md
+A	validation_reports/certificate_replay_results.json
+A	validation_reports/cohort_summary.csv
+A	validation_reports/external_episode_metrics.csv
+A	validation_reports/integrity_check.json
+A	validation_reports/validation_failures.md
+A	validation_reports/validation_summary.json
 

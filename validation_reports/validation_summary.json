@@ -1,11 +1,11 @@
 {
   "metadata": {
-    "validation_timestamp_utc": "2026-10-25T18:21:57.183204+00:00",
-    "execution_time_seconds": 10.12,
+    "validation_timestamp_utc": "2026-10-25T20:23:25.472616+00:00",
+    "execution_time_seconds": 2.29,
     "platform": "Windows-10-10.0.26200-SP0",
     "python_version": "3.11.9",
     "git_branch": "feature/external-validation-pipeline",
-    "git_commit": "2676ae6327c562d919cee7089764d679e9af186e"
+    "git_commit": "8c594ba861c16e80bd64baa02475aefeb7ac2f6c"
   },
   "scientific_integrity_disclosures": {
     "scoring_separation": "Four distinct evaluation concepts strictly maintained: (1) Official CLI Benchmark, (2) Reproduced SQL-only Checker, (3) Independent Strict Task-Contract Reference, (4) AURA Verification Certificate.",

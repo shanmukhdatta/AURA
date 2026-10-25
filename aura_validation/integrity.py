@@ -131,30 +131,41 @@ def audit_episode_integrity(episode_dir: Path) -> IntegrityRecord:
     )
 
 
-def audit_repository_manifest(manifest_path: Path) -> Dict[str, Any]:
-    """Verify stored SHA256SUMS against actual repository files."""
+def audit_repository_manifest(manifest_path: Path, base_dir: Optional[Path] = None) -> Dict[str, Any]:
+    """Verify stored SHA256SUMS against actual repository files using intelligent path resolution."""
     manifest_path = Path(manifest_path)
     if not manifest_path.exists():
-        return {"error": f"Manifest not found: {manifest_path}", "verified_count": 0, "mismatches": []}
+        return {"error": f"Manifest not found: {manifest_path}", "verified_count": 0, "mismatches": [], "missing": []}
 
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
     verified = 0
     mismatches = []
     missing = []
 
-    for rel_path, expected_sha in manifest.items():
-        full_path = REPO_ROOT / rel_path
-        if not full_path.exists():
+    for rel_path, entry in manifest.items():
+        expected_sha = entry["sha256"] if isinstance(entry, dict) else str(entry)
+        
+        # Check candidate search paths in order of specificity
+        candidates = []
+        if base_dir:
+            candidates.append(Path(base_dir) / rel_path)
+        candidates.append(manifest_path.parent / rel_path)
+        candidates.append(REPO_ROOT / rel_path)
+        candidates.append(REPO_ROOT / "artifacts" / "historical" / rel_path)
+
+        target = next((p for p in candidates if p.is_file()), None)
+        if not target:
             missing.append(rel_path)
             continue
-        actual_sha = file_sha256(full_path)
-        if actual_sha == expected_sha:
+
+        actual_sha = file_sha256(target)
+        if actual_sha.lower() == expected_sha.lower():
             verified += 1
         else:
-            mismatches.append({"file": rel_path, "expected": expected_sha, "actual": actual_sha})
+            mismatches.append({"file": rel_path, "resolved_path": str(target.relative_to(REPO_ROOT)), "expected": expected_sha, "actual": actual_sha})
 
     return {
-        "manifest_file": str(manifest_path),
+        "manifest_file": str(manifest_path.relative_to(REPO_ROOT) if manifest_path.is_relative_to(REPO_ROOT) else manifest_path),
         "total_declared": len(manifest),
         "verified_count": verified,
         "missing_count": len(missing),

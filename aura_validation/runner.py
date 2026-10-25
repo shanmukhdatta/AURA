@@ -62,6 +62,10 @@ def run_full_validation(output_dir: Optional[Path] = None) -> Dict[str, Any]:
     if stage83_manifest.exists():
         manifest_audit["stage83_sha256sums"] = audit_repository_manifest(stage83_manifest)
 
+    historical_manifest = REPO_ROOT / "artifacts" / "historical" / "HANDOFF_MANIFEST_SHA256.json"
+    if historical_manifest.exists():
+        manifest_audit["historical_manifest"] = audit_repository_manifest(historical_manifest)
+
     # 3. Aggregate metrics by cohort
     cohort_summaries = []
     cohort_stats: Dict[str, Dict[str, Any]] = {}
