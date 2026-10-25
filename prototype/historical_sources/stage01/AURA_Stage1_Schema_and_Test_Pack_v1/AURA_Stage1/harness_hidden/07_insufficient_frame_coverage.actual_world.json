@@ -1,0 +1,6 @@
+{
+  "fixture_id": "07_insufficient_frame_coverage",
+  "harness_only": true,
+  "actual_world_id": "world.07_insufficient_frame_coverage.actual",
+  "actual_world_satisfies_contract": true
+}

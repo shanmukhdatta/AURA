@@ -1,0 +1,46 @@
+{
+  "method": "REPRODUCED_PUBLISHED_CHECKERS_NOT_OFFICIAL_AGENTSYNTH_RUNNER",
+  "all_matched": true,
+  "passed_count": 2,
+  "total_count": 2,
+  "checks": [
+    {
+      "index": 0,
+      "kind": "sql",
+      "matched": true,
+      "observed": [
+        [
+          "high"
+        ]
+      ],
+      "reference_spec": {
+        "kind": "sql",
+        "query": "SELECT priority FROM tickets WHERE id=3",
+        "equals": [
+          [
+            "high"
+          ]
+        ]
+      }
+    },
+    {
+      "index": 1,
+      "kind": "sql",
+      "matched": true,
+      "observed": [
+        [
+          "normal"
+        ]
+      ],
+      "reference_spec": {
+        "kind": "sql",
+        "query": "SELECT priority FROM tickets WHERE id=1",
+        "equals": [
+          [
+            "normal"
+          ]
+        ]
+      }
+    }
+  ]
+}

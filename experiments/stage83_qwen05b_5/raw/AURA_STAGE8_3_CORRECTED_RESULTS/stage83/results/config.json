@@ -1,0 +1,35 @@
+{
+  "project": "AURA - Agent Uncertainty and Residue Arbiter",
+  "stage": "8.3",
+  "title": "External Agent Validation on AgentSynth Core_v2",
+  "model_id": "Qwen/Qwen2.5-0.5B-Instruct",
+  "gpu_contingency_notebook": "AURA_STAGE83_REAL_AGENT_KAGGLE.ipynb",
+  "gpu_target_model": "Qwen/Qwen2.5-3B-Instruct",
+  "preregistered_smoke_tasks": [
+    "raise-ticket-priority",
+    "refuse-cancel-shipped",
+    "clearance-discount",
+    "dedup-keep-latest",
+    "refund-and-restock"
+  ],
+  "task_tiers": {
+    "raise-ticket-priority": "easy",
+    "refuse-cancel-shipped": "medium",
+    "clearance-discount": "easy",
+    "dedup-keep-latest": "medium",
+    "refund-and-restock": "hard"
+  },
+  "seed": 42,
+  "generation": {
+    "do_sample": false,
+    "temperature": 0.0,
+    "max_new_tokens": 150,
+    "max_turns": 4
+  },
+  "verifier": {
+    "engine": "AURA Stage 7 Verifier Engine",
+    "policy": "closed_world",
+    "allowlist_enforcement": "strict_pk_cell_level",
+    "noninterference_check": "sha256_pre_post_matching"
+  }
+}

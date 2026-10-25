@@ -1,0 +1,1 @@
+{"database_expected":true,"no_extra_files":true,"report_expected":true,"source":"harness_independent_sqlite_file_trace_inspection","task_success":false,"validation_precedes_update":false,"warning":"same controlled sandbox, not external benchmark ground truth"}

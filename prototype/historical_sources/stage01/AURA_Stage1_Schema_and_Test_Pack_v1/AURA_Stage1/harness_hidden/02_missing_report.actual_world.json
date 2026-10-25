@@ -1,0 +1,6 @@
+{
+  "fixture_id": "02_missing_report",
+  "harness_only": true,
+  "actual_world_id": "world.02_missing_report.actual",
+  "actual_world_satisfies_contract": false
+}

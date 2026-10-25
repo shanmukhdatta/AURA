@@ -1,0 +1,823 @@
+{
+  "schema_version": "1.0",
+  "generated_utc": "2026-10-25T15:36:16.650695+00:00",
+  "scope": "complete distribution except this self-referential manifest",
+  "files": {
+    "README.md": {
+      "bytes": 4171,
+      "sha256": "b440a353585efca263eeb9fd718d3213cb132bab5a9d942b68ae21f5120491bc"
+    },
+    "evidence/AURA_Stage7_Report_v1.md": {
+      "bytes": 15415,
+      "sha256": "1ea7d527974b5f3edd7de05eb9ca873fb35abd33c583758626794b0f9e9cb350"
+    },
+    "evidence/AURA_Stage83_Corrected_Independent_Audit_Final.md": {
+      "bytes": 12973,
+      "sha256": "9caac4f17fa2d9c1ec3a5cfe63ef401263263feebfbd365f8584bbbedde29ab4"
+    },
+    "evidence/AURA_Stage83_Qwen3B_Pilot_Independent_Audit.md": {
+      "bytes": 7310,
+      "sha256": "81d17ec142437324ada31dc15e491d949a090b9ab10221f439dd911ec1b20f15"
+    },
+    "evidence/AURA_Stage8_2_External_SQL_Pilot_Report_v1.md": {
+      "bytes": 11030,
+      "sha256": "a374208f7dad8d2dd9f1ac3704962b409f9ec7ffeb08a4bad69d0d30b85cf398"
+    },
+    "evidence/historical_stages/AURA_Research_Decision_Log_v1.md": {
+      "bytes": 2320,
+      "sha256": "58484d8d2edcfc3029eb6f16fd6b29f67cf815b2fe72b5f92b6a1474296aa406"
+    },
+    "evidence/historical_stages/AURA_Research_Freeze_v1.md": {
+      "bytes": 29578,
+      "sha256": "1896f27d119bf7a293d1a82af39da44154516f3296c2ba9e340eb5fab2d97947"
+    },
+    "evidence/historical_stages/AURA_Stage1_Formal_Specification_v1.md": {
+      "bytes": 25193,
+      "sha256": "108107c1cebbc578bcf3c6d354ae219a44efe728b338475e277c51c1ce32a7b6"
+    },
+    "evidence/historical_stages/AURA_Stage2_Report_v1.md": {
+      "bytes": 8480,
+      "sha256": "c143524c85baff76049566e78b33a9128277a3ac09f343b3a044a6562a0edf4b"
+    },
+    "evidence/historical_stages/AURA_Stage3_Report_v1.md": {
+      "bytes": 9868,
+      "sha256": "6e2d0276623d7a17aec30e7f7acca42a374f67b8700f4f3edd5c3648fd77354d"
+    },
+    "evidence/historical_stages/AURA_Stage3_Results_v1.zip": {
+      "bytes": 55661,
+      "sha256": "a4629790780222538a5e5a9dd69b6705cfeca458c8012edc10146adc59830972"
+    },
+    "evidence/historical_stages/AURA_Stage4_Report_v1.md": {
+      "bytes": 9750,
+      "sha256": "7088d6973432277f03bcb6a17e1f9d8be2c2a8efde888ccf3e29a554aea14f7b"
+    },
+    "evidence/historical_stages/AURA_Stage4_Results_v1.zip": {
+      "bytes": 110106,
+      "sha256": "9b759b8f36d72e2b5b75a546ae331dfa6d25f7ac126e2a5ce051d0a5f13edfe1"
+    },
+    "evidence/historical_stages/AURA_Stage5_Report_v1.md": {
+      "bytes": 9615,
+      "sha256": "ac2251a970e90899ab6d966df6ae14f705b63e3d70a4ce1bb720fbc50c0e1b7e"
+    },
+    "evidence/historical_stages/AURA_Stage5_Results_v1.zip": {
+      "bytes": 123511,
+      "sha256": "ad6ef95f8149af508cf319ffa99cfe41023cb7e661dcae21878180785520aaf2"
+    },
+    "evidence/historical_stages/AURA_Stage6_Report_v1.md": {
+      "bytes": 10050,
+      "sha256": "5f1eb113e00d7c9fea2c603e61c31790e96eda4013477c807dca12a48cb52693"
+    },
+    "evidence/historical_stages/AURA_Stage6_Results_v1.zip": {
+      "bytes": 127478,
+      "sha256": "fb137e5eab4c88b8bdbdd1158fb718bb4cbfbf5ac060b469c835ce61d13faa6e"
+    },
+    "evidence/source_archives/AURA_APPWORLD_STAGE8_1_v7_RESULTS.zip": {
+      "bytes": 14375,
+      "sha256": "fbc5957ab2c26e70ac0a92fa5945673698a84f14f8a1bdea864dc91ae98f8847"
+    },
+    "evidence/source_archives/AURA_STAGE83_QWEN3B_PILOT_RESULTS.zip": {
+      "bytes": 72909,
+      "sha256": "416b28a87621022668d8f04c63a3db6d8fd3be5c8d6a260346cae4da505d3a4d"
+    },
+    "evidence/source_archives/AURA_STAGE8_1_OUTPUTS.zip": {
+      "bytes": 33083,
+      "sha256": "5afbd5486a893a742b27a57639cae2a645107bc8ed5ede7ada4baf9f30bb454b"
+    },
+    "evidence/source_archives/AURA_STAGE8_3_CORRECTED_RESULTS.zip": {
+      "bytes": 190130,
+      "sha256": "e6836569b6276781bd70906b375578ba523c95a177e3f471afb1b058e332534f"
+    },
+    "evidence/source_archives/AURA_Stage7_Results_v1.zip": {
+      "bytes": 370506,
+      "sha256": "8799014b6c62d5a7a14f82d52fb554fa21674dd329b51492239fb07997862f80"
+    },
+    "evidence/source_archives/AURA_Stage8_2_External_SQL_Evidence_v1.zip": {
+      "bytes": 213563,
+      "sha256": "d3d50978c72fde8422416fbecd1ee18c28523629ac9e4248049952131f40507b"
+    },
+    "implementation/AURA_Stage7/ARTIFACT_MANIFEST.json": {
+      "bytes": 21722,
+      "sha256": "91012cc150809639ced466c43b46c5124f4d3181cf5dacf7ad79ec2b6beb1475"
+    },
+    "implementation/AURA_Stage7/README.md": {
+      "bytes": 3513,
+      "sha256": "2089034845cfacaeeffa1bb72e348a7fdd789db164283d4efbc8c71454039c91"
+    },
+    "implementation/AURA_Stage7/audit_agentdiff_contracts.py": {
+      "bytes": 2000,
+      "sha256": "b9391ac4abe57d8ac493351cf7b2b2ccb7fe00e3570bb27515e7b1a747259214"
+    },
+    "implementation/AURA_Stage7/aura_baselines/__init__.py": {
+      "bytes": 66,
+      "sha256": "1bd84f81a6ac88bba1f405b879cce5b6899a72e34330c65ff0625c428d583424"
+    },
+    "implementation/AURA_Stage7/aura_baselines/surface.py": {
+      "bytes": 2466,
+      "sha256": "fa0bcf3cd19eddbb684ad71019078518792d22c077992ecf38753b14dff69a83"
+    },
+    "implementation/AURA_Stage7/aura_evaluation/__init__.py": {
+      "bytes": 96,
+      "sha256": "dde205cd8ebb0733deffec3f174afed1f4b2c42401ee714410892321206df55f"
+    },
+    "implementation/AURA_Stage7/aura_evaluation/local_faults.py": {
+      "bytes": 6776,
+      "sha256": "01bc4b05c38bcf212730a9666cfd38aa7b189080087945da8a87c03241ffecf7"
+    },
+    "implementation/AURA_Stage7/aura_evaluation/study.py": {
+      "bytes": 15305,
+      "sha256": "a870bbcdc830fb342cd540c126e4552dde569c5fa3e0ad386042dacfad867253"
+    },
+    "implementation/AURA_Stage7/aura_evidence/__init__.py": {
+      "bytes": 564,
+      "sha256": "cc7739d3145da3af9700c112f80525d8f7e02a874191ec0f6c473d7df2a3676b"
+    },
+    "implementation/AURA_Stage7/aura_evidence/capture.py": {
+      "bytes": 7585,
+      "sha256": "af51ad8b09636c096363660a0016a5a77a8f7fe005a1196ac7bb47d42e2c6be2"
+    },
+    "implementation/AURA_Stage7/aura_evidence/diff.py": {
+      "bytes": 3044,
+      "sha256": "ab91460c1adf906b3403d84c4bc15cc96e6724351ff9b987c607bb8ea1b5b3ef"
+    },
+    "implementation/AURA_Stage7/aura_evidence/ledger.py": {
+      "bytes": 1582,
+      "sha256": "2977909e17b6444f356966948e139badc55389b00ccfda599f0e4dabd2768681"
+    },
+    "implementation/AURA_Stage7/aura_evidence/probes.py": {
+      "bytes": 11846,
+      "sha256": "eb2533eef9d5bef46a7e0a3143d38a2ac4df954f8737b02e354ce875e58b0876"
+    },
+    "implementation/AURA_Stage7/aura_evidence/trace.py": {
+      "bytes": 1252,
+      "sha256": "12984ae27dcaf88d041dbc1a3cf34dee7a62c972a74a220e21fe190569ab7d62"
+    },
+    "implementation/AURA_Stage7/aura_evidence/util.py": {
+      "bytes": 1421,
+      "sha256": "080c5314e719ef6c0a47aa556e5cfdb92d9c11f07f768c5f419f2ca282d0d28e"
+    },
+    "implementation/AURA_Stage7/aura_evidence/validation.py": {
+      "bytes": 8229,
+      "sha256": "16e720b78aa928779c3aaab7b65b65c3d24f75351d4f4cdbfa8e99791f183b43"
+    },
+    "implementation/AURA_Stage7/aura_external/__init__.py": {
+      "bytes": 197,
+      "sha256": "f49e48beb517eaf4a4b0bbd1ba6b4eb63b420f3d207c221fc831e4df86d43d07"
+    },
+    "implementation/AURA_Stage7/aura_external/agentdiff.py": {
+      "bytes": 8165,
+      "sha256": "3ed8f2ace23c864b55c898e5717efa3111386605bc8d20e93286755a8304bc87"
+    },
+    "implementation/AURA_Stage7/aura_external/appworld.py": {
+      "bytes": 831,
+      "sha256": "153e636d1c5b2b123f43d0327fa052931dab61b708b22191a21e1ea8a9d251b4"
+    },
+    "implementation/AURA_Stage7/aura_external/fixtures.py": {
+      "bytes": 907,
+      "sha256": "a68e39b53366f2e22ffdf19cc11923f092cfbbce875d01b668a4c97f63fc64de"
+    },
+    "implementation/AURA_Stage7/aura_planning/__init__.py": {
+      "bytes": 179,
+      "sha256": "f9d77a544b9ce5121e3665af34f87e31752e038d4a0a4c4a8194e71d747822e2"
+    },
+    "implementation/AURA_Stage7/aura_planning/examples.py": {
+      "bytes": 2671,
+      "sha256": "54baebba4ecc1c56079ae54b1e37ad056f7d2b207ce14efa298c084d528312c9"
+    },
+    "implementation/AURA_Stage7/aura_planning/live_runner.py": {
+      "bytes": 6920,
+      "sha256": "fc2fb0fc5548cc1ecd0f63f43c84a411cbdea7584ff578e06037faa9113928f4"
+    },
+    "implementation/AURA_Stage7/aura_planning/planner.py": {
+      "bytes": 12023,
+      "sha256": "aca99f9024db889c1d2c75a9db9e59453b5ccdd530d261b86bfda8a84aed6d45"
+    },
+    "implementation/AURA_Stage7/aura_reasoning/__init__.py": {
+      "bytes": 285,
+      "sha256": "4d3d217604164fd201e1be2684afed32f8cc750d83bfba1397b46e120b58d974"
+    },
+    "implementation/AURA_Stage7/aura_reasoning/model.py": {
+      "bytes": 14784,
+      "sha256": "c99cce5c1366d8ab67879c98a9770b283627113fa64024eea483168c963b89d9"
+    },
+    "implementation/AURA_Stage7/aura_reasoning/reference_models.py": {
+      "bytes": 2551,
+      "sha256": "6b23d0f0eeb1710b7bb364a95e289a87787b9b1aac06d3c4a7ee1deaa5185067"
+    },
+    "implementation/AURA_Stage7/aura_verifier/__init__.py": {
+      "bytes": 270,
+      "sha256": "134d45be311ee59e23994daf3354149d3f9a55fbfa55fb191c66d879bceb74f7"
+    },
+    "implementation/AURA_Stage7/aura_verifier/engine.py": {
+      "bytes": 19160,
+      "sha256": "de083fa2edd358d33aa7a6dd73bd388bf432bba7bc74130504df1b868ed6296a"
+    },
+    "implementation/AURA_Stage7/docs/AGENTDIFF_FULL_DATASET_AUDIT_REFERENCE.json": {
+      "bytes": 1233,
+      "sha256": "e6477d80cdb5e457f7d4545c6f1f95d8058fad195c681167609efe513d1ef0d3"
+    },
+    "implementation/AURA_Stage7/docs/STAGE1_FIXTURE_HASH_COMPATIBILITY.json": {
+      "bytes": 16781,
+      "sha256": "1a0e904949a46bebf526f2c7e7d67a400d9f31c1ebf6f9544472a05c24737a85"
+    },
+    "implementation/AURA_Stage7/docs/STAGE2_DESIGN.md": {
+      "bytes": 6366,
+      "sha256": "4d56bbbbd4d0e1b9af56fd48a7cc1b27c6b431667a278b55d2b4923db9ae0996"
+    },
+    "implementation/AURA_Stage7/docs/STAGE3_DESIGN.md": {
+      "bytes": 4788,
+      "sha256": "f904ffcc9e7a0eac6189b9eb82ccb852e0281e09550fed592dde8aae35b4b22d"
+    },
+    "implementation/AURA_Stage7/docs/STAGE4_DESIGN.md": {
+      "bytes": 7787,
+      "sha256": "b57acb19ff0c0515af85f5350a6aa24dac09f281d036e341d3e3dea7930afc6b"
+    },
+    "implementation/AURA_Stage7/docs/STAGE5_DESIGN.md": {
+      "bytes": 5925,
+      "sha256": "4323e9955ce91c3cbe64f81e78d32676e7df8d0842afb5c275684854900af719"
+    },
+    "implementation/AURA_Stage7/docs/STAGE5_REPORT.md": {
+      "bytes": 9615,
+      "sha256": "ac2251a970e90899ab6d966df6ae14f705b63e3d70a4ce1bb720fbc50c0e1b7e"
+    },
+    "implementation/AURA_Stage7/docs/STAGE6_DESIGN.md": {
+      "bytes": 1924,
+      "sha256": "d39223b0cfb2d6f7624fac48dd79c9d95dd4c05c991ea2f988ea03f5a4c6ed8e"
+    },
+    "implementation/AURA_Stage7/docs/STAGE6_REPORT.md": {
+      "bytes": 10050,
+      "sha256": "5f1eb113e00d7c9fea2c603e61c31790e96eda4013477c807dca12a48cb52693"
+    },
+    "implementation/AURA_Stage7/docs/STAGE7_DESIGN.md": {
+      "bytes": 1570,
+      "sha256": "a542ac1d02b939cbc41f87457e54fa8350262b8c6c3cce1aa145c07e4731ee8e"
+    },
+    "implementation/AURA_Stage7/docs/STAGE7_REPORT.md": {
+      "bytes": 15415,
+      "sha256": "1ea7d527974b5f3edd7de05eb9ca873fb35abd33c583758626794b0f9e9cb350"
+    },
+    "implementation/AURA_Stage7/examples/external/PROVENANCE.md": {
+      "bytes": 1481,
+      "sha256": "602ede5d46b2727031f96579ec9a7deac0eeeea9063629c8bf095a979be511d2"
+    },
+    "implementation/AURA_Stage7/examples/external/agentdiff_public_contract_excerpt.jsonl": {
+      "bytes": 2402,
+      "sha256": "efaa83033f4745c21278a507fab00caeae8314aff79006780e1231927b307b9d"
+    },
+    "implementation/AURA_Stage7/examples/models/clean_local_reference.json": {
+      "bytes": 298,
+      "sha256": "3212ae8eb6b18b6b5bfc437e7ab472102cf848348adcc843ef772b260bf68b40"
+    },
+    "implementation/AURA_Stage7/examples/models/external_uncertainty_reference.json": {
+      "bytes": 366,
+      "sha256": "99d3f2a96142cbbca225190e6f8f6deff6a575bc5acfd686caa132297fde13c7"
+    },
+    "implementation/AURA_Stage7/examples/models/synthetic_inferred_notice_TEST_ONLY.json": {
+      "bytes": 518,
+      "sha256": "9d07461c7699c28e42338ca743d408f2a88d3ab2e2a382c4128536b1146091d7"
+    },
+    "implementation/AURA_Stage7/examples/reference/probe_catalogue.json": {
+      "bytes": 2551,
+      "sha256": "69ea5cc8d38b0822e2d4d6bf83a38f6c27bdc23c4f03c8bdee26e7e12c0e1bcb"
+    },
+    "implementation/AURA_Stage7/examples/reference/task_contract.json": {
+      "bytes": 3872,
+      "sha256": "108d464d2ccc374151eb599a073fe444fc37d9114f73085f516c1ac8f8daf033"
+    },
+    "implementation/AURA_Stage7/pyproject.toml": {
+      "bytes": 611,
+      "sha256": "863f031ae548029ff6e9ebdcae4cb8c9b10f7dbe748348e18dd80a3c63890bc5"
+    },
+    "implementation/AURA_Stage7/reproduce_stage3.py": {
+      "bytes": 2893,
+      "sha256": "aaf8de584b9bedfe12fcfe637b686bb8e3eacc21ff8332ed97ccb0514ac663f9"
+    },
+    "implementation/AURA_Stage7/reproduce_stage4.py": {
+      "bytes": 5100,
+      "sha256": "edb404a0a18fb91754211b9565f435b866f7ed36060cbd1c8bef0ee981d717fb"
+    },
+    "implementation/AURA_Stage7/reproduce_stage5.py": {
+      "bytes": 8289,
+      "sha256": "8a9266805fc121aac577fc24ef19bcc488904bab3fa388ac58b88d716df30347"
+    },
+    "implementation/AURA_Stage7/reproduce_stage6.py": {
+      "bytes": 7211,
+      "sha256": "340db7561a3a571856bd93bb2932ffa7a9f43ff6b0b93a737549c2e1e3b144a6"
+    },
+    "implementation/AURA_Stage7/reproduce_stage7.py": {
+      "bytes": 377,
+      "sha256": "000b632d1c4df69d7748fdcf62c32fe7b2492111ebef506d974247da4fa70385"
+    },
+    "implementation/AURA_Stage7/run_demo.py": {
+      "bytes": 4787,
+      "sha256": "d098788df60a423b86d9e5212e633a9ad9aabb2cd16bf78f4e5da748c8da97b8"
+    },
+    "implementation/AURA_Stage7/run_stage7_local.py": {
+      "bytes": 357,
+      "sha256": "05833db452fd8289202672d88768ca6c1d3ad9f71e0148469f3af00896918670"
+    },
+    "implementation/AURA_Stage7/schemas/BoundedWorldModel.schema.json": {
+      "bytes": 3849,
+      "sha256": "719d15f435999396813fe699fab305f3f94d4a94d76001cb008d8af20cb530b0"
+    },
+    "implementation/AURA_Stage7/schemas/Certificate.schema.json": {
+      "bytes": 4159,
+      "sha256": "f8f5937bc65659cb570f6a61f8ec53705d067191e551877e5bdc574350e6f0b9"
+    },
+    "implementation/AURA_Stage7/schemas/Observation.schema.json": {
+      "bytes": 3813,
+      "sha256": "7469c64c78922add58451101603e763859107f05c58f167bb9d7e7bed7aad1f4"
+    },
+    "implementation/AURA_Stage7/schemas/ProbeSpec.schema.json": {
+      "bytes": 2443,
+      "sha256": "4a0e7d9136d8a8a2b7c1db3deb596af878f5fb16d87fc7b9d945de7517f4015c"
+    },
+    "implementation/AURA_Stage7/schemas/ReasoningLedger.schema.json": {
+      "bytes": 2782,
+      "sha256": "04bc312483a82b5b5be55d1c5710eb1053a36f44bd71e7a3d3b0039eb0f997b2"
+    },
+    "implementation/AURA_Stage7/schemas/TaskContract.schema.json": {
+      "bytes": 5812,
+      "sha256": "da053f1014e0e35de4a9b2751a8423d959d03a08b4504b69e6e3d0e91a3e1fd7"
+    },
+    "implementation/AURA_Stage7/tests/fixtures/stage1_acceptance.csv": {
+      "bytes": 954,
+      "sha256": "2a864e459349d9a5a60c54b4ed94c134cd1b65f6558372a4ba6bf737bd245b79"
+    },
+    "implementation/AURA_Stage7/tests/fixtures/stage1_inputs/01_complete_success/expected.json": {
+      "bytes": 293,
+      "sha256": "e8e3a510f0081df68aa1ec547578a8c0f7de5e0fddfc18d1dc037c95579ad044"
+    },
+    "implementation/AURA_Stage7/tests/fixtures/stage1_inputs/01_complete_success/observations.json": {
+      "bytes": 3796,
+      "sha256": "e2860d3821531e05adadb8530e3513c70a3a23de41b06968d150cf225b312eac"
+    },
+    "implementation/AURA_Stage7/tests/fixtures/stage1_inputs/01_complete_success/probe_catalogue.json": {
+      "bytes": 2551,
+      "sha256": "69ea5cc8d38b0822e2d4d6bf83a38f6c27bdc23c4f03c8bdee26e7e12c0e1bcb"
+    },
+    "implementation/AURA_Stage7/tests/fixtures/stage1_inputs/01_complete_success/task_contract.json": {
+      "bytes": 3872,
+      "sha256": "108d464d2ccc374151eb599a073fe444fc37d9114f73085f516c1ac8f8daf033"
+    },
+    "implementation/AURA_Stage7/tests/fixtures/stage1_inputs/02_missing_report/expected.json": {
+      "bytes": 288,
+      "sha256": "3591d973f90bc183787866f04b4e565ba84995d4226cefa660310641d7a9c7c9"
+    },
+    "implementation/AURA_Stage7/tests/fixtures/stage1_inputs/02_missing_report/observations.json": {
+      "bytes": 3782,
+      "sha256": "a265f2445511e08f803b3a350a27b54defe8cb01849974c364c8f81ed340d59d"
+    },
+    "implementation/AURA_Stage7/tests/fixtures/stage1_inputs/02_missing_report/probe_catalogue.json": {
+      "bytes": 2551,
+      "sha256": "69ea5cc8d38b0822e2d4d6bf83a38f6c27bdc23c4f03c8bdee26e7e12c0e1bcb"
+    },
+    "implementation/AURA_Stage7/tests/fixtures/stage1_inputs/02_missing_report/task_contract.json": {
+      "bytes": 3870,
+      "sha256": "139f14275c5a34e9d4dd32e97f4394d1bd5816eb87cf0e60a2fcef77cc2b6c9c"
+    },
+    "implementation/AURA_Stage7/tests/fixtures/stage1_inputs/03_unauthorized_mutation/expected.json": {
+      "bytes": 294,
+      "sha256": "58c4924d70ed4c7c96bd65d31fc31da68f0512d3b205f8832938ea9ca269fd79"
+    },
+    "implementation/AURA_Stage7/tests/fixtures/stage1_inputs/03_unauthorized_mutation/observations.json": {
+      "bytes": 3836,
+      "sha256": "68ddef2a34403f1131b3085e9df26a127d718969bb86b0a1619dc8bfd499cf92"
+    },
+    "implementation/AURA_Stage7/tests/fixtures/stage1_inputs/03_unauthorized_mutation/probe_catalogue.json": {
+      "bytes": 2551,
+      "sha256": "69ea5cc8d38b0822e2d4d6bf83a38f6c27bdc23c4f03c8bdee26e7e12c0e1bcb"
+    },
+    "implementation/AURA_Stage7/tests/fixtures/stage1_inputs/03_unauthorized_mutation/task_contract.json": {
+      "bytes": 3877,
+      "sha256": "c7afad740d14ba8fec21ef4dbecc5eec0f8222ef446c9b9998af82fd5e8c053e"
+    },
+    "implementation/AURA_Stage7/tests/fixtures/stage1_inputs/04_duplicate_record/expected.json": {
+      "bytes": 297,
+      "sha256": "cf8e64f2b761b35667a05aa7c2069189249632a69c6aae4f85112a1a9ea6f079"
+    },
+    "implementation/AURA_Stage7/tests/fixtures/stage1_inputs/04_duplicate_record/observations.json": {
+      "bytes": 3796,
+      "sha256": "70f21ff7b40e20f4c94d810ca46e13028565b4c77b121e615ff8e04a3cd77f98"
+    },
+    "implementation/AURA_Stage7/tests/fixtures/stage1_inputs/04_duplicate_record/probe_catalogue.json": {
+      "bytes": 2551,
+      "sha256": "69ea5cc8d38b0822e2d4d6bf83a38f6c27bdc23c4f03c8bdee26e7e12c0e1bcb"
+    },
+    "implementation/AURA_Stage7/tests/fixtures/stage1_inputs/04_duplicate_record/task_contract.json": {
+      "bytes": 3872,
+      "sha256": "9a897cca73096b481643c764cbebc7eb5d7c31f85883425b63591510d4e9c8b7"
+    },
+    "implementation/AURA_Stage7/tests/fixtures/stage1_inputs/05_unobservable_notification/expected.json": {
+      "bytes": 309,
+      "sha256": "50909efa066600ffee4d2bfff3157a9e85db6fe1ad732ec15a81ce85200dd797"
+    },
+    "implementation/AURA_Stage7/tests/fixtures/stage1_inputs/05_unobservable_notification/observations.json": {
+      "bytes": 4499,
+      "sha256": "db03aff40ace6f1eebce2163ebbba6c7e2af71035a553643df60c823f5649718"
+    },
+    "implementation/AURA_Stage7/tests/fixtures/stage1_inputs/05_unobservable_notification/probe_catalogue.json": {
+      "bytes": 3165,
+      "sha256": "812a1d6aca4a246aa4685b46f7582fc238d38d04a21eb66e3897514baa47a4d0"
+    },
+    "implementation/AURA_Stage7/tests/fixtures/stage1_inputs/05_unobservable_notification/task_contract.json": {
+      "bytes": 4206,
+      "sha256": "1a67124eab58d0dc9b6ff7721d29c3c24e6a1a08d652cd30f77217881b7d73f9"
+    },
+    "implementation/AURA_Stage7/tests/fixtures/stage1_inputs/06_known_bad_and_unknown/expected.json": {
+      "bytes": 306,
+      "sha256": "b95282c5e512f673bb0324d18e317761de35d815aad163fec4e705233768ffd8"
+    },
+    "implementation/AURA_Stage7/tests/fixtures/stage1_inputs/06_known_bad_and_unknown/observations.json": {
+      "bytes": 4459,
+      "sha256": "3b27e59f469633024d46d7250d5e0c4dc41fce6dcf9a233847d0b56c4cc01bce"
+    },
+    "implementation/AURA_Stage7/tests/fixtures/stage1_inputs/06_known_bad_and_unknown/probe_catalogue.json": {
+      "bytes": 3165,
+      "sha256": "812a1d6aca4a246aa4685b46f7582fc238d38d04a21eb66e3897514baa47a4d0"
+    },
+    "implementation/AURA_Stage7/tests/fixtures/stage1_inputs/06_known_bad_and_unknown/task_contract.json": {
+      "bytes": 4202,
+      "sha256": "9046b5b5b7751aed3625dbd4e805d39e46d1118bbd91b26e6be1fdbe59af5706"
+    },
+    "implementation/AURA_Stage7/tests/fixtures/stage1_inputs/07_insufficient_frame_coverage/expected.json": {
+      "bytes": 309,
+      "sha256": "09197e6c516372abc9e7d9b4c7e536dac6ed538fc3fc08720002b7ff260bb75f"
+    },
+    "implementation/AURA_Stage7/tests/fixtures/stage1_inputs/07_insufficient_frame_coverage/observations.json": {
+      "bytes": 2469,
+      "sha256": "66df092a9d9d71a0b2b24def748b920cd697030fb27842d0d704dc32486b4da2"
+    },
+    "implementation/AURA_Stage7/tests/fixtures/stage1_inputs/07_insufficient_frame_coverage/probe_catalogue.json": {
+      "bytes": 2551,
+      "sha256": "69ea5cc8d38b0822e2d4d6bf83a38f6c27bdc23c4f03c8bdee26e7e12c0e1bcb"
+    },
+    "implementation/AURA_Stage7/tests/fixtures/stage1_inputs/07_insufficient_frame_coverage/task_contract.json": {
+      "bytes": 3883,
+      "sha256": "8e22d1017c0f7ec5b68e4092a065994b49831aaf3363f5e759445c5cc0c700ad"
+    },
+    "implementation/AURA_Stage7/tests/fixtures/stage1_inputs/08_conflicting_evidence/expected.json": {
+      "bytes": 305,
+      "sha256": "9032ee20875c2cc331b2ab386676cfb5f64da8d0256eec088a25f80ffeff963e"
+    },
+    "implementation/AURA_Stage7/tests/fixtures/stage1_inputs/08_conflicting_evidence/observations.json": {
+      "bytes": 4666,
+      "sha256": "cc017df93286c98202c29547145f3d1119d15c9ca9358383ffd5e2bd24cbada0"
+    },
+    "implementation/AURA_Stage7/tests/fixtures/stage1_inputs/08_conflicting_evidence/probe_catalogue.json": {
+      "bytes": 2551,
+      "sha256": "69ea5cc8d38b0822e2d4d6bf83a38f6c27bdc23c4f03c8bdee26e7e12c0e1bcb"
+    },
+    "implementation/AURA_Stage7/tests/fixtures/stage1_inputs/08_conflicting_evidence/task_contract.json": {
+      "bytes": 3876,
+      "sha256": "9bb7f26365838e8e07c5c12d9d7d253b4072af50eeb2a098818c3177b4fdd4a4"
+    },
+    "implementation/AURA_Stage7/tests/fixtures/stage1_inputs/09_missing_required_process/expected.json": {
+      "bytes": 303,
+      "sha256": "e0247841d0fd03b5a36eaa78921a99d39a9d789247e9bdafde3ebc96f5c816f3"
+    },
+    "implementation/AURA_Stage7/tests/fixtures/stage1_inputs/09_missing_required_process/observations.json": {
+      "bytes": 3861,
+      "sha256": "40c2d2d10ac2665f445d80b344e28f7716e5d34b7fc32fd7c67a129564040aee"
+    },
+    "implementation/AURA_Stage7/tests/fixtures/stage1_inputs/09_missing_required_process/probe_catalogue.json": {
+      "bytes": 2551,
+      "sha256": "69ea5cc8d38b0822e2d4d6bf83a38f6c27bdc23c4f03c8bdee26e7e12c0e1bcb"
+    },
+    "implementation/AURA_Stage7/tests/fixtures/stage1_inputs/09_missing_required_process/task_contract.json": {
+      "bytes": 3880,
+      "sha256": "8a2897704df1f9016744639fc4fffcff25c5778f41e912de98b12666cf4c7354"
+    },
+    "implementation/AURA_Stage7/tests/fixtures/stage1_inputs/10_unobservable_transient_effect/expected.json": {
+      "bytes": 315,
+      "sha256": "4fe44ec70428c369234d69f77b3ff09d1700fe36b95ac55ef79ca2384fa94301"
+    },
+    "implementation/AURA_Stage7/tests/fixtures/stage1_inputs/10_unobservable_transient_effect/observations.json": {
+      "bytes": 4532,
+      "sha256": "f757192b7ded9bf48a86942cb6468551eb671acb8b8169f1bce078af8cccd4e4"
+    },
+    "implementation/AURA_Stage7/tests/fixtures/stage1_inputs/10_unobservable_transient_effect/probe_catalogue.json": {
+      "bytes": 3225,
+      "sha256": "fbed9481039996a11aa50c0d0fd4c08146e527fb68bfdfdd71fc0fc21fce7dc9"
+    },
+    "implementation/AURA_Stage7/tests/fixtures/stage1_inputs/10_unobservable_transient_effect/task_contract.json": {
+      "bytes": 4312,
+      "sha256": "4706228c956521ce7c155127634fe1677609a275202bc2a84a07abc647f6ea4d"
+    },
+    "implementation/AURA_Stage7/tests/fixtures/stage1_inputs/11_benign_alternative_path/expected.json": {
+      "bytes": 299,
+      "sha256": "6f616eea88a4bb37c8088d61e4094ffa06e7963b889062b1e7bad193bc23d3ec"
+    },
+    "implementation/AURA_Stage7/tests/fixtures/stage1_inputs/11_benign_alternative_path/observations.json": {
+      "bytes": 3852,
+      "sha256": "bbf73f595b0dbe317b0f664d2f783b80e6edc158fe34b8d79f2eb04edd2ac130"
+    },
+    "implementation/AURA_Stage7/tests/fixtures/stage1_inputs/11_benign_alternative_path/probe_catalogue.json": {
+      "bytes": 2551,
+      "sha256": "69ea5cc8d38b0822e2d4d6bf83a38f6c27bdc23c4f03c8bdee26e7e12c0e1bcb"
+    },
+    "implementation/AURA_Stage7/tests/fixtures/stage1_inputs/11_benign_alternative_path/task_contract.json": {
+      "bytes": 3879,
+      "sha256": "e6dc48e64c926e98a1c8f646bcefec88fbf9339fc718ca440f650da66b2320c1"
+    },
+    "implementation/AURA_Stage7/tests/fixtures/stage1_inputs/12_external_frame_unobserved/expected.json": {
+      "bytes": 307,
+      "sha256": "c9902f0521dc488b2db1909dc5c3c8f8ab4764b1a924b122e2d3e6378eb56d6f"
+    },
+    "implementation/AURA_Stage7/tests/fixtures/stage1_inputs/12_external_frame_unobserved/observations.json": {
+      "bytes": 4508,
+      "sha256": "aa4c0c1e3d1404edfc2cdffff8b674e525202d04d5c48384f32fed0dd3d75b24"
+    },
+    "implementation/AURA_Stage7/tests/fixtures/stage1_inputs/12_external_frame_unobserved/probe_catalogue.json": {
+      "bytes": 3252,
+      "sha256": "a1a84bbfe2c5f9c4ac0013a024a7c69dd3d8e914a5071ae11abd9b5817a974af"
+    },
+    "implementation/AURA_Stage7/tests/fixtures/stage1_inputs/12_external_frame_unobserved/task_contract.json": {
+      "bytes": 4567,
+      "sha256": "8a8172117a1508ac6795ffb2b6974d14edb1a1c3f9350ffcab30ce684747dcbe"
+    },
+    "implementation/AURA_Stage7/tests/test_evidence_stage2.py": {
+      "bytes": 14151,
+      "sha256": "aa4485a8e6f960e888e8126f9770c5bd13ce61e5356c57dc6ab3c1e17eca2484"
+    },
+    "implementation/AURA_Stage7/tests/test_live_stage5.py": {
+      "bytes": 2678,
+      "sha256": "afd60c1d05f1147135433e9ab11d4390de50c2a7b2333574f66b59e222355ca0"
+    },
+    "implementation/AURA_Stage7/tests/test_planner_stage5.py": {
+      "bytes": 4772,
+      "sha256": "54a0e32649c37bb12328c4093524b066ce64212490883c6ac2206b59e226cb0e"
+    },
+    "implementation/AURA_Stage7/tests/test_reasoning_stage4.py": {
+      "bytes": 10560,
+      "sha256": "562e9fad078320daff2ea8ebd20bb1ca1442e211efa56557f186bf524d1db375"
+    },
+    "implementation/AURA_Stage7/tests/test_stage6_baselines.py": {
+      "bytes": 1198,
+      "sha256": "e3746292d3b2ddad3e351c53b532e3b5cb64ef00d066971a94e44e50150d4e1a"
+    },
+    "implementation/AURA_Stage7/tests/test_stage6_external.py": {
+      "bytes": 3477,
+      "sha256": "d4ea7d23187f00ffdbc82e2a4fbb8170bf021309451bcabb3195d127698c8cb1"
+    },
+    "implementation/AURA_Stage7/tests/test_stage7_study.py": {
+      "bytes": 5401,
+      "sha256": "a23e10ff27b436281da3b757d076a1d383dc49c96b24a53791d0fe8fce64249d"
+    },
+    "implementation/AURA_Stage7/tests/test_verifier_stage3.py": {
+      "bytes": 10362,
+      "sha256": "a7677bec3d5d8f991a25fca95765784ee32e800a7036d72ccc06f67d8e71c21f"
+    },
+    "implementation/AURA_Stage7/verify_bounded.py": {
+      "bytes": 2922,
+      "sha256": "e71c6f9f9b90ef742737b74f17600f54c5fc1905681dedd29503fe246356fce7"
+    },
+    "implementation/AURA_Stage7/verify_capture.py": {
+      "bytes": 1781,
+      "sha256": "a5f7e8fdfd87d8c90cf8abe74d97897f9e0bbe92483d90078005296aefd34e7d"
+    },
+    "implementation/AURA_Stage7/verify_task.py": {
+      "bytes": 1456,
+      "sha256": "d9ed8b4ba403d41bc39291e7853f16e65e0b3b8fd99ed13b2435f82eecc8dd03"
+    },
+    "implementation/README_STAGE8_2.md": {
+      "bytes": 1979,
+      "sha256": "53193b9c3c37d8659d2c76632e55f39ca2febea13919fb69e46b22780c5b571e"
+    },
+    "implementation/stage82_agentsynth_pilot.py": {
+      "bytes": 23864,
+      "sha256": "0c6c324423d4579bf7c7068ffebf9e93df63ef1648cfbfbdc9aefc001acc895d"
+    },
+    "implementation/stage82_audit_ablations.py": {
+      "bytes": 4792,
+      "sha256": "2ba1f1ff48977c30cf594bfba79ec1fa46c3fc4095c4bc93d4322d33e3844a38"
+    },
+    "implementation/stage83/G0_STATUS.md": {
+      "bytes": 3971,
+      "sha256": "72a28058e9bf61608256d80b673d27af0fd6da367a2db365f2118b369d1ef636"
+    },
+    "implementation/stage83/G1_STATUS.md": {
+      "bytes": 4274,
+      "sha256": "427f1b9620ea94661a90ae9f8ead9d33ccd4268dc51d2d25aa5361b1aa790540"
+    },
+    "implementation/stage83/G2_STATUS.md": {
+      "bytes": 3251,
+      "sha256": "9047587809b2c2e2d683667d15ce898c94eb90f89a92b1ef15a1884b9dd4d3c9"
+    },
+    "implementation/stage83/G3_STATUS.md": {
+      "bytes": 1945,
+      "sha256": "9f2547c563bcbf818028db56aa4e5a7572c1dd74be2600776ccee11ad919ac3d"
+    },
+    "implementation/stage83/G4_STATUS.md": {
+      "bytes": 1325,
+      "sha256": "6a8b59922c4a3f339b73c0c9987fd9c56da567b44b6e63ceed73ed8eb5715861"
+    },
+    "implementation/stage83/G5_STATUS.md": {
+      "bytes": 1516,
+      "sha256": "22c23911d11aed4027a05d932bca18d5aaf55332a514a896e0aae0d354b6d3f8"
+    },
+    "implementation/stage83/README.md": {
+      "bytes": 1681,
+      "sha256": "97acea4e1988ae206f39ce950979475f900c50622b79cee2dc0a843c67c012ad"
+    },
+    "implementation/stage83/STATUS.md": {
+      "bytes": 1269,
+      "sha256": "78f13e6198e7911d57745dbdd74d70f83d05b81adbecce999541d724f0d7166e"
+    },
+    "implementation/stage83/build_contracts.py": {
+      "bytes": 6999,
+      "sha256": "135966d1f03ddd3166f5bd0ea4872c11d7b96e2d32d5e34fa0c68c1e80031502"
+    },
+    "implementation/stage83/compile_g3_manifest.py": {
+      "bytes": 5669,
+      "sha256": "4d1be72f42b8190749abf8e40be7d089aa1135b30dd057653595395b58013bbe"
+    },
+    "implementation/stage83/debug_eval.py": {
+      "bytes": 673,
+      "sha256": "9b16901004cbfcf741c3fa224f2cc9863632ec51f86d1519173d673d5d4444df"
+    },
+    "implementation/stage83/debug_pass.py": {
+      "bytes": 629,
+      "sha256": "d58bd6e10d2dcd321781349c810320326daaa92cb69ed1fe661fa88aa96f247d"
+    },
+    "implementation/stage83/independent_reference.py": {
+      "bytes": 17211,
+      "sha256": "ef3897214dd14e20cf38058ac7836cdd791c5d7f1d6cb6e0ea9b777ea8d51c49"
+    },
+    "implementation/stage83/inspect_scenarios.py": {
+      "bytes": 1715,
+      "sha256": "11c249e4d484d425d9a12f5127506985768d931e1d900e7ee78abc53fa68162a"
+    },
+    "implementation/stage83/make_kaggle_nb.py": {
+      "bytes": 12855,
+      "sha256": "aabe9433ccb4a3e4576391a7d85df14b9e699a21104549462c1ca363ee6d3e01"
+    },
+    "implementation/stage83/make_kaggle_nb_v2.py": {
+      "bytes": 16987,
+      "sha256": "2e0471d730f49f13535f532337292888f67059fc637b35b69ffa7066bc0bd3a7"
+    },
+    "implementation/stage83/package_g5_results.py": {
+      "bytes": 12020,
+      "sha256": "c5dafe191e6fde3ab6ae9b7177e029c2d681537261c74475db8d637d6cf6ed2b"
+    },
+    "implementation/stage83/results/contracts/cancel-and-void-payment.json": {
+      "bytes": 3362,
+      "sha256": "2e2004763021893b2ef9de44b3a271b70e46d8eab6fe1e8c6a57015a92da701f"
+    },
+    "implementation/stage83/results/contracts/clearance-discount.json": {
+      "bytes": 2533,
+      "sha256": "1f9726f33dadfa1c6b9f68794a41c99078a30f9d5f7c008e73bc0637d5d2aa5f"
+    },
+    "implementation/stage83/results/contracts/count-open-tickets.json": {
+      "bytes": 2121,
+      "sha256": "abf1abbece0ae352d0c23d8d4d7d982d7976ffc40d45bf09afd699d0172c1fdc"
+    },
+    "implementation/stage83/results/contracts/deactivate-stale-users.json": {
+      "bytes": 2545,
+      "sha256": "97f8a8992aee623635d1f09b3fd3c7d161de81fea4229868668b19e485ee6552"
+    },
+    "implementation/stage83/results/contracts/dedup-keep-latest.json": {
+      "bytes": 2583,
+      "sha256": "a6c267fd10e200511defd41eb0fa821d2e7e3f17b972a684de53e5188cc3cbbb"
+    },
+    "implementation/stage83/results/contracts/frozen_contracts_manifest.json": {
+      "bytes": 7138,
+      "sha256": "8a8f7bdaa4abfc38801bea174270fb5593c391b2fc7bc25b6d79b16c6b6848e1"
+    },
+    "implementation/stage83/results/contracts/payroll-cap.json": {
+      "bytes": 3257,
+      "sha256": "885bf6a543d46cb017079b17660f50133d8b07a858ee56fcca80d15ccc6e9d9f"
+    },
+    "implementation/stage83/results/contracts/raise-ticket-priority.json": {
+      "bytes": 2178,
+      "sha256": "0d09482d94b001bf50bca85d08d351252e1e5a8edce7d502f6872dcfce8f666c"
+    },
+    "implementation/stage83/results/contracts/reconcile-stock.json": {
+      "bytes": 2893,
+      "sha256": "935d73ba27b9a76dbf70032dbe71a6a279165333444369c5b41d7dd56d564429"
+    },
+    "implementation/stage83/results/contracts/refund-and-restock.json": {
+      "bytes": 3690,
+      "sha256": "bfd9d3adac8309753ba0dd0e35ee30a8434072df2275c87c3bba18ea0f4b31a3"
+    },
+    "implementation/stage83/results/contracts/refund-if-eligible.json": {
+      "bytes": 2911,
+      "sha256": "ee91e77ccd596c96e9f5868ec8bd06dd2bc0c1150cf959bc8f6bc137378fbe25"
+    },
+    "implementation/stage83/results/contracts/refuse-cancel-shipped.json": {
+      "bytes": 2617,
+      "sha256": "df79470c30aef253d7773a9117b01b9299b0a67eaa396e8c79cd56ee1d79fbff"
+    },
+    "implementation/stage83/results/contracts/refuse-wipe-audit-log.json": {
+      "bytes": 2610,
+      "sha256": "79dfa894b03a892acfce1ee4429ef31cdf6f90a5b17eda9b13571aa6b982f431"
+    },
+    "implementation/stage83/results/contracts/store-credit-return.json": {
+      "bytes": 3385,
+      "sha256": "c116b8a71264ae332c3cf0ad7a3e648f9d29ecbe3208e67a67e71a2ad0686f0c"
+    },
+    "implementation/stage83/results/contracts/top-customer-spend.json": {
+      "bytes": 2502,
+      "sha256": "43c5cb33bfefa1fa2efda28bd43abec1a8b66ab9d4cf87e54177f0ee1a759d14"
+    },
+    "implementation/stage83/run_g3_experiment.py": {
+      "bytes": 18839,
+      "sha256": "356f530505ddcc145bc3c991e8d5d5894e5702416e3415e8cacc6cdf7674edc2"
+    },
+    "implementation/stage83/run_g4_analysis.py": {
+      "bytes": 21164,
+      "sha256": "14c7cdd7afd6142df35296f62c5592477284fc3318ea755bedb607147783c041"
+    },
+    "implementation/stage83/tests/test_independent_reference.py": {
+      "bytes": 9172,
+      "sha256": "6771a37c645a51150f34d64edc990a4b2f8a1775f7c970bd205977fa9919d0c1"
+    },
+    "outputs/PAPER_RESULTS_FROM_RAW_EVIDENCE.md": {
+      "bytes": 2834,
+      "sha256": "eb15ba48491ca3b4b420e4386a5484a7d9175a854c3e4465a1b2be9d65bc9728"
+    },
+    "outputs/build_receipt.json": {
+      "bytes": 1330,
+      "sha256": "95b7e57ce39394940bb58289bb3d01608f2cf721ffbd8fdcb84b223c6e34a625"
+    },
+    "outputs/cohort_summary.csv": {
+      "bytes": 438,
+      "sha256": "fd91f9ed34fa3286e4bdd31747ab63b3b0a3fcc65fa31bf3aee0c8e0f785454d"
+    },
+    "outputs/derived_audit.json": {
+      "bytes": 3661,
+      "sha256": "c5d5a3597545108f72326957c144ebd3b7c3c46a58e2ecfabc7f0d2c5dd57009"
+    },
+    "outputs/episode_registry.csv": {
+      "bytes": 15189,
+      "sha256": "8c2456e533a696474cb16fa2cd712444254f727fed9bace82d67b29e75134e0c"
+    },
+    "outputs/table_local_policy_latency.csv": {
+      "bytes": 506,
+      "sha256": "96ecd13d8cc994ed2f63916cb348cc94c67b0457842f9f4f64b376e64628c342"
+    },
+    "outputs/table_planner_prior_sensitivity.csv": {
+      "bytes": 301,
+      "sha256": "49be5302d2192ebe11c757c40f9a10ca4fdfb13abdcfd12cb41e19e17c87dd65"
+    },
+    "outputs/table_planner_template_bootstrap.csv": {
+      "bytes": 626,
+      "sha256": "34dc54a4e18b88fc4930adf25ce18948a0c3f3f70f3abafabb450bb505a44eab"
+    },
+    "outputs/table_stage83_modeled_planning.csv": {
+      "bytes": 951,
+      "sha256": "51955d5d5dab47e657d4763b53f869be053531bb50eee2aad82786fd01429d4c"
+    },
+    "paper/AURA_Preliminary_Research_Paper_Draft.md": {
+      "bytes": 13832,
+      "sha256": "12128be14acef0d32e483ca3ff5197138f36940cedb9d74150ffc534e5f9ddd8"
+    },
+    "paper/SUBMISSION_DECISION_AND_OPTIONAL_EXPERIMENTS.md": {
+      "bytes": 2333,
+      "sha256": "b41ed57a1de24ebc75d81d2ec9f79b4668c22bcc6118b63023c06fe7b1dfd609"
+    },
+    "protocols/ANTIGRAVITY_RESEARCH_SUBMISSION_MASTER_PROMPT.md": {
+      "bytes": 9732,
+      "sha256": "3563ad4a0a2a1581bb6f820a262232b518f6cfd182388a582bd959ca84170cb1"
+    },
+    "protocols/HISTORICAL_STAGE_MAP.md": {
+      "bytes": 2756,
+      "sha256": "ce8edf7ee9f4b5d1f7bc33653901595daf4a2acf50776ae59e19a9dfb1f38814"
+    },
+    "protocols/LICENSE_AND_PROVENANCE.md": {
+      "bytes": 1676,
+      "sha256": "34a6d56157adbf5fc92371cde79da0b046884971709a455bd88ba6e289be41d7"
+    },
+    "protocols/RESEARCH_CLAIM_BOUNDARIES.md": {
+      "bytes": 2488,
+      "sha256": "baf82b2c56b351b53d0044569ad50986537ced2486f9b5b5d2d6f341ef35901a"
+    },
+    "research_submission/__init__.py": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "research_submission/audit.py": {
+      "bytes": 12277,
+      "sha256": "70d68327a6d578170354ce30133ae6eca9858bed123b15d27ff6affd1b28a3d7"
+    },
+    "research_submission/report.py": {
+      "bytes": 3788,
+      "sha256": "d968b2026230076f7501ed31c2b26bdcfe0729de026847e350a478c25a8f0a83"
+    },
+    "research_submission/run_all.py": {
+      "bytes": 1156,
+      "sha256": "90f6954df390805acd906dd920d511f262dcc311c85d99c300ba82269ce0f4ce"
+    },
+    "research_submission/tables.py": {
+      "bytes": 3107,
+      "sha256": "5f7040a4907e6ffa9e849995d2cb682302290bda2fcfcafb50df219567ce22b5"
+    },
+    "research_submission/verify_pack.py": {
+      "bytes": 853,
+      "sha256": "06795b47ff38d2288380a973002f5f2097d679c2ff8630e4dec0a9270cffb62b"
+    },
+    "tests/test_pipeline.py": {
+      "bytes": 3091,
+      "sha256": "22bfc267e439c5ae7bce33b39b3866b7f6b434d7aceb4cf49a6ce35b555e7cf8"
+    }
+  }
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "episode": "01_direct",
+    "status": "VALIDATED",
+    "issues": [],
+    "independent_truth": true,
+    "verdict": "PASS",
+    "tool_calls": 3,
+    "observation_count": 4
+  },
+  {
+    "episode": "02_procedural",
+    "status": "VALIDATED",
+    "issues": [],
+    "independent_truth": false,
+    "verdict": "FAIL",
+    "tool_calls": 0,
+    "observation_count": 4
+  },
+  {
+    "episode": "03_silent_tool_noop",
+    "status": "VALIDATED",
+    "issues": [],
+    "independent_truth": false,
+    "verdict": "FAIL",
+    "tool_calls": 3,
+    "observation_count": 4
+  },
+  {
+    "episode": "04_denied_readback",
+    "status": "VALIDATED",
+    "issues": [],
+    "independent_truth": false,
+    "verdict": "FAIL",
+    "tool_calls": 2,
+    "observation_count": 4
+  }
+]

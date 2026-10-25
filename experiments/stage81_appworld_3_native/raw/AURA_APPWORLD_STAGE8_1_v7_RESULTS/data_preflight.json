@@ -1,0 +1,13 @@
+{
+  "expected_root": "/tmp/aura_appworld_v7_un_ef3zm/appworld_root",
+  "explicit_root_on_download": true,
+  "data_tree_complete": true,
+  "task_ids_in_dev_index": 57,
+  "directory_entry_counts": {
+    "tasks": 732,
+    "datasets": 4,
+    "base_dbs": 13
+  },
+  "missing_paths": [],
+  "alternative_data_paths_detected": []
+}

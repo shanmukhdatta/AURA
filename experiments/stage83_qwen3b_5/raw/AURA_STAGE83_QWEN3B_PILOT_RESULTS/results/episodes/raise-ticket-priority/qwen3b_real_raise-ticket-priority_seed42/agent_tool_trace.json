@@ -1,0 +1,31 @@
+[
+  {
+    "step": 0,
+    "tool": "sql_query",
+    "sql": "SELECT * FROM tickets WHERE id = 3;",
+    "write": false,
+    "response": [
+      [
+        3,
+        "outage",
+        "normal"
+      ]
+    ],
+    "error": null,
+    "timestamp": "2026-10-25T14:59:14.092554Z"
+  },
+  {
+    "step": 1,
+    "tool": "sql_query",
+    "sql": "UPDATE tickets SET priority = \"high\" WHERE id = 3;",
+    "write": true,
+    "response": "success",
+    "error": null,
+    "timestamp": "2026-10-25T14:59:15.075521Z"
+  },
+  {
+    "kind": "final_answer",
+    "text": "Ticket 3 has been updated to high priority.",
+    "timestamp": "2026-10-25T14:59:15.877056Z"
+  }
+]

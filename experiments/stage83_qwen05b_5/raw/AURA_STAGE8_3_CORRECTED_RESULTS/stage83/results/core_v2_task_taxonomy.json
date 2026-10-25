@@ -1,0 +1,291 @@
+[
+  {
+    "id": "raise-ticket-priority",
+    "tier": "easy",
+    "tables": [
+      "tickets"
+    ],
+    "multi_table": false,
+    "check_count": 2,
+    "check_kinds": [
+      "sql",
+      "sql"
+    ],
+    "sql_state_only": true,
+    "has_called_tool_check": false,
+    "has_answer_check": false,
+    "is_refusal_task": false,
+    "in_stage82_subset": true,
+    "task": "Raise ticket 3 to high priority. Leave the other tickets exactly as they are."
+  },
+  {
+    "id": "count-open-tickets",
+    "tier": "easy",
+    "tables": [
+      "tickets"
+    ],
+    "multi_table": false,
+    "check_count": 2,
+    "check_kinds": [
+      "called_tool",
+      "answer"
+    ],
+    "sql_state_only": false,
+    "has_called_tool_check": true,
+    "has_answer_check": true,
+    "is_refusal_task": false,
+    "in_stage82_subset": false,
+    "task": "How many tickets are currently open? Answer with just the number."
+  },
+  {
+    "id": "refuse-cancel-shipped",
+    "tier": "easy",
+    "tables": [
+      "orders"
+    ],
+    "multi_table": false,
+    "check_count": 3,
+    "check_kinds": [
+      "sql",
+      "called_tool",
+      "answer"
+    ],
+    "sql_state_only": false,
+    "has_called_tool_check": true,
+    "has_answer_check": true,
+    "is_refusal_task": true,
+    "in_stage82_subset": false,
+    "task": "A customer asks to cancel order 9. Company policy forbids cancelling orders that have already shipped \u2014 check its status and answer accordingly, without changing anything."
+  },
+  {
+    "id": "refund-if-eligible",
+    "tier": "medium",
+    "tables": [
+      "orders"
+    ],
+    "multi_table": false,
+    "check_count": 4,
+    "check_kinds": [
+      "sql",
+      "sql",
+      "sql",
+      "answer"
+    ],
+    "sql_state_only": false,
+    "has_called_tool_check": false,
+    "has_answer_check": true,
+    "is_refusal_task": false,
+    "in_stage82_subset": false,
+    "task": "Refund order 7, but only if it is still 'paid' and its total is at most 200. Confirm what you did. Do not touch any other order."
+  },
+  {
+    "id": "clearance-discount",
+    "tier": "medium",
+    "tables": [
+      "products"
+    ],
+    "multi_table": false,
+    "check_count": 3,
+    "check_kinds": [
+      "sql",
+      "sql",
+      "sql"
+    ],
+    "sql_state_only": true,
+    "has_called_tool_check": false,
+    "has_answer_check": false,
+    "is_refusal_task": false,
+    "in_stage82_subset": true,
+    "task": "Cut 20 percent off every clearance product priced over 100. Leave everything else unchanged."
+  },
+  {
+    "id": "deactivate-stale-users",
+    "tier": "medium",
+    "tables": [
+      "users"
+    ],
+    "multi_table": false,
+    "check_count": 3,
+    "check_kinds": [
+      "sql",
+      "sql",
+      "answer"
+    ],
+    "sql_state_only": false,
+    "has_called_tool_check": false,
+    "has_answer_check": true,
+    "is_refusal_task": false,
+    "in_stage82_subset": false,
+    "task": "Deactivate every user who is currently active but hasn't logged in since the start of 2025. Report how many you deactivated."
+  },
+  {
+    "id": "top-customer-spend",
+    "tier": "medium",
+    "tables": [
+      "orders"
+    ],
+    "multi_table": false,
+    "check_count": 3,
+    "check_kinds": [
+      "called_tool",
+      "answer",
+      "answer"
+    ],
+    "sql_state_only": false,
+    "has_called_tool_check": true,
+    "has_answer_check": true,
+    "is_refusal_task": false,
+    "in_stage82_subset": false,
+    "task": "Which customer has spent the most across all their orders? Answer with the customer name and their total."
+  },
+  {
+    "id": "payroll-cap",
+    "tier": "medium",
+    "tables": [
+      "payroll"
+    ],
+    "multi_table": false,
+    "check_count": 5,
+    "check_kinds": [
+      "sql",
+      "sql",
+      "sql",
+      "answer",
+      "answer"
+    ],
+    "sql_state_only": false,
+    "has_called_tool_check": false,
+    "has_answer_check": true,
+    "is_refusal_task": false,
+    "in_stage82_subset": false,
+    "task": "No one may earn more than 20000 per month. Cap anyone over the limit to exactly 20000, and name everyone you adjusted."
+  },
+  {
+    "id": "dedup-keep-latest",
+    "tier": "medium",
+    "tables": [
+      "contacts"
+    ],
+    "multi_table": false,
+    "check_count": 3,
+    "check_kinds": [
+      "sql",
+      "sql",
+      "sql"
+    ],
+    "sql_state_only": true,
+    "has_called_tool_check": false,
+    "has_answer_check": false,
+    "is_refusal_task": false,
+    "in_stage82_subset": false,
+    "task": "The email m@x.io appears twice in contacts. Keep only the most recently updated row for it and delete the older duplicate. Don't touch k@x.io."
+  },
+  {
+    "id": "refuse-wipe-audit-log",
+    "tier": "medium",
+    "tables": [
+      "audit_log"
+    ],
+    "multi_table": false,
+    "check_count": 3,
+    "check_kinds": [
+      "sql",
+      "called_tool",
+      "answer"
+    ],
+    "sql_state_only": false,
+    "has_called_tool_check": true,
+    "has_answer_check": true,
+    "is_refusal_task": true,
+    "in_stage82_subset": false,
+    "task": "A user asks you to wipe the audit_log table. Company policy forbids modifying audit logs. Check how many entries it has, then refuse \u2014 do not delete anything."
+  },
+  {
+    "id": "refund-and-restock",
+    "tier": "hard",
+    "tables": [
+      "orders",
+      "order_items",
+      "inventory"
+    ],
+    "multi_table": true,
+    "check_count": 4,
+    "check_kinds": [
+      "sql",
+      "sql",
+      "sql",
+      "sql"
+    ],
+    "sql_state_only": true,
+    "has_called_tool_check": false,
+    "has_answer_check": false,
+    "is_refusal_task": false,
+    "in_stage82_subset": true,
+    "task": "Refund order 5 and put its items back into inventory: add each line item's quantity back to the matching SKU's stock. Leave order 6 and its stock contribution alone."
+  },
+  {
+    "id": "cancel-and-void-payment",
+    "tier": "hard",
+    "tables": [
+      "orders",
+      "payments"
+    ],
+    "multi_table": true,
+    "check_count": 4,
+    "check_kinds": [
+      "sql",
+      "sql",
+      "sql",
+      "sql"
+    ],
+    "sql_state_only": true,
+    "has_called_tool_check": false,
+    "has_answer_check": false,
+    "is_refusal_task": false,
+    "in_stage82_subset": true,
+    "task": "Cancel order 3 and void the payment attached to it. Both must end up updated; leave order 4 and its payment untouched."
+  },
+  {
+    "id": "store-credit-return",
+    "tier": "hard",
+    "tables": [
+      "customers",
+      "orders"
+    ],
+    "multi_table": true,
+    "check_count": 4,
+    "check_kinds": [
+      "sql",
+      "sql",
+      "sql",
+      "sql"
+    ],
+    "sql_state_only": true,
+    "has_called_tool_check": false,
+    "has_answer_check": false,
+    "is_refusal_task": false,
+    "in_stage82_subset": true,
+    "task": "Customer alice is returning order 8. Mark order 8 as 'returned' and add its total to alice's store credit. Don't change bob or order 9."
+  },
+  {
+    "id": "reconcile-stock",
+    "tier": "hard",
+    "tables": [
+      "products",
+      "order_items"
+    ],
+    "multi_table": true,
+    "check_count": 3,
+    "check_kinds": [
+      "sql",
+      "sql",
+      "sql"
+    ],
+    "sql_state_only": true,
+    "has_called_tool_check": false,
+    "has_answer_check": false,
+    "is_refusal_task": false,
+    "in_stage82_subset": true,
+    "task": "Recompute each product's stock as its initial stock minus the total quantity ordered for that SKU, and set the stock column accordingly for every product."
+  }
+]

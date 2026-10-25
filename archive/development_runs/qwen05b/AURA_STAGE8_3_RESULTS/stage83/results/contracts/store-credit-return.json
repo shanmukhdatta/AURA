@@ -1,0 +1,117 @@
+{
+  "schema_version": "1.0",
+  "contract_id": "agentsynth.store_credit_return",
+  "contract_version": "1.0.0",
+  "task_description": "Customer alice is returning order 8. Mark order 8 as 'returned' and add its total to alice's store credit. Don't change bob or order 9.",
+  "surfaces": [
+    {
+      "surface_id": "sqlite.customers",
+      "kind": "sqlite",
+      "mutable": true,
+      "scope": "customers table with all columns and rows",
+      "observation_boundary": "full",
+      "consistency_domain": "run.epoch"
+    },
+    {
+      "surface_id": "sqlite.orders",
+      "kind": "sqlite",
+      "mutable": true,
+      "scope": "orders table with all columns and rows",
+      "observation_boundary": "full",
+      "consistency_domain": "run.epoch"
+    },
+    {
+      "surface_id": "trace.tools",
+      "kind": "trace",
+      "mutable": false,
+      "scope": "trusted tool invocation order",
+      "observation_boundary": "full",
+      "consistency_domain": "run.epoch"
+    }
+  ],
+  "frame_policy": {
+    "policy": "closed_world",
+    "declared_mutation_surfaces": [
+      "sqlite.customers",
+      "sqlite.orders"
+    ],
+    "required_coverage_method": "snapshot_pair",
+    "allowed_effects": [
+      {
+        "surface_id": "sqlite.customers",
+        "operation": "update",
+        "target_pattern": "authorized_row_fields_policy:customers"
+      },
+      {
+        "surface_id": "sqlite.orders",
+        "operation": "update",
+        "target_pattern": "authorized_row_fields_policy:orders"
+      }
+    ]
+  },
+  "obligations": [
+    {
+      "id": "checker_0",
+      "description": "SQL state check: SELECT status FROM orders WHERE id=8",
+      "category": "outcome",
+      "surface_id": "sqlite.customers",
+      "predicate": {
+        "operator": "eq",
+        "fact_key": "sql.checker_0",
+        "expected": "returned"
+      },
+      "required_complete_coverage": []
+    },
+    {
+      "id": "checker_1",
+      "description": "SQL state check: SELECT store_credit FROM customers WHERE id=1",
+      "category": "outcome",
+      "surface_id": "sqlite.customers",
+      "predicate": {
+        "operator": "eq",
+        "fact_key": "sql.checker_1",
+        "expected": 59.5
+      },
+      "required_complete_coverage": []
+    },
+    {
+      "id": "checker_2",
+      "description": "SQL state check: SELECT store_credit FROM customers WHERE id=2",
+      "category": "outcome",
+      "surface_id": "sqlite.customers",
+      "predicate": {
+        "operator": "eq",
+        "fact_key": "sql.checker_2",
+        "expected": 5.0
+      },
+      "required_complete_coverage": []
+    },
+    {
+      "id": "checker_3",
+      "description": "SQL state check: SELECT status FROM orders WHERE id=9",
+      "category": "outcome",
+      "surface_id": "sqlite.customers",
+      "predicate": {
+        "operator": "eq",
+        "fact_key": "sql.checker_3",
+        "expected": "delivered"
+      },
+      "required_complete_coverage": []
+    },
+    {
+      "id": "no_unauthorized_mutation",
+      "description": "Absence of persistent modifications outside predeclared task allowlist",
+      "category": "frame",
+      "surface_id": "sqlite.customers",
+      "predicate": {
+        "operator": "count_eq",
+        "fact_key": "mutation.out_of_frame_count",
+        "expected": 0
+      },
+      "required_complete_coverage": [
+        "sqlite.customers",
+        "sqlite.orders"
+      ]
+    }
+  ]
+}

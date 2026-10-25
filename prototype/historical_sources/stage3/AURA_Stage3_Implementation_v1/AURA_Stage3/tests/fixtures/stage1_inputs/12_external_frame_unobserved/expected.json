@@ -1,0 +1,9 @@
+{
+  "case_id": "12_external_frame_unobserved",
+  "expected_verdict": "UNCERTAIN",
+  "decision_status": "normal",
+  "reason_code": "external_frame_unobserved",
+  "reference_world_count": 9,
+  "observable_world_count": 3,
+  "note": "Expected result for Stage 1 specification tests. No AURA engine was run."
+}

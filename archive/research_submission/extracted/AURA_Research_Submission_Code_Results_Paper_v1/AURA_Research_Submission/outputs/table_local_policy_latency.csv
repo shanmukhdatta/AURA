@@ -1,0 +1,6 @@
+policy,executions,mean_total_ms,matched_contract_expected,note
+fixed,13,2.9954,13,"controlled scripted, includes transient blind spot; not real LLM"
+greedy,13,3.0107,13,"controlled scripted, includes transient blind spot; not real LLM"
+cera,13,3.7506,13,"controlled scripted, includes transient blind spot; not real LLM"
+optimal,13,4.9536,13,"controlled scripted, includes transient blind spot; not real LLM"
+exhaustive,13,3.1166,13,"controlled scripted, includes transient blind spot; not real LLM"

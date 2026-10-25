@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0",
+  "contract_id": "agentsynth.raise_ticket_priority",
+  "contract_version": "1.0.0",
+  "task_description": "Raise ticket 3 to high priority. Leave the other tickets exactly as they are.",
+  "surfaces": [
+    {
+      "surface_id": "sqlite.tickets",
+      "kind": "sqlite",
+      "mutable": true,
+      "scope": "tickets table with all columns and rows",
+      "observation_boundary": "full",
+      "consistency_domain": "run.epoch"
+    },
+    {
+      "surface_id": "trace.tools",
+      "kind": "trace",
+      "mutable": false,
+      "scope": "trusted tool invocation order",
+      "observation_boundary": "full",
+      "consistency_domain": "run.epoch"
+    }
+  ],
+  "frame_policy": {
+    "policy": "closed_world",
+    "declared_mutation_surfaces": [
+      "sqlite.tickets"
+    ],
+    "required_coverage_method": "snapshot_pair",
+    "allowed_effects": [
+      {
+        "surface_id": "sqlite.tickets",
+        "operation": "update",
+        "target_pattern": "authorized_row_fields_policy:tickets"
+      }
+    ]
+  },
+  "obligations": [
+    {
+      "id": "checker_0",
+      "description": "SQL state check: SELECT priority FROM tickets WHERE id=3",
+      "category": "outcome",
+      "surface_id": "sqlite.tickets",
+      "predicate": {
+        "operator": "eq",
+        "fact_key": "sql.checker_0",
+        "expected": "high"
+      },
+      "required_complete_coverage": []
+    },
+    {
+      "id": "checker_1",
+      "description": "SQL state check: SELECT priority FROM tickets WHERE id=1",
+      "category": "outcome",
+      "surface_id": "sqlite.tickets",
+      "predicate": {
+        "operator": "eq",
+        "fact_key": "sql.checker_1",
+        "expected": "normal"
+      },
+      "required_complete_coverage": []
+    },
+    {
+      "id": "no_unauthorized_mutation",
+      "description": "Absence of persistent modifications outside predeclared task allowlist",
+      "category": "frame",
+      "surface_id": "sqlite.tickets",
+      "predicate": {
+        "operator": "count_eq",
+        "fact_key": "mutation.out_of_frame_count",
+        "expected": 0
+      },
+      "required_complete_coverage": [
+        "sqlite.tickets"
+      ]
+    }
+  ]
+}

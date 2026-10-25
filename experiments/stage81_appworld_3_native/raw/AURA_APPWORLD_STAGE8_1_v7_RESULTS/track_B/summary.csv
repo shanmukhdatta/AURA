@@ -1,0 +1,4 @@
+task_id,split,status,agent_called_complete_task,native_evaluation_available,official_success_field,error,native_evaluation_error,trajectory_type,native_api_log_available,native_api_log_bytes
+50e1ac9_1,dev,EXECUTED_EVALUATED,True,True,False,,,LLM_code_execution_in_native_AppWorld,True,136
+50e1ac9_2,dev,EXECUTED_EVALUATED,True,True,False,,,LLM_code_execution_in_native_AppWorld,True,558
+50e1ac9_3,dev,EXECUTED_EVALUATED,False,True,False,,,LLM_code_execution_in_native_AppWorld,True,0

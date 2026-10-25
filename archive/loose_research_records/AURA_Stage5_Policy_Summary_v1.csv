@@ -1,0 +1,6 @@
+policy,episodes,mean_cost_units,median_cost_units,mean_probes,decision_coverage,false_passes,false_fails
+fixed,240,3.710067,2.830588,1.93333,1,0,0
+greedy,240,3.791661,2.68,1.8,1,0,0
+cera,240,3.630406,2.5,1.93333,1,0,0
+optimal,240,3.597073,2.0,1.8,1,0,0
+exhaustive,240,30.273467,30.514915,6,1,0,0

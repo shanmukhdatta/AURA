@@ -1,0 +1,14 @@
+Work,Date,Core mechanism,Novelty implication,AURA intended use,URL,Verification status
+AppWorld,2024,State-based task outcome and collateral damage,State diff / frame not novel,Benchmark/evaluation,https://arxiv.org/abs/2407.18901,Source and abstract verified
+Agent-Diff,2026-02,Declarative state-diff enterprise benchmark,JSON state contracts not novel,State-only baseline,https://arxiv.org/abs/2602.11224,Abstract and code link verified
+AgentLTL,2026-07,Deterministic procedural trace verification,Temporal checks not novel,Trace-only baseline,https://arxiv.org/abs/2607.02599,Abstract verified
+EffectMatch,2026-09,Runtime approved-effect checking,Effect boundary / side effects overlap,Runtime comparison,https://arxiv.org/abs/2609.31301,Abstract verified
+Evidence-Supported Bounds,2026-05,Evidence Pass / Fail / Unknown,Three-valued evidence labels not novel,Outcome-evidence comparator,https://arxiv.org/abs/2605.10448,Abstract verified
+BAVAR,2026-08,Budgeted adaptive verification for agent learning,Adaptive selection not novel,Conceptual comparison,https://www.preprints.org/manuscript/202608.2057,"Non-peer-reviewed; tables explicitly illustrative, not empirical"
+Can We Trust 'Done'?,2026-09,Targeted evidence requests and cost study,Direct nearest neighbor for evidence acquisition,Reproduce/adapt comparison,https://agentaction.dev/research/completion-assessment,Research page verified; product-affiliated preprint
+Interlock,2026-10,Typed completion graphs for task synthesis/training,Graph concept not novel,Task obligation comparison,https://arxiv.org/abs/2610.19686,Full arxiv HTML visible
+Abrich verifier audit,2026-10,Duplicate-write and extra-field verifier false accepts,Mutation testing already used,Contract testing/control,https://arxiv.org/abs/2610.09142,Abstract verified
+Trofimov & Novikov,2026-09,Eight external-effect anomalies,External uncertainty taxonomy established,Fault design,https://arxiv.org/abs/2609.15397,Abstract verified
+Executable Contract Audit,2026-09,Executable tool contract flaws,Verifying verifiers is established,Instrument validation,https://arxiv.org/abs/2609.37315,Abstract verified
+Task-relative evidence requirements,2026-10,Task-relative sufficiency and audit requirements,Evidence sufficiency concepts not novel,Terminology/assumptions,https://www.ietf.org/ietf-ftp/internet-drafts/draft-sergeev-audit-task-requirements-00.html,"Individual IETF draft, not standard"
+CEGAR,2000,Counterexample-guided refinement,Guidance principle not novel,Algorithmic inspiration,https://doi.org/10.1007/10722167_15,Classical formal-methods reference

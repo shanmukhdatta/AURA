@@ -1,0 +1,566 @@
+{
+  "timestamp": "2026-10-25T20:57:41.482812+00:00",
+  "repository_manifests": {
+    "stage83_sha256sums": {
+      "manifest_file": "stage83/results/SHA256SUMS.json",
+      "total_declared": 246,
+      "verified_count": 246,
+      "missing_count": 0,
+      "mismatches": [],
+      "missing": []
+    },
+    "historical_manifest": {
+      "manifest_file": "artifacts/historical/HANDOFF_MANIFEST_SHA256.json",
+      "total_declared": 135,
+      "verified_count": 124,
+      "missing_count": 11,
+      "mismatches": [],
+      "missing": [
+        "ANTIGRAVITY_RUN_GUIDE.md",
+        "ANTIGRAVITY_STAGE8_3_MASTER_PROMPT.md",
+        "AURA_PROJECT_STATUS_AND_CORRECTIONS.md",
+        "AURA_Stage8_2_Episode_Results_v1.csv",
+        "AURA_Stage8_2_External_SQL_Pilot_Report_v1.md",
+        "AURA_Stage8_2_External_SQL_Source_v1.zip",
+        "AURA_Stage8_2_Inspection_Ablations_v1.csv",
+        "README_STAGE8_2.md",
+        "REGRESSION_TEST_RECEIPT.txt",
+        "STAGE82_REPRO_RECEIPT.txt",
+        "START_HERE.md"
+      ]
+    }
+  },
+  "episodes_integrity": [
+    {
+      "cohort": "stage7_local",
+      "task_id": "clean",
+      "run_id": "run.stage7.clean",
+      "noninterference_verified": true,
+      "manifest_match": true,
+      "missing_files": [],
+      "database_on_disk_sha256": ""
+    },
+    {
+      "cohort": "stage7_local",
+      "task_id": "clean_extra_read",
+      "run_id": "run.stage7.clean_extra_read",
+      "noninterference_verified": true,
+      "manifest_match": true,
+      "missing_files": [],
+      "database_on_disk_sha256": ""
+    },
+    {
+      "cohort": "stage7_local",
+      "task_id": "wrong_marks",
+      "run_id": "run.stage7.wrong_marks",
+      "noninterference_verified": true,
+      "manifest_match": true,
+      "missing_files": [],
+      "database_on_disk_sha256": ""
+    },
+    {
+      "cohort": "stage7_local",
+      "task_id": "wrong_report",
+      "run_id": "run.stage7.wrong_report",
+      "noninterference_verified": true,
+      "manifest_match": true,
+      "missing_files": [],
+      "database_on_disk_sha256": ""
+    },
+    {
+      "cohort": "stage7_local",
+      "task_id": "extra_file",
+      "run_id": "run.stage7.extra_file",
+      "noninterference_verified": true,
+      "manifest_match": true,
+      "missing_files": [],
+      "database_on_disk_sha256": ""
+    },
+    {
+      "cohort": "stage7_local",
+      "task_id": "wrong_student",
+      "run_id": "run.stage7.wrong_student",
+      "noninterference_verified": true,
+      "manifest_match": true,
+      "missing_files": [],
+      "database_on_disk_sha256": ""
+    },
+    {
+      "cohort": "stage7_local",
+      "task_id": "unlicensed_name_change",
+      "run_id": "run.stage7.unlicensed_name_change",
+      "noninterference_verified": true,
+      "manifest_match": true,
+      "missing_files": [],
+      "database_on_disk_sha256": ""
+    },
+    {
+      "cohort": "stage7_local",
+      "task_id": "missing_report_and_collateral",
+      "run_id": "run.stage7.missing_report_and_collateral",
+      "noninterference_verified": true,
+      "manifest_match": true,
+      "missing_files": [],
+      "database_on_disk_sha256": ""
+    },
+    {
+      "cohort": "stage7_local",
+      "task_id": "late_regression",
+      "run_id": "run.stage7.late_regression",
+      "noninterference_verified": true,
+      "manifest_match": true,
+      "missing_files": [],
+      "database_on_disk_sha256": ""
+    },
+    {
+      "cohort": "stage7_local",
+      "task_id": "silent_noop",
+      "run_id": "run.stage7.silent_noop",
+      "noninterference_verified": true,
+      "manifest_match": true,
+      "missing_files": [],
+      "database_on_disk_sha256": ""
+    },
+    {
+      "cohort": "stage7_local",
+      "task_id": "missing_validation",
+      "run_id": "run.stage7.missing_validation",
+      "noninterference_verified": true,
+      "manifest_match": true,
+      "missing_files": [],
+      "database_on_disk_sha256": ""
+    },
+    {
+      "cohort": "stage7_local",
+      "task_id": "unavailable_authoritative_readback",
+      "run_id": "run.stage7.unavailable_authoritative_readback",
+      "noninterference_verified": true,
+      "manifest_match": true,
+      "missing_files": [],
+      "database_on_disk_sha256": ""
+    },
+    {
+      "cohort": "stage7_local",
+      "task_id": "transient_reverted_unobserved",
+      "run_id": "run.stage7.transient_reverted_unobserved",
+      "noninterference_verified": true,
+      "manifest_match": true,
+      "missing_files": [],
+      "database_on_disk_sha256": ""
+    },
+    {
+      "cohort": "stage82_scripted_controls",
+      "task_id": "cancel-and-void-payment",
+      "run_id": "study.cancel_and_void_payment.denied_readback",
+      "noninterference_verified": true,
+      "manifest_match": true,
+      "missing_files": [],
+      "database_on_disk_sha256": ""
+    },
+    {
+      "cohort": "stage82_scripted_controls",
+      "task_id": "cancel-and-void-payment",
+      "run_id": "study.cancel_and_void_payment.no_op",
+      "noninterference_verified": true,
+      "manifest_match": true,
+      "missing_files": [],
+      "database_on_disk_sha256": ""
+    },
+    {
+      "cohort": "stage82_scripted_controls",
+      "task_id": "cancel-and-void-payment",
+      "run_id": "study.cancel_and_void_payment.oracle",
+      "noninterference_verified": true,
+      "manifest_match": true,
+      "missing_files": [],
+      "database_on_disk_sha256": ""
+    },
+    {
+      "cohort": "stage82_scripted_controls",
+      "task_id": "cancel-and-void-payment",
+      "run_id": "study.cancel_and_void_payment.partial",
+      "noninterference_verified": true,
+      "manifest_match": true,
+      "missing_files": [],
+      "database_on_disk_sha256": ""
+    },
+    {
+      "cohort": "stage82_scripted_controls",
+      "task_id": "cancel-and-void-payment",
+      "run_id": "study.cancel_and_void_payment.silent_noop",
+      "noninterference_verified": true,
+      "manifest_match": true,
+      "missing_files": [],
+      "database_on_disk_sha256": ""
+    },
+    {
+      "cohort": "stage82_scripted_controls",
+      "task_id": "cancel-and-void-payment",
+      "run_id": "study.cancel_and_void_payment.unauthorized_extra",
+      "noninterference_verified": true,
+      "manifest_match": true,
+      "missing_files": [],
+      "database_on_disk_sha256": ""
+    },
+    {
+      "cohort": "stage82_scripted_controls",
+      "task_id": "clearance-discount",
+      "run_id": "study.clearance_discount.denied_readback",
+      "noninterference_verified": true,
+      "manifest_match": true,
+      "missing_files": [],
+      "database_on_disk_sha256": ""
+    },
+    {
+      "cohort": "stage82_scripted_controls",
+      "task_id": "clearance-discount",
+      "run_id": "study.clearance_discount.no_op",
+      "noninterference_verified": true,
+      "manifest_match": true,
+      "missing_files": [],
+      "database_on_disk_sha256": ""
+    },
+    {
+      "cohort": "stage82_scripted_controls",
+      "task_id": "clearance-discount",
+      "run_id": "study.clearance_discount.oracle",
+      "noninterference_verified": true,
+      "manifest_match": true,
+      "missing_files": [],
+      "database_on_disk_sha256": ""
+    },
+    {
+      "cohort": "stage82_scripted_controls",
+      "task_id": "clearance-discount",
+      "run_id": "study.clearance_discount.partial",
+      "noninterference_verified": true,
+      "manifest_match": true,
+      "missing_files": [],
+      "database_on_disk_sha256": ""
+    },
+    {
+      "cohort": "stage82_scripted_controls",
+      "task_id": "clearance-discount",
+      "run_id": "study.clearance_discount.silent_noop",
+      "noninterference_verified": true,
+      "manifest_match": true,
+      "missing_files": [],
+      "database_on_disk_sha256": ""
+    },
+    {
+      "cohort": "stage82_scripted_controls",
+      "task_id": "clearance-discount",
+      "run_id": "study.clearance_discount.unauthorized_extra",
+      "noninterference_verified": true,
+      "manifest_match": true,
+      "missing_files": [],
+      "database_on_disk_sha256": ""
+    },
+    {
+      "cohort": "stage82_scripted_controls",
+      "task_id": "raise-ticket-priority",
+      "run_id": "study.raise_ticket_priority.denied_readback",
+      "noninterference_verified": true,
+      "manifest_match": true,
+      "missing_files": [],
+      "database_on_disk_sha256": ""
+    },
+    {
+      "cohort": "stage82_scripted_controls",
+      "task_id": "raise-ticket-priority",
+      "run_id": "study.raise_ticket_priority.no_op",
+      "noninterference_verified": true,
+      "manifest_match": true,
+      "missing_files": [],
+      "database_on_disk_sha256": ""
+    },
+    {
+      "cohort": "stage82_scripted_controls",
+      "task_id": "raise-ticket-priority",
+      "run_id": "study.raise_ticket_priority.oracle",
+      "noninterference_verified": true,
+      "manifest_match": true,
+      "missing_files": [],
+      "database_on_disk_sha256": ""
+    },
+    {
+      "cohort": "stage82_scripted_controls",
+      "task_id": "raise-ticket-priority",
+      "run_id": "study.raise_ticket_priority.partial",
+      "noninterference_verified": true,
+      "manifest_match": true,
+      "missing_files": [],
+      "database_on_disk_sha256": ""
+    },
+    {
+      "cohort": "stage82_scripted_controls",
+      "task_id": "raise-ticket-priority",
+      "run_id": "study.raise_ticket_priority.silent_noop",
+      "noninterference_verified": true,
+      "manifest_match": true,
+      "missing_files": [],
+      "database_on_disk_sha256": ""
+    },
+    {
+      "cohort": "stage82_scripted_controls",
+      "task_id": "raise-ticket-priority",
+      "run_id": "study.raise_ticket_priority.unauthorized_extra",
+      "noninterference_verified": true,
+      "manifest_match": true,
+      "missing_files": [],
+      "database_on_disk_sha256": ""
+    },
+    {
+      "cohort": "stage82_scripted_controls",
+      "task_id": "reconcile-stock",
+      "run_id": "study.reconcile_stock.denied_readback",
+      "noninterference_verified": true,
+      "manifest_match": true,
+      "missing_files": [],
+      "database_on_disk_sha256": ""
+    },
+    {
+      "cohort": "stage82_scripted_controls",
+      "task_id": "reconcile-stock",
+      "run_id": "study.reconcile_stock.no_op",
+      "noninterference_verified": true,
+      "manifest_match": true,
+      "missing_files": [],
+      "database_on_disk_sha256": ""
+    },
+    {
+      "cohort": "stage82_scripted_controls",
+      "task_id": "reconcile-stock",
+      "run_id": "study.reconcile_stock.oracle",
+      "noninterference_verified": true,
+      "manifest_match": true,
+      "missing_files": [],
+      "database_on_disk_sha256": ""
+    },
+    {
+      "cohort": "stage82_scripted_controls",
+      "task_id": "reconcile-stock",
+      "run_id": "study.reconcile_stock.partial",
+      "noninterference_verified": true,
+      "manifest_match": true,
+      "missing_files": [],
+      "database_on_disk_sha256": ""
+    },
+    {
+      "cohort": "stage82_scripted_controls",
+      "task_id": "reconcile-stock",
+      "run_id": "study.reconcile_stock.silent_noop",
+      "noninterference_verified": true,
+      "manifest_match": true,
+      "missing_files": [],
+      "database_on_disk_sha256": ""
+    },
+    {
+      "cohort": "stage82_scripted_controls",
+      "task_id": "reconcile-stock",
+      "run_id": "study.reconcile_stock.unauthorized_extra",
+      "noninterference_verified": true,
+      "manifest_match": true,
+      "missing_files": [],
+      "database_on_disk_sha256": ""
+    },
+    {
+      "cohort": "stage82_scripted_controls",
+      "task_id": "refund-and-restock",
+      "run_id": "study.refund_and_restock.denied_readback",
+      "noninterference_verified": true,
+      "manifest_match": true,
+      "missing_files": [],
+      "database_on_disk_sha256": ""
+    },
+    {
+      "cohort": "stage82_scripted_controls",
+      "task_id": "refund-and-restock",
+      "run_id": "study.refund_and_restock.no_op",
+      "noninterference_verified": true,
+      "manifest_match": true,
+      "missing_files": [],
+      "database_on_disk_sha256": ""
+    },
+    {
+      "cohort": "stage82_scripted_controls",
+      "task_id": "refund-and-restock",
+      "run_id": "study.refund_and_restock.oracle",
+      "noninterference_verified": true,
+      "manifest_match": true,
+      "missing_files": [],
+      "database_on_disk_sha256": ""
+    },
+    {
+      "cohort": "stage82_scripted_controls",
+      "task_id": "refund-and-restock",
+      "run_id": "study.refund_and_restock.partial",
+      "noninterference_verified": true,
+      "manifest_match": true,
+      "missing_files": [],
+      "database_on_disk_sha256": ""
+    },
+    {
+      "cohort": "stage82_scripted_controls",
+      "task_id": "refund-and-restock",
+      "run_id": "study.refund_and_restock.silent_noop",
+      "noninterference_verified": true,
+      "manifest_match": true,
+      "missing_files": [],
+      "database_on_disk_sha256": ""
+    },
+    {
+      "cohort": "stage82_scripted_controls",
+      "task_id": "refund-and-restock",
+      "run_id": "study.refund_and_restock.unauthorized_extra",
+      "noninterference_verified": true,
+      "manifest_match": true,
+      "missing_files": [],
+      "database_on_disk_sha256": ""
+    },
+    {
+      "cohort": "stage82_scripted_controls",
+      "task_id": "store-credit-return",
+      "run_id": "study.store_credit_return.denied_readback",
+      "noninterference_verified": true,
+      "manifest_match": true,
+      "missing_files": [],
+      "database_on_disk_sha256": ""
+    },
+    {
+      "cohort": "stage82_scripted_controls",
+      "task_id": "store-credit-return",
+      "run_id": "study.store_credit_return.no_op",
+      "noninterference_verified": true,
+      "manifest_match": true,
+      "missing_files": [],
+      "database_on_disk_sha256": ""
+    },
+    {
+      "cohort": "stage82_scripted_controls",
+      "task_id": "store-credit-return",
+      "run_id": "study.store_credit_return.oracle",
+      "noninterference_verified": true,
+      "manifest_match": true,
+      "missing_files": [],
+      "database_on_disk_sha256": ""
+    },
+    {
+      "cohort": "stage82_scripted_controls",
+      "task_id": "store-credit-return",
+      "run_id": "study.store_credit_return.partial",
+      "noninterference_verified": true,
+      "manifest_match": true,
+      "missing_files": [],
+      "database_on_disk_sha256": ""
+    },
+    {
+      "cohort": "stage82_scripted_controls",
+      "task_id": "store-credit-return",
+      "run_id": "study.store_credit_return.silent_noop",
+      "noninterference_verified": true,
+      "manifest_match": true,
+      "missing_files": [],
+      "database_on_disk_sha256": ""
+    },
+    {
+      "cohort": "stage82_scripted_controls",
+      "task_id": "store-credit-return",
+      "run_id": "study.store_credit_return.unauthorized_extra",
+      "noninterference_verified": true,
+      "manifest_match": true,
+      "missing_files": [],
+      "database_on_disk_sha256": ""
+    },
+    {
+      "cohort": "stage83_qwen05b_genuine",
+      "task_id": "clearance-discount",
+      "run_id": "g3_real_clearance-discount_s42",
+      "noninterference_verified": true,
+      "manifest_match": true,
+      "missing_files": [],
+      "database_on_disk_sha256": "37cef17cc33e2d0d2c8c889167ab67cdc96d3fecdd29c1c4dcc15961b17c0c91"
+    },
+    {
+      "cohort": "stage83_qwen05b_genuine",
+      "task_id": "dedup-keep-latest",
+      "run_id": "g3_real_dedup-keep-latest_s42",
+      "noninterference_verified": true,
+      "manifest_match": true,
+      "missing_files": [],
+      "database_on_disk_sha256": "4fefb1562291cdb36374bc9f6baba6022801432d3ecd918923fb4954a75cd9d9"
+    },
+    {
+      "cohort": "stage83_qwen05b_genuine",
+      "task_id": "raise-ticket-priority",
+      "run_id": "g3_real_raise-ticket-priority_s42",
+      "noninterference_verified": true,
+      "manifest_match": true,
+      "missing_files": [],
+      "database_on_disk_sha256": "7f9224fa84c3eaa57d2f9aae3a7032ea4110c4af0bdb1e3c97987aa33265bf65"
+    },
+    {
+      "cohort": "stage83_qwen05b_genuine",
+      "task_id": "refund-and-restock",
+      "run_id": "g3_real_refund-and-restock_s42",
+      "noninterference_verified": true,
+      "manifest_match": true,
+      "missing_files": [],
+      "database_on_disk_sha256": "8e4cb0a8911a6bd7def647ec9e3f4207e2ce1ab2e234b6fe596e131c2d40d05b"
+    },
+    {
+      "cohort": "stage83_qwen05b_genuine",
+      "task_id": "refuse-cancel-shipped",
+      "run_id": "g3_real_refuse-cancel-shipped_s42",
+      "noninterference_verified": true,
+      "manifest_match": true,
+      "missing_files": [],
+      "database_on_disk_sha256": "10941a30150ec4f9648472b1ffd37150844cc36417c673886272ef136404f7f7"
+    },
+    {
+      "cohort": "stage83_qwen3b_genuine",
+      "task_id": "cancel-and-void-payment",
+      "run_id": "qwen3b_real_cancel-and-void-payment_seed42",
+      "noninterference_verified": true,
+      "manifest_match": true,
+      "missing_files": [],
+      "database_on_disk_sha256": "13c1c345b66b1668c175d73bd7e331a6acbd7b05311703e19f6c982cb65edc27"
+    },
+    {
+      "cohort": "stage83_qwen3b_genuine",
+      "task_id": "clearance-discount",
+      "run_id": "qwen3b_real_clearance-discount_seed42",
+      "noninterference_verified": true,
+      "manifest_match": true,
+      "missing_files": [],
+      "database_on_disk_sha256": "e08878f727ce97987a32dd9f7f5ada719141c2248630f9970c1618c50da5f0fe"
+    },
+    {
+      "cohort": "stage83_qwen3b_genuine",
+      "task_id": "dedup-keep-latest",
+      "run_id": "qwen3b_real_dedup-keep-latest_seed42",
+      "noninterference_verified": true,
+      "manifest_match": true,
+      "missing_files": [],
+      "database_on_disk_sha256": "f5b2273496f6144e48edcd07cd35ec7d64a8d2b353bd9965bff9c760e1ad3ec7"
+    },
+    {
+      "cohort": "stage83_qwen3b_genuine",
+      "task_id": "raise-ticket-priority",
+      "run_id": "qwen3b_real_raise-ticket-priority_seed42",
+      "noninterference_verified": true,
+      "manifest_match": true,
+      "missing_files": [],
+      "database_on_disk_sha256": "187feb20a3e514d5c273c8d5a8ebb42def923ce4dc3630735ede1ea199957b77"
+    },
+    {
+      "cohort": "stage83_qwen3b_genuine",
+      "task_id": "refund-and-restock",
+      "run_id": "qwen3b_real_refund-and-restock_seed42",
+      "noninterference_verified": true,
+      "manifest_match": true,
+      "missing_files": [],
+      "database_on_disk_sha256": "e8483eec93852be80a9655b8111be5f25cab8192fcc74abc5e8a2c0c361471cf"
+    }
+  ]
+}

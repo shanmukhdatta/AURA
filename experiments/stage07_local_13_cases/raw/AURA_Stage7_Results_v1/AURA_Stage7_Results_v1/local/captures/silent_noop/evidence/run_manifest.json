@@ -1,0 +1,1 @@
+{"actual_agent_rollout":false,"epoch_id":"epoch.stage7.silent_noop","harness_expected_contract_verdict":"FAIL","run_id":"run.stage7.silent_noop","scenario":"silent_noop","snapshot_capture_bytes_read":615,"snapshot_capture_latency_ms":2.09677,"transient_dirty_write_outside_existing_task_contract":false}

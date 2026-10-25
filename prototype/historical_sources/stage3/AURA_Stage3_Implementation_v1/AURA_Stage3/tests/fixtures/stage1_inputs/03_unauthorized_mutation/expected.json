@@ -1,0 +1,9 @@
+{
+  "case_id": "03_unauthorized_mutation",
+  "expected_verdict": "FAIL",
+  "decision_status": "normal",
+  "reason_code": "out_of_scope_mutation",
+  "reference_world_count": 7,
+  "observable_world_count": 1,
+  "note": "Expected result for Stage 1 specification tests. No AURA engine was run."
+}

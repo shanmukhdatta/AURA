@@ -1,0 +1,7 @@
+{
+  "executed": true,
+  "world_load_ok": true,
+  "native_evaluator_ok": true,
+  "control_success": null,
+  "control_stdout": "INIT_OK 50e1ac9_1\nINSTRUCTION_SIZE 126\nNATIVE_NO_OP_SCORE {\"success\": false, \"num_tests\": 2}\n"
+}

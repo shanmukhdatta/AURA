@@ -1,0 +1,1 @@
+{"allowlist":{"customers":{"1":["store_credit"]},"orders":{"8":["status"]}},"changes":[{"after":{"store_credit":59.5},"before":{"store_credit":0.0},"columns":["store_credit"],"pk":[1],"table":"customers"},{"after":{"status":"returned"},"before":{"status":"delivered"},"columns":["status"],"pk":[8],"table":"orders"}],"issues":[]}

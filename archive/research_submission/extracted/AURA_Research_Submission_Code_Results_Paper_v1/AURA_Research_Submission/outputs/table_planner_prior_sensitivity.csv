@@ -1,0 +1,4 @@
+prior,fixed_units,greedy_units,cera_units,optimal_units,exhaustive_units,cera_minus_greedy_units,cera_relative_vs_greedy_pct
+uniform,5.4847,4.3157,3.1933,3.1709,38.1694,-1.1224,26.01
+clean_50,9.8709,6.475,6.3237,5.894,38.1694,-0.1513,2.34
+clean_90,13.7943,8.4066,9.1205,7.761,38.1694,0.7139,-8.49

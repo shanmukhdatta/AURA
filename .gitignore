@@ -1,12 +1,13 @@
-_aura_recovery/
+# Python bytecode and caches
 __pycache__/
 *.pyc
 .pytest_cache/
-stage82_clean_replication/
-_deps/
-scratch*/
-*.sqlite3
 *.tmp
-*.zip
-!AURA_STAGE8_3_RESULTS.zip
-!AURA_STAGE8_3_CORRECTED_RESULTS.zip
+
+# Local scratch and temporary recovery directories
+_deps/
+_aura_recovery/
+*_scratch*/
+scratch*/
+stage82_clean_replication*
+AURA_EXTERNAL_VALIDATION_FINAL_HANDOFF.zip

@@ -1,0 +1,6 @@
+{
+  "fixture_id": "03_unauthorized_mutation",
+  "harness_only": true,
+  "actual_world_id": "world.03_unauthorized_mutation.actual",
+  "actual_world_satisfies_contract": false
+}

@@ -1,0 +1,5 @@
+actual_tool_calls,agent_error,aura_reason_codes,aura_verdict,capture_ms,episode,fault,inspection_ms,model,model_turns,oracle_success,source_type
+3,,all_obligations_supported,PASS,15.41707,01_direct,none,0.8571,Qwen/Qwen2.5-3B-Instruct,4,True,genuine_llm_local_agent_with_private_frozen_contract
+0,,cross_artifact_mismatch|process_precedence_violated|required_report_absent|required_value_mismatch,FAIL,12.33158,02_procedural,none,0.45263,Qwen/Qwen2.5-3B-Instruct,10,False,genuine_llm_local_agent_with_private_frozen_contract
+3,,cross_artifact_mismatch|required_value_mismatch,FAIL,16.39214,03_silent_tool_noop,silent_noop,0.82773,Qwen/Qwen2.5-3B-Instruct,4,False,genuine_llm_local_agent_with_private_frozen_contract
+2,,known_violation_dominates_unknown,FAIL,15.7702,04_denied_readback,deny_readback,0.85547,Qwen/Qwen2.5-3B-Instruct,4,False,genuine_llm_local_agent_with_private_frozen_contract

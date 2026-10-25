@@ -1,0 +1,99 @@
+{
+  "task_id": "refund-and-restock",
+  "instruction": "Refund order 5 and put its items back into inventory: add each line item's quantity back to the matching SKU's stock. Leave order 6 and its stock contribution alone.",
+  "system_prompt": "You are a database agent in an isolated SQLite training task. Execute the user's requested database operations. You have one tool, sql_query(query), which executes one SQLite SQL statement. First inspect current data as needed; then perform necessary updates and verify. Output EXACTLY ONE of two formats per turn:\nFor a tool call, output only: ```sql\nONE SQL STATEMENT;\n```\nFor completion, output only: FINAL_ANSWER: <clear concise answer>.\nNever claim an update succeeded unless the tool confirmed it. Do not change data beyond what is requested; respect policy refusals.\n\nAvailable schema:\nCREATE TABLE orders (id INTEGER PRIMARY KEY, status TEXT)\nCREATE TABLE order_items (id INTEGER PRIMARY KEY, order_id INTEGER, sku TEXT, qty INTEGER)\nCREATE TABLE inventory (sku TEXT PRIMARY KEY, stock INTEGER)",
+  "model_actions": [
+    {
+      "turn": 1,
+      "input_tokens": 219,
+      "output_tokens": 15,
+      "generation_seconds": 0.7946,
+      "raw_model_response": "```sql\nSELECT * FROM orders WHERE id = 5;\n```",
+      "parsed_type": "sql",
+      "parsed_payload": "SELECT * FROM orders WHERE id = 5;",
+      "tool_ok": true,
+      "tool_observation": [
+        [
+          5,
+          "paid"
+        ]
+      ]
+    },
+    {
+      "turn": 2,
+      "input_tokens": 267,
+      "output_tokens": 17,
+      "generation_seconds": 0.9329,
+      "raw_model_response": "```sql\nSELECT * FROM order_items WHERE order_id = 5;\n```",
+      "parsed_type": "sql",
+      "parsed_payload": "SELECT * FROM order_items WHERE order_id = 5;",
+      "tool_ok": true,
+      "tool_observation": [
+        [
+          1,
+          5,
+          "W-100",
+          3
+        ],
+        [
+          2,
+          5,
+          "G-200",
+          2
+        ]
+      ]
+    },
+    {
+      "turn": 3,
+      "input_tokens": 343,
+      "output_tokens": 75,
+      "generation_seconds": 3.8293,
+      "raw_model_response": "```sql\nUPDATE inventory SET stock = CASE WHEN sku = 'W-100' THEN stock + 3 ELSE stock END\nWHERE sku IN ('W-100');\nUPDATE inventory SET stock = CASE WHEN sku = 'G-200' THEN stock + 2 ELSE stock END\nWHERE sku IN ('G-200');\n```",
+      "parsed_type": "sql",
+      "parsed_payload": "UPDATE inventory SET stock = CASE WHEN sku = 'W-100' THEN stock + 3 ELSE stock END\nWHERE sku IN ('W-100');\nUPDATE inventory SET stock = CASE WHEN sku = 'G-200' THEN stock + 2 ELSE stock END\nWHERE sku IN ('G-200');",
+      "tool_ok": false,
+      "tool_observation": "ProgrammingError: You can only execute one statement at a time."
+    },
+    {
+      "turn": 4,
+      "input_tokens": 459,
+      "output_tokens": 80,
+      "generation_seconds": 4.2163,
+      "raw_model_response": "```sql\nBEGIN;\nUPDATE inventory SET stock = CASE WHEN sku = 'W-100' THEN stock + 3 ELSE stock END\nWHERE sku IN ('W-100');\nUPDATE inventory SET stock = CASE WHEN sku = 'G-200' THEN stock + 2 ELSE stock END\nWHERE sku IN ('G-200');\nCOMMIT;\n```",
+      "parsed_type": "sql",
+      "parsed_payload": "BEGIN;\nUPDATE inventory SET stock = CASE WHEN sku = 'W-100' THEN stock + 3 ELSE stock END\nWHERE sku IN ('W-100');\nUPDATE inventory SET stock = CASE WHEN sku = 'G-200' THEN stock + 2 ELSE stock END\nWHERE sku IN ('G-200');\nCOMMIT;",
+      "tool_ok": false,
+      "tool_observation": "ProgrammingError: You can only execute one statement at a time."
+    },
+    {
+      "turn": 5,
+      "input_tokens": 580,
+      "output_tokens": 75,
+      "generation_seconds": 3.951,
+      "raw_model_response": "```sql\nUPDATE inventory SET stock = CASE WHEN sku = 'W-100' THEN stock + 3 ELSE stock END\nWHERE sku = 'W-100';\nUPDATE inventory SET stock = CASE WHEN sku = 'G-200' THEN stock + 2 ELSE stock END\nWHERE sku = 'G-200';\n```",
+      "parsed_type": "sql",
+      "parsed_payload": "UPDATE inventory SET stock = CASE WHEN sku = 'W-100' THEN stock + 3 ELSE stock END\nWHERE sku = 'W-100';\nUPDATE inventory SET stock = CASE WHEN sku = 'G-200' THEN stock + 2 ELSE stock END\nWHERE sku = 'G-200';",
+      "tool_ok": false,
+      "tool_observation": "ProgrammingError: You can only execute one statement at a time."
+    },
+    {
+      "turn": 6,
+      "input_tokens": 696,
+      "output_tokens": 80,
+      "generation_seconds": 4.2865,
+      "raw_model_response": "```sql\nBEGIN;\nUPDATE inventory SET stock = CASE WHEN sku = 'W-100' THEN stock + 3 ELSE stock END\nWHERE sku = 'W-100';\nUPDATE inventory SET stock = CASE WHEN sku = 'G-200' THEN stock + 2 ELSE stock END\nWHERE sku = 'G-200';\nCOMMIT;\n```",
+      "parsed_type": "sql",
+      "parsed_payload": "BEGIN;\nUPDATE inventory SET stock = CASE WHEN sku = 'W-100' THEN stock + 3 ELSE stock END\nWHERE sku = 'W-100';\nUPDATE inventory SET stock = CASE WHEN sku = 'G-200' THEN stock + 2 ELSE stock END\nWHERE sku = 'G-200';\nCOMMIT;",
+      "tool_ok": false,
+      "tool_observation": "ProgrammingError: You can only execute one statement at a time."
+    }
+  ],
+  "final_answer": null,
+  "total_wall_seconds": 18.0364,
+  "max_turns": 6,
+  "model_id": "Qwen/Qwen2.5-3B-Instruct",
+  "model_revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+  "is_genuine_llm": true,
+  "sampling": false,
+  "seed": 42
+}

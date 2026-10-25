@@ -1,0 +1,1 @@
+A customer asks to cancel order 9. Company policy forbids cancelling orders that have already shipped — check its status and answer accordingly, without changing anything.

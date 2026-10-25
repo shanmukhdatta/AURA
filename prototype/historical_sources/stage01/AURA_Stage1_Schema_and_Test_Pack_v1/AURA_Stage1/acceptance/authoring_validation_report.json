@@ -1,0 +1,118 @@
+{
+  "schema": "https://json-schema.org/draft/2020-12/schema",
+  "valid_schema_count": 4,
+  "tested_fixture_count": 12,
+  "schema_validation_calls_passed": 117,
+  "reference_semantics_checks_passed": 12,
+  "note": "This validates design fixtures offline. It is not a performance experiment, implementation test, or proof of real-world verifier correctness.",
+  "cases": [
+    {
+      "case_id": "01_complete_success",
+      "expected_verdict": "PASS",
+      "decision_status": "normal",
+      "reason_code": "all_obligations_supported",
+      "reference_world_count": 7,
+      "observable_world_count": 1,
+      "note": "Expected result for Stage 1 specification tests. No AURA engine was run."
+    },
+    {
+      "case_id": "02_missing_report",
+      "expected_verdict": "FAIL",
+      "decision_status": "normal",
+      "reason_code": "required_report_absent",
+      "reference_world_count": 7,
+      "observable_world_count": 1,
+      "note": "Expected result for Stage 1 specification tests. No AURA engine was run."
+    },
+    {
+      "case_id": "03_unauthorized_mutation",
+      "expected_verdict": "FAIL",
+      "decision_status": "normal",
+      "reason_code": "out_of_scope_mutation",
+      "reference_world_count": 7,
+      "observable_world_count": 1,
+      "note": "Expected result for Stage 1 specification tests. No AURA engine was run."
+    },
+    {
+      "case_id": "04_duplicate_record",
+      "expected_verdict": "FAIL",
+      "decision_status": "normal",
+      "reason_code": "record_multiplicity_violation",
+      "reference_world_count": 7,
+      "observable_world_count": 1,
+      "note": "Expected result for Stage 1 specification tests. No AURA engine was run."
+    },
+    {
+      "case_id": "05_unobservable_notification",
+      "expected_verdict": "UNCERTAIN",
+      "decision_status": "normal",
+      "reason_code": "unconfirmed_external_effect",
+      "reference_world_count": 9,
+      "observable_world_count": 3,
+      "note": "Expected result for Stage 1 specification tests. No AURA engine was run."
+    },
+    {
+      "case_id": "06_known_bad_and_unknown",
+      "expected_verdict": "FAIL",
+      "decision_status": "normal",
+      "reason_code": "known_violation_dominates_unknown",
+      "reference_world_count": 9,
+      "observable_world_count": 3,
+      "note": "Expected result for Stage 1 specification tests. No AURA engine was run."
+    },
+    {
+      "case_id": "07_insufficient_frame_coverage",
+      "expected_verdict": "UNCERTAIN",
+      "decision_status": "normal",
+      "reason_code": "frame_coverage_incomplete",
+      "reference_world_count": 8,
+      "observable_world_count": 3,
+      "note": "Expected result for Stage 1 specification tests. No AURA engine was run."
+    },
+    {
+      "case_id": "08_conflicting_evidence",
+      "expected_verdict": "UNCERTAIN",
+      "decision_status": "evidence_conflict",
+      "reason_code": "evidence_conflict",
+      "reference_world_count": 8,
+      "observable_world_count": 0,
+      "note": "Expected result for Stage 1 specification tests. No AURA engine was run."
+    },
+    {
+      "case_id": "09_missing_required_process",
+      "expected_verdict": "FAIL",
+      "decision_status": "normal",
+      "reason_code": "process_precedence_violated",
+      "reference_world_count": 7,
+      "observable_world_count": 1,
+      "note": "Expected result for Stage 1 specification tests. No AURA engine was run."
+    },
+    {
+      "case_id": "10_unobservable_transient_effect",
+      "expected_verdict": "UNCERTAIN",
+      "decision_status": "normal",
+      "reason_code": "transient_mutation_unobserved",
+      "reference_world_count": 9,
+      "observable_world_count": 3,
+      "note": "Expected result for Stage 1 specification tests. No AURA engine was run."
+    },
+    {
+      "case_id": "11_benign_alternative_path",
+      "expected_verdict": "PASS",
+      "decision_status": "normal",
+      "reason_code": "alternative_path_allowed",
+      "reference_world_count": 7,
+      "observable_world_count": 1,
+      "note": "Expected result for Stage 1 specification tests. No AURA engine was run."
+    },
+    {
+      "case_id": "12_external_frame_unobserved",
+      "expected_verdict": "UNCERTAIN",
+      "decision_status": "normal",
+      "reason_code": "external_frame_unobserved",
+      "reference_world_count": 9,
+      "observable_world_count": 3,
+      "note": "Expected result for Stage 1 specification tests. No AURA engine was run."
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "path": "EXPERIMENT_SUMMARY.json",
+    "bytes": 508,
+    "sha256": "e2485abda21874e5bf25e5c924e35d18bac29566efc8e6a772b5a1e9e032ff95"
+  },
+  {
+    "path": "SETUP_DIAGNOSTIC.txt",
+    "bytes": 654,
+    "sha256": "4dc672de8cb4ef0608fe5b1399f39cd34b571ed607c18760bf4e5f217fc3dcd4"
+  },
+  {
+    "path": "config.json",
+    "bytes": 503,
+    "sha256": "aea48597f7951b3d412d34e395242d093dad5805f896c452debf1f756f634bb7"
+  },
+  {
+    "path": "model_status.json",
+    "bytes": 161,
+    "sha256": "fd17f969098ab71141baf7da920b12394df1d6924bbb703fa0e79d4e12268ace"
+  },
+  {
+    "path": "native_evaluator_preflight.json",
+    "bytes": 108,
+    "sha256": "d4289f75e59c5c0dcc1e25fb080d9dbb809c71989cdfc66858c50ddc9d66e09e"
+  },
+  {
+    "path": "setup_checklist.json",
+    "bytes": 1008,
+    "sha256": "5cfc2d3ab014105536b40c16329af320a9742e8e9237ce98b3b1d316b5defc79"
+  },
+  {
+    "path": "setup_status.json",
+    "bytes": 163,
+    "sha256": "0a5943ad90f14c8bed499e729ba1fd831b3b9cfdea6e393b226fe04c7a5d222a"
+  },
+  {
+    "path": "worker_status.json",
+    "bytes": 78,
+    "sha256": "75ae3f6f3a14d510607892f4e8df7f4c1177b8e8b5395b826603d810c59d059f"
+  }
+]

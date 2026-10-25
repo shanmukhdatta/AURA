@@ -1,0 +1,121 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aura.local/schemas/probe-spec-v1.schema.json",
+  "title": "AURA ProbeSpec v1",
+  "type": "object",
+  "description": "",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "probe_id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_.-]*$"
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1
+    },
+    "surface_id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_.-]*$"
+    },
+    "adapter": {
+      "enum": [
+        "sql_read",
+        "file_read",
+        "state_diff",
+        "trace_read",
+        "external_status"
+      ]
+    },
+    "read_only": {
+      "const": true
+    },
+    "independence": {
+      "enum": [
+        "independent_verifier",
+        "conditionally_trusted",
+        "agent_self_report"
+      ]
+    },
+    "provides_fact_keys": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z][a-z0-9_.-]*$"
+      },
+      "uniqueItems": true
+    },
+    "mutation_coverage": {
+      "enum": [
+        "none",
+        "scoped",
+        "complete"
+      ]
+    },
+    "covered_mutation_surfaces": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z][a-z0-9_.-]*$"
+      },
+      "uniqueItems": true
+    },
+    "coverage_method": {
+      "enum": [
+        "none",
+        "snapshot_pair",
+        "complete_journal"
+      ]
+    },
+    "estimated_cost": {
+      "type": "object",
+      "description": "",
+      "additionalProperties": false,
+      "properties": {
+        "latency_ms": {
+          "type": "number",
+          "minimum": 0
+        },
+        "bytes_read": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "latency_ms",
+        "bytes_read"
+      ]
+    },
+    "failure_modes": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "timeout",
+          "denied",
+          "unavailable",
+          "stale",
+          "integrity_failure"
+        ]
+      },
+      "uniqueItems": true
+    }
+  },
+  "required": [
+    "schema_version",
+    "probe_id",
+    "description",
+    "surface_id",
+    "adapter",
+    "read_only",
+    "independence",
+    "provides_fact_keys",
+    "mutation_coverage",
+    "covered_mutation_surfaces",
+    "coverage_method",
+    "estimated_cost",
+    "failure_modes"
+  ]
+}

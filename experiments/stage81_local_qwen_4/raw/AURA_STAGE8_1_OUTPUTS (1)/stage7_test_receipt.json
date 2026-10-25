@@ -1,0 +1,6 @@
+{
+  "source_sha256": "210d7c963aba647c436cba495da5e924062951082e1352fadd9ea8469cc94ff8",
+  "exit_code": 0,
+  "result": "186 passed in 33.00s",
+  "pytest_plugin_autoload_disabled": true
+}

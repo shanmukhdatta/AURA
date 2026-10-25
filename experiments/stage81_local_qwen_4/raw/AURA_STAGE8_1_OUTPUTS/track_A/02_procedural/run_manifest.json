@@ -1,0 +1,1 @@
+{"agent_type":"actual_model_generated_tool_calls","benchmark_external":false,"epoch_id":"stage8_1_02_procedural","fault_injection":"none","model":"Qwen/Qwen2.5-3B-Instruct","run_id":"agent_stage8_1_02_procedural","scenario":"02_procedural","snapshot_capture_bytes_read":592,"snapshot_capture_latency_ms":12.331579000000001}

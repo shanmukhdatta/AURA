@@ -1,0 +1,1 @@
+{"certificate_id":"cert.g3_real_refund-and-restock_s42","original_reasons":["out_of_scope_mutation","outcome_predicate_violated"],"original_verdict":"FAIL","replay_reasons":["out_of_scope_mutation","outcome_predicate_violated"],"replay_successful":true,"replay_verdict":"FAIL"}

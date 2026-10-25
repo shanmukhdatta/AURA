@@ -1,0 +1,57 @@
+{
+  "audit_status": "PASS",
+  "cohort_counts": [
+    {
+      "cohort": "stage8_1_local_qwen3b",
+      "n": 4,
+      "scope": "real LLM local-controlled workflows",
+      "pass": 1,
+      "fail": 3,
+      "uncertain": 0,
+      "not_aura_evaluated": 0
+    },
+    {
+      "cohort": "stage8_1_appworld",
+      "n": 3,
+      "scope": "AppWorld native agent evaluation; no AURA certificates",
+      "pass": 0,
+      "fail": 0,
+      "uncertain": 0,
+      "not_aura_evaluated": 3
+    },
+    {
+      "cohort": "stage8_2_scripted",
+      "n": 36,
+      "scope": "6 tasks x 6 scripted oracle/fault/denial controls",
+      "pass": 6,
+      "fail": 24,
+      "uncertain": 6,
+      "not_aura_evaluated": 0
+    },
+    {
+      "cohort": "stage8_3_qwen05",
+      "n": 5,
+      "scope": "Qwen2.5-0.5B; AgentSynth SQL environment; 1 seed",
+      "pass": 1,
+      "fail": 4,
+      "uncertain": 0,
+      "not_aura_evaluated": 0
+    },
+    {
+      "cohort": "stage8_3_qwen3b_gpu",
+      "n": 5,
+      "scope": "Qwen2.5-3B on Kaggle GPU; 5 tasks; 1 seed",
+      "pass": 3,
+      "fail": 2,
+      "uncertain": 0,
+      "not_aura_evaluated": 0
+    }
+  ],
+  "table_counts": {
+    "stage7_prior_rows": 3,
+    "stage7_model_cost_policy_rows": 15,
+    "stage7_local_policy_episodes": 65,
+    "stage7_bootstrap_pair_rows": 3,
+    "stage83_cera_rows": 4
+  }
+}

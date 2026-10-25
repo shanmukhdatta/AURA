@@ -1,0 +1,1322 @@
+{
+  "ablation_and_negative_audit.json": {
+    "bytes": 570,
+    "sha256": "53c23a51f0ccd3642dab9fbdbfd10bbe8d6d7b58a2bee0bb6e4e4ac08bce969f"
+  },
+  "cases/cancel-and-void-payment/denied_readback/after.json": {
+    "bytes": 802,
+    "sha256": "370713380f756b5c10d7c82a2af85a1898b14a7cd8cd5d055dfcd2e01a8b4e52"
+  },
+  "cases/cancel-and-void-payment/denied_readback/before.json": {
+    "bytes": 806,
+    "sha256": "682549c40b1bebfb9db7537433d025a44076d32938e55faaff7fd9fd17400ba8"
+  },
+  "cases/cancel-and-void-payment/denied_readback/certificate.json": {
+    "bytes": 2410,
+    "sha256": "c408aeea9d280095a3e876f179ffda26506206c4b5af0367a0ae6a91e2a8f2bf"
+  },
+  "cases/cancel-and-void-payment/denied_readback/contract.json": {
+    "bytes": 2155,
+    "sha256": "84993be9af30e3befac7ab29c650f089bd5bd1a9485cbd8712b8035853d64ad4"
+  },
+  "cases/cancel-and-void-payment/denied_readback/independent_checkers.json": {
+    "bytes": 484,
+    "sha256": "548f49db0447d700435b89b9e44114f9e99c1650b0680c9490a632d702d4ee27"
+  },
+  "cases/cancel-and-void-payment/denied_readback/observations.json": {
+    "bytes": 1144,
+    "sha256": "4a2d8fca6f64c5ad4d573d02f27130e58aa3a0872f896c9c3dfe34f289cab3a5"
+  },
+  "cases/cancel-and-void-payment/denied_readback/probes.json": {
+    "bytes": 1000,
+    "sha256": "545db640b581138910751ea55b68d453ab07788c32c5e5c095fac7da36398a08"
+  },
+  "cases/cancel-and-void-payment/denied_readback/strict_frame_diff.json": {
+    "bytes": 317,
+    "sha256": "325bb85801c8e3d9f29e64952ad116c90723872e7345d2779cae8b8bacda4b15"
+  },
+  "cases/cancel-and-void-payment/denied_readback/trace.json": {
+    "bytes": 647,
+    "sha256": "ca9e1932e6b581a140186dc5eb9d11e23d14b639d8876a6616b7ccd11d9be661"
+  },
+  "cases/cancel-and-void-payment/no_op/after.json": {
+    "bytes": 795,
+    "sha256": "da703a561d488139cfe4a0957ce720d60c179cc37ab8e9e67c471b91833376cf"
+  },
+  "cases/cancel-and-void-payment/no_op/before.json": {
+    "bytes": 796,
+    "sha256": "0a58ce87c675a81fb0ca4b2f640d66a1fd882fd89a69ef7bb900312e6fd127ed"
+  },
+  "cases/cancel-and-void-payment/no_op/certificate.json": {
+    "bytes": 2187,
+    "sha256": "973b5526cd4407e30541a304b74829844ba3cbdb1ac3d3bd00b5df8055875bb6"
+  },
+  "cases/cancel-and-void-payment/no_op/contract.json": {
+    "bytes": 2155,
+    "sha256": "84993be9af30e3befac7ab29c650f089bd5bd1a9485cbd8712b8035853d64ad4"
+  },
+  "cases/cancel-and-void-payment/no_op/independent_checkers.json": {
+    "bytes": 489,
+    "sha256": "3a9c63db6e735e295833871e3f2d0fc530f2a6b69af192f4ac48f684acfea41f"
+  },
+  "cases/cancel-and-void-payment/no_op/observations.json": {
+    "bytes": 2485,
+    "sha256": "1c5efe344fa88f6d4d5fde428a4026a70e38d474af795e5ddf97167075779a41"
+  },
+  "cases/cancel-and-void-payment/no_op/probes.json": {
+    "bytes": 1000,
+    "sha256": "545db640b581138910751ea55b68d453ab07788c32c5e5c095fac7da36398a08"
+  },
+  "cases/cancel-and-void-payment/no_op/strict_frame_diff.json": {
+    "bytes": 95,
+    "sha256": "3c610e4e23d5452d801c8e009608b3e87d54043ffa80e8fbe28cb71a232e0cf7"
+  },
+  "cases/cancel-and-void-payment/no_op/trace.json": {
+    "bytes": 64,
+    "sha256": "eb410ff2fe5124df1ecc39c14fe69ec2e69dad34b13bdfe6dc6cfe23ac30def3"
+  },
+  "cases/cancel-and-void-payment/oracle/after.json": {
+    "bytes": 793,
+    "sha256": "5b3834918c25cda8d30d4d0fa8de8d094f2f3b3c77e2b10c5a18985079f2a06b"
+  },
+  "cases/cancel-and-void-payment/oracle/before.json": {
+    "bytes": 797,
+    "sha256": "c5d6f987b5fd52f053b1d2f9f8c2da3176a0dbbb3f5c0cd40931b061b53c22e9"
+  },
+  "cases/cancel-and-void-payment/oracle/certificate.json": {
+    "bytes": 2181,
+    "sha256": "b5b0a8c202a5ddbb797538262a5df2ebf9c5ba8616d61505f3f564f2c0d2c6cd"
+  },
+  "cases/cancel-and-void-payment/oracle/contract.json": {
+    "bytes": 2155,
+    "sha256": "84993be9af30e3befac7ab29c650f089bd5bd1a9485cbd8712b8035853d64ad4"
+  },
+  "cases/cancel-and-void-payment/oracle/independent_checkers.json": {
+    "bytes": 484,
+    "sha256": "548f49db0447d700435b89b9e44114f9e99c1650b0680c9490a632d702d4ee27"
+  },
+  "cases/cancel-and-void-payment/oracle/observations.json": {
+    "bytes": 2492,
+    "sha256": "7104619facb067d4308582ebdbbb8b6d6804c5d8db2ce13b05f36c59d088b432"
+  },
+  "cases/cancel-and-void-payment/oracle/probes.json": {
+    "bytes": 1000,
+    "sha256": "545db640b581138910751ea55b68d453ab07788c32c5e5c095fac7da36398a08"
+  },
+  "cases/cancel-and-void-payment/oracle/strict_frame_diff.json": {
+    "bytes": 317,
+    "sha256": "325bb85801c8e3d9f29e64952ad116c90723872e7345d2779cae8b8bacda4b15"
+  },
+  "cases/cancel-and-void-payment/oracle/trace.json": {
+    "bytes": 647,
+    "sha256": "ca9e1932e6b581a140186dc5eb9d11e23d14b639d8876a6616b7ccd11d9be661"
+  },
+  "cases/cancel-and-void-payment/partial/after.json": {
+    "bytes": 796,
+    "sha256": "1468dd7e498f5c46f50d12c6e370f1fcc4ceaf8e972071ee61e3866c0297b7a3"
+  },
+  "cases/cancel-and-void-payment/partial/before.json": {
+    "bytes": 798,
+    "sha256": "9d8bda1ce826dc7fd5f30e754cf40035612dca82ab5d280e65ccad7c24e31e91"
+  },
+  "cases/cancel-and-void-payment/partial/certificate.json": {
+    "bytes": 2200,
+    "sha256": "faa41d6ad5c0eb5cfae8f65388b2d9de81c3e3e30e7d6030a6c00eab97441a0e"
+  },
+  "cases/cancel-and-void-payment/partial/contract.json": {
+    "bytes": 2155,
+    "sha256": "84993be9af30e3befac7ab29c650f089bd5bd1a9485cbd8712b8035853d64ad4"
+  },
+  "cases/cancel-and-void-payment/partial/independent_checkers.json": {
+    "bytes": 487,
+    "sha256": "e524a45f992171724904de8f2b3aa874f4f6ad74b9ac0e24ce4f53e51607a8dd"
+  },
+  "cases/cancel-and-void-payment/partial/observations.json": {
+    "bytes": 2504,
+    "sha256": "8c713395d3c5225398ac45c8223a328fcc33dd0481fc46178f9cb29c1607c626"
+  },
+  "cases/cancel-and-void-payment/partial/probes.json": {
+    "bytes": 1000,
+    "sha256": "545db640b581138910751ea55b68d453ab07788c32c5e5c095fac7da36398a08"
+  },
+  "cases/cancel-and-void-payment/partial/strict_frame_diff.json": {
+    "bytes": 207,
+    "sha256": "b9d71bdcb0cdfcfd7c4fababec5dad981807ea499335d49f0c961c365c003453"
+  },
+  "cases/cancel-and-void-payment/partial/trace.json": {
+    "bytes": 638,
+    "sha256": "34085cd0d1427606ccb85cec23e4666fc43413a2f78797bd32bfdc2f3635b588"
+  },
+  "cases/cancel-and-void-payment/silent_noop/after.json": {
+    "bytes": 799,
+    "sha256": "45f1f4f12415f91e14ecc1eba5f2c44cd6cfcedd6995ba98ea3406257a5cdabd"
+  },
+  "cases/cancel-and-void-payment/silent_noop/before.json": {
+    "bytes": 802,
+    "sha256": "954a6e51148e8ffe0e0851328a28161b8cd15b658284de8e4727323f31551a26"
+  },
+  "cases/cancel-and-void-payment/silent_noop/certificate.json": {
+    "bytes": 2240,
+    "sha256": "aebf001268c2b7f895e4d8a9203be5bfb91378f4403673b155e954a590b06ce2"
+  },
+  "cases/cancel-and-void-payment/silent_noop/contract.json": {
+    "bytes": 2155,
+    "sha256": "84993be9af30e3befac7ab29c650f089bd5bd1a9485cbd8712b8035853d64ad4"
+  },
+  "cases/cancel-and-void-payment/silent_noop/independent_checkers.json": {
+    "bytes": 486,
+    "sha256": "feda3bec4ca2b86bf06c32fe4615770fe6176930d456e18d2ea315bc38f62f9f"
+  },
+  "cases/cancel-and-void-payment/silent_noop/observations.json": {
+    "bytes": 2543,
+    "sha256": "c0c82e89f235b60122353fe8ab3491064b77a226dfa269693ce20b7830781f3e"
+  },
+  "cases/cancel-and-void-payment/silent_noop/probes.json": {
+    "bytes": 1000,
+    "sha256": "545db640b581138910751ea55b68d453ab07788c32c5e5c095fac7da36398a08"
+  },
+  "cases/cancel-and-void-payment/silent_noop/strict_frame_diff.json": {
+    "bytes": 204,
+    "sha256": "f0e13fa00facbbc99580a7120e8c7b3c35cb450dba05dbf2844909ce468f8c5d"
+  },
+  "cases/cancel-and-void-payment/silent_noop/trace.json": {
+    "bytes": 636,
+    "sha256": "6466ca834dccef39cbd8b31faab436d835cf7b2b0adee63c7de60400b30e459d"
+  },
+  "cases/cancel-and-void-payment/unauthorized_extra/after.json": {
+    "bytes": 805,
+    "sha256": "718e8fca53306b403be77b93c37d8546e0d4e280d118ace7d0ad06247834b998"
+  },
+  "cases/cancel-and-void-payment/unauthorized_extra/before.json": {
+    "bytes": 809,
+    "sha256": "1a58e2cd9218cd536ba0478029d314c52455bc939377a12b60a0d7fddd2c976c"
+  },
+  "cases/cancel-and-void-payment/unauthorized_extra/certificate.json": {
+    "bytes": 2299,
+    "sha256": "44897cfa5e39154dbe0ac20bf69777e00765502582d24a5b7fdb6e81a8f6cdfc"
+  },
+  "cases/cancel-and-void-payment/unauthorized_extra/contract.json": {
+    "bytes": 2155,
+    "sha256": "84993be9af30e3befac7ab29c650f089bd5bd1a9485cbd8712b8035853d64ad4"
+  },
+  "cases/cancel-and-void-payment/unauthorized_extra/independent_checkers.json": {
+    "bytes": 484,
+    "sha256": "548f49db0447d700435b89b9e44114f9e99c1650b0680c9490a632d702d4ee27"
+  },
+  "cases/cancel-and-void-payment/unauthorized_extra/observations.json": {
+    "bytes": 2612,
+    "sha256": "1cfecfd8252733cef3cda2c6a08707e75a13615f2038e59346f0e7e38a9cb6f5"
+  },
+  "cases/cancel-and-void-payment/unauthorized_extra/probes.json": {
+    "bytes": 1000,
+    "sha256": "545db640b581138910751ea55b68d453ab07788c32c5e5c095fac7da36398a08"
+  },
+  "cases/cancel-and-void-payment/unauthorized_extra/strict_frame_diff.json": {
+    "bytes": 434,
+    "sha256": "51cd884804321314f6541327668facad795a3cdff8525c10d8c7432a713d05b1"
+  },
+  "cases/cancel-and-void-payment/unauthorized_extra/trace.json": {
+    "bytes": 801,
+    "sha256": "b38e3aa3bd3151c27ea4c1c2ff8c62870bf4c4f82585d52a007897111fad4345"
+  },
+  "cases/clearance-discount/denied_readback/after.json": {
+    "bytes": 713,
+    "sha256": "a19e24aa93a21f1673bcc834a81bd806e609d6953f1bcad093d93b69092a0dee"
+  },
+  "cases/clearance-discount/denied_readback/before.json": {
+    "bytes": 714,
+    "sha256": "49b1c62898ebc187072c27b3e492948968e6f7dc17dc55015af5947e1baf51ee"
+  },
+  "cases/clearance-discount/denied_readback/certificate.json": {
+    "bytes": 2167,
+    "sha256": "363dad0514999034cb64e6912212f16858f4dcf870d49444e34d85b6db67447c"
+  },
+  "cases/clearance-discount/denied_readback/contract.json": {
+    "bytes": 1611,
+    "sha256": "8236ce0d453cd10b5f4657eee0f854b754d09cba87bfdd82194b61f602aa711f"
+  },
+  "cases/clearance-discount/denied_readback/independent_checkers.json": {
+    "bytes": 321,
+    "sha256": "96771d3b34d60d4424f5a715b0bd1819b1e3945ab7bf3cbfbe4e6c306a3e6353"
+  },
+  "cases/clearance-discount/denied_readback/observations.json": {
+    "bytes": 1114,
+    "sha256": "ff4a731a8279e6c13c17d9e9c936b488aa9eb6d7eadb99e49d92ea22802b31d1"
+  },
+  "cases/clearance-discount/denied_readback/probes.json": {
+    "bytes": 973,
+    "sha256": "241e3a5862bc2d97a02b95fc4f623a53cc870c99c80847b731970cd660c2ac9e"
+  },
+  "cases/clearance-discount/denied_readback/strict_frame_diff.json": {
+    "bytes": 166,
+    "sha256": "7e5cebc20bee57affc81d2712ee316e111bb1243217e900e951935c34363c58b"
+  },
+  "cases/clearance-discount/denied_readback/trace.json": {
+    "bytes": 609,
+    "sha256": "8ca3a9e3e4f462a787ae19de4369fdfb4162c7b78fb9e43ccbf01f75b9475993"
+  },
+  "cases/clearance-discount/no_op/after.json": {
+    "bytes": 703,
+    "sha256": "eb2fc132ee3f553e899498cda2bc83ee55c06b7ca1eab83f4a811b29aa56f487"
+  },
+  "cases/clearance-discount/no_op/before.json": {
+    "bytes": 704,
+    "sha256": "fd7e9b83dae3bb9017284f6afffde2c2e34849d031dcfe144ffdca2710c9b95f"
+  },
+  "cases/clearance-discount/no_op/certificate.json": {
+    "bytes": 1955,
+    "sha256": "8c86c2fcec7160aa19f08ef025c323fc062fd85763decbdc4e07e1e6b6c3d504"
+  },
+  "cases/clearance-discount/no_op/contract.json": {
+    "bytes": 1611,
+    "sha256": "8236ce0d453cd10b5f4657eee0f854b754d09cba87bfdd82194b61f602aa711f"
+  },
+  "cases/clearance-discount/no_op/independent_checkers.json": {
+    "bytes": 322,
+    "sha256": "0c2155cbdcfaf756180e7ffbddc5c321ee2d94d69dacda7d1f53f0c3e2f5a883"
+  },
+  "cases/clearance-discount/no_op/observations.json": {
+    "bytes": 1972,
+    "sha256": "00ba1b9660124218b51cb0ee4ecc04725c7fffe7c36478c32cabf2deb323d4e8"
+  },
+  "cases/clearance-discount/no_op/probes.json": {
+    "bytes": 973,
+    "sha256": "241e3a5862bc2d97a02b95fc4f623a53cc870c99c80847b731970cd660c2ac9e"
+  },
+  "cases/clearance-discount/no_op/strict_frame_diff.json": {
+    "bytes": 68,
+    "sha256": "772c9786abca6370d43467d0ba2611313783ff1c6d184f37c97847e84c24af4e"
+  },
+  "cases/clearance-discount/no_op/trace.json": {
+    "bytes": 64,
+    "sha256": "eb410ff2fe5124df1ecc39c14fe69ec2e69dad34b13bdfe6dc6cfe23ac30def3"
+  },
+  "cases/clearance-discount/oracle/after.json": {
+    "bytes": 704,
+    "sha256": "bc413c484160fbfe480663ba0ec9d620bf634c139a1b1ae1ae2552188b5ad840"
+  },
+  "cases/clearance-discount/oracle/before.json": {
+    "bytes": 705,
+    "sha256": "4a40ecfbae03be3fc5938c96ed92e34e6c08ec81cd71ecee7454a7c073c01c50"
+  },
+  "cases/clearance-discount/oracle/certificate.json": {
+    "bytes": 1957,
+    "sha256": "afb84dd486effd4501a29f5c2b825da72fafd750c43a0da2706112d940bbab36"
+  },
+  "cases/clearance-discount/oracle/contract.json": {
+    "bytes": 1611,
+    "sha256": "8236ce0d453cd10b5f4657eee0f854b754d09cba87bfdd82194b61f602aa711f"
+  },
+  "cases/clearance-discount/oracle/independent_checkers.json": {
+    "bytes": 321,
+    "sha256": "96771d3b34d60d4424f5a715b0bd1819b1e3945ab7bf3cbfbe4e6c306a3e6353"
+  },
+  "cases/clearance-discount/oracle/observations.json": {
+    "bytes": 1980,
+    "sha256": "53ea8cf2681fd384ca954166b523c0a5a48538a4a04601ad0f55a0ebfedcb277"
+  },
+  "cases/clearance-discount/oracle/probes.json": {
+    "bytes": 973,
+    "sha256": "241e3a5862bc2d97a02b95fc4f623a53cc870c99c80847b731970cd660c2ac9e"
+  },
+  "cases/clearance-discount/oracle/strict_frame_diff.json": {
+    "bytes": 166,
+    "sha256": "7e5cebc20bee57affc81d2712ee316e111bb1243217e900e951935c34363c58b"
+  },
+  "cases/clearance-discount/oracle/trace.json": {
+    "bytes": 609,
+    "sha256": "8ca3a9e3e4f462a787ae19de4369fdfb4162c7b78fb9e43ccbf01f75b9475993"
+  },
+  "cases/clearance-discount/partial/after.json": {
+    "bytes": 705,
+    "sha256": "b5e99d67fd31a649c8611dd87a18ee3173305ff53c33eff6c9a417e77a0f097c"
+  },
+  "cases/clearance-discount/partial/before.json": {
+    "bytes": 706,
+    "sha256": "2df155380ddae5d3817789c5499fa9d079345b33d851debbf23f57f5e4b8cdd2"
+  },
+  "cases/clearance-discount/partial/certificate.json": {
+    "bytes": 1974,
+    "sha256": "1f76e3c2aa6c3a5c1aec477f11b9099cb47d6b5a649444ef98b29d0f9ca62eee"
+  },
+  "cases/clearance-discount/partial/contract.json": {
+    "bytes": 1611,
+    "sha256": "8236ce0d453cd10b5f4657eee0f854b754d09cba87bfdd82194b61f602aa711f"
+  },
+  "cases/clearance-discount/partial/independent_checkers.json": {
+    "bytes": 322,
+    "sha256": "0c2155cbdcfaf756180e7ffbddc5c321ee2d94d69dacda7d1f53f0c3e2f5a883"
+  },
+  "cases/clearance-discount/partial/observations.json": {
+    "bytes": 1988,
+    "sha256": "e8110eb45dc665540bad54f3b180addccae2165d84a1ca489253c11721dcc742"
+  },
+  "cases/clearance-discount/partial/probes.json": {
+    "bytes": 973,
+    "sha256": "241e3a5862bc2d97a02b95fc4f623a53cc870c99c80847b731970cd660c2ac9e"
+  },
+  "cases/clearance-discount/partial/strict_frame_diff.json": {
+    "bytes": 68,
+    "sha256": "772c9786abca6370d43467d0ba2611313783ff1c6d184f37c97847e84c24af4e"
+  },
+  "cases/clearance-discount/partial/trace.json": {
+    "bytes": 598,
+    "sha256": "2d3d3bda94e8cb15762f94a32fdd6647fe9c820498ef36ce87cd647db4000d40"
+  },
+  "cases/clearance-discount/silent_noop/after.json": {
+    "bytes": 709,
+    "sha256": "530fc7ee8979f2a41b8643584d4c9a3e5bf2123a39b28cac1460b7f15a25f949"
+  },
+  "cases/clearance-discount/silent_noop/before.json": {
+    "bytes": 710,
+    "sha256": "70968bbedd18192076c237c5e550911ac8ec1095c2b43a1bb413a6b7a95e2ec1"
+  },
+  "cases/clearance-discount/silent_noop/certificate.json": {
+    "bytes": 2010,
+    "sha256": "156e807870b0eb0d7593d3bc4a49b581ce65fccf0950c8db33e2446fee52c444"
+  },
+  "cases/clearance-discount/silent_noop/contract.json": {
+    "bytes": 1611,
+    "sha256": "8236ce0d453cd10b5f4657eee0f854b754d09cba87bfdd82194b61f602aa711f"
+  },
+  "cases/clearance-discount/silent_noop/independent_checkers.json": {
+    "bytes": 322,
+    "sha256": "0c2155cbdcfaf756180e7ffbddc5c321ee2d94d69dacda7d1f53f0c3e2f5a883"
+  },
+  "cases/clearance-discount/silent_noop/observations.json": {
+    "bytes": 2020,
+    "sha256": "8c52c8d1bbc94bc194d2b87c41cbd4951a08d5e0a6511aa32f378716c93d593b"
+  },
+  "cases/clearance-discount/silent_noop/probes.json": {
+    "bytes": 973,
+    "sha256": "241e3a5862bc2d97a02b95fc4f623a53cc870c99c80847b731970cd660c2ac9e"
+  },
+  "cases/clearance-discount/silent_noop/strict_frame_diff.json": {
+    "bytes": 68,
+    "sha256": "772c9786abca6370d43467d0ba2611313783ff1c6d184f37c97847e84c24af4e"
+  },
+  "cases/clearance-discount/silent_noop/trace.json": {
+    "bytes": 598,
+    "sha256": "2d3d3bda94e8cb15762f94a32fdd6647fe9c820498ef36ce87cd647db4000d40"
+  },
+  "cases/clearance-discount/unauthorized_extra/after.json": {
+    "bytes": 716,
+    "sha256": "641e4498395355106eca736eee386bdbde32ac0d936a30ff2ecf12aaa847a9eb"
+  },
+  "cases/clearance-discount/unauthorized_extra/before.json": {
+    "bytes": 717,
+    "sha256": "6b24be078342b5c8071da020ac5619076802692f66f489c742350c2a07e9d30c"
+  },
+  "cases/clearance-discount/unauthorized_extra/certificate.json": {
+    "bytes": 2063,
+    "sha256": "0b01cfb7285f89c9c7f16faf13e3f4140ae035e3d9423ce085dffd3870bf735e"
+  },
+  "cases/clearance-discount/unauthorized_extra/contract.json": {
+    "bytes": 1611,
+    "sha256": "8236ce0d453cd10b5f4657eee0f854b754d09cba87bfdd82194b61f602aa711f"
+  },
+  "cases/clearance-discount/unauthorized_extra/independent_checkers.json": {
+    "bytes": 321,
+    "sha256": "96771d3b34d60d4424f5a715b0bd1819b1e3945ab7bf3cbfbe4e6c306a3e6353"
+  },
+  "cases/clearance-discount/unauthorized_extra/observations.json": {
+    "bytes": 2076,
+    "sha256": "cdd0c08dc6b1c28adae0259c60c2707d2c98cbc78cc76b57d6961ed46463c20e"
+  },
+  "cases/clearance-discount/unauthorized_extra/probes.json": {
+    "bytes": 973,
+    "sha256": "241e3a5862bc2d97a02b95fc4f623a53cc870c99c80847b731970cd660c2ac9e"
+  },
+  "cases/clearance-discount/unauthorized_extra/strict_frame_diff.json": {
+    "bytes": 340,
+    "sha256": "5c35cecbdba0c34e2b7a21119fc62fcd7dd3b80ac7012457f6885ef1563bb0dd"
+  },
+  "cases/clearance-discount/unauthorized_extra/trace.json": {
+    "bytes": 761,
+    "sha256": "2fa6c95f44382d8120393ad6791d61f70aeb3c4cf3576fd6ad9325b1461b8bc0"
+  },
+  "cases/raise-ticket-priority/denied_readback/after.json": {
+    "bytes": 607,
+    "sha256": "ce54550bc2213b7a66378ec3dffc4e8baa061cda582d4edcf1abbb81c7c7403b"
+  },
+  "cases/raise-ticket-priority/denied_readback/before.json": {
+    "bytes": 610,
+    "sha256": "0cdccd0b27fab0f20d407a7a36dee4d6c1b111cd655c51349a9ecfab5ba83186"
+  },
+  "cases/raise-ticket-priority/denied_readback/certificate.json": {
+    "bytes": 2006,
+    "sha256": "fee5db4e452d6636652f85b2f0301c578a366b0f4b84d323da4659720ab7edfe"
+  },
+  "cases/raise-ticket-priority/denied_readback/contract.json": {
+    "bytes": 1391,
+    "sha256": "8976917fabb456f5189a236ac04de0bb82183567f3299b99aa0be874b4e6b05c"
+  },
+  "cases/raise-ticket-priority/denied_readback/independent_checkers.json": {
+    "bytes": 228,
+    "sha256": "d74a6a0b52a5ce7455261ec36da774c323fe19d848b841a8c50d179ef02eef50"
+  },
+  "cases/raise-ticket-priority/denied_readback/observations.json": {
+    "bytes": 1132,
+    "sha256": "b4eab5081907cf4268ff861c7eb58daa91a751107cfb4b4346b0018f7b424903"
+  },
+  "cases/raise-ticket-priority/denied_readback/probes.json": {
+    "bytes": 955,
+    "sha256": "985af770cf1a9cc2d3b1aaac0161f1a28787bac92d1df03d3dbb4168df1d251c"
+  },
+  "cases/raise-ticket-priority/denied_readback/strict_frame_diff.json": {
+    "bytes": 180,
+    "sha256": "fab13898a8c1bcf144da6b26fb81eb357c243fe8ce31775928fe840132536b4b"
+  },
+  "cases/raise-ticket-priority/denied_readback/trace.json": {
+    "bytes": 509,
+    "sha256": "19d9a5ac0d2b93040c7ec7bbf00952d9a275b815d760a67d5b6b554c075efa41"
+  },
+  "cases/raise-ticket-priority/no_op/after.json": {
+    "bytes": 599,
+    "sha256": "586ec19f611841b45c189a4e4d5825a609948777ecc7e5dfd03efa1bddb0720c"
+  },
+  "cases/raise-ticket-priority/no_op/before.json": {
+    "bytes": 600,
+    "sha256": "54c610781f37ff61a03a5203627dbf993f723e32b4f6ce99dcbcf8728481c8ee"
+  },
+  "cases/raise-ticket-priority/no_op/certificate.json": {
+    "bytes": 1829,
+    "sha256": "b653da8b1981cf8f439710e9294a330d0ba32584aada0a22cb59a465b0189aa6"
+  },
+  "cases/raise-ticket-priority/no_op/contract.json": {
+    "bytes": 1391,
+    "sha256": "8976917fabb456f5189a236ac04de0bb82183567f3299b99aa0be874b4e6b05c"
+  },
+  "cases/raise-ticket-priority/no_op/independent_checkers.json": {
+    "bytes": 231,
+    "sha256": "233141db50c2ae69c457edcf54528219ef73c979f3967fcc20f82ebb1f7e97bb"
+  },
+  "cases/raise-ticket-priority/no_op/observations.json": {
+    "bytes": 1848,
+    "sha256": "2b6e8c062609d787a688929f34267c6377a3f1e4174bd3ef4fe7a53316525384"
+  },
+  "cases/raise-ticket-priority/no_op/probes.json": {
+    "bytes": 955,
+    "sha256": "985af770cf1a9cc2d3b1aaac0161f1a28787bac92d1df03d3dbb4168df1d251c"
+  },
+  "cases/raise-ticket-priority/no_op/strict_frame_diff.json": {
+    "bytes": 70,
+    "sha256": "13bba5e732def19e6acded6531b1c555ed07f544ae16935a932499c9e6b2695c"
+  },
+  "cases/raise-ticket-priority/no_op/trace.json": {
+    "bytes": 64,
+    "sha256": "eb410ff2fe5124df1ecc39c14fe69ec2e69dad34b13bdfe6dc6cfe23ac30def3"
+  },
+  "cases/raise-ticket-priority/oracle/after.json": {
+    "bytes": 598,
+    "sha256": "1ae5cb9c07f1b5ab70ab7489a878e463c36e70e9f5449ee947eef8fade6d2066"
+  },
+  "cases/raise-ticket-priority/oracle/before.json": {
+    "bytes": 601,
+    "sha256": "0f7a3912db9cddae3a4c54daf8247cef0a927af0eb28a6d50a2a03955f225749"
+  },
+  "cases/raise-ticket-priority/oracle/certificate.json": {
+    "bytes": 1829,
+    "sha256": "e15c1b2636ffce9210a00fe6e8fb5667c3d85dcadd755fb35cec2283ac85fd60"
+  },
+  "cases/raise-ticket-priority/oracle/contract.json": {
+    "bytes": 1391,
+    "sha256": "8976917fabb456f5189a236ac04de0bb82183567f3299b99aa0be874b4e6b05c"
+  },
+  "cases/raise-ticket-priority/oracle/independent_checkers.json": {
+    "bytes": 228,
+    "sha256": "d74a6a0b52a5ce7455261ec36da774c323fe19d848b841a8c50d179ef02eef50"
+  },
+  "cases/raise-ticket-priority/oracle/observations.json": {
+    "bytes": 1854,
+    "sha256": "3b080a6bf6b4fedcc9d9f3b81f1c73a384853a8338e8574a26bcd9856365e5dc"
+  },
+  "cases/raise-ticket-priority/oracle/probes.json": {
+    "bytes": 955,
+    "sha256": "985af770cf1a9cc2d3b1aaac0161f1a28787bac92d1df03d3dbb4168df1d251c"
+  },
+  "cases/raise-ticket-priority/oracle/strict_frame_diff.json": {
+    "bytes": 180,
+    "sha256": "fab13898a8c1bcf144da6b26fb81eb357c243fe8ce31775928fe840132536b4b"
+  },
+  "cases/raise-ticket-priority/oracle/trace.json": {
+    "bytes": 509,
+    "sha256": "19d9a5ac0d2b93040c7ec7bbf00952d9a275b815d760a67d5b6b554c075efa41"
+  },
+  "cases/raise-ticket-priority/partial/after.json": {
+    "bytes": 601,
+    "sha256": "24ec77cfb7baa9b6928ec7cdd943bdede7fef967be05f1db61a26aaf60f7e312"
+  },
+  "cases/raise-ticket-priority/partial/before.json": {
+    "bytes": 602,
+    "sha256": "28c743332a4b550c04ef8fde65e521cbadf9fadc66a49083cf14daa3ee1c63a4"
+  },
+  "cases/raise-ticket-priority/partial/certificate.json": {
+    "bytes": 1845,
+    "sha256": "c19ce48daefd82ee906f5b78d400e5d8270935d266c22e6fc50bf9edd7ee69ac"
+  },
+  "cases/raise-ticket-priority/partial/contract.json": {
+    "bytes": 1391,
+    "sha256": "8976917fabb456f5189a236ac04de0bb82183567f3299b99aa0be874b4e6b05c"
+  },
+  "cases/raise-ticket-priority/partial/independent_checkers.json": {
+    "bytes": 231,
+    "sha256": "233141db50c2ae69c457edcf54528219ef73c979f3967fcc20f82ebb1f7e97bb"
+  },
+  "cases/raise-ticket-priority/partial/observations.json": {
+    "bytes": 1864,
+    "sha256": "b5e30d3ae9137834bdba58729a3ca1726335fee1193f394b6d3297ea18b7da70"
+  },
+  "cases/raise-ticket-priority/partial/probes.json": {
+    "bytes": 955,
+    "sha256": "985af770cf1a9cc2d3b1aaac0161f1a28787bac92d1df03d3dbb4168df1d251c"
+  },
+  "cases/raise-ticket-priority/partial/strict_frame_diff.json": {
+    "bytes": 70,
+    "sha256": "13bba5e732def19e6acded6531b1c555ed07f544ae16935a932499c9e6b2695c"
+  },
+  "cases/raise-ticket-priority/partial/trace.json": {
+    "bytes": 500,
+    "sha256": "01f832d4df33229cbc74247fbccb9e3da349f1969a19f3bc78ca487c3238c392"
+  },
+  "cases/raise-ticket-priority/silent_noop/after.json": {
+    "bytes": 605,
+    "sha256": "e5d6ee88b91d6856e61b066175f989993f08a6d31ea4b66dac6db75a81e509c2"
+  },
+  "cases/raise-ticket-priority/silent_noop/before.json": {
+    "bytes": 606,
+    "sha256": "15493add620354bedd25e64e228f384fe389a9bcac1e815f32875950ab39eb83"
+  },
+  "cases/raise-ticket-priority/silent_noop/certificate.json": {
+    "bytes": 1877,
+    "sha256": "3d83ff7f851ef25f14a9993e8ab09b2d8921ba4ec209deda98b9bacb682ff387"
+  },
+  "cases/raise-ticket-priority/silent_noop/contract.json": {
+    "bytes": 1391,
+    "sha256": "8976917fabb456f5189a236ac04de0bb82183567f3299b99aa0be874b4e6b05c"
+  },
+  "cases/raise-ticket-priority/silent_noop/independent_checkers.json": {
+    "bytes": 231,
+    "sha256": "233141db50c2ae69c457edcf54528219ef73c979f3967fcc20f82ebb1f7e97bb"
+  },
+  "cases/raise-ticket-priority/silent_noop/observations.json": {
+    "bytes": 1896,
+    "sha256": "56cc4b335491e5380b5ca16aafd4507e7e76e516e7e3c8a15029e1e6c923c5a0"
+  },
+  "cases/raise-ticket-priority/silent_noop/probes.json": {
+    "bytes": 955,
+    "sha256": "985af770cf1a9cc2d3b1aaac0161f1a28787bac92d1df03d3dbb4168df1d251c"
+  },
+  "cases/raise-ticket-priority/silent_noop/strict_frame_diff.json": {
+    "bytes": 70,
+    "sha256": "13bba5e732def19e6acded6531b1c555ed07f544ae16935a932499c9e6b2695c"
+  },
+  "cases/raise-ticket-priority/silent_noop/trace.json": {
+    "bytes": 500,
+    "sha256": "01f832d4df33229cbc74247fbccb9e3da349f1969a19f3bc78ca487c3238c392"
+  },
+  "cases/raise-ticket-priority/unauthorized_extra/after.json": {
+    "bytes": 613,
+    "sha256": "394806799c9b557cdddb4ce96572cb5879afee0d8c43cda928c6dee39c349b1d"
+  },
+  "cases/raise-ticket-priority/unauthorized_extra/before.json": {
+    "bytes": 613,
+    "sha256": "9e8fed1e59417074edf9d793353a1168fb77d0f84221eecf0c16329ce3cc03d6"
+  },
+  "cases/raise-ticket-priority/unauthorized_extra/certificate.json": {
+    "bytes": 1923,
+    "sha256": "16d2eb592518e757b2157385418e79bddde82d91ad8a792caa81e165a1367da4"
+  },
+  "cases/raise-ticket-priority/unauthorized_extra/contract.json": {
+    "bytes": 1391,
+    "sha256": "8976917fabb456f5189a236ac04de0bb82183567f3299b99aa0be874b4e6b05c"
+  },
+  "cases/raise-ticket-priority/unauthorized_extra/independent_checkers.json": {
+    "bytes": 228,
+    "sha256": "d74a6a0b52a5ce7455261ec36da774c323fe19d848b841a8c50d179ef02eef50"
+  },
+  "cases/raise-ticket-priority/unauthorized_extra/observations.json": {
+    "bytes": 1950,
+    "sha256": "bc456431c6cebead8a1fb742b7b0834796075c2a1d05cc6fc363e847d49a1829"
+  },
+  "cases/raise-ticket-priority/unauthorized_extra/probes.json": {
+    "bytes": 955,
+    "sha256": "985af770cf1a9cc2d3b1aaac0161f1a28787bac92d1df03d3dbb4168df1d251c"
+  },
+  "cases/raise-ticket-priority/unauthorized_extra/strict_frame_diff.json": {
+    "bytes": 369,
+    "sha256": "f9cbcd0413d696c72f27581c7a61223fe6250ad965fada6862a9055ab8d11ca6"
+  },
+  "cases/raise-ticket-priority/unauthorized_extra/trace.json": {
+    "bytes": 669,
+    "sha256": "6c6f8ece38611df0dbf9b3e848a883cb98cdcd757ff2952fe9e40307875fa993"
+  },
+  "cases/reconcile-stock/denied_readback/after.json": {
+    "bytes": 814,
+    "sha256": "3a6a45ef88d18293c216cb1157555408be4f827055a447ad8930f55b80cdf614"
+  },
+  "cases/reconcile-stock/denied_readback/before.json": {
+    "bytes": 818,
+    "sha256": "74488df773cf1ecd1575d7b6d37442933c22c136f56b572dded571f0d980aaa8"
+  },
+  "cases/reconcile-stock/denied_readback/certificate.json": {
+    "bytes": 2137,
+    "sha256": "1ead15c932ac31142b9aa406773c735158fc884cc8cb439851e549a0b89aee82"
+  },
+  "cases/reconcile-stock/denied_readback/contract.json": {
+    "bytes": 1815,
+    "sha256": "f7b5979876758cd536719dd749a112cc0972c1aa2a438514c7dd85ef578c0047"
+  },
+  "cases/reconcile-stock/denied_readback/independent_checkers.json": {
+    "bytes": 314,
+    "sha256": "d886a67ee9aa298112430707c1385d29a9fa140e89d73dd544dd0b63c4dd8f96"
+  },
+  "cases/reconcile-stock/denied_readback/observations.json": {
+    "bytes": 1096,
+    "sha256": "b904cb5ccd53b0cca409ea4daa525d8edcf83820642b4f1e2d386dfdc3113973"
+  },
+  "cases/reconcile-stock/denied_readback/probes.json": {
+    "bytes": 1000,
+    "sha256": "28002a0e521f29d0640ddd9531e811e1ff83d542706129173ca4ca8889599f76"
+  },
+  "cases/reconcile-stock/denied_readback/strict_frame_diff.json": {
+    "bytes": 383,
+    "sha256": "863ca50030a73da5ba8f1206248c3b63debbed30151188457004f55268177aa0"
+  },
+  "cases/reconcile-stock/denied_readback/trace.json": {
+    "bytes": 663,
+    "sha256": "5279f2e7cf1ebd6fe954e8714f8b6a9da354ccf90c6ff800240f3de94a5924e0"
+  },
+  "cases/reconcile-stock/no_op/after.json": {
+    "bytes": 807,
+    "sha256": "3fa618c74440abd48ed2ace2ec74de7778519174209f98bf274f867c1b8faa79"
+  },
+  "cases/reconcile-stock/no_op/before.json": {
+    "bytes": 808,
+    "sha256": "ac05a4763d5be9845a87589cce8ceb6ac14ebc42e610eb33463284966b933bb4"
+  },
+  "cases/reconcile-stock/no_op/certificate.json": {
+    "bytes": 1961,
+    "sha256": "8e5d94a16d367ddec5fb65e53370056829b20c64a5f74d8ad4884e7aab71f6cb"
+  },
+  "cases/reconcile-stock/no_op/contract.json": {
+    "bytes": 1815,
+    "sha256": "f7b5979876758cd536719dd749a112cc0972c1aa2a438514c7dd85ef578c0047"
+  },
+  "cases/reconcile-stock/no_op/independent_checkers.json": {
+    "bytes": 320,
+    "sha256": "1297db3f704f4b9807c872cc305ff81ed5db2955a975275891c40c2ae755671c"
+  },
+  "cases/reconcile-stock/no_op/observations.json": {
+    "bytes": 2226,
+    "sha256": "1168ef746f7cd326c8e223ab56cc5c018c916249e9423a100a0c38b9ed474655"
+  },
+  "cases/reconcile-stock/no_op/probes.json": {
+    "bytes": 1000,
+    "sha256": "28002a0e521f29d0640ddd9531e811e1ff83d542706129173ca4ca8889599f76"
+  },
+  "cases/reconcile-stock/no_op/strict_frame_diff.json": {
+    "bytes": 96,
+    "sha256": "1354ed22449b021d8db399d9ed39529a13f197652103830626a5410e25555ff7"
+  },
+  "cases/reconcile-stock/no_op/trace.json": {
+    "bytes": 64,
+    "sha256": "eb410ff2fe5124df1ecc39c14fe69ec2e69dad34b13bdfe6dc6cfe23ac30def3"
+  },
+  "cases/reconcile-stock/oracle/after.json": {
+    "bytes": 805,
+    "sha256": "e034bf84fd00299f768a78f25a3229059a504e7cb822b657dd842bfcecf3a225"
+  },
+  "cases/reconcile-stock/oracle/before.json": {
+    "bytes": 809,
+    "sha256": "4d96ad346222b13ac128a50b02ffe51bf08a8edee6da349b6ec59030511ce546"
+  },
+  "cases/reconcile-stock/oracle/certificate.json": {
+    "bytes": 1948,
+    "sha256": "92e7a957e577bd223d057c849db33a3b81b1c119edd19886a3d6c0af0441be5d"
+  },
+  "cases/reconcile-stock/oracle/contract.json": {
+    "bytes": 1815,
+    "sha256": "f7b5979876758cd536719dd749a112cc0972c1aa2a438514c7dd85ef578c0047"
+  },
+  "cases/reconcile-stock/oracle/independent_checkers.json": {
+    "bytes": 314,
+    "sha256": "d886a67ee9aa298112430707c1385d29a9fa140e89d73dd544dd0b63c4dd8f96"
+  },
+  "cases/reconcile-stock/oracle/observations.json": {
+    "bytes": 2233,
+    "sha256": "4c93b15e3f1157c64cf00a4ac4cd2b0c59626362a0191aeee12ee9849b2242ab"
+  },
+  "cases/reconcile-stock/oracle/probes.json": {
+    "bytes": 1000,
+    "sha256": "28002a0e521f29d0640ddd9531e811e1ff83d542706129173ca4ca8889599f76"
+  },
+  "cases/reconcile-stock/oracle/strict_frame_diff.json": {
+    "bytes": 383,
+    "sha256": "863ca50030a73da5ba8f1206248c3b63debbed30151188457004f55268177aa0"
+  },
+  "cases/reconcile-stock/oracle/trace.json": {
+    "bytes": 663,
+    "sha256": "5279f2e7cf1ebd6fe954e8714f8b6a9da354ccf90c6ff800240f3de94a5924e0"
+  },
+  "cases/reconcile-stock/partial/after.json": {
+    "bytes": 809,
+    "sha256": "1878e75fd650917d0ddff178ee513bca17baa92f7f0be3102f866cf68f75681e"
+  },
+  "cases/reconcile-stock/partial/before.json": {
+    "bytes": 810,
+    "sha256": "f29374eccde5dadb89d6391ccc36496d4ec41f886eb1409c7a6d6637138d1f0f"
+  },
+  "cases/reconcile-stock/partial/certificate.json": {
+    "bytes": 1979,
+    "sha256": "cd4de46a0f944a4f7f9a0f67dbd5b2eeebfe2b5a15868676e445f866aa335719"
+  },
+  "cases/reconcile-stock/partial/contract.json": {
+    "bytes": 1815,
+    "sha256": "f7b5979876758cd536719dd749a112cc0972c1aa2a438514c7dd85ef578c0047"
+  },
+  "cases/reconcile-stock/partial/independent_checkers.json": {
+    "bytes": 320,
+    "sha256": "1297db3f704f4b9807c872cc305ff81ed5db2955a975275891c40c2ae755671c"
+  },
+  "cases/reconcile-stock/partial/observations.json": {
+    "bytes": 2246,
+    "sha256": "2ff3cb49fe4acb749f41379aac0135201390868a93662f67fbad29b9ba0fa4b3"
+  },
+  "cases/reconcile-stock/partial/probes.json": {
+    "bytes": 1000,
+    "sha256": "28002a0e521f29d0640ddd9531e811e1ff83d542706129173ca4ca8889599f76"
+  },
+  "cases/reconcile-stock/partial/strict_frame_diff.json": {
+    "bytes": 96,
+    "sha256": "1354ed22449b021d8db399d9ed39529a13f197652103830626a5410e25555ff7"
+  },
+  "cases/reconcile-stock/partial/trace.json": {
+    "bytes": 655,
+    "sha256": "9fc105630315f7cf713de4b802a739edc0245e4c574a4673414fb0cac264bf7b"
+  },
+  "cases/reconcile-stock/silent_noop/after.json": {
+    "bytes": 813,
+    "sha256": "8fdd469ac661beaa0a3767f6d4f288378a3ce0c80faf2b4956b0c330f58bd3bb"
+  },
+  "cases/reconcile-stock/silent_noop/before.json": {
+    "bytes": 814,
+    "sha256": "002160e20aab97bef7df9c0dd05d4b7efa26be29e81a167b736f0ffde98e4c77"
+  },
+  "cases/reconcile-stock/silent_noop/certificate.json": {
+    "bytes": 2015,
+    "sha256": "2554dd1248c912c92afd6f82fce589fee9ecc482b0e6d132773033ea7c18397d"
+  },
+  "cases/reconcile-stock/silent_noop/contract.json": {
+    "bytes": 1815,
+    "sha256": "f7b5979876758cd536719dd749a112cc0972c1aa2a438514c7dd85ef578c0047"
+  },
+  "cases/reconcile-stock/silent_noop/independent_checkers.json": {
+    "bytes": 320,
+    "sha256": "1297db3f704f4b9807c872cc305ff81ed5db2955a975275891c40c2ae755671c"
+  },
+  "cases/reconcile-stock/silent_noop/observations.json": {
+    "bytes": 2286,
+    "sha256": "a5b731f067dbfa7af9ac446ee62c66906049c056d90ee1516f51e0bdf024f17f"
+  },
+  "cases/reconcile-stock/silent_noop/probes.json": {
+    "bytes": 1000,
+    "sha256": "28002a0e521f29d0640ddd9531e811e1ff83d542706129173ca4ca8889599f76"
+  },
+  "cases/reconcile-stock/silent_noop/strict_frame_diff.json": {
+    "bytes": 96,
+    "sha256": "1354ed22449b021d8db399d9ed39529a13f197652103830626a5410e25555ff7"
+  },
+  "cases/reconcile-stock/silent_noop/trace.json": {
+    "bytes": 655,
+    "sha256": "9fc105630315f7cf713de4b802a739edc0245e4c574a4673414fb0cac264bf7b"
+  },
+  "cases/reconcile-stock/unauthorized_extra/after.json": {
+    "bytes": 817,
+    "sha256": "5dff1c569d3aa9e146b363a5918a7bad87756e212670b1898690e8354d9aa0fa"
+  },
+  "cases/reconcile-stock/unauthorized_extra/before.json": {
+    "bytes": 821,
+    "sha256": "a0fbed589f9ddfb448427a46a12c44014b68855beead8b6fcf4bd0df216d5dab"
+  },
+  "cases/reconcile-stock/unauthorized_extra/certificate.json": {
+    "bytes": 2054,
+    "sha256": "893555a7dfb9ffab87de5e855af168d56b4d1090d73394810068a2c0bed26bb8"
+  },
+  "cases/reconcile-stock/unauthorized_extra/contract.json": {
+    "bytes": 1815,
+    "sha256": "f7b5979876758cd536719dd749a112cc0972c1aa2a438514c7dd85ef578c0047"
+  },
+  "cases/reconcile-stock/unauthorized_extra/independent_checkers.json": {
+    "bytes": 314,
+    "sha256": "d886a67ee9aa298112430707c1385d29a9fa140e89d73dd544dd0b63c4dd8f96"
+  },
+  "cases/reconcile-stock/unauthorized_extra/observations.json": {
+    "bytes": 2353,
+    "sha256": "16f012c55dc6af7186272d3bdbd9366eb3487a96a02bbe0bd14596488373f27d"
+  },
+  "cases/reconcile-stock/unauthorized_extra/probes.json": {
+    "bytes": 1000,
+    "sha256": "28002a0e521f29d0640ddd9531e811e1ff83d542706129173ca4ca8889599f76"
+  },
+  "cases/reconcile-stock/unauthorized_extra/strict_frame_diff.json": {
+    "bytes": 500,
+    "sha256": "ec6a04a56bdb28e3047fe1c1885e161c1155923640222dc5b25a1b0e3a2b79c0"
+  },
+  "cases/reconcile-stock/unauthorized_extra/trace.json": {
+    "bytes": 820,
+    "sha256": "b81d81dde57c4ef51b65b73126cd9076fd2ee406d19dac3c114cd302f93a5422"
+  },
+  "cases/refund-and-restock/denied_readback/after.json": {
+    "bytes": 1004,
+    "sha256": "abe70c6b03f74542eae4143eb43dbfd3fb0bac5226b7fd6443b8258f87c0ebcc"
+  },
+  "cases/refund-and-restock/denied_readback/before.json": {
+    "bytes": 1001,
+    "sha256": "6698646a7ba7751e0b64eac5c31c082e44831b51b8052bfca778ae45138ea78b"
+  },
+  "cases/refund-and-restock/denied_readback/certificate.json": {
+    "bytes": 2356,
+    "sha256": "1c0f4faa993d8b9b3f702db67b40ca6d586740bb81c23b69c4203b8c4807f94c"
+  },
+  "cases/refund-and-restock/denied_readback/contract.json": {
+    "bytes": 2348,
+    "sha256": "94222539bb38f7f567697a8ac3b95470ed5221863b77698a136a20de215983a4"
+  },
+  "cases/refund-and-restock/denied_readback/independent_checkers.json": {
+    "bytes": 442,
+    "sha256": "92175d3059d489d408bd7c4c240d1a7cc97b18897f1fb626886f7e3cd2cf7e53"
+  },
+  "cases/refund-and-restock/denied_readback/observations.json": {
+    "bytes": 1114,
+    "sha256": "f763e9aa0211d99cd3d4866053da019d6b9b49cb12483f20f08d5b75c2e7b966"
+  },
+  "cases/refund-and-restock/denied_readback/probes.json": {
+    "bytes": 1028,
+    "sha256": "3a4d95030b7c6afee50d05300087ef5497c821476d1e1c25fba001e6e0b56d88"
+  },
+  "cases/refund-and-restock/denied_readback/strict_frame_diff.json": {
+    "bytes": 420,
+    "sha256": "41bd5c346a35e4d71545b62f3795ab2a3e9eb6bf6eee7f1052fc1e8aeecdd21a"
+  },
+  "cases/refund-and-restock/denied_readback/trace.json": {
+    "bytes": 737,
+    "sha256": "6aa641fb3e0678ac3798ca5b0945cfeccc4fcef78c0da45233aa10e263878fa8"
+  },
+  "cases/refund-and-restock/no_op/after.json": {
+    "bytes": 990,
+    "sha256": "07922ba3549496192dd25f16816d31d03be190a4528859c8d447f79d83a99592"
+  },
+  "cases/refund-and-restock/no_op/before.json": {
+    "bytes": 991,
+    "sha256": "f157b27678c4fdd6d95014f2dc38188a232de2296ddb518e85ebc12c4f4b4dd9"
+  },
+  "cases/refund-and-restock/no_op/certificate.json": {
+    "bytes": 2161,
+    "sha256": "248a02c279ea764e465d00d3c828c9f543b6c9ff6d583d8f036c99e0b820251e"
+  },
+  "cases/refund-and-restock/no_op/contract.json": {
+    "bytes": 2348,
+    "sha256": "94222539bb38f7f567697a8ac3b95470ed5221863b77698a136a20de215983a4"
+  },
+  "cases/refund-and-restock/no_op/independent_checkers.json": {
+    "bytes": 441,
+    "sha256": "d02242f969c79177d29a56236f41ac24e8cac360033f13061f1997b4aad98ef3"
+  },
+  "cases/refund-and-restock/no_op/observations.json": {
+    "bytes": 2696,
+    "sha256": "36880a6d4df48b8abfc65b700e7e8156700f982858d9f90c1c9a08672ca5fad2"
+  },
+  "cases/refund-and-restock/no_op/probes.json": {
+    "bytes": 1028,
+    "sha256": "3a4d95030b7c6afee50d05300087ef5497c821476d1e1c25fba001e6e0b56d88"
+  },
+  "cases/refund-and-restock/no_op/strict_frame_diff.json": {
+    "bytes": 117,
+    "sha256": "3834200dc667193bc9a129b10fde597787dcbfd2160d816040408176049c0f19"
+  },
+  "cases/refund-and-restock/no_op/trace.json": {
+    "bytes": 64,
+    "sha256": "eb410ff2fe5124df1ecc39c14fe69ec2e69dad34b13bdfe6dc6cfe23ac30def3"
+  },
+  "cases/refund-and-restock/oracle/after.json": {
+    "bytes": 995,
+    "sha256": "0a650a4fc8975acef7cc00a4722cedf5922bdcf0b76edd7d25d8464f47ce3174"
+  },
+  "cases/refund-and-restock/oracle/before.json": {
+    "bytes": 992,
+    "sha256": "441ba393399bfef2a410c094ac94490db5ba840cce7383c8fb0ed2e16b6601bd"
+  },
+  "cases/refund-and-restock/oracle/certificate.json": {
+    "bytes": 2148,
+    "sha256": "c706b30d8cacf280fc7c8ad57dbecd5039efc3641ee8c1de9ea7d95a059b6f9d"
+  },
+  "cases/refund-and-restock/oracle/contract.json": {
+    "bytes": 2348,
+    "sha256": "94222539bb38f7f567697a8ac3b95470ed5221863b77698a136a20de215983a4"
+  },
+  "cases/refund-and-restock/oracle/independent_checkers.json": {
+    "bytes": 442,
+    "sha256": "92175d3059d489d408bd7c4c240d1a7cc97b18897f1fb626886f7e3cd2cf7e53"
+  },
+  "cases/refund-and-restock/oracle/observations.json": {
+    "bytes": 2712,
+    "sha256": "1d05f7db1e6217fedbcb9cf2a53aedcad51c649d2cc9ca5b3ce51d7ad2db7f11"
+  },
+  "cases/refund-and-restock/oracle/probes.json": {
+    "bytes": 1028,
+    "sha256": "3a4d95030b7c6afee50d05300087ef5497c821476d1e1c25fba001e6e0b56d88"
+  },
+  "cases/refund-and-restock/oracle/strict_frame_diff.json": {
+    "bytes": 420,
+    "sha256": "41bd5c346a35e4d71545b62f3795ab2a3e9eb6bf6eee7f1052fc1e8aeecdd21a"
+  },
+  "cases/refund-and-restock/oracle/trace.json": {
+    "bytes": 737,
+    "sha256": "6aa641fb3e0678ac3798ca5b0945cfeccc4fcef78c0da45233aa10e263878fa8"
+  },
+  "cases/refund-and-restock/partial/after.json": {
+    "bytes": 992,
+    "sha256": "0d549901fb2103ff233b0aafa55780b84173aa90efdf5f16e25efa579f4c9352"
+  },
+  "cases/refund-and-restock/partial/before.json": {
+    "bytes": 993,
+    "sha256": "3c0950d988a790819a6fff017633d83414d9560fb2536acd3e0d601947a98d15"
+  },
+  "cases/refund-and-restock/partial/certificate.json": {
+    "bytes": 2167,
+    "sha256": "789839f0ca44da22ef39e1e22f760afaa7136be4f8ab90b5854987032621d24c"
+  },
+  "cases/refund-and-restock/partial/contract.json": {
+    "bytes": 2348,
+    "sha256": "94222539bb38f7f567697a8ac3b95470ed5221863b77698a136a20de215983a4"
+  },
+  "cases/refund-and-restock/partial/independent_checkers.json": {
+    "bytes": 439,
+    "sha256": "57c625f6b48f9e8a3250a38c65350a456a694b187d597e4ff4e3cfbe365049af"
+  },
+  "cases/refund-and-restock/partial/observations.json": {
+    "bytes": 2720,
+    "sha256": "fb8eaea2a9aecebd021014c90ebd6e703663ff06c1ab821cfac93c12822b00a0"
+  },
+  "cases/refund-and-restock/partial/probes.json": {
+    "bytes": 1028,
+    "sha256": "3a4d95030b7c6afee50d05300087ef5497c821476d1e1c25fba001e6e0b56d88"
+  },
+  "cases/refund-and-restock/partial/strict_frame_diff.json": {
+    "bytes": 314,
+    "sha256": "63b5e57eecf47c1b6cc377a3e2f8fb8f88423b7dbe21da92b30542e8f12e8c49"
+  },
+  "cases/refund-and-restock/partial/trace.json": {
+    "bytes": 726,
+    "sha256": "534545212b7127981a88160d9a31915fc99ff1df5e84cecde9033e92da842124"
+  },
+  "cases/refund-and-restock/silent_noop/after.json": {
+    "bytes": 1000,
+    "sha256": "452ef61ba5102ecc9f6be8a9b6a54409d9a3953aedcd049e8dbbaee28c36a339"
+  },
+  "cases/refund-and-restock/silent_noop/before.json": {
+    "bytes": 997,
+    "sha256": "8f4fa84225823af6a701c641b072beb90da93adb1456f19acf505634e0f3025a"
+  },
+  "cases/refund-and-restock/silent_noop/certificate.json": {
+    "bytes": 2214,
+    "sha256": "9eae42a4cb7c6bdffaaa48515b8943713f17a402a6fdee9fd3b9ff439ad3b159"
+  },
+  "cases/refund-and-restock/silent_noop/contract.json": {
+    "bytes": 2348,
+    "sha256": "94222539bb38f7f567697a8ac3b95470ed5221863b77698a136a20de215983a4"
+  },
+  "cases/refund-and-restock/silent_noop/independent_checkers.json": {
+    "bytes": 444,
+    "sha256": "75adb1cefb16c956f44c0da56fc15e40aee1cdfac36cf5a143a5dd6ce1d33e55"
+  },
+  "cases/refund-and-restock/silent_noop/observations.json": {
+    "bytes": 2772,
+    "sha256": "0a38b7bbc5078ae339d45174fc986ba4fcaa7281b98cee2bce0d162a8b17efce"
+  },
+  "cases/refund-and-restock/silent_noop/probes.json": {
+    "bytes": 1028,
+    "sha256": "3a4d95030b7c6afee50d05300087ef5497c821476d1e1c25fba001e6e0b56d88"
+  },
+  "cases/refund-and-restock/silent_noop/strict_frame_diff.json": {
+    "bytes": 222,
+    "sha256": "2b527006b21da8383614cd11d7a9245acae04ee199c196c548c3d824024c8703"
+  },
+  "cases/refund-and-restock/silent_noop/trace.json": {
+    "bytes": 726,
+    "sha256": "69dcbabc0aff8e8d47de4200f1fcfedc484c78b06ea946c1129dc6fe7651540a"
+  },
+  "cases/refund-and-restock/unauthorized_extra/after.json": {
+    "bytes": 1008,
+    "sha256": "a040dcfb89177963d45fce61600e8f350ef5310641e3c7e06fb71317c5cdd066"
+  },
+  "cases/refund-and-restock/unauthorized_extra/before.json": {
+    "bytes": 1004,
+    "sha256": "6d7fac98a8ab191923f2eab57c7c031b6e0a1b0a5e41071d451285bce6d7878a"
+  },
+  "cases/refund-and-restock/unauthorized_extra/certificate.json": {
+    "bytes": 2267,
+    "sha256": "318d1095b7c994c2570b881d8272a81ee4eef8ddb589f0ec5059a28bd340c661"
+  },
+  "cases/refund-and-restock/unauthorized_extra/contract.json": {
+    "bytes": 2348,
+    "sha256": "94222539bb38f7f567697a8ac3b95470ed5221863b77698a136a20de215983a4"
+  },
+  "cases/refund-and-restock/unauthorized_extra/independent_checkers.json": {
+    "bytes": 442,
+    "sha256": "92175d3059d489d408bd7c4c240d1a7cc97b18897f1fb626886f7e3cd2cf7e53"
+  },
+  "cases/refund-and-restock/unauthorized_extra/observations.json": {
+    "bytes": 2856,
+    "sha256": "2db26de1b4e00088bbda171d1a53b9b23dc1eadab4d94d8452924eefd985e03e"
+  },
+  "cases/refund-and-restock/unauthorized_extra/probes.json": {
+    "bytes": 1028,
+    "sha256": "3a4d95030b7c6afee50d05300087ef5497c821476d1e1c25fba001e6e0b56d88"
+  },
+  "cases/refund-and-restock/unauthorized_extra/strict_frame_diff.json": {
+    "bytes": 587,
+    "sha256": "d70952149214e55dfd37a08c9ebdb62756aeaa80fe2357b936d9bf119c737cab"
+  },
+  "cases/refund-and-restock/unauthorized_extra/trace.json": {
+    "bytes": 890,
+    "sha256": "11e87651d36e2807c57d5c806d277de3937bfe8e3b94949ee5b3218572002b14"
+  },
+  "cases/store-credit-return/denied_readback/after.json": {
+    "bytes": 865,
+    "sha256": "89a596f5629e10fff97e5a4a5f476949117dba33b37eb14b1749f7286c719a61"
+  },
+  "cases/store-credit-return/denied_readback/before.json": {
+    "bytes": 866,
+    "sha256": "ad9cf893ff3980516c88aff7e5b47762bc74f7e017bfca9cf0d41257af741c7f"
+  },
+  "cases/store-credit-return/denied_readback/certificate.json": {
+    "bytes": 2367,
+    "sha256": "82a606e7ac13234f5e6af29418e8e11b357467d5e279a0d42f56285ab65c0a11"
+  },
+  "cases/store-credit-return/denied_readback/contract.json": {
+    "bytes": 2153,
+    "sha256": "f401c53c7d02503216f95c995c93ad0ac2145258ab5ce20d4970c5b71c66e3d2"
+  },
+  "cases/store-credit-return/denied_readback/independent_checkers.json": {
+    "bytes": 460,
+    "sha256": "d9936ceb8f4cc1fa3af3d175b86034f6b13e0be293a071edb495ed39629cdc1e"
+  },
+  "cases/store-credit-return/denied_readback/observations.json": {
+    "bytes": 1120,
+    "sha256": "0cf662996e6e19d4e47e23d04a280da6ec2759d869e69678fa2d979deaf409ac"
+  },
+  "cases/store-credit-return/denied_readback/probes.json": {
+    "bytes": 1007,
+    "sha256": "63e8147a6c93c723145a45bef5785fefb1fd41228ad839c107d7649c3a77b061"
+  },
+  "cases/store-credit-return/denied_readback/strict_frame_diff.json": {
+    "bytes": 330,
+    "sha256": "8617c602aba7549574c8f479064674e761ade080268399f3d4d6373b31f2f404"
+  },
+  "cases/store-credit-return/denied_readback/trace.json": {
+    "bytes": 668,
+    "sha256": "8844f59d70482f9c3e4af5cfcda39953b3fe49baa7ba08cd7094f3259c67501b"
+  },
+  "cases/store-credit-return/no_op/after.json": {
+    "bytes": 855,
+    "sha256": "3017160a2f827bd87f106fc24421533811230c29852f73ad397ec227fc359ed1"
+  },
+  "cases/store-credit-return/no_op/before.json": {
+    "bytes": 856,
+    "sha256": "e31c03cf676e3a4073c625aa34c0efcf8e3f32b48c79d7b4a4909c3d73dcc8aa"
+  },
+  "cases/store-credit-return/no_op/certificate.json": {
+    "bytes": 2143,
+    "sha256": "f5277e880bba58a089f84dd7e8aa669af3b2b004ff7853c1aec72be8c49b7654"
+  },
+  "cases/store-credit-return/no_op/contract.json": {
+    "bytes": 2153,
+    "sha256": "f401c53c7d02503216f95c995c93ad0ac2145258ab5ce20d4970c5b71c66e3d2"
+  },
+  "cases/store-credit-return/no_op/independent_checkers.json": {
+    "bytes": 462,
+    "sha256": "f0c73d5dbddb8dc4fac665eba1679e0c52d3d6cc032a323824b0ebf7fb7d7d04"
+  },
+  "cases/store-credit-return/no_op/observations.json": {
+    "bytes": 2430,
+    "sha256": "e38cf43c265fff379aa1063c76b81be76f62e6117da5469e2c5cfd1ccee80340"
+  },
+  "cases/store-credit-return/no_op/probes.json": {
+    "bytes": 1007,
+    "sha256": "63e8147a6c93c723145a45bef5785fefb1fd41228ad839c107d7649c3a77b061"
+  },
+  "cases/store-credit-return/no_op/strict_frame_diff.json": {
+    "bytes": 102,
+    "sha256": "981a447470cc72d3e191d5bce0b27a72446690b1455c925438e0a4a786de67aa"
+  },
+  "cases/store-credit-return/no_op/trace.json": {
+    "bytes": 64,
+    "sha256": "eb410ff2fe5124df1ecc39c14fe69ec2e69dad34b13bdfe6dc6cfe23ac30def3"
+  },
+  "cases/store-credit-return/oracle/after.json": {
+    "bytes": 856,
+    "sha256": "e3ea25b3c868572ad9bf4005c45988cb1d0011ea92d45fd8970627f79510b2ce"
+  },
+  "cases/store-credit-return/oracle/before.json": {
+    "bytes": 857,
+    "sha256": "2382ffc20481abf5ceacc3ff3e0e560ae1cbe0c6813a44aab9b3d0b5b973fdea"
+  },
+  "cases/store-credit-return/oracle/certificate.json": {
+    "bytes": 2139,
+    "sha256": "ce33eb536b14546ae20b8e3aab2bb85eb26937065846dbcf927acf9533efa4c5"
+  },
+  "cases/store-credit-return/oracle/contract.json": {
+    "bytes": 2153,
+    "sha256": "f401c53c7d02503216f95c995c93ad0ac2145258ab5ce20d4970c5b71c66e3d2"
+  },
+  "cases/store-credit-return/oracle/independent_checkers.json": {
+    "bytes": 460,
+    "sha256": "d9936ceb8f4cc1fa3af3d175b86034f6b13e0be293a071edb495ed39629cdc1e"
+  },
+  "cases/store-credit-return/oracle/observations.json": {
+    "bytes": 2440,
+    "sha256": "3cba41d13269d508b1ed27cf8fb0624326adb4442d07a6f8e522fd75c46922f5"
+  },
+  "cases/store-credit-return/oracle/probes.json": {
+    "bytes": 1007,
+    "sha256": "63e8147a6c93c723145a45bef5785fefb1fd41228ad839c107d7649c3a77b061"
+  },
+  "cases/store-credit-return/oracle/strict_frame_diff.json": {
+    "bytes": 330,
+    "sha256": "8617c602aba7549574c8f479064674e761ade080268399f3d4d6373b31f2f404"
+  },
+  "cases/store-credit-return/oracle/trace.json": {
+    "bytes": 668,
+    "sha256": "8844f59d70482f9c3e4af5cfcda39953b3fe49baa7ba08cd7094f3259c67501b"
+  },
+  "cases/store-credit-return/partial/after.json": {
+    "bytes": 858,
+    "sha256": "869fd168642c0ee98f36657969c8c150b2cedbab566bf2d2559b6ee3ca84c844"
+  },
+  "cases/store-credit-return/partial/before.json": {
+    "bytes": 858,
+    "sha256": "41cee026bc425e3092d9ef88d4327c1076ef54bd104621e0768932c7f4593793"
+  },
+  "cases/store-credit-return/partial/certificate.json": {
+    "bytes": 2157,
+    "sha256": "9719576dbe18e53ce82e2e8bdbf41afc44f883f25e9bca97a0eaf30037f2b639"
+  },
+  "cases/store-credit-return/partial/contract.json": {
+    "bytes": 2153,
+    "sha256": "f401c53c7d02503216f95c995c93ad0ac2145258ab5ce20d4970c5b71c66e3d2"
+  },
+  "cases/store-credit-return/partial/independent_checkers.json": {
+    "bytes": 462,
+    "sha256": "3ff7eed6012bbb07d7fac2a34c8b336af85a025b6594e265c0054b092ce3258d"
+  },
+  "cases/store-credit-return/partial/observations.json": {
+    "bytes": 2451,
+    "sha256": "e72754582d1c142252b5dfe1edf8f9ac86d4040e08eab6af9dd46c12208038d8"
+  },
+  "cases/store-credit-return/partial/probes.json": {
+    "bytes": 1007,
+    "sha256": "63e8147a6c93c723145a45bef5785fefb1fd41228ad839c107d7649c3a77b061"
+  },
+  "cases/store-credit-return/partial/strict_frame_diff.json": {
+    "bytes": 219,
+    "sha256": "1c3bd74a578bc19b3205a3e6f5c703788234ca5408b7a0e9ac760e7db7dc2178"
+  },
+  "cases/store-credit-return/partial/trace.json": {
+    "bytes": 657,
+    "sha256": "423b033789a883d2c50c8cdf182bae14a51736b07b1bfe9a75051ac39c7b7c40"
+  },
+  "cases/store-credit-return/silent_noop/after.json": {
+    "bytes": 860,
+    "sha256": "0e04768e136816dca5d07d6333d9880e02e5225f7672dbad545d1f70bd3d0fbe"
+  },
+  "cases/store-credit-return/silent_noop/before.json": {
+    "bytes": 862,
+    "sha256": "af6c44e3ef2bcfab42d2079e1aa8408d5ebc1374eba0f1a1a934249fe7ffe3ec"
+  },
+  "cases/store-credit-return/silent_noop/certificate.json": {
+    "bytes": 2197,
+    "sha256": "823367ba6d13524170b5338ec873fe7e16240048c035831374a864e89cc0431d"
+  },
+  "cases/store-credit-return/silent_noop/contract.json": {
+    "bytes": 2153,
+    "sha256": "f401c53c7d02503216f95c995c93ad0ac2145258ab5ce20d4970c5b71c66e3d2"
+  },
+  "cases/store-credit-return/silent_noop/independent_checkers.json": {
+    "bytes": 460,
+    "sha256": "ff353a404271dde0f2d20b06ad7fe3c6d081a06182d5507bd8e0b3fb8de9be8a"
+  },
+  "cases/store-credit-return/silent_noop/observations.json": {
+    "bytes": 2489,
+    "sha256": "a84b9cd01e7a9c7a6e518503553419d111b51385cb528e108efef17cca005458"
+  },
+  "cases/store-credit-return/silent_noop/probes.json": {
+    "bytes": 1007,
+    "sha256": "63e8147a6c93c723145a45bef5785fefb1fd41228ad839c107d7649c3a77b061"
+  },
+  "cases/store-credit-return/silent_noop/strict_frame_diff.json": {
+    "bytes": 212,
+    "sha256": "3bd0f16710990d995dfd4ad3dfc48529a34c43f44d875666a33fcce108ff519b"
+  },
+  "cases/store-credit-return/silent_noop/trace.json": {
+    "bytes": 656,
+    "sha256": "f80819da2615e44973aca598ef59b4099365bafa4f2698edc7cf01865157bdce"
+  },
+  "cases/store-credit-return/unauthorized_extra/after.json": {
+    "bytes": 868,
+    "sha256": "d449f8de34a4442ca20fbd86a3baf734f78ad2502dcbbc6e1233c2084a29d9b5"
+  },
+  "cases/store-credit-return/unauthorized_extra/before.json": {
+    "bytes": 869,
+    "sha256": "66bb3d6dce9328e21107f01fc84daf616f2bc2afd5f675f13c3a1499d519d7ec"
+  },
+  "cases/store-credit-return/unauthorized_extra/certificate.json": {
+    "bytes": 2257,
+    "sha256": "10c70d295c3467a62334a02f9738160738e84696b1096e3c8a81158c55b61e7b"
+  },
+  "cases/store-credit-return/unauthorized_extra/contract.json": {
+    "bytes": 2153,
+    "sha256": "f401c53c7d02503216f95c995c93ad0ac2145258ab5ce20d4970c5b71c66e3d2"
+  },
+  "cases/store-credit-return/unauthorized_extra/independent_checkers.json": {
+    "bytes": 460,
+    "sha256": "d9936ceb8f4cc1fa3af3d175b86034f6b13e0be293a071edb495ed39629cdc1e"
+  },
+  "cases/store-credit-return/unauthorized_extra/observations.json": {
+    "bytes": 2560,
+    "sha256": "47118e9d4b2b603c652cd0355b0f1ef3eae38c15d15acb9768e8eff18889329c"
+  },
+  "cases/store-credit-return/unauthorized_extra/probes.json": {
+    "bytes": 1007,
+    "sha256": "63e8147a6c93c723145a45bef5785fefb1fd41228ad839c107d7649c3a77b061"
+  },
+  "cases/store-credit-return/unauthorized_extra/strict_frame_diff.json": {
+    "bytes": 439,
+    "sha256": "fc16abcb15cb5a94c44a30bec7c6d20677c241624f02783d4d21fc18c44ffaac"
+  },
+  "cases/store-credit-return/unauthorized_extra/trace.json": {
+    "bytes": 818,
+    "sha256": "c751b771df5e6ef0514e078366dafe5ef4747fe002910f51876d75953e16fe3e"
+  },
+  "certificate_replay_check.json": {
+    "bytes": 2457,
+    "sha256": "66ec49001313778d4f2423e47b1f7eb869466ffafa9d775ffeba8a29cace3c50"
+  },
+  "episode_results.csv": {
+    "bytes": 5010,
+    "sha256": "a7ec5aaea91898353b5e4f2307daccfd20d73abec951cfc7ff22029c29514f70"
+  },
+  "experiment_summary.json": {
+    "bytes": 1509,
+    "sha256": "af5f5246fbf9470c16796ecf20ee233052c667afd7c3b9579760cd7fbe30cfc3"
+  },
+  "inspection_ablation_results.csv": {
+    "bytes": 8972,
+    "sha256": "f5022b91dd1f784ad0ba2e5061ac50bdcf6c9c826c40b38c58b92bdf00bd3a34"
+  },
+  "source_and_protocol.json": {
+    "bytes": 1166,
+    "sha256": "bb50853ec1ff51c9c83b381e8a8677c6bb03c7690574d3f1fec4621d64c221f8"
+  }
+}

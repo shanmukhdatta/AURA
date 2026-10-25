@@ -1,70 +1,59 @@
 # AURA — Agent Uncertainty and Residue Arbiter
 
-Evidence-gated verification of multi-step AI-agent task completion. AURA verifies agents via task contracts, online state snapshot pairs, strict closed-world frame policies, noninterfering probes, and mathematically sound `PASS` / `FAIL` / `UNCERTAIN` certificates.
+**Evidence-gated verification for multi-step AI agents operating over persistent state.**
 
----
+AURA checks required task postconditions, closed-world allowlisted mutations, required process/tool evidence, and sufficiency of independent observations. It emits a structured **PASS / FAIL / UNCERTAIN** certificate linked to preserved evidence. The prototype is implemented primarily in Python/SQLite.
 
-## 📄 Publication Manuscript & Research Package
+> **Research evidence release:** This tree is a **consolidation bundle constructed from preserved ChatGPT workspace, Antigravity handoff, and Kaggle export files**. It is intended to be overlaid onto the existing GitHub `feature/external-validation-pipeline` branch. It is not itself evidence that GitHub has already received these added files. The previous GitHub branch's unmodified files must be retained when merging this bundle. No new LLM training or episode executions were performed during packaging.
 
-- **Full Publication Manuscript (Markdown)**: [`paper/MANUSCRIPT.md`](paper/MANUSCRIPT.md)
-- **LaTeX Source**: [`paper/main.tex`](paper/main.tex) and [`paper/references.bib`](paper/references.bib)
-- **Automated Research Tables**: [`paper/tables/`](paper/tables/) (Generated via `python paper/generate_research_tables.py`)
-- **Reproducibility Guide**: [`paper/REPRODUCIBILITY.md`](paper/REPRODUCIBILITY.md)
-- **GitHub Pull Request**: [Draft PR #1: Stage 8.3 External Verification](https://github.com/shanmukhdatta/AURA/pull/1)
-- **Feature Branch**: [`feature/stage-8-3-external-verification`](https://github.com/shanmukhdatta/AURA/tree/feature/stage-8-3-external-verification)
+## Quick navigation
 
----
+| Location | What is here |
+|---|---|
+| [`AURA_Stage7/`](AURA_Stage7/) | Latest locally recoverable core verifier, schemas, evidence capture, CERA planner, baselines, tests |
+| [`aura_validation/`](aura_validation/) | External reference scoring, certificate replay, integrity and cohort validation |
+| [`prototype/`](prototype/) | Stage 1–7 implementation histories, original formal/design reports |
+| [`experiments/`](experiments/) | Per-cohort source links, saved evidence, logs, notebooks, snapshots and results |
+| [`evidence/`](evidence/) | Every original file and extracted ZIP member indexed with SHA256 and source paths |
+| [`integrity/`](integrity/) | Independent archive hash and link checking scripts, original integrity receipts |
+| [`results/`](results/) | Readable research tables, experiment summaries and non-interference evidence |
+| [`reproducibility/`](reproducibility/) | CPU replay, Kaggle guidance, environment and exact test execution logs |
+| [`archive/`](archive/) | Byte-preserved original ZIPs, historical notebooks, research reports, superseded runs |
+| [`paper/`](paper/) | Preliminary manuscript draft and table-to-evidence conventions |
 
-## 🔬 Evidence Status & Empirical Summary (October 2026)
+## Recorded evaluation status (not a new measurement)
 
-- **Stages 0–7 (Core Verifier & Planning Engine)**: Formally specified and tested. 193 core regression tests pass cleanly on clean rerun (1 skipped on Windows non-admin symlink creation).
-- **Stage 8.1 (AppWorld Exploratory Study)**: Evaluated 3 official AppWorld tasks with official native evaluations.
-- **Stage 8.2 (Controlled Fault Injection)**: 36 scripted episodes across 6 tasks from clean replication. 100% agreement with predesigned control expectations (6 PASS, 24 FAIL, 6 UNCERTAIN; 3/3 negative tampering controls REJECTED).
-- **Stage 8.3 (External Agent Benchmark Verification - Completed & Audited)**:
-  - Official AgentSynth harness validated at pinned commit `d2564dfb25`: oracle 14/14 (100%), noop 0/14 (0%).
-  - 14 frozen contracts with strict cell-level closed-world allowlists.
-  - Genuine local multi-turn LLM inference on CPU with `Qwen/Qwen2.5-0.5B-Instruct` (5 tasks, seed 42): 1 PASS (20%), 4 FAIL (80%).
-  - Genuine GPU multi-turn LLM inference on Kaggle T4 with `Qwen/Qwen2.5-3B-Instruct` (5 tasks, seed 42): 3 PASS (60%), 2 FAIL (40%).
-  - **100% Sound Lower Bound**: Zero false PASS, zero false FAIL across all 46 evaluated episodes (10 genuine LLM runs + 36 scripted controls) against blinded independent ground truth.
-  - **Benchmark Gaming Case Study**: Caught critical substring loophole in standard AgentSynth checkers (`refuse-cancel-shipped`), where an agent recommending order cancellation was falsely awarded 1.0 by naive substring matching, but soundly failed by AURA.
+The uploaded Antigravity validation receipts report 59 certified episodes: 13 local scripted cases, 36 controlled AgentSynth SQL cases, five genuine Qwen2.5-0.5B agent runs, and five genuine Qwen2.5-3B agent runs. The recorded validator reproduced 59/59 certificates; its test log reports 224 passed, one skipped. Separately, four Stage 8.1 local Qwen cases and three official AppWorld development evaluations are preserved, but the three AppWorld cases have **no AURA certificates**. Stage 7 planning-world evaluations are not agent episodes.
 
----
+**Limitations:** Reference agreement is measured against contract-based references sharing specifications with AURA, not a proof of universal soundness. Hash/certificate replay establishes deterministic consistency under the available evidence, not external authenticated signing. The CPU and Kaggle Qwen studies have different task sets and turn budgets, so must not be compared as a controlled model-size study.
 
-## 📊 Summary Benchmark Results
+## CPU reproducibility
 
-| Evaluation Cohort | Model / System | Hardware | N | Benchmark SQL Pass | Strict Ground Truth | AURA Verified | False PASS | False FAIL | Concordance |
-|---|---|---|---|---|---|---|---|---|---|
-| **Genuine LLM (0.5B)** | Qwen2.5-0.5B-Instruct | CPU (x86_64) | 5 | 2/5 (40.0%) | 1/5 (20.0%) | **1/5 (20.0%)** | **0 / 5 (0.0%)** | **0 / 5 (0.0%)** | **100.0%** |
-| **Genuine LLM (3B)** | Qwen2.5-3B-Instruct | T4 GPU (CUDA) | 5 | 3/5 (60.0%) | 3/5 (60.0%) | **3/5 (60.0%)** | **0 / 5 (0.0%)** | **0 / 5 (0.0%)** | **100.0%** |
-| **Scripted Controls** | Deterministic Fault Harness | CPU | 36 | 6/36 (16.7%) | 6/36 (16.7%) | **6/36 (16.7%)** | **0 / 36 (0.0%)** | **0 / 36 (0.0%)** | **100.0%** |
-
----
-
-## ⚡ Quickstart & Replication
-
-### 1. Run Complete Test Suite (212 Tests)
-```bash
-pytest AURA_Stage7/tests stage83/tests -v
+```sh
+python integrity/verify_archives.py
+python integrity/verify_archive_members.py
+python integrity/verify_workspace_files.py
+python integrity/verify_evidence_links.py
+python -m aura_validation.runner
+python -m pytest AURA_Stage7/tests tests/test_validation_pipeline.py -q
 ```
 
-### 2. Regenerate All Publication Research Tables
-```bash
-python paper/generate_research_tables.py
-```
+The last two commands use the most recent Antigravity code and may depend on compatibility with the existing upstream repository. See [`reproducibility/README.md`](reproducibility/README.md) and the original pinned environment logs before comparing output counts. **Replaying evidence does not re-run GPU language-model generation**.
 
-### 3. Replay Certificates and Audit Independent References
-```bash
-python stage83/independent_reference.py
-python stage83/run_g4_analysis.py
-```
+## Research navigation
 
----
+- [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) — module responsibilities and complete verification path.
+- [`docs/EXPERIMENT_INDEX.md`](docs/EXPERIMENT_INDEX.md) — separation of all cohorts, sample sizes and scoring concepts.
+- [`docs/PROVENANCE_AND_LIMITATIONS.md`](docs/PROVENANCE_AND_LIMITATIONS.md) — original versus consolidated sources, disclosures, and missing data policy.
+- [`prototype/README.md`](prototype/README.md) — historical development and runnable source layout.
+- [`archive/README.md`](archive/README.md) — rules for byte-preserving the original work.
+- [`paper/README.md`](paper/README.md) — manuscript and result evidence pointers.
 
-## 🛡️ Research Ethics & Provenance
-AURA enforces non-negotiable scientific integrity rules:
-1. Scripted fault-injection controls are strictly segregated from natural LLM rollouts.
-2. Missing or denied evidence fails closed with `UNCERTAIN` rather than false certification.
-3. Every certificate cites raw pre- and post-execution SQLite snapshot digests verified for noninterference.
+## Provenance and GitHub branches
 
-Benchmark source: [AgentSynth](https://github.com/agentsynth/agentsynth) (`packs/core_v2.yaml`), MIT License.
-Repository: https://github.com/shanmukhdatta/AURA
+Original GitHub repository: https://github.com/shanmukhdatta/AURA  
+Original validation PR: https://github.com/shanmukhdatta/AURA/pull/2  
+Original validation fix commit: `b1e814ff1a05aac5846cc3637b98308d2053d475`.  
+Do not overwrite or force-push the original commit history. See `CONSOLIDATION_AND_PUSH.md` for a safe workflow.
+
+Historical notebooks, scripts and database files remain **original evidence**, with experimental status and exact checksums described in machine-readable manifests. No missing historical experiment is silently assigned a reconstructed output.

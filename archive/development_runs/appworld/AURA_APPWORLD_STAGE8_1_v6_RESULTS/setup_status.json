@@ -1,0 +1,6 @@
+{
+  "ready_for_native_agent": false,
+  "failure_phase": "appworld_dev_task_index",
+  "appworld_version": null,
+  "first_world_and_native_evaluator_passed": false
+}

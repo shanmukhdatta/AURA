@@ -1,0 +1,6 @@
+task_id,run_id,state,sql_tool_calls,aura_verdict,reproduced_full_published_checker_pass,certificate_replay,snapshot_noninterference,trajectory_wall_seconds,error
+raise-ticket-priority,qwen3b_real_raise-ticket-priority_seed42,EXECUTED_AND_AURA_EVALUATED,2,PASS,True,True,True,3.8083,
+clearance-discount,qwen3b_real_clearance-discount_seed42,EXECUTED_AND_AURA_EVALUATED,1,PASS,True,True,True,2.0184,
+dedup-keep-latest,qwen3b_real_dedup-keep-latest_seed42,EXECUTED_AND_AURA_EVALUATED,2,PASS,True,True,True,2.953,
+cancel-and-void-payment,qwen3b_real_cancel-and-void-payment_seed42,EXECUTED_AND_AURA_EVALUATED,4,FAIL,False,True,True,5.3683,
+refund-and-restock,qwen3b_real_refund-and-restock_seed42,EXECUTED_AND_AURA_EVALUATED,6,FAIL,False,True,True,18.0364,

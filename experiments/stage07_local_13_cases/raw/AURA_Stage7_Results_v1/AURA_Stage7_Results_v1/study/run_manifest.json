@@ -1,0 +1,24 @@
+{
+  "stage": 7,
+  "study": "controlled_paired_finite_world_inspection_study",
+  "author_generated_tasks": 48,
+  "declared_prior_regimes": [
+    "uniform",
+    "clean_50",
+    "clean_90"
+  ],
+  "world_policy_evaluations": 14400,
+  "task_policy_summaries": 720,
+  "observation_boundary_controls": 36,
+  "budget_ablation_points": 288,
+  "scaling_runs": 15,
+  "computational_cost_note": "Synthetic cost units for the 48-task policy study; actual measured planner runtime only in scaling_stress.csv. Shared snapshot expense excluded from synthetic costs and must be added for operational comparisons.",
+  "prior_note": "Prior assumptions are authored for sensitivity testing and are NOT trained/calibrated from agent data.",
+  "ground_truth_note": "The synthetic oracle knows the actual finite-world index; policies see only declared model and selected probe outcomes.",
+  "external_agent_trajectories_evaluated": 0,
+  "official_agentdiff_scores": 0,
+  "official_appworld_scores": 0,
+  "bootstrap_note": "Templates are authored and correlated; bootstrap intervals reflect only this design set and are NOT external population confidence intervals.",
+  "runtime_seconds": 14.234,
+  "reproduction_command": "python reproduce_stage7.py --out ./new_stage7_results"
+}

@@ -1,0 +1,93 @@
+{
+  "schema_version": "1.0",
+  "certificate_id": "certificate.example.success",
+  "run_id": "run.01_complete_success",
+  "contract_id": "contract.01_complete_success",
+  "contract_sha256": "03a4f6826798da4effb7b950b1c64d4a851267ab93378e9bb1598a85e667b843",
+  "epoch_id": "run.epoch.20261024",
+  "mode": "bounded_exact",
+  "verdict": "PASS",
+  "decision_status": "normal",
+  "reason_codes": [
+    "all_obligations_established"
+  ],
+  "obligation_results": [
+    {
+      "obligation_id": "marks_correct",
+      "truth": "pass",
+      "reason_code": "witnessed_true",
+      "evidence_refs": [
+        "obs.01_complete_success.student_state.0"
+      ]
+    },
+    {
+      "obligation_id": "exact_record_count",
+      "truth": "pass",
+      "reason_code": "witnessed_true",
+      "evidence_refs": [
+        "obs.01_complete_success.student_state.0"
+      ]
+    },
+    {
+      "obligation_id": "report_exists",
+      "truth": "pass",
+      "reason_code": "witnessed_true",
+      "evidence_refs": [
+        "obs.01_complete_success.report_state.0"
+      ]
+    },
+    {
+      "obligation_id": "report_matches_database",
+      "truth": "pass",
+      "reason_code": "witnessed_true",
+      "evidence_refs": [
+        "obs.01_complete_success.report_state.0"
+      ]
+    },
+    {
+      "obligation_id": "no_unauthorized_mutation",
+      "truth": "pass",
+      "reason_code": "witnessed_true",
+      "evidence_refs": [
+        "obs.01_complete_success.full_frame_diff.0"
+      ]
+    },
+    {
+      "obligation_id": "validation_before_update",
+      "truth": "pass",
+      "reason_code": "witnessed_true",
+      "evidence_refs": [
+        "obs.01_complete_success.validation_trace.0"
+      ]
+    }
+  ],
+  "inspection_ids": [
+    "student_state",
+    "report_state",
+    "full_frame_diff",
+    "validation_trace"
+  ],
+  "evidence_refs": [
+    "obs.01_complete_success.student_state.0",
+    "obs.01_complete_success.report_state.0",
+    "obs.01_complete_success.full_frame_diff.0",
+    "obs.01_complete_success.validation_trace.0"
+  ],
+  "verified_frame_surfaces": [
+    "sqlite.students",
+    "filesystem.reports"
+  ],
+  "unresolved_obligation_ids": [],
+  "costs": {
+    "capture_latency_ms": 13.0,
+    "inspection_latency_ms": 26.0,
+    "planner_latency_ms": 2.0,
+    "bytes_read": 101900
+  },
+  "trust_assumptions": [
+    "Read-only probes independently observe the quiescent sandbox.",
+    "Frame snapshot pair consistently covers both declared mutable surfaces.",
+    "Reviewed contract represents the complete in-scope task requirements."
+  ],
+  "created_at": "2026-10-24T14:49:00Z"
+}

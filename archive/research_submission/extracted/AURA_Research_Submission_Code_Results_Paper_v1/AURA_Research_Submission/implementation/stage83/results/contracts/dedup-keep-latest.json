@@ -1,0 +1,90 @@
+{
+  "schema_version": "1.0",
+  "contract_id": "agentsynth.dedup_keep_latest",
+  "contract_version": "1.0.0",
+  "task_description": "The email m@x.io appears twice in contacts. Keep only the most recently updated row for it and delete the older duplicate. Don't touch k@x.io.",
+  "surfaces": [
+    {
+      "surface_id": "sqlite.contacts",
+      "kind": "sqlite",
+      "mutable": true,
+      "scope": "contacts table with all columns and rows",
+      "observation_boundary": "full",
+      "consistency_domain": "run.epoch"
+    },
+    {
+      "surface_id": "trace.tools",
+      "kind": "trace",
+      "mutable": false,
+      "scope": "trusted tool invocation order",
+      "observation_boundary": "full",
+      "consistency_domain": "run.epoch"
+    }
+  ],
+  "frame_policy": {
+    "policy": "closed_world",
+    "declared_mutation_surfaces": [
+      "sqlite.contacts"
+    ],
+    "required_coverage_method": "snapshot_pair",
+    "allowed_effects": [
+      {
+        "surface_id": "sqlite.contacts",
+        "operation": "update",
+        "target_pattern": "authorized_row_fields_policy:contacts"
+      }
+    ]
+  },
+  "obligations": [
+    {
+      "id": "checker_0",
+      "description": "SQL state check: SELECT COUNT(*) FROM contacts WHERE email='m@x.io'",
+      "category": "outcome",
+      "surface_id": "sqlite.contacts",
+      "predicate": {
+        "operator": "eq",
+        "fact_key": "sql.checker_0",
+        "expected": 1
+      },
+      "required_complete_coverage": []
+    },
+    {
+      "id": "checker_1",
+      "description": "SQL state check: SELECT id FROM contacts WHERE email='m@x.io'",
+      "category": "outcome",
+      "surface_id": "sqlite.contacts",
+      "predicate": {
+        "operator": "eq",
+        "fact_key": "sql.checker_1",
+        "expected": 3
+      },
+      "required_complete_coverage": []
+    },
+    {
+      "id": "checker_2",
+      "description": "SQL state check: SELECT COUNT(*) FROM contacts",
+      "category": "outcome",
+      "surface_id": "sqlite.contacts",
+      "predicate": {
+        "operator": "eq",
+        "fact_key": "sql.checker_2",
+        "expected": 2
+      },
+      "required_complete_coverage": []
+    },
+    {
+      "id": "no_unauthorized_mutation",
+      "description": "Absence of persistent modifications outside predeclared task allowlist",
+      "category": "frame",
+      "surface_id": "sqlite.contacts",
+      "predicate": {
+        "operator": "count_eq",
+        "fact_key": "mutation.out_of_frame_count",
+        "expected": 0
+      },
+      "required_complete_coverage": [
+        "sqlite.contacts"
+      ]
+    }
+  ]
+}

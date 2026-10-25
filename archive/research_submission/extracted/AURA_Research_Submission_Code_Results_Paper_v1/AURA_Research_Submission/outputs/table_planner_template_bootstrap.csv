@@ -1,0 +1,4 @@
+regime,comparison,templates,mean_cost_difference,bootstrap_95_low,bootstrap_95_high,fraction_templates_better,interpretation
+uniform,cera_minus_greedy,48,-1.1224240451458332,-1.56441179471875,-0.7385279188911459,0.7916666666666666,"resampling authored templates, not population inference"
+clean_50,cera_minus_greedy,48,-0.15129856047916654,-0.4350566240328124,0.09945836276666709,0.5208333333333334,"resampling authored templates, not population inference"
+clean_90,cera_minus_greedy,48,0.7138736213333335,0.19837387913854188,1.2453582864281256,0.3958333333333333,"resampling authored templates, not population inference"

@@ -1,0 +1,65 @@
+{
+  "method": "REPRODUCED_PUBLISHED_CHECKERS_NOT_OFFICIAL_AGENTSYNTH_RUNNER",
+  "all_matched": true,
+  "passed_count": 3,
+  "total_count": 3,
+  "checks": [
+    {
+      "index": 0,
+      "kind": "sql",
+      "matched": true,
+      "observed": [
+        [
+          1
+        ]
+      ],
+      "reference_spec": {
+        "kind": "sql",
+        "query": "SELECT COUNT(*) FROM contacts WHERE email='m@x.io'",
+        "equals": [
+          [
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "index": 1,
+      "kind": "sql",
+      "matched": true,
+      "observed": [
+        [
+          3
+        ]
+      ],
+      "reference_spec": {
+        "kind": "sql",
+        "query": "SELECT id FROM contacts WHERE email='m@x.io'",
+        "equals": [
+          [
+            3
+          ]
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "kind": "sql",
+      "matched": true,
+      "observed": [
+        [
+          2
+        ]
+      ],
+      "reference_spec": {
+        "kind": "sql",
+        "query": "SELECT COUNT(*) FROM contacts",
+        "equals": [
+          [
+            2
+          ]
+        ]
+      }
+    }
+  ]
+}

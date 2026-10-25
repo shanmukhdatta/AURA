@@ -1,0 +1,1 @@
+{"actual_agent_rollout":false,"epoch_id":"epoch.stage7.missing_report_and_collateral","harness_expected_contract_verdict":"FAIL","run_id":"run.stage7.missing_report_and_collateral","scenario":"missing_report_and_collateral","snapshot_capture_bytes_read":592,"snapshot_capture_latency_ms":3.08826,"transient_dirty_write_outside_existing_task_contract":false}

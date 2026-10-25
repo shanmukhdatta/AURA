@@ -1,0 +1,122 @@
+{
+  "gate": "G1",
+  "status": "PASS",
+  "audit_timestamp": "2026-10-25T11:58:00Z",
+  "upstream_provenance": {
+    "repository_url": "https://github.com/agentsynth/agentsynth",
+    "pinned_full_commit_sha": "d2564dfb25ed7ba32e367d28117e6afd1ee6c485",
+    "commit_date": "2026-07-10T18:25:04+07:00",
+    "license": "MIT License (Copyright (c) 2026 agentsynth)",
+    "pack_files": {
+      "packs/core_v2.yaml": {
+        "sha256": "3b5ea231d22e2a53ac02a5880e35e62bdb105d2dc4975b60f2363ea005a4034c",
+        "size_bytes": 12661,
+        "git_blob_sha": "d2bee0100fc46c58bbbe73b94d921b3e6c9f7a7a"
+      },
+      "packs/core_v2_oracle.py": {
+        "sha256": "eda7d75aa54a6b151ce8b5eb4ee78b58dff44ac754e17dddc04bd4810b70a46d",
+        "size_bytes": 5410,
+        "git_blob_sha": "942c296fadd47c7ec335355af39de05db9f7024a"
+      }
+    }
+  },
+  "official_cli_syntax": {
+    "entry_point": "agentsynth",
+    "validate_command": "agentsynth pack validate <pack_path>",
+    "bench_command": "agentsynth bench --pack <pack_path> --policy <policy_ref> --json <output_path>"
+  },
+  "official_validation_gate": {
+    "executed_command": "agentsynth pack validate _deps/agentsynth/packs/core_v2.yaml",
+    "exit_code": 0,
+    "verdict": "PACK OK",
+    "details": {
+      "schema": "14 scenarios, unique ids [ok]",
+      "oracle_passes": "14/14 [ok]",
+      "deterministic": "true [ok]",
+      "lazy_guard": "do-nothing policy passes 0/14 [ok]",
+      "robustness": "86% (warn: refuse-cancel-shipped, refuse-wipe-audit-log gameable by silence)"
+    }
+  },
+  "official_benchmark_runs": {
+    "oracle": {
+      "command": "agentsynth bench --pack _deps/agentsynth/packs/core_v2.yaml --policy packs.core_v2_oracle:solve --json stage83/results/g1_oracle_bench.json",
+      "exit_code": 0,
+      "scenarios_passed": 14,
+      "scenarios_total": 14,
+      "pass_rate": 1.0,
+      "run_hash": "0d95bd82867d081a",
+      "pack_hash": "760aa69db0f18c3d",
+      "json_report": "stage83/results/g1_oracle_bench.json"
+    },
+    "noop": {
+      "command": "agentsynth bench --pack _deps/agentsynth/packs/core_v2.yaml --policy agentsynth.robustness:noop_policy --json stage83/results/g1_noop_bench.json",
+      "exit_code": 0,
+      "scenarios_passed": 0,
+      "scenarios_total": 14,
+      "pass_rate": 0.0,
+      "run_hash": "ceb990ebb4d5ce69",
+      "pack_hash": "760aa69db0f18c3d",
+      "json_report": "stage83/results/g1_noop_bench.json"
+    }
+  },
+  "task_taxonomy_14_scenarios": {
+    "pure_sql_state_only": [
+      "raise-ticket-priority",
+      "clearance-discount",
+      "dedup-keep-latest",
+      "refund-and-restock",
+      "cancel-and-void-payment",
+      "store-credit-return",
+      "reconcile-stock"
+    ],
+    "mixed_sql_and_answer_refusal": [
+      "refuse-cancel-shipped",
+      "refund-if-eligible",
+      "deactivate-stale-users",
+      "payroll-cap",
+      "refuse-wipe-audit-log"
+    ],
+    "pure_query_and_answer": [
+      "count-open-tickets",
+      "top-customer-spend"
+    ]
+  },
+  "preregistered_smoke_selection_5_tasks": [
+    {
+      "task_id": "raise-ticket-priority",
+      "tier": "easy",
+      "nature": "single-table SQL state update (tickets)",
+      "allowed_write": "tickets: {3: ['priority']}"
+    },
+    {
+      "task_id": "refuse-cancel-shipped",
+      "tier": "easy",
+      "nature": "refusal / policy compliance (read-only query + text answer)",
+      "allowed_write": "read-only / none"
+    },
+    {
+      "task_id": "clearance-discount",
+      "tier": "medium",
+      "nature": "multi-row conditional price reduction (products)",
+      "allowed_write": "products: {1: ['price']}"
+    },
+    {
+      "task_id": "dedup-keep-latest",
+      "tier": "medium",
+      "nature": "database row deduplication deletion (contacts)",
+      "allowed_write": "contacts: {1: ['deleted_row']}"
+    },
+    {
+      "task_id": "refund-and-restock",
+      "tier": "hard",
+      "nature": "multi-table business transaction (orders, order_items, inventory)",
+      "allowed_write": "orders: {5: ['status']}, inventory: {'W-100': ['stock'], 'G-200': ['stock']}"
+    }
+  ],
+  "contract_freeze": {
+    "contracts_directory": "stage83/results/contracts",
+    "manifest_file": "stage83/results/contracts/frozen_contracts_manifest.json",
+    "frozen_count": 14,
+    "status": "FROZEN_BEFORE_MODEL_EVALUATION"
+  }
+}

@@ -1,0 +1,143 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aura.local/schemas/reasoning-ledger-v1.schema.json",
+  "title": "AURA Stage 4 Reasoning Ledger",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "reasoner": {
+      "const": "finite_world_enumeration"
+    },
+    "model_id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_.-]*$"
+    },
+    "model_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "contract_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "run_id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_.-]*$"
+    },
+    "epoch_id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_.-]*$"
+    },
+    "graph": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "observed_fact_keys": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z][a-z0-9_.-]*$"
+      }
+    },
+    "conflicted_fact_keys": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z][a-z0-9_.-]*$"
+      }
+    },
+    "assumption_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "model_domain_size": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "compatible_world_count": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "satisfying_world_count": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "failing_world_count": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "success_witness": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "failure_witness": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "conservative_verdict": {
+      "enum": [
+        "PASS",
+        "FAIL",
+        "UNCERTAIN"
+      ]
+    },
+    "bounded_verdict": {
+      "enum": [
+        "PASS",
+        "FAIL",
+        "UNCERTAIN"
+      ]
+    },
+    "limitation": {
+      "type": "string"
+    },
+    "stage4_reasoning_latency_ms": {
+      "type": "number",
+      "minimum": 0
+    }
+  },
+  "required": [
+    "schema_version",
+    "reasoner",
+    "model_id",
+    "model_sha256",
+    "contract_sha256",
+    "run_id",
+    "epoch_id",
+    "graph",
+    "observed_fact_keys",
+    "conflicted_fact_keys",
+    "assumption_count",
+    "model_domain_size",
+    "compatible_world_count",
+    "satisfying_world_count",
+    "failing_world_count",
+    "success_witness",
+    "failure_witness",
+    "conservative_verdict",
+    "bounded_verdict",
+    "limitation",
+    "stage4_reasoning_latency_ms"
+  ]
+}

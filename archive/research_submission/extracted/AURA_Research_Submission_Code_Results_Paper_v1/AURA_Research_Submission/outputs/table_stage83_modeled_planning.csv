@@ -1,0 +1,5 @@
+policy,domains_evaluated,worlds_evaluated_per_policy,avg_probes,avg_probe_cost_units,avg_planner_latency_ms,decisive_rate,false_pass_rate,false_fail_rate,policy_regime,notes
+cera,4,64,1.88,3.25,0.3709,1.0,0.0,0.0,"Advantageous when probe execution cost > 10ms (distributed I/O, heavy sandboxes)",Counterexample-guided risk-amortized. Minimizes probe count on counterexamples.
+greedy,4,64,1.88,3.25,0.0736,1.0,0.0,0.0,Recommended for fast local databases where planner overhead matters,"Greedy 1-step variance reduction. Fast planning, low overhead."
+fixed,4,64,1.88,3.375,0.0451,1.0,0.0,0.0,Suboptimal probe efficiency; fixed order regardless of observations,"Static pre-ordered sequence. Zero planning overhead, but executes unneeded probes."
+exhaustive,4,64,6.0,29.2,0.0895,1.0,0.0,0.0,Worst efficiency; evaluates all probes even after decisive failure,Full complete inspection. Always evaluates every probe regardless of intermediate verdict.

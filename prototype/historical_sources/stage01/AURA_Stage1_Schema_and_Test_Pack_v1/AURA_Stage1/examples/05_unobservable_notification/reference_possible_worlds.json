@@ -1,0 +1,142 @@
+{
+  "model_version": "1.0",
+  "case_id": "05_unobservable_notification",
+  "scope_note": "Finite abstract candidate-world fixture for reference semantics. Not a full model of all SQLite states.",
+  "worlds": [
+    {
+      "world_id": "world.05_unobservable_notification.actual",
+      "facts": {
+        "student.101.marks": 85,
+        "student.101.matching_count": 1,
+        "report.101.exists": true,
+        "report.101.matches_db": true,
+        "mutation.out_of_frame_count": 0,
+        "trace.validation_before_update": true,
+        "external.notify.confirmed": true,
+        "mutation.transient_out_of_frame_count": 0,
+        "mutation.external_ledger_out_of_frame_count": 0
+      },
+      "description": "possible world permitted by the declared abstract model"
+    },
+    {
+      "world_id": "world.05_unobservable_notification.counterfactual_marks_correct",
+      "facts": {
+        "student.101.marks": 90,
+        "student.101.matching_count": 1,
+        "report.101.exists": true,
+        "report.101.matches_db": true,
+        "mutation.out_of_frame_count": 0,
+        "trace.validation_before_update": true,
+        "external.notify.confirmed": true,
+        "mutation.transient_out_of_frame_count": 0,
+        "mutation.external_ledger_out_of_frame_count": 0
+      },
+      "description": "contract-relevant alternative world; not leaked as actual world truth"
+    },
+    {
+      "world_id": "world.05_unobservable_notification.counterfactual_exact_record_count",
+      "facts": {
+        "student.101.marks": 85,
+        "student.101.matching_count": 2,
+        "report.101.exists": true,
+        "report.101.matches_db": true,
+        "mutation.out_of_frame_count": 0,
+        "trace.validation_before_update": true,
+        "external.notify.confirmed": true,
+        "mutation.transient_out_of_frame_count": 0,
+        "mutation.external_ledger_out_of_frame_count": 0
+      },
+      "description": "contract-relevant alternative world; not leaked as actual world truth"
+    },
+    {
+      "world_id": "world.05_unobservable_notification.counterfactual_report_exists",
+      "facts": {
+        "student.101.marks": 85,
+        "student.101.matching_count": 1,
+        "report.101.exists": false,
+        "report.101.matches_db": true,
+        "mutation.out_of_frame_count": 0,
+        "trace.validation_before_update": true,
+        "external.notify.confirmed": true,
+        "mutation.transient_out_of_frame_count": 0,
+        "mutation.external_ledger_out_of_frame_count": 0
+      },
+      "description": "contract-relevant alternative world; not leaked as actual world truth"
+    },
+    {
+      "world_id": "world.05_unobservable_notification.counterfactual_report_matches_database",
+      "facts": {
+        "student.101.marks": 85,
+        "student.101.matching_count": 1,
+        "report.101.exists": true,
+        "report.101.matches_db": false,
+        "mutation.out_of_frame_count": 0,
+        "trace.validation_before_update": true,
+        "external.notify.confirmed": true,
+        "mutation.transient_out_of_frame_count": 0,
+        "mutation.external_ledger_out_of_frame_count": 0
+      },
+      "description": "contract-relevant alternative world; not leaked as actual world truth"
+    },
+    {
+      "world_id": "world.05_unobservable_notification.counterfactual_no_unauthorized_mutation",
+      "facts": {
+        "student.101.marks": 85,
+        "student.101.matching_count": 1,
+        "report.101.exists": true,
+        "report.101.matches_db": true,
+        "mutation.out_of_frame_count": 1,
+        "trace.validation_before_update": true,
+        "external.notify.confirmed": true,
+        "mutation.transient_out_of_frame_count": 0,
+        "mutation.external_ledger_out_of_frame_count": 0
+      },
+      "description": "contract-relevant alternative world; not leaked as actual world truth"
+    },
+    {
+      "world_id": "world.05_unobservable_notification.counterfactual_validation_before_update",
+      "facts": {
+        "student.101.marks": 85,
+        "student.101.matching_count": 1,
+        "report.101.exists": true,
+        "report.101.matches_db": true,
+        "mutation.out_of_frame_count": 0,
+        "trace.validation_before_update": false,
+        "external.notify.confirmed": true,
+        "mutation.transient_out_of_frame_count": 0,
+        "mutation.external_ledger_out_of_frame_count": 0
+      },
+      "description": "contract-relevant alternative world; not leaked as actual world truth"
+    },
+    {
+      "world_id": "world.05_unobservable_notification.counterfactual_notification_confirmed",
+      "facts": {
+        "student.101.marks": 85,
+        "student.101.matching_count": 1,
+        "report.101.exists": true,
+        "report.101.matches_db": true,
+        "mutation.out_of_frame_count": 0,
+        "trace.validation_before_update": true,
+        "external.notify.confirmed": false,
+        "mutation.transient_out_of_frame_count": 0,
+        "mutation.external_ledger_out_of_frame_count": 0
+      },
+      "description": "contract-relevant alternative world; not leaked as actual world truth"
+    },
+    {
+      "world_id": "world.05_unobservable_notification.notify_failed",
+      "facts": {
+        "student.101.marks": 85,
+        "student.101.matching_count": 1,
+        "report.101.exists": true,
+        "report.101.matches_db": true,
+        "mutation.out_of_frame_count": 0,
+        "trace.validation_before_update": true,
+        "external.notify.confirmed": false,
+        "mutation.transient_out_of_frame_count": 0,
+        "mutation.external_ledger_out_of_frame_count": 0
+      },
+      "description": "same observable evidence; hidden notification differs"
+    }
+  ]
+}

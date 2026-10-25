@@ -1,0 +1,2 @@
+{"method": "post", "url": "/supervisor/message", "data": {"answer": ["Don't Stop Me Now - Queen", "Titanium - David Guetta ft. Sia", "Can't Stop The Feeling! - Justin Timberlake", "Uptown Funk - Mark Ronson ft. Bruno Mars", "Shape Of You - Ed Sheeran", "Sugar - Maroon 5 ft. Kesha"]}}
+{"method": "post", "url": "/supervisor/message", "data": {"answer": "Don't Stop Me Now - Queen, Titanium - David Guetta ft. Sia, Can't Stop The Feeling! - Justin Timberlake, Uptown Funk - Mark Ronson ft. Bruno Mars, Shape Of You - Ed Sheeran, Sugar - Maroon 5 ft. Kesha"}}
